@@ -5,7 +5,7 @@
 
 .section1-login {
     width: 100%;
-    height: 120px;
+    height: 220px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,7 +15,7 @@
 
 .section2-input {
     width: 100%;
-    height: 200px;
+    height: 300px;
     display: flex;
     justify-content: center;
     margin: auto;
