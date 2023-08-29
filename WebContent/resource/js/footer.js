@@ -1,6 +1,6 @@
 //개인정보처리 모달창으로 불러오기
 $(document).ready(function () {
-    $("#termOfUse").load("./include/termOfUse.jsp", function () {
+    $("#termOfUse").load("C:/jsp_wg_project/warigariProject/WebContent/include/termOfUse.jsp", function () {
 
         
     });
