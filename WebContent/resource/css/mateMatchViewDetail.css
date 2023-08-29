@@ -1,0 +1,357 @@
+@font-face {
+    font-family: 'LINESeedKR-Bd';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+* {
+    margin: 10;
+    padding: 0;
+    font-family: 'LINESeedKR-Bd';
+    /* border: 1px solid black; */
+  }
+
+main{
+    width: 1000px;
+    height: auto;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.mate-detail-title-text{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.mate-detail-subtitle-text{
+    font-size: 15px;
+    font-weight: bold;
+    color: lightgrey;
+}
+
+
+/* 모집완료 버튼 */
+button{
+    cursor: pointer;
+    color: white;
+    border-radius: 6px;
+    border: none;
+}
+
+.mate-detail-form-button3{
+    background-color: #18c6ae;
+    width: 80px;
+    height: 30px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 10px;
+} 
+
+.mate-detail-form-button-text{
+    font-size: 12px;
+}
+
+.mate-detail-form-button-text2{
+    font-size: 12px;
+    float: right;
+    margin-top: 15px;
+    color: #e4584b;
+    font-weight: bold;
+}
+
+
+/* 작성자 프로필 */
+.mate-detail-profile{
+    width:100%;
+    height: 100%;
+}
+
+.mate-detail-profile > div{
+    display: inline;
+    padding: 3px;
+}
+
+.member-box > div, span{
+    display: inline;
+    padding: 5px;
+}
+
+/* 모집 요구 정보 */
+.mate-detail-bigform{
+    border: 1px solid rgb(240, 239, 239);
+    background-color: rgb(240, 239, 239);
+    border-radius: 10px;
+}
+
+.mate-detail-bigform > *{
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.mate-detail-form{
+    height: 500px;
+}
+
+.mate-detail-form > *{
+    margin-left: 8px;
+}
+
+.gray{
+    color: rgb(140, 140, 140) ;
+}
+
+.comment-bigbox{
+    display: flex;
+    align-items: center;
+    height: 300px;
+    width: 100%;
+}
+
+.comment-smallbox{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.comment-text{
+    height: 100%;
+    width: 5%;
+}
+
+.comment-text-box{
+    height: 100%;
+    width: 95%;
+    background-color: white;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.commentbox-text{
+    height: 90%;
+    width: 95%;
+    border: none;
+    resize: none;
+}
+
+.mate-detail-form > *{
+    padding-bottom: 13px;
+}
+
+
+
+/* 삭제, 수정 버튼 */
+.mate-detail-button{
+    margin-bottom: 30px;
+}
+.form-button{
+    display: inline;
+}
+
+.mate-detail-form-button1{
+    background-color: #e4584b;
+    margin: 5px;
+    height: 30px;
+    width: 70px;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.mate-detail-form-button2{
+    background-color: #18c6ae;
+    margin: 5px;
+    height: 30px;
+    width: 70px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+/* 댓글 아이콘, 수 */
+.comment-icon-box{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: 15px
+}
+
+.comment-icon{
+    object-fit: contain;
+    height: 25px;
+    width: 25px;
+    margin-top: 10px;
+}
+
+.comment-num{
+    margin-bottom: 2px;
+}
+
+
+/* 댓글 목록*/
+.mate-detail-form-comment2{
+    background-color: rgb(240, 239, 239);
+    border-color: rgb(240, 239, 239);
+    border-radius: 10px;
+    height: 350px;
+}
+
+.comment2-box > div{
+    display: inline-flex;
+    height: 30px;
+    margin-right: 15px;
+}
+
+.mate-detail-form-comment2 > *{
+    margin-left: 3%;
+}
+
+.comment2-text{
+    color:rgb(140, 140, 140);
+}
+
+
+.delete-button-box{
+    display: flex;
+    /* justify-content: flex-end; */
+    float: right;
+    margin-right: 10px;
+    border: none;
+}
+
+.delete-button{
+    border-style: outset;
+    border-radius: 5px;
+    color: #e4584b;
+    height: 30px;
+    width: 60px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.modify-button-box{
+    display: flex;
+    justify-content: end;
+    margin-right: 10px;
+    float: right;
+    border: none;
+}
+
+.modify-button{
+    border-style: outset;
+    border-radius: 5px;
+    height: 30px;
+    width: 60px;
+    font-size: 15px;
+    color: black;
+    cursor: pointer;
+}
+
+
+/* 페이징 */
+.page_wrap {
+	text-align:center;
+	font-size:0;
+    padding-top: 10px;
+ }
+.page_nation {
+	display:inline-block;
+}
+.page_nation .none {
+	display:none;
+}
+.page_nation a {
+	display:block;
+	margin:0 3px;
+	float:left;
+	border:1px solid #e6e6e6;
+	width:28px;
+	height:28px;
+	line-height:28px;
+	text-align:center;
+	background-color:#fff;
+	font-size:13px;
+	color:#999999;
+	text-decoration:none;
+}
+.page_nation .arrow {
+	border:1px solid #ccc;
+}
+.page_nation .pprev {
+	background:#f8f8f8 url('img/page_pprev.png') no-repeat center center;
+	margin-left:0;
+}
+.page_nation .prev {
+	background:#f8f8f8 url('img/page_prev.png') no-repeat center center;
+	margin-right:7px;
+}
+.page_nation .next {
+	background:#f8f8f8 url('img/page_next.png') no-repeat center center;
+	margin-left:7px;
+}
+.page_nation .nnext {
+	background:#f8f8f8 url('img/page_nnext.png') no-repeat center center;
+	margin-right:0;
+}
+.page_nation a.active {
+	background-color: #18c6ae;
+	color:#fff;
+	border:1px solid #18c6ae;
+}
+
+  /* 댓글 달기 */
+
+.ReviewWrite-Container {
+    /* border: 1px solid red; */
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ReviewWrite-Container-form{
+    height: 70%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+}
+.ReviewWrite-Container-box1{
+    height: 100%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    margin-left: 25px;
+    background-color: white;
+}
+/* 댓글작성란 스타일 */
+.ReviewWrite-Container-form-text{
+    height: 70%;
+    width: 95%;
+    background-color: white;
+    border: none;
+    resize: none;
+}
+/* '댓글 등록' 버튼 */
+.Review-Button {
+    height: 80%;
+    width: 100px;
+    background-color: #00C7AE;
+    border-radius: 6px;
+    color: white;
+    font-size: 17px;
+    margin-left: 20px;
+    cursor: pointer;
+}

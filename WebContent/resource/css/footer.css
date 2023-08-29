@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* footer */
+footer{
+    border-top: solid #d2d1d1;
+    border-width: 1px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+.main-footer-column{
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+}
+.main-footer-category{
+    display: flex;
+    justify-content: center;
+}
+.main-footer-category-ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    flex-wrap:inherit;
+}
+.main-footer-category-termOfUsetag{
+    text-decoration: none;
+    margin: 20px 40px 25px 40px;
+}
+.main-footer-category-termOfUselist{
+    color: #949191;
+}
+.main-footer-category-termOfUselist:hover{
+    text-shadow: 1px 1px 1px #888585;
+}
+.main-footer-text-group{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: #949191;
+    font-size: 13px;
+}
+.main-footer-text1{
+    margin-bottom: 15px;
+}
+/* 모달창(이용약관, 개인정보처리 방침) */
+.main-section5{
+    width: 100%;
+    height: 320%;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    z-index: 12;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+}
+.modal-termOfUse{
+    display: none;
+    position: fixed;
+    background-color: #fffdfd;
+    top: 15%;
+    left: 18%;
+    z-index: 15;
+    width: 50%;
+    height: 60%;
+    padding: 1% 2%;
+    overflow-y: auto;
+    border-radius: 6px;
+    box-shadow: 3px 3px 3px gray;
+}
+.modal-termOfUse-close{
+    display: none;
+    font-size: 15px;
+    position: fixed;
+    width: 80px;
+    height: 35px;
+    background-color: #00C7AE;
+    color: white;
+    top: 17%;
+    text-align: center;
+    line-height: 5vh;
+    left: 65%;
+    z-index: 16;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.modal-termOfUse-close:hover{
+    background-color: #00a18d;
+}

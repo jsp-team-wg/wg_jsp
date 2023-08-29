@@ -1,0 +1,172 @@
+ @font-face {
+    font-family: 'LINESeedKR-Bd';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+* {
+    margin: 10;
+    padding: 0;
+    font-family: 'LINESeedKR-Bd';
+    /* border: 1px solid black; */
+}
+
+body {
+display: flex;
+justify-content:  center;
+align-items: center;
+}
+
+main {
+  width: 1000px;
+  height: 800px;
+  display: flex;
+  background-color: rgb(214, 247, 255);
+  }
+
+  a{
+    text-decoration: none;
+    color: white;
+  }
+
+/* 어사이드 */
+.hover1:hover {
+  border: 2px solid #00a18d;
+  background-color: #00a18d;
+}
+
+aside{
+  width: 20%;
+}
+
+.aside-box{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  
+} 
+
+.aside-member-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 30px;
+  background-color:#00a18d;
+  border-radius: 5px;
+  height: 35px;
+  /* width: 300px; */
+}
+
+.aside-matematch-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  margin-left: 10px;
+  background-color: #18c6ae;
+  height: 35px;
+}
+
+.aside-qna-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  margin-left: 10px;
+  border-radius: 5px;
+  background-color: #18c6ae;
+  height: 35px;
+}
+
+.accountmodify-form{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 800px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: white;
+  margin-left: 10px;
+}
+
+.mp{
+  margin-bottom: 20px;
+  padding-left: 200px;
+}
+
+
+/* 회원탈퇴 버튼 */
+
+.withdraw-button{
+  display: flex;
+  justify-content: center;
+  float: right;
+  width: 65px;
+  height: 25px;
+  margin: 7px;
+  background-color: #e4584b;
+  border: 1px solid #e4584b;
+  border-radius: 5px;
+  color: white;
+  font-size: 11px;
+}
+
+/* 회원정보 */
+.id-box{
+  margin-top: 10px;
+}
+
+.pwmatch-input,
+.pwmatch-input-check{
+  width: 250px;
+  height: 20px;
+  margin-top: 10px;
+}
+
+.pwmatch-ment-box{
+  height: 20px;
+  color: gray;
+}
+
+.gender-input{
+  width: 100px;
+  height: 30px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.hover2:hover, .hover2:focus {
+  border: 2px solid #00a18d;
+}
+
+.hover3:hover,.hover3:focus {
+  border: 2px solid #00a18d ;
+}
+
+.oldpower-input{
+  width: 50px;
+  height: 20px;
+  margin-top: 10px;
+  margin-right: 5px;
+}
+
+/* 수정완료 버튼 */
+.button-box{
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  margin-top: 80px;
+}
+
+.submit-button{
+  width: 100px;
+  background-color: #18c6ae;
+  color: white;
+  border-radius: 5px;
+  border-color: #18c6ae;
+}

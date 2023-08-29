@@ -1,0 +1,92 @@
+@폰트
+ @font-face {
+    font-family: 'LINESeedKR-Bd';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'LINESeedKR-Bd';
+  /* border: 1px solid black; */
+}
+
+.bgGray {
+  background-color: #e5e5e5;
+}
+.bgGreen {
+  background-color: #18c6ae;
+}
+.bgRed {
+  background-color: #e4584b;
+}
+
+.colorWhite {
+  color: white;
+}
+.colorGreen {
+  color: #18c6ae;
+}
+.colorRed {
+  color: #e4584b;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fffffa;
+  flex-direction: column;
+}
+
+.findPwH2 {
+  margin: 30px;
+  text-align: center;
+}
+
+.findPwBorder {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.findPwInput > div > input {
+  height: 30px;
+  width: 80%;
+  border-radius: 5px;
+  border: 0.5px solid rgb(201, 201, 201);
+}
+
+.findPwInput > div > div {
+  text-align: left;
+  margin-left: 9.5%;
+  color: #696969;
+}
+
+.findPwInput {
+  display: block;
+}
+.findPwInput > * {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+button {
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  width: 80%;
+  cursor: pointer;
+  transition: background-color 1s ease;
+}
+
+button:hover {
+  background-color: #18c6af86;
+}
