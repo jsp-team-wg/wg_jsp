@@ -1,11 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+<html>
+<head>
+<meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>메이트 찾기 상세페이지</title>
     <link rel="stylesheet" href="../../resource/css/mateMatchViewDetail.css" />
   </head>
+  <%@ include file="../../headerLogin.jsp" %>
   <body>
     <main>
       <!-- 메이트 찾기 상세페이지 창 -->
@@ -22,7 +25,7 @@
           <button
             type="button"
             class="mate-detail-form-button3"
-            onclick="location.href='../mateMatchList/mateMatchList.html'"
+            onclick="location.href='../../mateMatch/mateMatchList/mateMatchList.jsp'"
           >
             <span class="mate-detail-form-button-text">모집완료</span>
           </button>
@@ -109,7 +112,7 @@
           <button
             type="button"
             class="mate-detail-form-button1"
-            onclick="location.href='../mateMatchList/mateMatchList.html'"
+            onclick="location.href='../../mateMatch/mateMatchList/mateMatchList.jsp'"
           >
             <span>삭제</span>
           </button>
@@ -119,7 +122,7 @@
           <button
             type="button"
             class="mate-detail-form-button2"
-            onclick="location.href='../mateMatchEdit/mateMatchEdit.html'"
+            onclick="location.href='../../mateMatch/mateMatchEdit/mateMatchEdit.jsp'"
           >
             <span>수정</span>
           </button>
@@ -132,7 +135,7 @@
         <!-- 댓글 아이콘, 수 -->
         <div class="comment-icon-box">
           <!-- <span class = "comment-title-text">댓글 목록 </span>  -->
-          <img class="comment-icon" src="comment.png" alt="comment-icon" />
+          <img class="comment-icon" src="../../resource/img/comment.png" alt="comment-icon" />
           <div class="comment-num">
             <span class="comment-num-text">15</span>
           </div>
@@ -218,4 +221,5 @@
       </section>
     </main>
   </body>
+  <%@ include file="../../footer.jsp" %>
 </html>

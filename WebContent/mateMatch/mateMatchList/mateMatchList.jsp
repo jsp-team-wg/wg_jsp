@@ -1,11 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
+<html>
+<head>
+<meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>메이트찾기</title>
-    <link rel="stylesheet" href="mateMatchList.css" />
+    <link rel="stylesheet" href="../../resource/css/mateMatchList.css" />
   </head>
+  <%@ include file="../../headerLogin.jsp" %>
   <body>
     <!-- 게시글 목록 창 -->
     <main>
@@ -20,7 +23,7 @@
         </div>
         <!-- 글쓰기버튼 -->
         <div class="section-top-write">
-          <a class="section-top-write-a" href="../mateMatchWrite/mateMatchWrite.html">
+          <a class="section-top-write-a" href="../../mateMatch/mateMatchWrite/mateMatchWrite.jsp">
             <button class="button-write">글쓰기</button>
           </a>
         </div>
@@ -44,7 +47,7 @@
         <!-- 아우터 박스 -->
         <div class="board-outer-box">
           <!-- 이너 박스 -->
-          <a class="board-inner-box" href="../mateMatchViewDetail/mateMatchViewDetail.html">
+          <a class="board-inner-box" href="../../mateMatch/mateMatchViewDetail/mateMatchViewDetail.jsp">
             <!-- 이너박스 상단 -->
             <div class="board-inner-box-top">
               <!-- 코트명 -->
@@ -62,7 +65,7 @@
                 <div class="comment-icon-img-box">
                   <img
                     class="comment-icon-img"
-                    src="img/comment.png"
+                    src="../../resource/img/comment.png"
                     alt="댓글아이콘"
                   />
                 </div>
@@ -120,7 +123,7 @@
         <!-- 아우터 박스 -->
         <div class="board-outer-box">
           <!-- 이너 박스 -->
-          <a class="board-inner-box" href="../mateMatchViewDetail/mateMatchViewDetail.html">
+          <a class="board-inner-box" href="../../mateMatch/mateMatchViewDetail/mateMatchViewDetail.jsp">
             <!-- 이너박스 상단 -->
             <div class="board-inner-box-top">
               <!-- 코트명 -->
@@ -138,7 +141,7 @@
                 <div class="comment-icon-img-box">
                   <img
                     class="comment-icon-img"
-                    src="img/comment.png"
+                    src="../../resource/img/comment.png"
                     alt="댓글아이콘"
                   />
                 </div>
@@ -196,7 +199,7 @@
         <!-- 아우터 박스 -->
         <div class="board-outer-box">
           <!-- 이너 박스 -->
-          <a class="board-inner-box" href="../mateMatchViewDetail/mateMatchViewDetail.html">
+          <a class="board-inner-box" href="../../mateMatch/mateMatchViewDetail/mateMatchViewDetail.jsp">
             <!-- 이너박스 상단 -->
             <div class="board-inner-box-top">
               <!-- 코트명 -->
@@ -214,7 +217,7 @@
                 <div class="comment-icon-img-box">
                   <img
                     class="comment-icon-img"
-                    src="img/comment.png"
+                    src="../../resource/img/comment.png"
                     alt="댓글아이콘"
                   />
                 </div>
@@ -272,7 +275,7 @@
         <!-- 아우터 박스 -->
         <div class="board-outer-box">
           <!-- 이너 박스 -->
-          <a class="board-inner-box" href="../mateMatchViewDetail/mateMatchViewDetail.html">
+          <a class="board-inner-box" href="../../mateMatch/mateMatchViewDetail/mateMatchViewDetail.jsp">
             <!-- 이너박스 상단 -->
             <div class="board-inner-box-top">
               <!-- 코트명 -->
@@ -290,7 +293,7 @@
                 <div class="comment-icon-img-box">
                   <img
                     class="comment-icon-img"
-                    src="img/comment.png"
+                    src="../../resource/img/comment.png"
                     alt="댓글아이콘"
                   />
                 </div>
@@ -348,7 +351,7 @@
         <!-- 아우터 박스 -->
         <div class="board-outer-box">
           <!-- 이너 박스 -->
-          <a class="board-inner-box" href="../mateMatchViewDetail/mateMatchViewDetail.html">
+          <a class="board-inner-box" href="../../mateMatch/mateMatchViewDetail/mateMatchViewDetail.jsp">
             <!-- 이너박스 상단 -->
             <div class="board-inner-box-top">
               <!-- 코트명 -->
@@ -366,7 +369,7 @@
                 <div class="comment-icon-img-box">
                   <img
                     class="comment-icon-img"
-                    src="img/comment.png"
+                    src="../../resource/img/comment.png"
                     alt="댓글아이콘"
                   />
                 </div>
@@ -424,7 +427,7 @@
         <!-- 아우터 박스 -->
         <div class="board-outer-box">
           <!-- 이너 박스 -->
-          <a class="board-inner-box" href="../mateMatchViewDetail/mateMatchViewDetail.html">
+          <a class="board-inner-box" href="../../mateMatch/mateMatchViewDetail/mateMatchViewDetail.jsp">
             <!-- 이너박스 상단 -->
             <div class="board-inner-box-top">
               <!-- 코트명 -->
@@ -442,7 +445,7 @@
                 <div class="comment-icon-img-box">
                   <img
                     class="comment-icon-img"
-                    src="img/comment.png"
+                    src="../../resource/img/comment.png"
                     alt="댓글아이콘"
                   />
                 </div>
@@ -518,8 +521,7 @@
            <a class="arrow nnext" href="#">&gt;&gt;</a>
         </div>
      </div>
-
-
     </main>
   </body>
+  <%@ include file="../../footer.jsp" %>
 </html>

@@ -1,34 +1,37 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>마이페이지 회원정보 수정</title>
     <link rel = "stylesheet" href = "../../resource/css/mateMatchMyPageMemberEdit.css">
-    <script src = "mateMatchMyPageMemberEdit.js"></script>
+    <script src = "../../resource/js/mateMatchMyPageMemberEdit.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-  <main>
+	<%@ include file="../../headerLogin.jsp" %>
+  	<main>
     <aside>
         <section  class = "aside-box">
         <div class = "aside-member-box hover1">
             <div class = "aside-member-text-box">
-                <a href = "../mateMemberEditMyPage/mateMatchMyPageMemberEdit.html">
+                <a href = "../../myPage/mateMemberEditMyPage/mateMatchMyPageMemberEdit.jsp">
                 <span class = "aside-member-text white">회원정보 수정</span>
                 </a>
             </div>
         </div>
         <div class = "aside-matematch-box hover1">
           <div class = "aside-matematch-text-box">
-              <a href = "../mateFindMyPage/mateFindMyPage.html">
+              <a href = "../../myPage/mateFindMyPage/mateFindMyPage.jsp">
               <span class = "aside-matematch-text white">메이트 찾기</span>
               </a>
           </div>
         </div>
         <div class = "aside-qna-box hover1">
           <div class = "aside-qna-text-box">
-              <a href = "../mateMatchQnaMyPage/mateMatchQnaMyPage.html">
+              <a href = "../../myPage/mateMatchQnaMyPage/mateMatchQnaMyPage.jsp">
               <span class = "aside-qna-text white">Q&A</span>
               </a>
           </div>
@@ -118,6 +121,6 @@
         </form>
       </section>
     </main>
-    
+    <%@ include file="../../footer.jsp" %>
 </body>
 </html>
