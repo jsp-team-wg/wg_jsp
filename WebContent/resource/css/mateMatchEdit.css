@@ -1,0 +1,382 @@
+@font-face {
+  font-family: "LINESeedKR-Bd";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+* {
+  font-family: "LINESeedKR-Bd";
+  margin: 0;
+  padding: 0;
+  border: none;
+  /* border: 1px solid black; */
+}
+main {
+  width: 600px;
+  height: 1000px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 100px;
+}
+form {
+  width: 100%;
+  height: 100%;
+}
+
+/* 카테고리 섹션 */
+.section-category {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  margin-bottom: 20px;
+}
+.category-name {
+  font-size: 20px;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.category-name2 {
+  font-size: 15px;
+  color: lightgrey;
+}
+
+/* 내용입력 섹션 */
+.section-info {
+  width: 100%;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(240, 239, 239);
+}
+/* 코트이름 */
+.court-name {
+  margin-left: 10px;
+  width: 100%;
+  height: 10%;
+  /* background-color: pink; */
+}
+.court-name-text {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: end;
+}
+.court-name-input {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  /* background-color: yellow; */
+}
+.court-name-input-text {
+  width: 200px;
+  height: 30px;
+  border-radius: 6px;
+}
+/* 코트주소 */
+.court-address-input {
+    margin-left: 10px;
+  width: 100%;
+  height: 5%;
+  display: flex;
+  /* background-color: pink; */
+}
+.court-address-input-box1 {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.court-address-input-address {
+  height: 90%;
+  width: 100%;
+  border-radius: 6px;
+}
+.court-address-input-box2 {
+  width: 10%;
+  height: 100%;
+  /* background-color: bisque; */
+}
+.court-address-input-box2-button {
+  height: 100%;
+  width: 90%;
+  border-radius: 6px;
+  background-color: #18c6ae;
+  color: white;
+}
+
+/* 날짜 */
+.date {
+    margin-left: 10px;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+}
+.date-text {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: end;
+}
+.date-calender {
+  width: 100%;
+  height: 70%;
+}
+.date-calendar-input {
+  height: 40px;
+  width: 130px;
+  border-radius: 6px;
+}
+
+/* 시간 */
+.time {
+    margin-left: 10px;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+}
+.time-box1 {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: end;
+}
+.time-box2 {
+  width: 100%;
+  height: 50%;
+  display: flex;
+}
+.time-start-input {
+  width: 54px;
+  height: 100%;
+  border-radius: 6px;
+}
+.wave {
+  height: 100%;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.si {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.time-end-input {
+  width: 54px;
+  height: 100%;
+  border-radius: 6px;
+}
+
+/* 구력 */
+.exp {
+    margin-left: 10px;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+}
+.exp-text {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: end;
+}
+.exp-box {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+}
+.exp-input {
+  height: 70%;
+  width: 12%;
+}
+.exp-spacing{
+  width: 5px;
+}
+.exp-dropdown {
+  height: 100%;
+  width: 50px;
+  display: flex;
+  align-items: center;
+}
+.exp-dropdown-select {
+  height: 70%;
+  width: 50px;
+}
+
+/* ntrp */
+.ntrp {
+    margin-left: 10px;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+}
+.ntrp-text {
+  height: 50%;
+  width: 100px;
+  display: flex;
+  align-items: end;
+}
+.ntrp-dropbox {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+}
+.ntrp-select {
+  height: 80%;
+  width: 100px;
+}
+
+/* 게임유형 */
+.game-type {
+    margin-left: 10px;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+}
+
+.game-type-text {
+  height: 50%;
+  width: 100px;
+  display: flex;
+  align-items: end;
+}
+.game-type-dropbox {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+}
+.game-type-select {
+  height: 80%;
+  width: 100px;
+}
+/* 모집인원 */
+.recruit {
+    margin-left: 10px;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+}
+.recruit-text {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: end;
+}
+.recruit-input {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+}
+.recruit-man {
+  height: 50%;
+  width: 20px;
+  display: flex;
+  align-items: center;
+}
+.recruit-spacing{
+  width: 10px;
+}
+.recruit-woman {
+  height: 80%;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  display: flex;
+  align-items: center;
+}
+.recruit-woman {
+  height: 50%;
+  width: 20px;
+  display: flex;
+  align-items: center;
+}
+
+/* 내용 */
+.content {
+  width: 100%;
+  height: 24%;
+  display: flex;
+  flex-direction: column;
+  /* background-color: yellow; */
+}
+.content-text {
+    margin-left: 10px;
+  width: 100%;
+  height: 15%;
+  display: flex;
+  align-items: end;
+}
+.content-box {
+  width: 100%;
+  height: 86%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: pink; */
+}
+
+.content-inner-box {
+  width: 96%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+.content-write {
+  width: 96%;
+  height: 87%;
+  border: none;
+  resize: none;
+  /* background-color: yellow; */
+}
+
+/* 버튼 섹션 */
+.section-button {
+  width: 100%;
+  height: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+.button-prev-a {
+  height: 80%;
+  width: 80px;
+  /* border: none; */
+}
+.button-prev {
+  height: 100%;
+  width: 100%;
+  border-radius: 6px;
+  border: none;
+  font-size: 14px;
+  color: white;
+  margin-top: 5px;
+  background-color: #e4584b;
+}
+.button-submit {
+  height: 80%;
+  width: 80px;
+  border-radius: 6px;
+  border: none;
+  color: white;
+  margin-top: 5px;
+  font-size: 14px;
+  background-color: #18c6ae;
+}

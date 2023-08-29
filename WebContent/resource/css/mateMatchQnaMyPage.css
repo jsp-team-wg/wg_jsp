@@ -1,0 +1,361 @@
+ @font-face {
+    font-family: 'LINESeedKR-Bd';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+* {
+    margin: 10;
+    padding: 0;
+    font-family: 'LINESeedKR-Bd';
+    /* border: 1px solid black; */
+}
+
+body {
+display: flex;
+justify-content:  center;
+align-items: center;
+}
+
+main {
+  width: 1000px;
+  height: 860px;
+  display: flex;
+  background-color: rgb(214, 247, 255);
+  }
+
+  a{
+    text-decoration: none;
+    color: white;
+  }
+
+/* 어사이드 */
+.hover1:hover {
+  border: 2px solid #00a18d;
+  background-color: #00a18d;
+}
+
+aside{
+  width: 20%;
+}
+
+.aside-box{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  
+} 
+
+.aside-member-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 30px;
+  background-color:#18c6ae;
+  border-radius: 5px;
+  height: 35px;
+}
+
+.aside-matematch-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  margin-left: 10px;
+  background-color: #18c6ae;
+  height: 35px;
+}
+
+.aside-qna-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  margin-left: 10px;
+  border-radius: 5px;
+  background-color: #00a18d;
+  height: 35px;
+}
+
+.accountmodify-form{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 860px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: white;
+  margin-left: 10px;
+}
+
+.mp{
+  margin-bottom: 20px;
+  padding-left: 200px;
+}
+
+
+/* 회원탈퇴 버튼 */
+
+.withdraw-button{
+  display: flex;
+  justify-content: center;
+  float: right;
+  width: 65px;
+  height: 25px;
+  margin: 7px;
+  background-color: #e4584b;
+  border: 1px solid #e4584b;
+  border-radius: 5px;
+  color: white;
+  font-size: 11px;
+}
+
+/* 회원정보 */
+.id-box{
+  margin-top: 10px;
+}
+
+.pwmatch-input{
+  width: 250px;
+  height: 20px;
+  margin-top: 10px;
+}
+
+.pwmatch-ment-correct-text{
+  /* display: none; */
+}
+
+.pwmatch-ment-incorrect-text{
+  /* display: none; */
+}
+
+.gender-input{
+  width: 100px;
+  height: 30px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.hover2:hover, .hover2:focus {
+  border: 2px solid #00a18d;
+}
+
+.hover3:hover,.hover3:focus {
+  border: 2px solid #00a18d ;
+}
+
+.oldpower-input{
+  width: 50px;
+  height: 20px;
+  margin-top: 10px;
+  margin-right: 5px;
+}
+
+/* 수정완료 버튼 */
+.button-box{
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  margin-top: 80px;
+}
+
+.submit-button{
+  width: 100px;
+  background-color: #18c6ae;
+  color: white;
+  border-radius: 5px;
+  border-color: #18c6ae;
+}
+  /* 아우터박스 */
+  .board-outer-box {
+    margin: 1%;
+    width: 98%;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding-bottom: 20px; */
+    padding-top: 10px;
+  }
+  /* 이너박스 */
+  .board-inner-box {
+    width: 100%;
+    height: 95%;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px;
+    text-decoration: none;
+    color: black;
+    
+  }
+  /* 이너박스 상단 */
+  .board-inner-box-title {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: end;
+  }
+  .board-inner-box-title-text {
+    font-weight: bold;
+    font-size: 16px;
+    margin-left: 20px;
+  }
+  /* 이너박스 중단 */
+  .board-inner-box-content {
+    width: 100%;
+    height: 30%;
+    display: flex;
+  
+    align-items: center;
+  }
+  .board-inner-box-content-text {
+    margin-left: 20px;
+    font-size: 12px;
+    display: block;
+    width: 600px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  /* 이너박스 하단 */
+  .board-inner-box-view-comment {
+    width: 100%;
+    height: 30%;
+    display: flex;
+  }
+  /* 조회수 아이콘 */
+  .comment-view {
+    height: 100%;
+    width: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+  .comment-view-img {
+    height: 40%;
+    width: 40%;
+    object-fit: contain;
+    margin-top: 2px;
+  }
+  /* 조회수 */
+  .comment-view-cnt {
+    height: 100%;
+    width: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+  }
+  .comment-view-cnt-text {
+    height: 50%;
+    width: 90%;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* 댓글 아이콘 */
+  .comment-comment {
+    height: 100%;
+    width: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+  .comment-comment-img {
+    height: 50%;
+    width: 80%;
+    object-fit: contain;
+  }
+  /* 댓글 수 */
+  .comment-comment-cnt {
+    height: 100%;
+    width: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+  }
+  .comment-comment-cnt-text {
+    height: 50%;
+    width: 50%;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* 작성일시 */
+  .comment-written-date {
+    height: 100%;
+    width: 98%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-right: 20px;
+  }
+  .comment-written-date-text {
+    height: 80%;
+    width: 30%;
+    font-size: 12px;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* 페이징 */
+  /* 페이징 */
+.page_wrap {
+	text-align:center;
+	font-size:0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+ }
+.page_nation {
+	display:inline-block;
+}
+.page_nation .none {
+	display:none;
+}
+.page_nation a {
+	display:block;
+	margin:0 3px;
+	float:left;
+	border:1px solid #e6e6e6;
+	width:28px;
+	height:28px;
+	line-height:28px;
+	text-align:center;
+	background-color:#fff;
+	font-size:13px;
+	color:#999999;
+	text-decoration:none;
+}
+.page_nation .arrow {
+	border:1px solid #ccc;
+}
+.page_nation .pprev {
+	background:#f8f8f8 url('img/page_pprev.png') no-repeat center center;
+	margin-left:0;
+}
+.page_nation .prev {
+	background:#f8f8f8 url('img/page_prev.png') no-repeat center center;
+	margin-right:7px;
+}
+.page_nation .next {
+	background:#f8f8f8 url('img/page_next.png') no-repeat center center;
+	margin-left:7px;
+}
+.page_nation .nnext {
+	background:#f8f8f8 url('img/page_nnext.png') no-repeat center center;
+	margin-right:0;
+}
+.page_nation a.active {
+	background-color: #18c6ae;
+	color:#fff;
+	border:1px solid #18c6ae;
+}

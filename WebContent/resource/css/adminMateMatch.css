@@ -1,0 +1,494 @@
+@font-face {
+  font-family: 'LINESeedKR-Bd';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+* {
+font-family: 'LINESeedKR-Bd';
+margin: 0;
+padding: 0;
+/* border: 1px black solid; */
+}
+
+/* 전체컨테이너 */
+.container {
+  width: 1000px;
+  height: 1340px;
+  display: flex;
+  margin: auto;
+}
+
+/* 좌측 어사이드 */
+aside {
+  height: 100%;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+aside section {
+  width: 170px;
+  height: 50px;
+  margin-top: 40px;
+  background-color: #00c7ae;
+  border-radius: 6px;
+}
+
+aside section:hover {
+  background-color: #00a18d;
+}
+
+aside a {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+aside div {
+  font-weight: bold;
+  font-size: 17px;
+  color: white;
+}
+
+.aside-spacing {
+  width: 100%;
+  height: 225px;
+  margin-top: 40px;
+  background-color: white;
+}
+
+.board-mate {
+  background-color: #00a18d;
+}
+
+/* 우측 게시글 목록 창 */
+main {
+  height: 100%;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+}
+
+/*  메이트찾기 & 글쓰기 창 */
+.section-top {
+  width: 100%;
+  height: 200px;
+  display: flex;
+}
+
+/* 카테고리명 - 메이트찾기 */
+.section-top-category-name {
+  height: 100%;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+.section-top-category-name-text1 {
+  font-size: 20px;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.section-top-category-name-text2 {
+  font-size: 15px;
+  color: lightgrey;
+}
+
+/* 검색바 */
+.section-search {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-form {
+  width: 90%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.search-date {
+  width: 15%;
+  height: 95%;
+  border: 1px #00c7ae solid;
+  border-radius: 6px;
+  margin-right: 5px;
+}
+
+.search-bar {
+  margin-left: 10%;
+  width: 75%;
+  height: 95%;
+  border: 1px #00c7ae solid;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+
+}
+.search-button {
+  height: 100%;
+  width: 10%;
+  background-color: #00c7ae;
+  border: 1px #00c7ae solid;
+  font-size: 14px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  font-weight: bold;
+  color: white;
+}
+
+/* 게시글 목록 */
+.section-board {
+  width: 100%;
+  height: 840px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 아우터박스 */
+.board-outer-box {
+  width: 100%;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 이너박스 */
+.board-inner-box {
+  width: 100%;
+  height: 95%;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+  text-decoration: none;
+  color: black;
+}
+
+.board-inner-box-top {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+/* 코트명 */
+.court-name {
+  height: 100%;
+  width: 30%;
+  margin-left: 20px;
+  display: flex;
+  align-items: end;
+}
+
+.court-name-text {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+/* 모집마감 */
+.recruit-close {
+  height: 100%;
+  width: 70%;
+  display: flex;
+  align-items: end;
+}
+
+.recruit-close-box {
+  width: 90px;
+  height: 30px;
+  border: 1px solid gray;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.recruit-close-text {
+  color: red;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/* 댓글 아이콘 */
+.comment-icon {
+  height: 100%;
+  width: 5%;
+}
+
+.comment-icon-img-box {
+  height: 100%;
+  width: 100%;
+  margin-top: 3px;
+  margin-left: 12px;
+}
+
+.comment-icon-img {
+  object-fit: contain;
+  height: 70%;
+  width: 70%;
+}
+
+/* 댓글 수 */
+.comment-num {
+  height: 100%;
+  width: 5%;
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+}
+
+.comment-num-text {
+  height: 50%;
+  width: 50%;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+/* 이너박스 하단  */
+.board-inner-box-bottom {
+  width: 100%;
+  height: 100%;
+  display: flex;
+
+}
+
+/* 날짜 */
+.date {
+  height: 100%;
+  width: 50px;
+
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.date-text {
+  font-size: 18px;
+}
+
+/* 요일 */
+.day {
+  height: 100%;
+  width: 50px;
+
+  display: flex;
+  align-items: center;
+}
+
+.day-text {
+  font-size: 18px;
+}
+
+/* 시작시간 */
+.time-start {
+  height: 100%;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.time-start-text {
+  font-size: 18px;
+}
+
+/* 대쉬 */
+.dash {
+  height: 100%;
+  width: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.dash-text {
+  font-size: 18px;
+}
+
+/* 종료시간 */
+.time-end {
+  height: 100%;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.time-end-text {
+  font-size: 18px;
+}
+
+/* 게임유형 */
+.game-type {
+  height: 100%;
+  width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.game-type-text {
+  font-size: 18px;
+}
+
+/* 남 */
+.man {
+  height: 100%;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.man-text {
+  font-size: 18px;
+}
+
+/* 남 수 */
+.man-num {
+  height: 100%;
+  width: 15px;
+  display: flex;
+  align-items: center;
+
+}
+
+.man-num-text {
+  font-size: 18px;
+}
+
+/* 여 */
+.woman {
+  height: 100%;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.woman-text {
+  font-size: 18px;
+}
+
+/* 여 수 */
+.woman-num {
+  height: 100%;
+  width: 15px;
+  display: flex;
+  align-items: center;
+
+}
+
+.woman-num-text {
+  font-size: 18px;
+}
+
+/* 구력 */
+.exp {
+  height: 100%;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+
+}
+
+.exp-text {
+  font-size: 18px;
+}
+
+/* 년 */
+.year {
+  height: 100%;
+  width: 20px;
+  display: flex;
+  align-items: center;
+
+}
+
+.year-text {
+  font-size: 18px;
+}
+
+/* 이상 이하 내외 */
+.more-less {
+  height: 100%;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.more-less-text {
+  font-size: 18px;
+}
+
+/* 페이징 */
+.page_wrap {
+	text-align:center;
+	font-size:0;
+    padding-top: 10px;
+ }
+.page_nation {
+	display:inline-block;
+}
+.page_nation .none {
+	display:none;
+}
+.page_nation a {
+	display:block;
+	margin:0 3px;
+	float:left;
+	border:1px solid #e6e6e6;
+	width:28px;
+	height:28px;
+	line-height:28px;
+	text-align:center;
+	background-color:#fff;
+	font-size:13px;
+	color:#999999;
+	text-decoration:none;
+}
+.page_nation .arrow {
+	border:1px solid #ccc;
+}
+.page_nation .pprev {
+	background:#f8f8f8;
+}
+.page_nation .prev {
+	background:#f8f8f8;
+}
+.page_nation .next {
+	background:#f8f8f8;
+}
+.page_nation .nnext {
+	background:#f8f8f8;
+}
+.page_nation a.active {
+	background-color: #18c6ae;
+	color:#fff;
+	border:1px solid #18c6ae;
+}

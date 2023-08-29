@@ -1,0 +1,146 @@
+@font-face {
+  font-family: 'LINESeedKR-Bd';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+* {
+font-family: 'LINESeedKR-Bd';
+margin: 0;
+padding: 0;
+/* border: 1px solid black; */
+}
+.bgGray {
+  background-color: #e5e5e5;
+
+}
+.bgGreen {
+  background-color: #00C7AE;
+}
+.bgRed {
+  background-color: #e4584b;
+}
+.colorWhite {
+  color: white;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+main {
+  width: 800px;
+  height: 670px;
+  display: flex;
+  flex-direction: column;
+  margin: 100px 0;
+}
+form{
+}
+
+.first-section{
+  height: 100%;
+}
+.section-top-category-name {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.section-top-category-name-text1 {
+  font-size: 20px;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.section-top-category-name-text2 {
+  font-size: 15px;
+  color: lightgrey;
+}
+
+.titleContentSection {
+  margin-top: 30px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.titleContent{
+}
+
+
+.title {
+  margin-top: 5%;
+  height: 60px;
+}
+
+.title-out-box{
+border: none;
+  width: 100%;
+  height: 65%;
+  border-radius: 6px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.title-in-box-text{
+ height: 70%;
+ width: 98%;
+ border: none;
+ resize: none;
+ /* background-color: yellow; */
+}
+
+.content {
+  margin-top: 2%;
+  margin-bottom: 7%;
+}
+.content-box-out{
+   width: 700px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 6px;
+}
+.content-area {
+  border: none;
+  margin-bottom: 2%;
+  resize: none;
+  width:  97%;
+  height: 90%;
+  /* box-sizing: border-box; */
+  
+}
+.border-radius {
+  border-radius: 5px;
+}
+.pagebackComplete {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.button-size {
+  height: 30px;
+    width: 70px;
+    cursor: pointer;
+}
+.pageback {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.complete {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
