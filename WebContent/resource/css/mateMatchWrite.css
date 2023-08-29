@@ -17,22 +17,21 @@ main {
   height: 1000px;
   display: flex;
   flex-direction: column;
-  margin: auto;
-  margin-top: 100px;
+  margin: 100px auto;
 }
 form {
   width: 100%;
   height: 100%;
 }
 
-/* 카테고리 섹션 */
+/* 移댄뀒怨좊━ �꽮�뀡 */
 .section-category {
   width: 100%;
   height: 10%;
   display: flex;
   flex-direction: column;
   justify-content: end;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .category-name {
   font-size: 20px;
@@ -45,7 +44,7 @@ form {
   color: lightgrey;
 }
 
-/* 내용입력 섹션 */
+/* �궡�슜�엯�젰 �꽮�뀡 */
 .section-info {
   width: 100%;
   height: 85%;
@@ -53,7 +52,7 @@ form {
   flex-direction: column;
   background-color: rgb(240, 239, 239);
 }
-/* 코트이름 */
+/* 肄뷀듃�씠由� */
 .court-name {
   margin-left: 10px;
   width: 100%;
@@ -77,10 +76,11 @@ form {
   width: 200px;
   height: 30px;
   border-radius: 6px;
+  background-color: white;
 }
-/* 코트주소 */
+/* 肄뷀듃二쇱냼 */
 .court-address-input {
-    margin-left: 10px;
+  margin-left: 10px;
   width: 100%;
   height: 5%;
   display: flex;
@@ -96,6 +96,7 @@ form {
   height: 90%;
   width: 100%;
   border-radius: 6px;
+  background-color: white;
 }
 .court-address-input-box2 {
   width: 10%;
@@ -108,9 +109,10 @@ form {
   border-radius: 6px;
   background-color: #18c6ae;
   color: white;
+  cursor:pointer;
 }
 
-/* 날짜 */
+/* �궇吏� */
 .date {
     margin-left: 10px;
   width: 100%;
@@ -134,7 +136,7 @@ form {
   border-radius: 6px;
 }
 
-/* 시간 */
+/* �떆媛� */
 .time {
     margin-left: 10px;
   width: 100%;
@@ -154,7 +156,7 @@ form {
   display: flex;
 }
 .time-start-input {
-  width: 54px;
+  width: 100px;
   height: 100%;
   border-radius: 6px;
 }
@@ -171,12 +173,12 @@ form {
   align-items: center;
 }
 .time-end-input {
-  width: 54px;
+  width: 100px;
   height: 100%;
   border-radius: 6px;
 }
 
-/* 구력 */
+/* 援щ젰 */
 .exp {
     margin-left: 10px;
   width: 100%;
@@ -239,7 +241,7 @@ form {
   width: 100px;
 }
 
-/* 게임유형 */
+/* 寃뚯엫�쑀�삎 */
 .game-type {
     margin-left: 10px;
   width: 100%;
@@ -264,7 +266,7 @@ form {
   height: 80%;
   width: 100px;
 }
-/* 모집인원 */
+/* 紐⑥쭛�씤�썝 */
 .recruit {
     margin-left: 10px;
   width: 100%;
@@ -291,7 +293,7 @@ form {
   align-items: center;
 }
 .recruit-spacing{
-    width: 10px;
+  width: 10px;
 }
 .recruit-woman {
   height: 80%;
@@ -308,10 +310,8 @@ form {
   align-items: center;
 }
 
-/* 내용 */
+/* �궡�슜 */
 .content {
-    
-
   width: 100%;
   height: 24%;
   display: flex;
@@ -350,12 +350,13 @@ form {
   /* background-color: yellow; */
 }
 
-/* 버튼 섹션 */
+/* 踰꾪듉 �꽮�뀡 */
 .section-button {
   width: 100%;
   height: 5%;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 10px;
 }
 .button-prev-a {
   height: 80%;

@@ -1,11 +1,13 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>footer</title>
-    <link rel="stylesheet" href="footer.css">
-    <script defer src="footer.js"></script>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resource/css/footer.css">
+    <script defer src="${pageContext.request.contextPath}/resource/js/footer.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -13,14 +15,9 @@
         <div class="main-footer-column">
             <nav class="main-footer-category">
                 <ul class="main-footer-category-ul">
-                    <a href="" class="main-footer-category-tag">
-                        <li class="main-footer-category-list">
-                            이용약관
-                        </li>
-                    </a>
                     <a href="" class="main-footer-category-termOfUsetag">
                         <li class="main-footer-category-termOfUselist">
-                            개인정보처리 약관
+                            개인정보처리 방침
                         </li>
                     </a>
                 </ul>
@@ -40,14 +37,13 @@
                 </div>
             </div>
         </div>
-        <section class="main-section5">
-            <div id="termOfUse" class="modal-termOfUse">
-                
-            </div>
-            <div class="modal-termOfUse-close">
-                닫기
-            </div>
-        </section>
+        
     </footer>
+    <section class="main-section5">
+        <div id="termOfUse" class="modal-termOfUse"></div>
+        <div class="modal-termOfUse-close">
+            닫기
+        </div>
+    </section>
 </body>
 </html>
