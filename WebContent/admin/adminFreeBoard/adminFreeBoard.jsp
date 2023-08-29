@@ -1,38 +1,42 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>공지사항 관리</title>
-    <link rel="stylesheet" href="admin_noticeList.css" />
+    <title>자유게시판 관리</title>
+    <link rel="stylesheet" href="../../resource/css/adminFreeBoard.css" />
   </head>
   <body>
+  
     <div class="container">
       <!-- 좌측 어사이드 -->
       <aside>
         <div class="aside-spacing"></div>
         <section class="member">
-          <a class="member-a" href="../../admin_member/admin_member.html">
+          <a class="member-a" href="../admin_member/admin_member.html">
             <div class="member-text">회원관리</div>
           </a>
         </section>
         <section class="board-mate">
-          <a class="board-mate-a" href="../../admin_mateMatch/admin_mateMatch.html">
+          <a class="board-mate-a" href="../admin_mateMatch/admin_mateMatch.html">
             <div class="board-mate-text">메이트찾기 관리</div>
           </a>
         </section>
         <section class="board-free">
-          <a class="board-free-a" href="../../admin_freeBoard/admin_freeBoard.html">
+          <a class="board-free-a" href="../admin_freeBoard/admin_freeBoard.html">
             <div class="board-free-text">자유게시판 관리</div>
           </a>
         </section>
         <section class="board-qna">
-          <a class="board-qna-a" href="../../admin_qna/admin_qna.html">
+          <a class="board-qna-a" href="../admin_qna/admin_qna.html">
             <div class="board-qna-text">Q&A 관리</div>
           </a>
         </section>
         <section class="board-notification">
-          <a class="board-notification-a" href="../../admin_notice/admin_noticeList/admin_noticeList.html">
+          <a class="board-notification-a" href="../admin_notice/admin_noticeList/admin_noticeList.html">
             <div class="board-notification-text">공지사항 관리</div>
           </a>
         </section>
@@ -42,21 +46,14 @@
       <main>
         <!-- 카테고리 & 글쓰기 창 -->
         <section class="section-top">
-          <!-- 카테고리명 -Q&A -->
+          <!-- 카테고리명 - 자유게시판 -->
           <div class="section-top-category-name">
             <div class="section-top-category-name-text1">커뮤니티</div>
-            <div class="section-top-category-name-text2">공지사항 - 관리</div>
-          </div>
-        
-          <!-- 글쓰기버튼 -->
-          <div class="section-top-write">
-            <a class="section-top-write-a" href="../admin_noticeViewDetail/noticeViewDetail.html">
-                <button class="button-write">글쓰기</button>
-            </a>
+            <div class="section-top-category-name-text2">자유게시판 - 관리</div>
           </div>
         </section>
 
-        <!-- 검색바 -->
+         <!-- 검색바 -->
         <section class="section-search">
           <form class="search-form" action="">
             <div class="search-inner">
@@ -65,33 +62,40 @@
             </div>
           </form>
         </section>
-        
+
         <!-- 게시글 목록 -->
         <section class="section-board">
 
           <!-- @@아우터박스 -->
           <div class="board-outer-box">
-            <a class="board-inner-box" href="../../admin_notice/admin_noticeViewDetail/noticeViewDetail.html">
+            <a class="board-inner-box" href="../../community/freeboard/freeboardViewDetail/freeboardViewDetail.html">
               <!-- 이너박스 상단 -->
               <div class="board-inner-box-title">
                 <div class="board-inner-box-title-text">
-                  불법광고 게시글 제재 안내
+                  구력 2개월 테린이인데 라켓 추천 부탁드려요
                 </div>
               </div>
               <!-- 이너박스 중단 -->
               <div class="board-inner-box-content">
                 <div class="board-inner-box-content-text">
-                  안녕하세요. 최근 불법광고 게시글이 지속적으로 발견되어 발견즉시 사전통보 없이 제재에 들어갔음을 알려드립니다. 회원들의 
-                  원활한 사이트 이용을 위해 늘 노력하겠습니다. 감사합니다.
+                  이번에 테니스 라켓을 새로 구매하려고합니다. 라켓추천
+                  부탁드립니다. 이번에 테니스 라켓을 새로 구매하려고합니다.
+                  라켓추천 부탁드립니다.
                 </div>
               </div>
               <!-- 이너박스 하단 -->
               <div class="board-inner-box-view-comment">
                 <div class="comment-view">
-                  <img class="comment-view-img" src="img/view.png" alt="" />
+                  <img class="comment-view-img" src="../../resource/img/view.png" alt="" />
                 </div>
                 <div class="comment-view-cnt">
                   <div class="comment-view-cnt-text">112</div>
+                </div>
+                <div class="comment-comment">
+                  <img class="comment-comment-img" src="../../resource/img/comment.png" alt="" />
+                </div>
+                <div class="comment-comment-cnt">
+                  <div class="comment-comment-cnt-text">12</div>
                 </div>
                 <div class="comment-written-date">
                   <div class="comment-written-date-text">2023.08.11 11:13</div>
@@ -101,27 +105,34 @@
           </div>
           <!-- @@아우터박스 -->
           <div class="board-outer-box">
-            <a class="board-inner-box" href="../../admin_notice/admin_noticeViewDetail/noticeViewDetail.html">
+            <a class="board-inner-box" href="../../community/freeboard/freeboardViewDetail/freeboardViewDetail.html">
               <!-- 이너박스 상단 -->
               <div class="board-inner-box-title">
                 <div class="board-inner-box-title-text">
-                  불법광고 게시글 제재 안내
+                  구력 2개월 테린이인데 라켓 추천 부탁드려요
                 </div>
               </div>
               <!-- 이너박스 중단 -->
               <div class="board-inner-box-content">
                 <div class="board-inner-box-content-text">
-                  안녕하세요. 최근 불법광고 게시글이 지속적으로 발견되어 발견즉시 사전통보 없이 제재에 들어갔음을 알려드립니다. 회원들의 
-                  원활한 사이트 이용을 위해 늘 노력하겠습니다. 감사합니다.
+                  이번에 테니스 라켓을 새로 구매하려고합니다. 라켓추천
+                  부탁드립니다. 이번에 테니스 라켓을 새로 구매하려고합니다.
+                  라켓추천 부탁드립니다.
                 </div>
               </div>
               <!-- 이너박스 하단 -->
               <div class="board-inner-box-view-comment">
                 <div class="comment-view">
-                  <img class="comment-view-img" src="img/view.png" alt="" />
+                  <img class="comment-view-img" src="../../resource/img/view.png" alt="" />
                 </div>
                 <div class="comment-view-cnt">
                   <div class="comment-view-cnt-text">112</div>
+                </div>
+                <div class="comment-comment">
+                  <img class="comment-comment-img" src="../../resource/img/comment.png" alt="" />
+                </div>
+                <div class="comment-comment-cnt">
+                  <div class="comment-comment-cnt-text">12</div>
                 </div>
                 <div class="comment-written-date">
                   <div class="comment-written-date-text">2023.08.11 11:13</div>
@@ -131,27 +142,34 @@
           </div>
           <!-- @@아우터박스 -->
           <div class="board-outer-box">
-            <a class="board-inner-box" href="../../admin_notice/admin_noticeViewDetail/noticeViewDetail.html">
+            <a class="board-inner-box" href="../../community/freeboard/freeboardViewDetail/freeboardViewDetail.html">
               <!-- 이너박스 상단 -->
               <div class="board-inner-box-title">
                 <div class="board-inner-box-title-text">
-                  불법광고 게시글 제재 안내
+                  구력 2개월 테린이인데 라켓 추천 부탁드려요
                 </div>
               </div>
               <!-- 이너박스 중단 -->
               <div class="board-inner-box-content">
                 <div class="board-inner-box-content-text">
-                  안녕하세요. 최근 불법광고 게시글이 지속적으로 발견되어 발견즉시 사전통보 없이 제재에 들어갔음을 알려드립니다. 회원들의 
-                  원활한 사이트 이용을 위해 늘 노력하겠습니다. 감사합니다.
+                  이번에 테니스 라켓을 새로 구매하려고합니다. 라켓추천
+                  부탁드립니다. 이번에 테니스 라켓을 새로 구매하려고합니다.
+                  라켓추천 부탁드립니다.
                 </div>
               </div>
               <!-- 이너박스 하단 -->
               <div class="board-inner-box-view-comment">
                 <div class="comment-view">
-                  <img class="comment-view-img" src="img/view.png" alt="" />
+                  <img class="comment-view-img" src="../../resource/img/view.png" alt="" />
                 </div>
                 <div class="comment-view-cnt">
                   <div class="comment-view-cnt-text">112</div>
+                </div>
+                <div class="comment-comment">
+                  <img class="comment-comment-img" src="../../resource/img/comment.png" alt="" />
+                </div>
+                <div class="comment-comment-cnt">
+                  <div class="comment-comment-cnt-text">12</div>
                 </div>
                 <div class="comment-written-date">
                   <div class="comment-written-date-text">2023.08.11 11:13</div>
@@ -161,27 +179,34 @@
           </div>
           <!-- @@아우터박스 -->
           <div class="board-outer-box">
-            <a class="board-inner-box" href="../../admin_notice/admin_noticeViewDetail/noticeViewDetail.html">
+            <a class="board-inner-box" href="../../community/freeboard/freeboardViewDetail/freeboardViewDetail.html">
               <!-- 이너박스 상단 -->
               <div class="board-inner-box-title">
                 <div class="board-inner-box-title-text">
-                  불법광고 게시글 제재 안내
+                  구력 2개월 테린이인데 라켓 추천 부탁드려요
                 </div>
               </div>
               <!-- 이너박스 중단 -->
               <div class="board-inner-box-content">
                 <div class="board-inner-box-content-text">
-                  안녕하세요. 최근 불법광고 게시글이 지속적으로 발견되어 발견즉시 사전통보 없이 제재에 들어갔음을 알려드립니다. 회원들의 
-                  원활한 사이트 이용을 위해 늘 노력하겠습니다. 감사합니다.
+                  이번에 테니스 라켓을 새로 구매하려고합니다. 라켓추천
+                  부탁드립니다. 이번에 테니스 라켓을 새로 구매하려고합니다.
+                  라켓추천 부탁드립니다.
                 </div>
               </div>
               <!-- 이너박스 하단 -->
               <div class="board-inner-box-view-comment">
                 <div class="comment-view">
-                  <img class="comment-view-img" src="img/view.png" alt="" />
+                  <img class="comment-view-img" src="../../resource/img/view.png" alt="" />
                 </div>
                 <div class="comment-view-cnt">
                   <div class="comment-view-cnt-text">112</div>
+                </div>
+                <div class="comment-comment">
+                  <img class="comment-comment-img" src="../../resource/img/comment.png" alt="" />
+                </div>
+                <div class="comment-comment-cnt">
+                  <div class="comment-comment-cnt-text">12</div>
                 </div>
                 <div class="comment-written-date">
                   <div class="comment-written-date-text">2023.08.11 11:13</div>
@@ -191,27 +216,34 @@
           </div>
           <!-- @@아우터박스 -->
           <div class="board-outer-box">
-            <a class="board-inner-box" href="../../admin_notice/admin_noticeViewDetail/noticeViewDetail.html">
+            <a class="board-inner-box" href="../../community/freeboard/freeboardViewDetail/freeboardViewDetail.html">
               <!-- 이너박스 상단 -->
               <div class="board-inner-box-title">
                 <div class="board-inner-box-title-text">
-                  불법광고 게시글 제재 안내
+                  구력 2개월 테린이인데 라켓 추천 부탁드려요
                 </div>
               </div>
               <!-- 이너박스 중단 -->
               <div class="board-inner-box-content">
                 <div class="board-inner-box-content-text">
-                  안녕하세요. 최근 불법광고 게시글이 지속적으로 발견되어 발견즉시 사전통보 없이 제재에 들어갔음을 알려드립니다. 회원들의 
-                  원활한 사이트 이용을 위해 늘 노력하겠습니다. 감사합니다.
+                  이번에 테니스 라켓을 새로 구매하려고합니다. 라켓추천
+                  부탁드립니다. 이번에 테니스 라켓을 새로 구매하려고합니다.
+                  라켓추천 부탁드립니다.
                 </div>
               </div>
               <!-- 이너박스 하단 -->
               <div class="board-inner-box-view-comment">
                 <div class="comment-view">
-                  <img class="comment-view-img" src="img/view.png" alt="" />
+                  <img class="comment-view-img" src="../../resource/img/view.png" alt="" />
                 </div>
                 <div class="comment-view-cnt">
                   <div class="comment-view-cnt-text">112</div>
+                </div>
+                <div class="comment-comment">
+                  <img class="comment-comment-img" src="../../resource/img/comment.png" alt="" />
+                </div>
+                <div class="comment-comment-cnt">
+                  <div class="comment-comment-cnt-text">12</div>
                 </div>
                 <div class="comment-written-date">
                   <div class="comment-written-date-text">2023.08.11 11:13</div>
@@ -221,27 +253,34 @@
           </div>
           <!-- @@아우터박스 -->
           <div class="board-outer-box">
-            <a class="board-inner-box" href="../../admin_notice/admin_noticeViewDetail/noticeViewDetail.html">
+            <a class="board-inner-box" href="../../community/freeboard/freeboardViewDetail/freeboardViewDetail.html">
               <!-- 이너박스 상단 -->
               <div class="board-inner-box-title">
                 <div class="board-inner-box-title-text">
-                  불법광고 게시글 제재 안내
+                  구력 2개월 테린이인데 라켓 추천 부탁드려요
                 </div>
               </div>
               <!-- 이너박스 중단 -->
               <div class="board-inner-box-content">
                 <div class="board-inner-box-content-text">
-                  안녕하세요. 최근 불법광고 게시글이 지속적으로 발견되어 발견즉시 사전통보 없이 제재에 들어갔음을 알려드립니다. 회원들의 
-                  원활한 사이트 이용을 위해 늘 노력하겠습니다. 감사합니다.
+                  이번에 테니스 라켓을 새로 구매하려고합니다. 라켓추천
+                  부탁드립니다. 이번에 테니스 라켓을 새로 구매하려고합니다.
+                  라켓추천 부탁드립니다.
                 </div>
               </div>
               <!-- 이너박스 하단 -->
               <div class="board-inner-box-view-comment">
                 <div class="comment-view">
-                  <img class="comment-view-img" src="img/view.png" alt="" />
+                  <img class="comment-view-img" src="../../resource/img/view.png" alt="" />
                 </div>
                 <div class="comment-view-cnt">
                   <div class="comment-view-cnt-text">112</div>
+                </div>
+                <div class="comment-comment">
+                  <img class="comment-comment-img" src="../../resource/img/comment.png" alt="" />
+                </div>
+                <div class="comment-comment-cnt">
+                  <div class="comment-comment-cnt-text">12</div>
                 </div>
                 <div class="comment-written-date">
                   <div class="comment-written-date-text">2023.08.11 11:13</div>
@@ -249,6 +288,7 @@
               </div>
             </a>
           </div>
+          
           
         </section>
 
@@ -274,5 +314,6 @@
 
       </main>
     </div>
+
   </body>
 </html>
