@@ -15,12 +15,10 @@
 main{
     width: 1000px;
     height: auto;
+    margin: 100px auto;
+   
 }
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;    
-}
+
 
 .mate-detail-title-text{
     font-size: 20px;
