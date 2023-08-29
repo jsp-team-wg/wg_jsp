@@ -1,12 +1,15 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>자유게시판 글수정</title>
-    <link rel="stylesheet" href="freeboardEdit.css" />
+    <link rel="stylesheet" href="../../../resource/css/freeboardEdit.css" />
   </head>
   <body>
+  	<%@ include file="../../../headerLogin.jsp" %>
     <main>
       <!-- 자유게시판 글수정-->
       <section class="first-section">
@@ -43,7 +46,7 @@
         <section>
           <div class="pagebackComplete border-radius">
             <button type="button" 
-            onclick="location.href='../freeboardViewDetail/freeboardViewDetail.html'"
+            onclick="location.href='../freeboardViewDetail/freeboardViewDetailLogin.jsp'"
               class="pageback button-size border-radius bgRed colorWhite"
               name="pageback"
             >
@@ -51,7 +54,7 @@
             </button>
 
             <button type="button" 
-            onclick="location.href='../freeboardViewDetail/freeboardViewDetail.html'"
+            onclick="location.href='../freeboardViewDetail/freeboardViewDetailLogin.jsp'"
               class="complete button-size border-radius bgGreen colorWhite "
               name="complete"
             >
@@ -61,5 +64,6 @@
         </section>
       </form>
     </main>
+    <%@ include file="../../../footer.jsp" %>
   </body>
 </html>

@@ -24,17 +24,13 @@ padding: 0;
   color: white;
 }
 
-body {
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
-}
+
 main {
   width: 800px;
   height: 670px;
   display: flex;
   flex-direction: column;
-  margin: 100px 0;
+  margin: 100px auto;
 }
 form{
 }

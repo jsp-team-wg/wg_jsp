@@ -78,7 +78,7 @@ button {
 
 /* '커뮤니티 자유게시판' 텍스트 컨테이너 */
 .MainText-Container {
-    height: 120px;
+    height: 220px;
     display: flex;
     flex-direction: column;
     justify-content: end;
