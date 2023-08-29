@@ -1,33 +1,36 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>마이페이지 회원정보 수정</title>
     <link rel = "stylesheet" href = "../../resource/css/mateMatchQnaMyPage.css">
     <link rel="stylesheet" href="">
 </head>
 <body>
-  <main>
+	<%@ include file="../../headerLogin.jsp" %>
+  	<main>
     <aside>
         <section  class = "aside-box">
         <div class = "aside-member-box hover1">
             <div class = "aside-member-text-box">
-                <a href = "../mateMemberEditMyPage/mateMatchMyPageMemberEdit.html">
+                <a href = "../../myPage/mateMemberEditMyPage/mateMatchMyPageMemberEdit.jsp">
                 <span class = "aside-member-text white">회원정보 수정</span>
                 </a>
             </div>
         </div>
         <div class = "aside-matematch-box hover1">
           <div class = "aside-matematch-text-box">
-              <a href = "../mateFindMyPage/mateFindMyPage.html">
+              <a href = "../../myPage/mateFindMyPage/mateFindMyPage.jsp">
               <span class = "aside-matematch-text white">메이트 찾기</span>
               </a>
           </div>
         </div>
         <div class = "aside-qna-box hover1">
           <div class = "aside-qna-text-box">
-              <a href = "../mateMatchQnaMyPage/mateMatchQnaMyPage.html">
+              <a href = "../../myPage/mateMatchQnaMyPage/mateMatchQnaMyPage.jsp">
               <span class = "aside-qna-text white">Q&A</span>
               </a>
           </div>
@@ -39,7 +42,7 @@
       <section class = "accountmodify-form">
            <!-- @@아우터박스 -->
     <div class="board-outer-box">
-        <a class="board-inner-box" href="../../community/qna/qnaViewDetail/qnaViewDetail.html">
+        <a class="board-inner-box" href="../../community/qna/qnaViewDetail/qnaViewDetail.jsp">
           <!-- 이너박스 상단 -->
           <div class="board-inner-box-title">
             <div class="board-inner-box-title-text">
@@ -57,13 +60,13 @@
           <!-- 이너박스 하단 -->
           <div class="board-inner-box-view-comment">
             <div class="comment-view">
-              <img class="comment-view-img" src="img/view.png" alt="" />
+              <img class="comment-view-img" src="../../resource/img/view.png" alt="" />
             </div>
             <div class="comment-view-cnt">
               <div class="comment-view-cnt-text">112</div>
             </div>
             <div class="comment-comment">
-              <img class="comment-comment-img" src="img/comment.png" alt="" />
+              <img class="comment-comment-img" src="../../resource/img/comment.png" alt="" />
             </div>
             <div class="comment-comment-cnt">
               <div class="comment-comment-cnt-text">12</div>
@@ -75,7 +78,7 @@
         </a>
       </div>
       <div class="board-outer-box">
-        <a class="board-inner-box" href="../../community/qna/qnaViewDetail/qnaViewDetail.html">
+        <a class="board-inner-box" href="../../community/qna/qnaViewDetail/qnaViewDetail.jsp">
           <!-- 이너박스 상단 -->
           <div class="board-inner-box-title">
             <div class="board-inner-box-title-text">
@@ -93,13 +96,13 @@
           <!-- 이너박스 하단 -->
           <div class="board-inner-box-view-comment">
             <div class="comment-view">
-              <img class="comment-view-img" src="img/view.png" alt="" />
+              <img class="comment-view-img" src="../../resource/img/view.png" alt="" />
             </div>
             <div class="comment-view-cnt">
               <div class="comment-view-cnt-text">112</div>
             </div>
             <div class="comment-comment">
-              <img class="comment-comment-img" src="img/comment.png" alt="" />
+              <img class="comment-comment-img" src="../../resource/img/comment.png" alt="" />
             </div>
             <div class="comment-comment-cnt">
               <div class="comment-comment-cnt-text">12</div>
@@ -111,7 +114,7 @@
         </a>
       </div>
       <div class="board-outer-box">
-        <a class="board-inner-box" href="../../community/qna/qnaViewDetail/qnaViewDetail.html">
+        <a class="board-inner-box" href="../../community/qna/qnaViewDetail/qnaViewDetail.jsp">
           <!-- 이너박스 상단 -->
           <div class="board-inner-box-title">
             <div class="board-inner-box-title-text">
@@ -129,13 +132,13 @@
           <!-- 이너박스 하단 -->
           <div class="board-inner-box-view-comment">
             <div class="comment-view">
-              <img class="comment-view-img" src="img/view.png" alt="" />
+              <img class="comment-view-img" src="../../resource/img/view.png" alt="" />
             </div>
             <div class="comment-view-cnt">
               <div class="comment-view-cnt-text">112</div>
             </div>
             <div class="comment-comment">
-              <img class="comment-comment-img" src="img/comment.png" alt="" />
+              <img class="comment-comment-img" src="../../resource/img/comment.png" alt="" />
             </div>
             <div class="comment-comment-cnt">
               <div class="comment-comment-cnt-text">12</div>
@@ -147,7 +150,7 @@
         </a>
       </div>
       <div class="board-outer-box">
-        <a class="board-inner-box" href="../../community/qna/qnaViewDetail/qnaViewDetail.html">
+        <a class="board-inner-box" href="../../community/qna/qnaViewDetail/qnaViewDetail.jsp">
           <!-- 이너박스 상단 -->
           <div class="board-inner-box-title">
             <div class="board-inner-box-title-text">
@@ -165,13 +168,13 @@
           <!-- 이너박스 하단 -->
           <div class="board-inner-box-view-comment">
             <div class="comment-view">
-              <img class="comment-view-img" src="img/view.png" alt="" />
+              <img class="comment-view-img" src="../../resource/img/view.png" alt="" />
             </div>
             <div class="comment-view-cnt">
               <div class="comment-view-cnt-text">112</div>
             </div>
             <div class="comment-comment">
-              <img class="comment-comment-img" src="img/comment.png" alt="" />
+              <img class="comment-comment-img" src="../../resource/img/comment.png" alt="" />
             </div>
             <div class="comment-comment-cnt">
               <div class="comment-comment-cnt-text">12</div>
@@ -183,7 +186,7 @@
         </a>
       </div>
       <div class="board-outer-box">
-        <a class="board-inner-box" href="../../community/qna/qnaViewDetail/qnaViewDetail.html">
+        <a class="board-inner-box" href="../../community/qna/qnaViewDetail/qnaViewDetail.jsp">
           <!-- 이너박스 상단 -->
           <div class="board-inner-box-title">
             <div class="board-inner-box-title-text">
@@ -201,13 +204,13 @@
           <!-- 이너박스 하단 -->
           <div class="board-inner-box-view-comment">
             <div class="comment-view">
-              <img class="comment-view-img" src="img/view.png" alt="" />
+              <img class="comment-view-img" src="../../resource/img/view.png" alt="" />
             </div>
             <div class="comment-view-cnt">
               <div class="comment-view-cnt-text">112</div>
             </div>
             <div class="comment-comment">
-              <img class="comment-comment-img" src="img/comment.png" alt="" />
+              <img class="comment-comment-img" src="../../resource/img/comment.png" alt="" />
             </div>
             <div class="comment-comment-cnt">
               <div class="comment-comment-cnt-text">12</div>
@@ -219,7 +222,7 @@
         </a>
       </div>
       <div class="board-outer-box">
-        <a class="board-inner-box" href="../../community/qna/qnaViewDetail/qnaViewDetail.html">
+        <a class="board-inner-box" href="../../community/qna/qnaViewDetail/qnaViewDetail.jsp">
           <!-- 이너박스 상단 -->
           <div class="board-inner-box-title">
             <div class="board-inner-box-title-text">
@@ -237,13 +240,13 @@
           <!-- 이너박스 하단 -->
           <div class="board-inner-box-view-comment">
             <div class="comment-view">
-              <img class="comment-view-img" src="img/view.png" alt="" />
+              <img class="comment-view-img" src="../../resource/img/view.png" alt="" />
             </div>
             <div class="comment-view-cnt">
               <div class="comment-view-cnt-text">112</div>
             </div>
             <div class="comment-comment">
-              <img class="comment-comment-img" src="img/comment.png" alt="" />
+              <img class="comment-comment-img" src="../../resource/img/comment.png" alt="" />
             </div>
             <div class="comment-comment-cnt">
               <div class="comment-comment-cnt-text">12</div>
@@ -275,6 +278,6 @@
         </div>
      </div>
     </main>
-    
+    <%@ include file="../../footer.jsp" %>
 </body>
 </html>
