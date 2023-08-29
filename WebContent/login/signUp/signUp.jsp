@@ -1,14 +1,17 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원가입</title>
-    <link rel="stylesheet" href="signUp.css">
-    <script defer src="signUp.js"></script>
+    <link rel="stylesheet" href="../../resource/css/signUp.css">
+    <script defer src="../../resource/js/signUp.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
+    <%@ include file="../../../header.jsp" %>
     <div class="Area">
         <section class="MainText-Container">
             <div class="MainText-Style">회원가입</div>
@@ -112,12 +115,13 @@
                     </div>
 
                     <!-- 회원가입 완료 -->
-                    <button type="button" onclick="location.href='../../login/signIn/signIn.html'" class="SignUpDone-Container Shadow1">
+                    <button type="button" onclick="location.href='../signIn/signIn.jsp'" class="SignUpDone-Container Shadow1">
                         <span class="Text-Style1" >회원가입 완료</span>
                     </button>
                 </form>
             </div>
         </section>
     </div>
+    <%@ include file="../../../footer.jsp" %>
 </body>
 </html>

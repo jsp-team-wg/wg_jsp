@@ -1,10 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>자유게시판 상세보기</title>
-    <link rel="stylesheet" href="freeboardViewDetail.css" />
+    <link rel="stylesheet" href="../../../resource/css/freeboardViewDetail.css" />
     <!-- 구글 폰트 -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,6 +16,7 @@
     />
   </head>
   <body>
+    <%@ include file="../../../headerLogin.jsp" %>
     <!-- 커뮤니티(Q&A) 상세보기 전체 영역 -->
     <div class="Area">
       <!-- 위쪽 컨테이너 -->
@@ -67,14 +70,14 @@
               <button
                 class="Delete1"
                 type="button"
-                onclick="location.href='../freeboardList/freeboardList.html'"
+                onclick="location.href='../freeboardList/freeboardListLogin.jsp'"
               >
                 <span>삭제</span>
               </button>
               <button
                 class="Edit1"
                 type="button"
-                onclick="location.href='../freeboardEdit/freeboardEdit.html'"
+                onclick="location.href='../freeboardEdit/freeboardEditLogin.jsp'"
               >
                 <span>수정</span>
               </button>
@@ -89,11 +92,11 @@
         <div class="Icon-OuterContainer">
           <div class="Icon-InnerContainer">
             <div class="Icon-Margin">
-              <img class="Icon-Size1" src="img/View.png" alt="조회수" />
+              <img class="Icon-Size1" src="../../../resource/img/view.png" alt="조회수" />
               <div class="Font-Size">112</div>
             </div>
             <div class="Icon-Margin">
-              <img class="Icon-Size2" src="img/Review.png" alt="댓글수" />
+              <img class="Icon-Size2" src="../../../resource/img/comment.png" alt="댓글수" />
               <div class="Font-Size Font-Size2">12</div>
             </div>
           </div>
@@ -217,5 +220,6 @@
         </div>
       </section>
     </div>
+    <%@ include file="../../../footer.jsp" %>
   </body>
 </html>
