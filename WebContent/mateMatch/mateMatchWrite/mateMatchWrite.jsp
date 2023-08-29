@@ -1,19 +1,22 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+<html>
+<head>
+ <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../resource/css/mateMatchEdit.css" />
-    <title>메이트찾기 글수정</title>
+    <link rel="stylesheet" href="../../resource/css/mateMatchWrite.css" />
+    <script defer src="../../resource/js/mateMatchWrite.js"></script>
+    <title>메이트찾기 글작성</title>
   </head>
-  <%@ include file="../../header.jsp" %>
   <body>
+  <%@ include file="../../headerLogin.jsp" %>
     <main>
       <form action="">
         <!-- 카테고리 섹션 -->
         <section class="section-category">
           <div class="category-name">메이트찾기</div>
-          <div class="category-name2">메이트찾기 - 글수정</div>
+          <div class="category-name2">메이트찾기 - 글작성</div>
         </section>
         <!-- 내용입력 섹션 -->
         <section class="section-info">
@@ -23,8 +26,8 @@
             <div class="court-name-input">
               <input
                 class="court-name-input-text"
-                type="text"
-                placeholder="코트 이름 입력"
+                value="" type="text"
+                placeholder="코트 이름 입력" disabled
               />
             </div>
           </div>
@@ -34,16 +37,19 @@
             <div class="court-address-input-box1">
               <input
                 class="court-address-input-address"
-                type="text"
-                placeholder="테니스장 주소"
+                type="text" value=""
+                placeholder="테니스장 주소" disabled
               />
             </div>
             <div class="court-address-input-box2">
-              <button class="court-address-input-box2-button" type="">
+              <button class="court-address-input-box2-button" type=""
+              id="openPopup">
                 주소찾기
               </button>
             </div>
           </div>
+          <!-- 팝업 내용을 담을 공간 -->
+          <div id="popupContainer" style="display: none;"></div>
 
           <!-- 날짜 -->
           <div class="date">
@@ -59,17 +65,17 @@
             <div class="time-box2">
               <input
                 class="time-start-input"
-                type="text"
+                type="time"
                 placeholder="시작 시간"
               />
-              <div class="si">시</div>
+              <div class="si"></div>
               <div class="wave">~</div>
               <input
                 class="time-end-input"
-                type="text"
+                type="time"
                 placeholder="종료 시간"
               />
-              <div class="si">시</div>
+              <div class="si"></div>
             </div>
           </div>
 
@@ -181,13 +187,13 @@
 
         <!-- 버튼 섹션 -->
         <section class="section-button">
-          <a class="button-prev-a" href="../mateMatchViewDetail/mateMatchViewDetail.html"
+          <a class="button-prev-a" href="../../mateMatch/mateMatchList/mateMatchList.jsp"
             ><button class="button-prev">뒤로가기</button></a
           >
           <button class="button-submit" type="submit">작성완료</button>
         </section>
       </form>
     </main>
-    <%@ include file="../../header.jsp" %>
+    <%@ include file="../../footer.jsp" %>
   </body>
 </html>

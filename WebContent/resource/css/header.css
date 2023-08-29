@@ -13,8 +13,8 @@ header{
     z-index: 10;
     border-bottom: solid #d2d1d1;
     border-width: 1px;
-    left: 50%; /* 왼쪽에서 50% 위치에 */
-    transform: translateX(-50%); /* 왼쪽으로 반만큼 이동하여 중앙 정렬 */
+    left: 50%; /* �쇊履쎌뿉�꽌 50% �쐞移섏뿉 */
+    transform: translateX(-50%); /* �쇊履쎌쑝濡� 諛섎쭔�겮 �씠�룞�븯�뿬 以묒븰 �젙�젹 */
 }
 
 .main-header-container{
