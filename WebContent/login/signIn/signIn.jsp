@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -5,10 +7,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>로그인</title>
-    <link rel="stylesheet" href="signIn.css">
+    <link rel="stylesheet" href="../../resource/css/signIn.css">
 </head>
 
 <body>
+    <%@ include file="../../../header.jsp" %>
     <section class="section1-login">로그인</section>
 
     <section class="section2-input">
@@ -32,14 +35,14 @@
                 </div>
             </form>
             <button class="container-login-button" type="button" 
-            onclick="location.href='/mainPage/mainPageLogin.html'">
+            onclick="location.href='../../mainPage/mainPageLogin.jsp'">
                 <div class="container-login-button-text">
                     로그인
                 </div>
             </button>
 
             <div class="find-id-pw">
-                <a class="find-id-a" href="../findID/findID.html">
+                <a class="find-id-a" href="../findID/findID.jsp">
                     <div class="find-id">
                         <div class="find-id-text">
                             아이디 찾기
@@ -47,7 +50,7 @@
                     </div>
                 </a>
                 <div class="seperate-bar">|</div>
-                <a class="find-pw-a" href="../findPW/findPW.html">
+                <a class="find-pw-a" href="../findPW/findPW.jsp">
                     <div class="find-pw">
                         <div class="find-pw-text">
                             비밀번호 찾기
@@ -56,7 +59,7 @@
                 </a>
             </div>
             <div class="signup">
-                <a class="signup-a" href="../signUp/signUp.html">
+                <a class="signup-a" href="../signUp/signUp.jsp">
                     <div class="signup-text">
                         회원가입
                     </div>
@@ -65,6 +68,7 @@
 
         </div>
     </section>
+    <%@ include file="../../../footer.jsp" %>
 </body>
 
 </html>
