@@ -20,11 +20,12 @@ button {
     cursor: pointer;
 }
 .Area {
-    height: 1340px;
+    height: 700px;
     width: 1000px;
     display: flex;
     flex-direction: column;
     margin: auto;
+    margin-top: 50px;
 }
 /* 작성자 정보 칸 나누기 */
 .man{
