@@ -329,7 +329,7 @@
                     커뮤니티
                 </div>
                 <div class="main-section3-title-more">
-                    <a class="main-section3-title-more-tag" href="${pageContext.request.contextPath}/community/freeboard/freeboardList/freeboardList.jsp">
+                    <a class="main-section3-title-more-tag" href="${pageContext.request.contextPath}/community/freeboard/freeboardList/freeboardListLogin.jsp">
                         더보기
                     </a>
                 </div>
@@ -339,7 +339,7 @@
                     <div class="main-section3-section1">
                         <div class="main-section3-community-board">
                             <div class="main-section3-community-board-title">
-                                <a href="${pageContext.request.contextPath}/community/freeboard/freeboardViewDetail/freeboardViewDetail.jsp" class="main-section3-community-board-tag">
+                                <a href="${pageContext.request.contextPath}/community/freeboard/freeboardViewDetail/freeboardViewDetailLogin.jsp" class="main-section3-community-board-tag">
                                     구력 2개월 테린인데 라켓 추천부탁드려요 구력 2개월 테린인데 라켓 추천부탁드려요
                                 </a>
                             </div>
@@ -368,7 +368,7 @@
                         <hr>
                         <div class="main-section3-community-board">
                             <div class="main-section3-community-board-title">
-                                <a href="${pageContext.request.contextPath}/community/freeboard/freeboardViewDetail/freeboardViewDetail.jsp" class="main-section3-community-board-tag">
+                                <a href="${pageContext.request.contextPath}/community/freeboard/freeboardViewDetail/freeboardViewDetailLogin.jsp" class="main-section3-community-board-tag">
                                     구력 2개월 테린인데 라켓 추천부탁드려요 구력 2개월 테린인데 라켓 추천부탁드려요
                                 </a>
                             </div>
@@ -397,7 +397,7 @@
                         <hr>
                         <div class="main-section3-community-board">
                             <div class="main-section3-community-board-title">
-                                <a href="${pageContext.request.contextPath}/community/freeboard/freeboardViewDetail/freeboardViewDetail.jsp" class="main-section3-community-board-tag">
+                                <a href="${pageContext.request.contextPath}/community/freeboard/freeboardViewDetail/freeboardViewDetailLogin.jsp" class="main-section3-community-board-tag">
                                     구력 2개월 테린인데 라켓 추천부탁드려요 구력 2개월 테린인데 라켓 추천부탁드려요
                                 </a>
                             </div>
@@ -429,7 +429,7 @@
                     <div class="main-section3-section2">
                         <div class="main-section3-community-QA">
                             <div class="main-section3-community-QA-title">
-                                <a href="${pageContext.request.contextPath}/community/qna/qnaViewDetail/qnaViewDetail.jsp" class="main-section3-community-QA-tag">
+                                <a href="${pageContext.request.contextPath}/community/qna/qnaViewDetail/qnaViewDetailLogin.jsp" class="main-section3-community-QA-tag">
                                     구력 2개월 테린인데 라켓 추천부탁드려요 구력 2개월 테린인데 라켓 추천부탁드려요
                                 </a>
                             </div>
@@ -458,7 +458,7 @@
                         <hr>
                         <div class="main-section3-community-QA">
                             <div class="main-section3-community-QA-title">
-                                <a href="${pageContext.request.contextPath}/community/qna/qnaViewDetail/qnaViewDetail.jsp" class="main-section3-community-QA-tag">
+                                <a href="${pageContext.request.contextPath}/community/qna/qnaViewDetail/qnaViewDetailLogin.jsp" class="main-section3-community-QA-tag">
                                     구력 2개월 테린인데 라켓 추천부탁드려요 구력 2개월 테린인데 라켓 추천부탁드려요
                                 </a>
                             </div>
@@ -487,7 +487,7 @@
                         <hr>
                         <div class="main-section3-community-QA">
                             <div class="main-section3-community-QA-title">
-                                <a href="${pageContext.request.contextPath}/community/qna/qnaViewDetail/qnaViewDetail.jsp" class="main-section3-community-QA-tag">
+                                <a href="${pageContext.request.contextPath}/community/qna/qnaViewDetail/qnaViewDetailLogin.jsp" class="main-section3-community-QA-tag">
                                     구력 2개월 테린인데 라켓 추천부탁드려요 구력 2개월 테린인데 라켓 추천부탁드려요
                                 </a>
                             </div>

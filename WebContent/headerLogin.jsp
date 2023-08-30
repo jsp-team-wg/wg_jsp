@@ -30,7 +30,7 @@
                         </a>
                     </li>
                     <li class="main-header-category-list">
-                        <a href="${pageContext.request.contextPath}/community/freeboardList/freeboardList.jsp" class="main-header-category-communitytag">
+                        <a href="${pageContext.request.contextPath}/community/freeboard/freeboardList/freeboardListLogin.jsp" class="main-header-category-communitytag">
                         커뮤니티
                         </a>
                     </li>
@@ -40,12 +40,12 @@
             <article class = "main-sub-menu">
                 <ul class="main-sub-menu-ul">
                     <li class="main-sub-menu-li">
-                        <a href="${pageContext.request.contextPath}/community/freeboard/freeboardList/freeboardList.jsp" class="main-sub-menu-tag">
+                        <a href="${pageContext.request.contextPath}/community/freeboard/freeboardList/freeboardListLogin.jsp" class="main-sub-menu-tag">
                             자유게시판
                         </a>
                     </li>
                     <li class="main-sub-menu-li">
-                        <a href="${pageContext.request.contextPath}/community/qna/qnaList/qnaList.jsp" class="main-sub-menu-tag">
+                        <a href="${pageContext.request.contextPath}/community/qna/qnaList/qnaListLogin.jsp" class="main-sub-menu-tag">
                             Q&A
                         </a>
                     </li>
@@ -61,7 +61,7 @@
         <div class="main-header-service">
             <div class="main-header-service-mypage">
                 <a class="main-header-service-mypage-tag"
-                href="${pageContext.request.contextPath}/myPage/mateMemberEditMyPage/mateMatchMyPageMemberEdit.jsp">
+                href="${pageContext.request.contextPath}/myPage/mateMemberEditMyPage/mateMemberEditMyPage.jsp">
                     <div class="main-header-nickname">
                         JinHyukKang
                     </div>님
