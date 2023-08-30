@@ -41,7 +41,6 @@
 			<section>
 				<div class="pagebackComplete border-radius">
 					<button type="button"
-						href="../admin_noticeList/admin_noticeList.html"
 						onclick="location.href='${pageContext.request.contextPath}/admin/adminNotice/adminNoticeList/adminNoticeList.jsp'"
 						class="pageback button-size border-radius bgRed colorWhite"
 						name="pageback">뒤로가기</button>
