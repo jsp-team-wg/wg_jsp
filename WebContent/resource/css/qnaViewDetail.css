@@ -20,7 +20,7 @@ button {
     cursor: pointer;
 }
 .Area {
-    height: 1340px;
+    height: 1390px;
     width: 1000px;
     display: flex;
     flex-direction: column;
@@ -213,6 +213,7 @@ button {
     width: 100%;
     background-color: rgb(240, 240, 240);
     border-radius: 6px;
+    margin-bottom: 50px;
 }
 /* 아이콘 영역 */
 .Icon-OuterContainer {
