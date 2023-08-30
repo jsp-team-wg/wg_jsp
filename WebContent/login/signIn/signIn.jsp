@@ -35,14 +35,14 @@
                 </div>
             </form>
             <button class="container-login-button" type="button" 
-            onclick="location.href='../../mainPage/mainPageLogin.jsp'">
+            onclick="location.href='../../indexLogin.jsp'">
                 <div class="container-login-button-text">
                     로그인
                 </div>
             </button>
 
             <div class="find-id-pw">
-                <a class="find-id-a" href="../findID/findID.jsp">
+                <a class="find-id-a" href="../findId/findId.jsp">
                     <div class="find-id">
                         <div class="find-id-text">
                             아이디 찾기
@@ -50,7 +50,7 @@
                     </div>
                 </a>
                 <div class="seperate-bar">|</div>
-                <a class="find-pw-a" href="../findPW/findPW.jsp">
+                <a class="find-pw-a" href="../findPw/findPw.jsp">
                     <div class="find-pw">
                         <div class="find-pw-text">
                             비밀번호 찾기
