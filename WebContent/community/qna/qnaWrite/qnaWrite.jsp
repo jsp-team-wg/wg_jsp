@@ -48,7 +48,7 @@
 						name="pageback">뒤로가기</button>
 
 					<button type="button"
-						onclick="location.href='./qnaViewDetailLogin.jsp'"
+						onclick="location.href='../qnaViewDetail/qnaViewDetailLogin.jsp'"
 						class="complete button-size border-radius bgGreen colorWhite "
 						name="complete">작성완료</button>
 				</div>
