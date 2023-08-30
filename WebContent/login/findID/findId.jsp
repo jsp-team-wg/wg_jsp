@@ -10,23 +10,23 @@
 </head>
 <body>
 	<%@ include file="../../../header.jsp"%>
-	<main class="">
-		<section>
+	<section class= "mainSection">
+		<main class="">
 			<div class="findPwH2">
 				<h2>아이디 찾기</h2>
 			</div>
 			<form action="">
+				<div class="findPwText">
+					<p>*기존의 가입하신정보가 일치하면 아이디를 알려드립니다</p>
+				</div>
 				<div class="findPwBorder">
-					<div class="findPwText">
-						<p>기존의 가입하신정보가 일치하면 아이디를 알려드립니다</p>
-					</div>
 					<div class="findPwInput">
-						<div style="margin-top: 10px;">
+						<div class="inputGroup">
 							<div>이름</div>
 							<input type="text" name="userName" id="userName"
 								placeholder="ex) 홍길동" />
 						</div>
-						<div style="margin-top: 10px;">
+						<div class="inputGroup">
 							<div>가입한 이메일</div>
 							<input type="text" name="userEmail" id="userEmail"
 								placeholder="ex) honggildong@naver.com" />
@@ -46,13 +46,12 @@
 					</div>
 				</div>
 			</form>
-		</section>
-		<div>
-			<a onclick="alert('입력하신 정보가 일치하지 않아 아이디를 찾지 못했습니다.');"
-				style="cursor: pointer">아이디 찾기 실패</a>
-		</div>
-	</main>
-	<%@ include file="../../../footer.jsp"%>
-
+			<div>
+				<a onclick="alert('입력하신 정보가 일치하지 않아 아이디를 찾지 못했습니다.');"
+					style="cursor: pointer">아이디 찾기 실패</a>
+			</div>
+		</main>
+	</section>
 </body>
+<%@ include file="../../../footer.jsp"%>
 </html>

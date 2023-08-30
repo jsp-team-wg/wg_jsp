@@ -30,13 +30,13 @@
 	color: white;
 }
 
-body {
+body {/*
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 	flex-wrap: wrap;
-	align-content: center;
+	align-content: center;*/
 }
 
 main {
