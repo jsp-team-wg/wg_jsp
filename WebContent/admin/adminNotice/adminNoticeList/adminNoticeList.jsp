@@ -6,7 +6,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>공지사항 관리</title>
-        <link rel="stylesheet" href="../../../resource/css/adminNoticeList.css" />
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/resource/css/adminNoticeList.css" />
       </head>
       <body>
         <div class="container">
@@ -14,27 +14,27 @@
           <aside>
             <div class="aside-spacing"></div>
             <section class="member">
-              <a class="member-a" href="../../admin_member/admin_member.html">
+              <a class="member-a" href="${pageContext.request.contextPath}/admin/adminMember/adminMember.jsp">
                 <div class="member-text">회원관리</div>
               </a>
             </section>
             <section class="board-mate">
-              <a class="board-mate-a" href="../../admin_mateMatch/admin_mateMatch.html">
+              <a class="board-mate-a" href="${pageContext.request.contextPath}/admin/adminMateMatch/adminMateMatch.jsp">
                 <div class="board-mate-text">메이트찾기 관리</div>
               </a>
             </section>
             <section class="board-free">
-              <a class="board-free-a" href="../../admin_freeBoard/admin_freeBoard.html">
+              <a class="board-free-a" href="${pageContext.request.contextPath}/admin/adminFreeBoard/adminFreeBoard.jsp">
                 <div class="board-free-text">자유게시판 관리</div>
               </a>
             </section>
             <section class="board-qna">
-              <a class="board-qna-a" href="../../admin_qna/admin_qna.html">
+              <a class="board-qna-a" href="${pageContext.request.contextPath}/admin/adminQna/adminQna.jsp">
                 <div class="board-qna-text">Q&A 관리</div>
               </a>
             </section>
             <section class="board-notification">
-              <a class="board-notification-a" href="../../admin_notice/admin_noticeList/admin_noticeList.html">
+              <a class="board-notification-a" href="${pageContext.request.contextPath}/admin/adminNotice/adminNoticeList/adminNoticeList.jsp">
                 <div class="board-notification-text">공지사항 관리</div>
               </a>
             </section>
@@ -52,7 +52,7 @@
             
               <!-- 글쓰기버튼 -->
               <div class="section-top-write">
-                <a class="section-top-write-a" href="../admin_noticeViewDetail/noticeViewDetail.html">
+                <a class="section-top-write-a" href="${pageContext.request.contextPath}/admin/adminNotice/adminNoticeWrite/adminNoticeWrite.jsp">
                     <button class="button-write">글쓰기</button>
                 </a>
               </div>
@@ -73,7 +73,7 @@
     
               <!-- @@아우터박스 -->
               <div class="board-outer-box">
-                <a class="board-inner-box" href="../../admin_notice/admin_noticeViewDetail/noticeViewDetail.html">
+                <a class="board-inner-box" href="${pageContext.request.contextPath}/community/notice/noticeViewDetail/noticeViewDetail.jsp">
                   <!-- 이너박스 상단 -->
                   <div class="board-inner-box-title">
                     <div class="board-inner-box-title-text">
@@ -90,7 +90,7 @@
                   <!-- 이너박스 하단 -->
                   <div class="board-inner-box-view-comment">
                     <div class="comment-view">
-                      <img class="comment-view-img" src="../../../resource/img/comment.png" alt="" />
+                      <img class="comment-view-img" src="${pageContext.request.contextPath}/resource/img/view.png" alt="" />
                     </div>
                     <div class="comment-view-cnt">
                       <div class="comment-view-cnt-text">112</div>
@@ -101,9 +101,10 @@
                   </div>
                 </a>
               </div>
-              <!-- @@아우터박스 -->
+              
+               <!-- @@아우터박스 -->
               <div class="board-outer-box">
-                <a class="board-inner-box" href="../../admin_notice/admin_noticeViewDetail/noticeViewDetail.html">
+                <a class="board-inner-box" href="${pageContext.request.contextPath}/community/notice/noticeViewDetail/noticeViewDetail.jsp">
                   <!-- 이너박스 상단 -->
                   <div class="board-inner-box-title">
                     <div class="board-inner-box-title-text">
@@ -120,7 +121,7 @@
                   <!-- 이너박스 하단 -->
                   <div class="board-inner-box-view-comment">
                     <div class="comment-view">
-                      <img class="comment-view-img" src="../../../resource/img/comment.png" alt="" />
+                      <img class="comment-view-img" src="${pageContext.request.contextPath}/resource/img/view.png" alt="" />
                     </div>
                     <div class="comment-view-cnt">
                       <div class="comment-view-cnt-text">112</div>
@@ -131,9 +132,9 @@
                   </div>
                 </a>
               </div>
-              <!-- @@아우터박스 -->
+               <!-- @@아우터박스 -->
               <div class="board-outer-box">
-                <a class="board-inner-box" href="../../admin_notice/admin_noticeViewDetail/noticeViewDetail.html">
+                <a class="board-inner-box" href="${pageContext.request.contextPath}/community/notice/noticeViewDetail/noticeViewDetail.jsp">
                   <!-- 이너박스 상단 -->
                   <div class="board-inner-box-title">
                     <div class="board-inner-box-title-text">
@@ -150,7 +151,7 @@
                   <!-- 이너박스 하단 -->
                   <div class="board-inner-box-view-comment">
                     <div class="comment-view">
-                      <img class="comment-view-img" src="../../../resource/img/comment.png" alt="" />
+                      <img class="comment-view-img" src="${pageContext.request.contextPath}/resource/img/view.png" alt="" />
                     </div>
                     <div class="comment-view-cnt">
                       <div class="comment-view-cnt-text">112</div>
@@ -161,9 +162,9 @@
                   </div>
                 </a>
               </div>
-              <!-- @@아우터박스 -->
+               <!-- @@아우터박스 -->
               <div class="board-outer-box">
-                <a class="board-inner-box" href="../../admin_notice/admin_noticeViewDetail/noticeViewDetail.html">
+                <a class="board-inner-box" href="${pageContext.request.contextPath}/community/notice/noticeViewDetail/noticeViewDetail.jsp">
                   <!-- 이너박스 상단 -->
                   <div class="board-inner-box-title">
                     <div class="board-inner-box-title-text">
@@ -180,7 +181,7 @@
                   <!-- 이너박스 하단 -->
                   <div class="board-inner-box-view-comment">
                     <div class="comment-view">
-                      <img class="comment-view-img" src="../../../resource/img/comment.png" alt="" />
+                      <img class="comment-view-img" src="${pageContext.request.contextPath}/resource/img/view.png" alt="" />
                     </div>
                     <div class="comment-view-cnt">
                       <div class="comment-view-cnt-text">112</div>
@@ -191,9 +192,9 @@
                   </div>
                 </a>
               </div>
-              <!-- @@아우터박스 -->
+               <!-- @@아우터박스 -->
               <div class="board-outer-box">
-                <a class="board-inner-box" href="../../admin_notice/admin_noticeViewDetail/noticeViewDetail.html">
+                <a class="board-inner-box" href="${pageContext.request.contextPath}/community/notice/noticeViewDetail/noticeViewDetail.jsp">
                   <!-- 이너박스 상단 -->
                   <div class="board-inner-box-title">
                     <div class="board-inner-box-title-text">
@@ -210,7 +211,7 @@
                   <!-- 이너박스 하단 -->
                   <div class="board-inner-box-view-comment">
                     <div class="comment-view">
-                      <img class="comment-view-img" src="../../../resource/img/comment.png" alt="" />
+                      <img class="comment-view-img" src="${pageContext.request.contextPath}/resource/img/view.png" alt="" />
                     </div>
                     <div class="comment-view-cnt">
                       <div class="comment-view-cnt-text">112</div>
@@ -221,9 +222,9 @@
                   </div>
                 </a>
               </div>
-              <!-- @@아우터박스 -->
+               <!-- @@아우터박스 -->
               <div class="board-outer-box">
-                <a class="board-inner-box" href="../../admin_notice/admin_noticeViewDetail/noticeViewDetail.html">
+                <a class="board-inner-box" href="${pageContext.request.contextPath}/community/notice/noticeViewDetail/noticeViewDetail.jsp">
                   <!-- 이너박스 상단 -->
                   <div class="board-inner-box-title">
                     <div class="board-inner-box-title-text">
@@ -240,7 +241,7 @@
                   <!-- 이너박스 하단 -->
                   <div class="board-inner-box-view-comment">
                     <div class="comment-view">
-                      <img class="comment-view-img" src="../../../resource/img/comment.png" alt="" />
+                      <img class="comment-view-img" src="${pageContext.request.contextPath}/resource/img/view.png" alt="" />
                     </div>
                     <div class="comment-view-cnt">
                       <div class="comment-view-cnt-text">112</div>

@@ -1,10 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>공지사항 상세보기</title>
-    <link rel="stylesheet" href="noticeViewDetail.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resource/css/noticeViewDetail.css" />
     <!-- 구글 폰트 -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,6 +16,7 @@
     />
   </head>
   <body>
+  <%@ include file="../../../header.jsp" %>
     <!-- 커뮤니티(공지사항) 상세보기 전체 영역 -->
     <div class="Area">
       <!-- 위쪽 컨테이너 -->
@@ -68,14 +71,14 @@
               <button
                 class="Delete1"
                 type="button"
-                onclick="location.href='../noticeList/noticeList.html'"
+                onclick="location.href='${pageContext.request.contextPath}/community/notice/noticeList/noticeList.jsp'"
               >
                 <span>삭제</span>
               </button>
               <button
                 class="Edit1"
                 type="button"
-                onclick="location.href='../../../admin/admin_notice/admin_notice_edit/admin_notice_edit.html'"
+                onclick="location.href='${pageContext.request.contextPath}/admin/adminNotice/adminNoticeEdit/adminNoticeEdit.jsp'"
               >
                 <span>수정</span>
               </button>
@@ -84,5 +87,6 @@
         </form>
       </section>
     </div>
+    <%@ include file="../../../footer.jsp" %>
   </body>
 </html>

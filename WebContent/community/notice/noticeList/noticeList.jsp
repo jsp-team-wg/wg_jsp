@@ -1,28 +1,31 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>공지사항</title>
-    <link rel="stylesheet" href="noticeList.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resource/css/noticeList.css" />
   </head>
   <body>
+  <%@ include file="../../../header.jsp" %>
     <div class="container">
        <!-- 좌측 어사이드 -->
        <aside>
         <div class="aside-spacing"></div>
         <section class="section-freeboard">
-          <a class="freeboard-a" href="/community/freeboard/freeboardList/freeboardList.html">
+          <a class="freeboard-a" href="${pageContext.request.contextPath}/community/freeboard/freeboardList/freeboardList.jsp">
             <div class="freeboard">자유게시판</div>
           </a>
         </section>
         <section class="section-qna">
-          <a class="qna-a" href="/community/qna/qnaList/qnaList.html">
+          <a class="qna-a" href="${pageContext.request.contextPath}/community/qna/qnaList/qnaList.jsp">
             <div class="qna">Q&A</div>
           </a>
         </section>
         <section class="section-notice">
-          <a class="notice-a" href="/community/notice/noticeList/noticeList.html">
+          <a class="notice-a" href="${pageContext.request.contextPath}/community/notice/noticeList/noticeList.jsp">
             <div class="notice">공지사항</div>
           </a>
         </section>
@@ -54,7 +57,7 @@
 
           <!-- @@아우터박스 -->
           <div class="board-outer-box">
-            <a class="board-inner-box" href="../noticeViewDetail/noticeViewDetail.html">
+            <a class="board-inner-box" href="${pageContext.request.contextPath}/community/notice/noticeViewDetail/noticeViewDetail.jsp">
               <!-- 이너박스 상단 -->
               <div class="board-inner-box-title">
                 <div class="board-inner-box-title-text">
@@ -72,13 +75,13 @@
               <!-- 이너박스 하단 -->
               <div class="board-inner-box-view-comment">
                 <div class="comment-view">
-                  <img class="comment-view-img" src="img/view.png" alt="" />
+                  <img class="comment-view-img" src="${pageContext.request.contextPath}/resource/img/view.png" alt="" />
                 </div>
                 <div class="comment-view-cnt">
                   <div class="comment-view-cnt-text">112</div>
                 </div>
                 <div class="comment-comment">
-                  <img class="comment-comment-img" src="img/comment.png" alt="" />
+                  <img class="comment-comment-img" src="${pageContext.request.contextPath}/resource/img/comment.png" alt="" />
                 </div>
                 <div class="comment-comment-cnt">
                   <div class="comment-comment-cnt-text">12</div>
@@ -89,9 +92,10 @@
               </div>
             </a>
           </div>
+          
           <!-- @@아우터박스 -->
           <div class="board-outer-box">
-            <a class="board-inner-box" href="../noticeViewDetail/noticeViewDetail.html">
+            <a class="board-inner-box" href="${pageContext.request.contextPath}/community/notice/noticeViewDetail/noticeViewDetail.jsp">
               <!-- 이너박스 상단 -->
               <div class="board-inner-box-title">
                 <div class="board-inner-box-title-text">
@@ -109,13 +113,13 @@
               <!-- 이너박스 하단 -->
               <div class="board-inner-box-view-comment">
                 <div class="comment-view">
-                  <img class="comment-view-img" src="img/view.png" alt="" />
+                  <img class="comment-view-img" src="${pageContext.request.contextPath}/resource/img/view.png" alt="" />
                 </div>
                 <div class="comment-view-cnt">
                   <div class="comment-view-cnt-text">112</div>
                 </div>
                 <div class="comment-comment">
-                  <img class="comment-comment-img" src="img/comment.png" alt="" />
+                  <img class="comment-comment-img" src="${pageContext.request.contextPath}/resource/img/comment.png" alt="" />
                 </div>
                 <div class="comment-comment-cnt">
                   <div class="comment-comment-cnt-text">12</div>
@@ -126,9 +130,10 @@
               </div>
             </a>
           </div>
+          
           <!-- @@아우터박스 -->
           <div class="board-outer-box">
-            <a class="board-inner-box" href="../noticeViewDetail/noticeViewDetail.html">
+            <a class="board-inner-box" href="${pageContext.request.contextPath}/community/notice/noticeViewDetail/noticeViewDetail.jsp">
               <!-- 이너박스 상단 -->
               <div class="board-inner-box-title">
                 <div class="board-inner-box-title-text">
@@ -146,13 +151,13 @@
               <!-- 이너박스 하단 -->
               <div class="board-inner-box-view-comment">
                 <div class="comment-view">
-                  <img class="comment-view-img" src="img/view.png" alt="" />
+                  <img class="comment-view-img" src="${pageContext.request.contextPath}/resource/img/view.png" alt="" />
                 </div>
                 <div class="comment-view-cnt">
                   <div class="comment-view-cnt-text">112</div>
                 </div>
                 <div class="comment-comment">
-                  <img class="comment-comment-img" src="img/comment.png" alt="" />
+                  <img class="comment-comment-img" src="${pageContext.request.contextPath}/resource/img/comment.png" alt="" />
                 </div>
                 <div class="comment-comment-cnt">
                   <div class="comment-comment-cnt-text">12</div>
@@ -163,9 +168,10 @@
               </div>
             </a>
           </div>
+          
           <!-- @@아우터박스 -->
           <div class="board-outer-box">
-            <a class="board-inner-box" href="../noticeViewDetail/noticeViewDetail.html">
+            <a class="board-inner-box" href="${pageContext.request.contextPath}/community/notice/noticeViewDetail/noticeViewDetail.jsp">
               <!-- 이너박스 상단 -->
               <div class="board-inner-box-title">
                 <div class="board-inner-box-title-text">
@@ -183,13 +189,13 @@
               <!-- 이너박스 하단 -->
               <div class="board-inner-box-view-comment">
                 <div class="comment-view">
-                  <img class="comment-view-img" src="img/view.png" alt="" />
+                  <img class="comment-view-img" src="${pageContext.request.contextPath}/resource/img/view.png" alt="" />
                 </div>
                 <div class="comment-view-cnt">
                   <div class="comment-view-cnt-text">112</div>
                 </div>
                 <div class="comment-comment">
-                  <img class="comment-comment-img" src="img/comment.png" alt="" />
+                  <img class="comment-comment-img" src="${pageContext.request.contextPath}/resource/img/comment.png" alt="" />
                 </div>
                 <div class="comment-comment-cnt">
                   <div class="comment-comment-cnt-text">12</div>
@@ -200,9 +206,10 @@
               </div>
             </a>
           </div>
+          
           <!-- @@아우터박스 -->
           <div class="board-outer-box">
-            <a class="board-inner-box" href="../noticeViewDetail/noticeViewDetail.html">
+            <a class="board-inner-box" href="${pageContext.request.contextPath}/community/notice/noticeViewDetail/noticeViewDetail.jsp">
               <!-- 이너박스 상단 -->
               <div class="board-inner-box-title">
                 <div class="board-inner-box-title-text">
@@ -220,13 +227,13 @@
               <!-- 이너박스 하단 -->
               <div class="board-inner-box-view-comment">
                 <div class="comment-view">
-                  <img class="comment-view-img" src="img/view.png" alt="" />
+                  <img class="comment-view-img" src="${pageContext.request.contextPath}/resource/img/view.png" alt="" />
                 </div>
                 <div class="comment-view-cnt">
                   <div class="comment-view-cnt-text">112</div>
                 </div>
                 <div class="comment-comment">
-                  <img class="comment-comment-img" src="img/comment.png" alt="" />
+                  <img class="comment-comment-img" src="${pageContext.request.contextPath}/resource/img/comment.png" alt="" />
                 </div>
                 <div class="comment-comment-cnt">
                   <div class="comment-comment-cnt-text">12</div>
@@ -237,9 +244,10 @@
               </div>
             </a>
           </div>
+          
           <!-- @@아우터박스 -->
           <div class="board-outer-box">
-            <a class="board-inner-box" href="../noticeViewDetail/noticeViewDetail.html">
+            <a class="board-inner-box" href="${pageContext.request.contextPath}/community/notice/noticeViewDetail/noticeViewDetail.jsp">
               <!-- 이너박스 상단 -->
               <div class="board-inner-box-title">
                 <div class="board-inner-box-title-text">
@@ -257,13 +265,13 @@
               <!-- 이너박스 하단 -->
               <div class="board-inner-box-view-comment">
                 <div class="comment-view">
-                  <img class="comment-view-img" src="img/view.png" alt="" />
+                  <img class="comment-view-img" src="${pageContext.request.contextPath}/resource/img/view.png" alt="" />
                 </div>
                 <div class="comment-view-cnt">
                   <div class="comment-view-cnt-text">112</div>
                 </div>
                 <div class="comment-comment">
-                  <img class="comment-comment-img" src="img/comment.png" alt="" />
+                  <img class="comment-comment-img" src="${pageContext.request.contextPath}/resource/img/comment.png" alt="" />
                 </div>
                 <div class="comment-comment-cnt">
                   <div class="comment-comment-cnt-text">12</div>
@@ -274,6 +282,7 @@
               </div>
             </a>
           </div>
+          
           
         </section>
 
@@ -300,5 +309,6 @@
 
       </main>
     </div>
+    <%@ include file="../../../footer.jsp" %>
   </body>
 </html>
