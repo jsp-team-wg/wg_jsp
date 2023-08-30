@@ -14,3 +14,13 @@ comminity.addEventListener('mouseout', () => {
 subMenu.addEventListener('mouseout', () => {
     subMenu.style.display = 'none';
 });
+
+//로그아웃 confirm
+function confirmLogout() {
+    if (confirm("로그아웃 하시겠습니까?")) {
+        alert("정상적으로 로그아웃 되었습니다");
+        return true;
+    } else {
+        return false;
+    }
+}
