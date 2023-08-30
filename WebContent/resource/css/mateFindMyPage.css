@@ -12,17 +12,14 @@
     /* border: 1px solid black; */
 }
 
-body {
-display: flex;
-justify-content:  center;
-align-items: center;
-}
-
 main {
   width: 1000px;
   height: 860px;
   display: flex;
   background-color: rgb(214, 247, 255);
+  margin: 100px auto;
+  justify-content: center;
+  margin-top: 100px;
   }
 
   a{
