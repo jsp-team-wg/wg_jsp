@@ -12,9 +12,8 @@
 
 <body>
     <%@ include file="../../../header.jsp" %>
-    
     <section class="section1-login">로그인</section>
-	
+
     <section class="section2-input">
 
         <div class="container">
@@ -30,20 +29,20 @@
                 <div class="container-pw-text">비밀번호</div>
             </div>
 
-            <form action = "">
+            <form action="">
                 <div class="container-pw-input">
                     <input class="container-pw-input-box" type="text" placeholder=" 비밀번호를 입력해주세요" name="">
                 </div>
             </form>
             <button class="container-login-button" type="button" 
-            onclick="location.href='../../index.jsp'">
+            onclick="location.href='../../mainPage/mainPageLogin.jsp'">
                 <div class="container-login-button-text">
                     로그인
                 </div>
             </button>
 
             <div class="find-id-pw">
-                <a class="find-id-a" href="../findId/findId.jsp">
+                <a class="find-id-a" href="../findID/findID.jsp">
                     <div class="find-id">
                         <div class="find-id-text">
                             아이디 찾기
@@ -51,7 +50,7 @@
                     </div>
                 </a>
                 <div class="seperate-bar">|</div>
-                <a class="find-pw-a" href="../findPw/findPw.jsp">
+                <a class="find-pw-a" href="../findPW/findPW.jsp">
                     <div class="find-pw">
                         <div class="find-pw-text">
                             비밀번호 찾기
