@@ -6,7 +6,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>공지사항 글수정</title>
-        <link rel="stylesheet" href="../../../resource/css/adminNoticeEdit.css" />
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/resource/css/adminNoticeEdit.css" />
       </head>
       <body>
         
@@ -46,7 +46,7 @@
             <section>
               <div class="pagebackComplete border-radius">
                 <button type="button" 
-                onclick="location.href='../admin_noticeViewDetail/noticeViewDetail.html'"
+                onclick="location.href='${pageContext.request.contextPath}/community/notice/noticeViewDetail/noticeViewDetail.jsp'"
                   class="pageback button-size border-radius bgRed colorWhite"
                   name="pageback"
                 >
@@ -54,7 +54,7 @@
                 </button>
     
                 <button type="button"
-                onclick="location.href='../admin_noticeViewDetail/noticeViewDetail.html'"
+                onclick="location.href='${pageContext.request.contextPath}/community/notice/noticeViewDetail/noticeViewDetail.jsp'"
                   class="complete button-size border-radius bgGreen colorWhite "
                   name="complete"
                 >
