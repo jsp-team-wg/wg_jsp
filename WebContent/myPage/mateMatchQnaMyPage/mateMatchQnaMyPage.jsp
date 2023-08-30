@@ -16,7 +16,7 @@
         <section  class = "aside-box">
         <div class = "aside-member-box hover1">
             <div class = "aside-member-text-box">
-                <a href = "../../myPage/mateMemberEditMyPage/mateMatchMyPageMemberEdit.jsp">
+                <a href = "../../myPage/mateMemberEditMyPage/mateMemberEditMyPage.jsp">
                 <span class = "aside-member-text white">회원정보 수정</span>
                 </a>
             </div>
