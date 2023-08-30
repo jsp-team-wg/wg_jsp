@@ -16,11 +16,19 @@
 
 
 body {
-  display: flex;
+  /*display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #fffffa;
+  flex-direction: column;*/
+}
+.mainSection{
+	  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*height: 100vh;*/
+  margin-top : 300px;
+  margin-bottom : 50px;
   flex-direction: column;
 }
 
@@ -52,8 +60,15 @@ body {
 }
 
 .findPwH2 {
-  text-align: center;
-  margin: 30px;
+	text-align: center;
+	margin-top: -144px;
+	margin-bottom: 70px;
+}
+.findPwText{
+	color: red;
+	font-size: 10px;
+	text-align: left;
+	width: 500px
 }
 
 .findPwBorder {

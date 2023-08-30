@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="../../../resource/css/qnaViewDetail.css" />
 <!-- 구글 폰트 -->
 </head>
-<body style="display: block; margin: 100px 0;">
+<body>
 	<%@ include file="../../../header.jsp"%>
 	<!-- 커뮤니티(Q&A) 상세보기 전체 영역 -->
 	<div class="Area">
@@ -59,7 +59,7 @@
 					<div class="Button-InnerContainer1">
 						<button class="Delete1" type="button"
 							onclick="location.href='../qnaList/qnaList.jsp'">
-							<span>삭제</span>
+							<span>뒤로가기</span>
 						</button>
 						<button class="Edit1" type="button"
 							onclick="location.href='../qnaEdit/qnaEdit.jsp'">

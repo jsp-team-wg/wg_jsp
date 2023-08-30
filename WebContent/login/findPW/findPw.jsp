@@ -6,21 +6,21 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>비밀번호 변경</title>
-<link rel="stylesheet" href="../../resource/css/findPW.css" />
+<link rel="stylesheet" href="../../resource/css/findPw.css" />
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 	<%@ include file="../../header.jsp"%>
 	<main class="container">
-		<section>
+		<section class="mainSection">
 			<div class="findPwH2">
 				<h2>비밀번호 찾기</h2>
 			</div>
 			<form action="">
-				<div class="findPwBorder">
 					<div class="findPwText">
-						<p>기존의 가입하신정보가 일치하면 비밀번호일부를 알려 드립니다</p>
+						<p>*기존의 가입하신정보가 일치하면 비밀번호일부를 알려 드립니다</p>
 					</div>
+				<div class="findPwBorder">
 					<div class="findPwInput">
 						<div class="inputGroup">
 							<div class="inputLabel">가입한 아이디</div>

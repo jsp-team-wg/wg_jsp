@@ -8,7 +8,7 @@
 <title>Q&A</title>
 <link rel="stylesheet" href="../../../resource/css/qnaList.css" />
 </head>
-<body style="display: block; margin: 100px 0;">
+<body>
 	<%@ include file="../../../headerLogin.jsp"%>
 	<div class="container">
 		<!-- 좌측 어사이드 -->
@@ -44,7 +44,7 @@
 				</div>
 				<!-- 글쓰기버튼 -->
 				<div class="section-top-write">
-					<a class="section-top-write-a" href="../qnaWrite/qnaWriteLogin.jsp">
+					<a class="section-top-write-a" href="../qnaWrite/qnaWrite.jsp">
 						<button class="button-write">글쓰기</button>
 					</a>
 				</div>

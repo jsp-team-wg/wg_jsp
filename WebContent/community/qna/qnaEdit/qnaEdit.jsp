@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="../../../resource/css/qnaEdit.css" />
 </head>
 <body>
-	<%@ include file="../../../header.jsp"%>
+	<%@ include file="../../../headerLogin.jsp"%>
 	<main >
 		<!-- 자유게시판 글수정-->
 		<section class="first-section">

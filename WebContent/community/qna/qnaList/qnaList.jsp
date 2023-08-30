@@ -8,7 +8,7 @@
 <title>Q&A</title>
 <link rel="stylesheet" href="../../../resource/css/qnaList.css" />
 </head>
-<body style="display: block; margin: 100px 0;">
+<body>
 	<%@ include file="../../../header.jsp"%>
 	<div class="container">
 		<!-- 좌측 어사이드 -->

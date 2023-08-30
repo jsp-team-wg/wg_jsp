@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="../../../resource/css/qnaWrite.css" />
 </head>
 <body>
-	<%@ include file="../../../header.jsp"%>
+	<%@ include file="../../../headerLogin.jsp"%>
 
 	<main>
 		<!-- Q&A 글작성-->
@@ -43,12 +43,12 @@
 			<section>
 				<div class="pagebackComplete border-radius">
 					<button type="button"
-						onclick="location.href='./qnaList.jsp'"
+						onclick="location.href='../qnaList/qnaListLogin.jsp'"
 						class="pageback button-size border-radius bgRed colorWhite"
 						name="pageback">뒤로가기</button>
 
 					<button type="button"
-						onclick="location.href='./qnaViewDetail.jsp'"
+						onclick="location.href='./qnaViewDetailLogin.jsp'"
 						class="complete button-size border-radius bgGreen colorWhite "
 						name="complete">작성완료</button>
 				</div>
