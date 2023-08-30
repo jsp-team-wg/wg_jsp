@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,21 +13,29 @@
     <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
 </head>
 <body>
-    <%@ include file="header.jsp" %>
+	<c:choose>
+	    <c:when test="${empty sessionScope}">
+	        <jsp:include page="header.jsp" />
+	    </c:when>
+	    <c:otherwise>
+	        <jsp:include page="headerLogin.jsp" />
+	    </c:otherwise>
+	</c:choose>
+	
     <main>
     	<!-- 베너 화면 -->
         <section class="main-section1">
             <div class="main-banner-group">
                 <div class="main-banner-list">
                     <a href="" class="main-banner-tag">
-                        <img src="resource/img/tennislogo2.png" 
+                        <img src="./resource/img/tennislogo2.png" 
                         class="main-banner-img"
                         alt="main-banner-img1">
                     </a>
                 </div>
                 <div class="main-banner-list">
                     <a href="" class="main-banner-tag">
-                        <img src="resource/img//tennislogo1.png" 
+                        <img src="./resource/img//tennislogo1.png" 
                         class="main-banner-img"
                         alt="main-banner-img1">
                     </a>
