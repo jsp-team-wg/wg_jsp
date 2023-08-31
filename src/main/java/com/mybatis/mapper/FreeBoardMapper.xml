@@ -8,7 +8,6 @@
    
    <update id = "freeedit" parameterType = "FreeBoardDTO">
    		update TBL_FREEBOARD set 
-   		freeboard_num = #{freeboardNum}, user_num = #{userNum},
    		freeboard_title = #{freeboardTitle}, freeboard_content = #{freeboardContent}
    		where freeboard_num = #{freeboardNum};
    </update>
