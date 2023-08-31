@@ -1,27 +1,26 @@
-package com.example.app.wg;
+package com.example.app.ma;
 
 import java.io.IOException;
-
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.example.app.user.LoginOkController;
-import com.example.app.user.LogoutOkController;
-import com.example.app.user.SignUpOkController;
+import com.example.app.me.LoginOkController;
+import com.example.app.me.LogoutOkController;
+import com.example.app.me.SignUpOkController;
 
 /**
- * Servlet implementation class MemberFrontController
+ * Servlet implementation class MateMatchFrontController
  */
-
-public class WgFrontController extends HttpServlet {
+public class MateMatchFrontController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public WgFrontController() {
+    public MateMatchFrontController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -29,7 +28,7 @@ public class WgFrontController extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 //		response.getWriter().append("Served at: ").append(request.getContextPath());
 		doProcess(request, response);
@@ -66,24 +65,8 @@ public class WgFrontController extends HttpServlet {
 			System.out.println("signUp!!");
 			request.getRequestDispatcher("/login/signUp/signUp.jsp").forward(request, response);
 			break;
-		case "/login/signUp/signUpOk.wg":
-			System.out.println("signUpOk!!");
-			new SignUpOkController().execute(request, response);
-			break;
-		case "/login/signIn/signIn.wg":
-			System.out.println("signIn!!");
-			request.getRequestDispatcher("/login/signIn/signIn.jsp").forward(request, response);
-			break;
-		case "/login/signIn/signInOk.wg":
-			System.out.println("signInOk!!");
-			new LoginOkController().execute(request, response);
-			break;
-		case "/login/signIn/signOutOk.wg":
-			System.out.println("logout!");
-			new LogoutOkController().execute(request, response);
-			break;
+		
 		}
-		
-		
+
 	}
 }
