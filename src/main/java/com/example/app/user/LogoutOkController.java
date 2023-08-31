@@ -19,7 +19,7 @@ public class LogoutOkController implements Execute {
 		session.invalidate();
 		System.out.println("실행");
 		try {
-			request.getRequestDispatcher("/").forward(request, response);
+			request.getRequestDispatcher("/index.jsp").forward(request, response);
 		} catch (ServletException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
