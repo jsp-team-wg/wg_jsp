@@ -7,6 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>로그인</title>
+    <script defer src="${pageContext.request.contextPath}/resource/js/signIn.js"></script>
     <link rel="stylesheet" href="../../resource/css/signIn.css">
 </head>
 
@@ -20,19 +21,23 @@
             <div class="container-id">
                 <div class="container-id-text">아이디</div>
             </div>
-            <form action="">
+            <form action="${pageContext.request.contextPath}/login/signIn/signInOk.wg" method="post" onsubmit="return submitForm();">
                 <div class="container-id-input">
-                    <input class="container-id-input-box" type="text" placeholder=" 아이디를 입력해주세요" name="">
+                    <input class="container-id-input-box" type="text" placeholder=" 아이디를 입력해주세요" name="userId">
                 </div>
-            </form>
-            <div class="container-pw">
-                <div class="container-pw-text">비밀번호</div>
-            </div>
+            
+	            <div class="container-pw">
+	                <div class="container-pw-text">비밀번호</div>
+	            </div>
 
+<<<<<<< HEAD
             <form action="">
+=======
+>>>>>>> 0829
                 <div class="container-pw-input">
-                    <input class="container-pw-input-box" type="text" placeholder=" 비밀번호를 입력해주세요" name="">
+                    <input class="container-pw-input-box" type="password" placeholder=" 비밀번호를 입력해주세요" name="userPassword">
                 </div>
+<<<<<<< HEAD
             </form>
             <button class="container-login-button" type="button" 
             onclick="location.href='../../indexLogin.jsp'">
@@ -41,6 +46,15 @@
                 </div>
             </button>
 
+=======
+            
+	            <button class="container-login-button" type="submit">
+	                <div class="container-login-button-text">
+	                    로그인
+	                </div>
+	            </button>
+			</form>
+>>>>>>> 0829
             <div class="find-id-pw">
                 <a class="find-id-a" href="../findId/findId.jsp">
                     <div class="find-id">
