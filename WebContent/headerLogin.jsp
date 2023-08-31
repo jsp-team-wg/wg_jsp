@@ -68,7 +68,7 @@
                 </a>
             </div>
             
-            <form class="main-header-service-logout" action="${pageContext.request.contextPath}/login/signIn/signOutOk.wg"
+            <form class="main-header-service-logout" action="${pageContext.request.contextPath}/login/signIn/signOutOk.me"
             onsubmit="return confirmLogout()">
                 <button class="main-header-service-logout-tag">
                     로그아웃

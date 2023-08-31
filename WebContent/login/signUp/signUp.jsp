@@ -18,7 +18,7 @@
         </section>
         <section class="Content-OuterContainer">
             <div class="Content-InnerContainer">
-                <form id="signup-form" action="${pageContext.request.contextPath}/login/signUp/signUpOk.wg" method="post">
+                <form id="signup-form" action="${pageContext.request.contextPath}/login/signUp/signUpOk.me" method="post">
                     <!-- 아이디 -->
                     <div class="Container1">
                         <span class="Text-Style1">아이디</span>
