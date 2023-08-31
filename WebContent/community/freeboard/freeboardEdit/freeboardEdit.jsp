@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="../../../resource/css/freeboardEdit.css" />
   </head>
   <body>
-  	<%@ include file="../../../header.jsp" %>
-	<main>
+  	<%@ include file="../../../headerLogin.jsp" %>
+    <main>
       <!-- 자유게시판 글수정-->
       <section class="first-section">
         <div class="section-top-category-name">
@@ -19,7 +19,7 @@
         </div>
       </section>
       <!-- 제목 & 내용 -->
-      <form action="" accept-charset="UTF-8" method="post">
+      <form action="${pageContext.request.contextPath}/community/freeboard/freeboardEdit/freeboardEdit.fr" accept-charset="UTF-8" method="post">
         <section class="titleContentSection border-radius bgGray">
           <div class="titleContent">
             <div class="title">
@@ -46,7 +46,7 @@
         <section>
           <div class="pagebackComplete border-radius">
             <button type="button" 
-            onclick="location.href='../freeboardViewDetail/freeboardViewDetail.jsp'"
+            onclick="location.href='${pageContext.request.contextPath}community/freeboard/freeboardViewDetail/freeboardViewDetail.fr'"
               class="pageback button-size border-radius bgRed colorWhite"
               name="pageback"
             >
@@ -54,7 +54,7 @@
             </button>
 
             <button type="button" 
-            onclick="location.href='../freeboardViewDetail/freeboardViewDetail.jsp'"
+            onclick="location.href='${pageContext.request.contextPath}/community/freeboard/freeboardViewDetail/freeboardViewDetail.fr'"
               class="complete button-size border-radius bgGreen colorWhite "
               name="complete"
             >
@@ -67,4 +67,3 @@
     <%@ include file="../../../footer.jsp" %>
   </body>
 </html>
-    

@@ -70,6 +70,7 @@ public class FreeboardFrontController extends HttpServlet {
 			System.out.println("Free Edit!!");
 			request.getRequestDispatcher("/community/freeboard/freeboardWrite/freeboardWrite.jsp").forward(request, response);
 			break;
+		
 			
 		
 

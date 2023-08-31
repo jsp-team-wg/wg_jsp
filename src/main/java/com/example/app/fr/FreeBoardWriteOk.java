@@ -1,6 +1,7 @@
 package com.example.app.fr;
 
 import java.io.IOException;
+import java.util.Date;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -16,10 +17,15 @@ public class FreeBoardWriteOk implements Execute{
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		FreeBoardDTO freeboardDTO = new FreeBoardDTO();
 		FreeBoardDAO freeboardDAO = new FreeBoardDAO();
+		Date date = new Date();
 		
-		
-//		freeboardDTO.setFreeboardNum(request.getParameter("FreeboartNum"));
-		request.getRequestDispatcher("/app/board/boardList.jsp").forward(request, response);
+		freeboardDTO.setFreeboardNum(Integer.valueOf(request.getParameter("freeboardNum")));
+		freeboardDTO.setFreeboardTitle(request.getParameter("freeboardTitle"));
+		freeboardDTO.setFreeboardContent(request.getParameter("freeboardContent"));
+		freeboardDTO.setFreeboardViewCnt(Integer.valueOf(request.getParameter("freeboardViewCnt")));
+		freeboardDTO.setFreeboardCommentCnt(Integer.valueOf(request.getParameter("freeboardCommentCnt")));
+		freeboardDTO.setFreeboardWriteDate(date);
+		request.getRequestDispatcher("/community/freeboard/freeboardEdit/freeboardEdit.jsp").forward(request, response);
 		
 	}
 	

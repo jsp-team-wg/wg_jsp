@@ -9,23 +9,23 @@
     <link rel="stylesheet" href="../../../resource/css/freeboardList.css" />
   </head>
   <body>
-    <%@ include file="../../../header.jsp" %>
+    <%@ include file="../../../headerLogin.jsp" %>
     <div class="container">
       <!-- 좌측 어사이드 -->
       <aside>
         <div class="aside-spacing"></div>
         <section class="section-freeboard">
-          <a class="freeboard-a" href="../freeboardList/freeboardList.jsp">
+          <a class="freeboard-a" href="../freeboardList/freeboardListLogin.jsp">
             <div class="freeboard">자유게시판</div>
           </a>
         </section>
         <section class="section-qna">
-          <a class="qna-a" href="../../qna/qnaList/qnaList.jsp">
+          <a class="qna-a" href="../../qna/qnaList/qnaListLogin.jsp">
             <div class="qna">Q&A</div>
           </a>
         </section>
         <section class="section-notice">
-          <a class="notice-a" href="../../notice/noticeList/noticeList.jsp">
+          <a class="notice-a" href="../../notice/noticeList/noticeListLogin.jsp">
             <div class="notice">공지사항</div>
           </a>
         </section>
@@ -42,7 +42,7 @@
           </div>
           <!-- 글쓰기버튼 -->
           <div class="section-top-write">
-            <a class="section-top-write-a" href="../freeboardWrite/freeboardWrite.jsp">
+            <a class="section-top-write-a" href="../freeboardWrite/freeboardWriteLogin.jsp">
                 <button class="button-write">글쓰기</button>
             </a>
           </div>
@@ -63,7 +63,7 @@
 
           <!-- @@아우터박스 -->
           <div class="board-outer-box">
-            <a class="board-inner-box" href="../freeboardViewDetail/freeboardViewDetail.jsp">
+            <a class="board-inner-box" href="../freeboardViewDetail/freeboardViewDetailLogin.jsp">
               <!-- 이너박스 상단 -->
               <div class="board-inner-box-title">
                 <div class="board-inner-box-title-text">
@@ -100,7 +100,7 @@
           </div>
           <!-- @@아우터박스 -->
           <div class="board-outer-box">
-            <a class="board-inner-box" href="../freeboardViewDetail/freeboardViewDetail.jsp">
+            <a class="board-inner-box" href="../freeboardViewDetail/freeboardViewDetailLogin.jsp">
               <!-- 이너박스 상단 -->
               <div class="board-inner-box-title">
                 <div class="board-inner-box-title-text">
@@ -137,7 +137,7 @@
           </div>
           <!-- @@아우터박스 -->
           <div class="board-outer-box">
-            <a class="board-inner-box" href="../freeboardViewDetail/freeboardViewDetail.jsp">
+            <a class="board-inner-box" href="../freeboardViewDetail/freeboardViewDetailLogin.jsp">
               <!-- 이너박스 상단 -->
               <div class="board-inner-box-title">
                 <div class="board-inner-box-title-text">
@@ -174,7 +174,7 @@
           </div>
           <!-- @@아우터박스 -->
           <div class="board-outer-box">
-            <a class="board-inner-box" href="../freeboardViewDetail/freeboardViewDetail.jsp">
+            <a class="board-inner-box" href="../freeboardViewDetail/freeboardViewDetailLogin.jsp">
               <!-- 이너박스 상단 -->
               <div class="board-inner-box-title">
                 <div class="board-inner-box-title-text">
@@ -211,7 +211,7 @@
           </div>
           <!-- @@아우터박스 -->
           <div class="board-outer-box">
-            <a class="board-inner-box" href="../freeboardViewDetail/freeboardViewDetail.jsp">
+            <a class="board-inner-box" href="../freeboardViewDetail/freeboardViewDetailLogin.jsp">
               <!-- 이너박스 상단 -->
               <div class="board-inner-box-title">
                 <div class="board-inner-box-title-text">
@@ -248,7 +248,7 @@
           </div>
           <!-- @@아우터박스 -->
           <div class="board-outer-box">
-            <a class="board-inner-box" href="../freeboardViewDetail/freeboardViewDetail.jsp">
+            <a class="board-inner-box" href="../freeboardViewDetail/freeboardViewDetailLogin.jsp">
               <!-- 이너박스 상단 -->
               <div class="board-inner-box-title">
                 <div class="board-inner-box-title-text">
@@ -311,4 +311,3 @@
     <%@ include file="../../../footer.jsp" %>
   </body>
 </html>
-    
