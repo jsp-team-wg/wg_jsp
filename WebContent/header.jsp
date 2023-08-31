@@ -61,13 +61,13 @@
             <div class="main-header-service">
                 <div class="main-header-service-login">
                     <a class="main-header-service-login-tag"
-                    href="${pageContext.request.contextPath}/login/signIn/signIn.jsp">
+                    href="${pageContext.request.contextPath}/login/signIn/signIn.wg">
                         로그인
                     </a>
                 </div>
                 <div class="main-header-service-join">
                     <a class="main-header-service-join-tag"
-                    href="${pageContext.request.contextPath}/login/signUp/signUp.jsp">
+                    href="${pageContext.request.contextPath}/login/signUp/signUp.wg">
                         회원가입
                     </a>
                 </div>

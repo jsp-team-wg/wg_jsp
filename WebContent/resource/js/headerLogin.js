@@ -15,12 +15,12 @@ subMenu.addEventListener('mouseout', () => {
     subMenu.style.display = 'none';
 });
 
-//로그아웃 confirm
 function confirmLogout() {
     if (confirm("로그아웃 하시겠습니까?")) {
-        alert("정상적으로 로그아웃 되었습니다");
-        return true;
-    } else {
-        return false;
-    }
+        // Confirm 창에서 "네"를 누른 경우
+        alert("로그아웃되었습니다!");
+        document.getElementById('logoutForm').submit(); // 폼 전송을 실행합니다.
+    }else{
+		return false;
+	}
 }

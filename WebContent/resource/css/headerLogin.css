@@ -165,6 +165,9 @@ header{
 }
 .main-header-service-logout-tag{
     color: #323232;
+    background-color: white;
+    cursor: pointer;
+    border-style:none;
 }
 .main-header-service-mypage-tag{
     color: white;

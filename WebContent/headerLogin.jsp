@@ -63,17 +63,18 @@
                 <a class="main-header-service-mypage-tag"
                 href="${pageContext.request.contextPath}/myPage/mateMemberEditMyPage/mateMemberEditMyPage.jsp">
                     <div class="main-header-nickname">
-                        JinHyukKang
-                    </div>님
+                        ${sessionScope.userNickname}님
+                    </div>
                 </a>
             </div>
-            <div class="main-header-service-logout">
-                <a class="main-header-service-logout-tag"
-                href="${pageContext.request.contextPath}/index.jsp" 
-                onclick="return confirmLogout();">
+            
+            <form class="main-header-service-logout" action="${pageContext.request.contextPath}/login/signIn/signOutOk.wg"
+            onsubmit="return confirmLogout()">
+                <button class="main-header-service-logout-tag">
                     로그아웃
-                </a>
-            </div>
+                </button>
+            </form>
+            
         </div>
     </div>
 </header>

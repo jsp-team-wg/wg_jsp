@@ -9,4 +9,13 @@
     <welcome-file>default.jsp</welcome-file>
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
+  
+  <servlet>
+  	<servlet-name>Wg</servlet-name>
+  	<servlet-class>com.example.app.wg.WgFrontController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Wg</servlet-name>
+  	<url-pattern>*.wg</url-pattern>
+  </servlet-mapping>
 </web-app>
