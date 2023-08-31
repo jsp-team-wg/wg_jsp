@@ -7,7 +7,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.example.app.Result;
 import com.example.app.user.LoginOkController;
 import com.example.app.user.LogoutOkController;
 import com.example.app.user.SignUpOkController;
@@ -58,7 +57,6 @@ public class WgFrontController extends HttpServlet {
 		//전체 URI에서 ContextPath를 제외시킨 부분이 필요하다
 		String target = request.getRequestURI().substring(request.getContextPath().length());
 		System.out.println(target);
-		Result result = null;
 		
 		
 		//단순한 값비교는 if문보다 switch문이 효율성이 좋고 가독성도 좋다
@@ -70,7 +68,7 @@ public class WgFrontController extends HttpServlet {
 			break;
 		case "/login/signUp/signUpOk.wg":
 			System.out.println("signUpOk!!");
-			result = new SignUpOkController().execute(request, response);
+			new SignUpOkController().execute(request, response);
 			break;
 		case "/login/signIn/signIn.wg":
 			System.out.println("signIn!!");
@@ -78,24 +76,14 @@ public class WgFrontController extends HttpServlet {
 			break;
 		case "/login/signIn/signInOk.wg":
 			System.out.println("signInOk!!");
-			result = new LoginOkController().execute(request, response);
+			new LoginOkController().execute(request, response);
 			break;
 		case "/login/signIn/signOutOk.wg":
 			System.out.println("logout!");
-			result = new LogoutOkController().execute(request, response);
+			new LogoutOkController().execute(request, response);
+			break;
 		}
 		
-		
-		
-		if(result != null) {
-			if(result.isRedirect()) {
-				response.sendRedirect(result.getPath());
-				//리다이렉션을 필요로 한다면 리다이렉션을 수행한다
-			}else {
-				request.getRequestDispatcher(result.getPath()).forward(request, response);
-				//포워딩을 필요로 하면 result객체의 경로로 포워딩을 수행한다
-			}
-		}
 		
 	}
 }

@@ -1,23 +1,21 @@
 package com.example.app.user;
 
 import java.io.IOException;
-import java.rmi.ServerException;
 import java.util.Date;
 
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.example.app.Execute;
-import com.example.app.Result;
 import com.example.app.dao.UserDAO;
 import com.example.app.dto.UserDTO;
 
 public class SignUpOkController implements Execute{
 	
-	public Result execute(HttpServletRequest request, HttpServletResponse response) throws IOException,ServerException{
+	public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException,ServletException{
 		UserDAO userDAO = new UserDAO();
 		UserDTO userDTO = new UserDTO();
-		Result result = new Result();
 		Date date = new Date();
 		
 		userDTO.setUserId(request.getParameter("userId"));
@@ -33,10 +31,7 @@ public class SignUpOkController implements Execute{
 		System.out.println(userDTO);
 		
 		userDAO.signUp(userDTO);
+		response.sendRedirect("/wg_jsp/login/signIn/signIn.wg");
 		
-		result.setRedirect(true);
-		result.setPath(request.getContextPath());;
-		
-		return result;
 	}
 }

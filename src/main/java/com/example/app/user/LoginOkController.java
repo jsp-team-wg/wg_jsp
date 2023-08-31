@@ -1,21 +1,20 @@
 package com.example.app.user;
 
 import java.io.IOException;
-import java.rmi.ServerException;
 
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.example.app.Execute;
-import com.example.app.Result;
 import com.example.app.dao.UserDAO;
 import com.example.app.dto.UserDTO;
 
 public class LoginOkController implements Execute{
 	
 	@Override
-	public Result execute(HttpServletRequest request, HttpServletResponse response) throws IOException,ServerException{
+	public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException,ServletException{
 		UserDAO UserDAO = new UserDAO();
 		UserDTO UserDTO = new UserDTO();
 		UserDTO result = null;
@@ -40,9 +39,9 @@ public class LoginOkController implements Execute{
 		System.out.println(session.getAttribute("userName"));
 		System.out.println(session.getAttribute("userNickname"));
 		
-		response.sendRedirect(request.getContextPath());
+		response.sendRedirect("/wg_jsp/index.jsp");
 
-		return null;
+		
 		
 	}
 	
