@@ -2,10 +2,11 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mate">
    <select id = "wirte" parameterType="MateDTO">
-   		insert into tbl_mate(user_id, user_nickname, user_password, user_email, user_name,
-   		user_gender, user_exp, user_ntrp)
-   		value(#{userId}, #{userNickname}, #{userPassword}, #{userEmail}, #{userName},
-   		#{userGender}, #{userExp}, #{userNtrp})
+   		insert into tbl_mate(user_num, mate_courtname, mate_courtaddr, mate_date, mate_starttime,
+   		mate_endtime, mate_exp, mate_ntrp, mate_gametype, mate_mcount, mate_wcount, mate_content, mate_writedate)
+   		value(#{userNum}, #{mate_courtname}, #{mate_courtaddr}, #{mate_date}, #{mate_starttime},
+   		#{mate_endtime}, #{mate_exp}, #{mate_ntrp}, #{mate_gametype}, #{mate_mcount}, #{mate_wcount},
+   		#{mate_content}, #{mate_writedate})
    </select>
    
    <select id="signIn" parameterType="UserDTO" resultType="userDTO">

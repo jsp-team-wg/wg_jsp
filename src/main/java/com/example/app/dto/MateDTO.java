@@ -1,6 +1,8 @@
 package com.example.app.dto;
 
-import java.security.Timestamp;
+
+
+import java.sql.Timestamp;
 import java.util.Date;
 
 public class MateDTO {
@@ -13,8 +15,8 @@ public class MateDTO {
 	private Date mateDate; 
 	private Timestamp mateStarttime;
 	private Timestamp mateEndtime;
-	private int mateExp;
-	private int mateNtrp;
+	private String mateExp;
+	private Double mateNtrp;
 	private String mateGametype; 
 	private int mateMcount;
 	private int mateWcount;
@@ -23,7 +25,10 @@ public class MateDTO {
 	private int atstatus;
 	private Date mateWritedate;
 	
-	//게터, 세터
+	
+	
+	
+
 	public int getMateNum() {
 		return mateNum;
 	}
@@ -66,16 +71,16 @@ public class MateDTO {
 	public void setMateEndtime(Timestamp mateEndtime) {
 		this.mateEndtime = mateEndtime;
 	}
-	public int getMateExp() {
+	public String getMateExp() {
 		return mateExp;
 	}
-	public void setMateExp(int mateExp) {
+	public void setMateExp(String mateExp) {
 		this.mateExp = mateExp;
 	}
-	public int getMateNtrp() {
+	public Double getMateNtrp() {
 		return mateNtrp;
 	}
-	public void setMateNtrp(int mateNtrp) {
+	public void setMateNtrp(Double mateNtrp) {
 		this.mateNtrp = mateNtrp;
 	}
 	public String getMateGametype() {
@@ -120,7 +125,8 @@ public class MateDTO {
 	public void setMateWritedate(Date mateWritedate) {
 		this.mateWritedate = mateWritedate;
 	}
-	
+
+
 	@Override
 	public String toString() {
 		return "MateDTO [mateNum=" + mateNum + ", userNum=" + userNum + ", mateCourtname=" + mateCourtname
@@ -130,6 +136,8 @@ public class MateDTO {
 				+ mateContent + ", commentCnt=" + commentCnt + ", atstatus=" + atstatus + ", mateWritedate="
 				+ mateWritedate + "]";
 	}
+
+	
 	
 	
 	

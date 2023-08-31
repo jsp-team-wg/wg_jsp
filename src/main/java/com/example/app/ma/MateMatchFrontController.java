@@ -61,11 +61,18 @@ public class MateMatchFrontController extends HttpServlet {
 		//단순한 값비교는 if문보다 switch문이 효율성이 좋고 가독성도 좋다
 		//break문을 꼭 써야된다!
 		switch(target) {
-		case "/login/signUp/signUp.wg":
-			System.out.println("signUp!!");
-			request.getRequestDispatcher("/login/signUp/signUp.jsp").forward(request, response);
+		case "/mateMatch/mateMatchWrite/mateMatchWrite.ma":
+			System.out.println("mateMatchWrite!!");
+			request.getRequestDispatcher("/mateMatch/mateMatchWrite/mateMatchWrite.jsp").forward(request, response);
 			break;
-		
+		case "/mateMatch/mateMatchWrite/mateMatchWriteOk.ma":
+			System.out.println("mateMatchWriteOk!!");
+			new MateMatchWriteController().execute(request, response);
+			break;
+		case "/mateMatch/mateMatchList/mateMatchList.ma":
+			System.out.println("mateMatchList!!");
+			request.getRequestDispatcher("/mateMatch/mateMatchList/mateMatchList.jsp").forward(request, response);
+			break;
 		}
 
 	}
