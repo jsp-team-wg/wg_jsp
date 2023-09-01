@@ -59,7 +59,7 @@
             <div class="date-text">날짜</div>
             <div class="date-calender">
               <input class="date-calendar-input" 
-              name="mateDate"
+              name="mateDate" disabled
               type="date" />
             </div>
           </div>
@@ -80,7 +80,7 @@
                 class="time-end-input"
                 type="time"
                 name="mateEndtime"
-                placeholder="종료 시간"
+                placeholder="종료 시간" disabled
               />
               <div class="si"></div>
             </div>

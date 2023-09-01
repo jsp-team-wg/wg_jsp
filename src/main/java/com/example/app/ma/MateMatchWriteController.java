@@ -30,7 +30,7 @@ public class MateMatchWriteController implements Execute{
 		mateDTO.setMateCourtname(request.getParameter("mateCourtname"));
 		System.out.println(request.getParameter("mateCourtname"));
 		mateDTO.setMateCourtddr(request.getParameter("mateCourtaddr"));
-		System.out.println(request.getParameter("mateCourtname"));
+		System.out.println(request.getParameter("mateCourtaddr"));
 		try {
 			mateDTO.setMateDate(format.parse(request.getParameter("mateDate")));
 		} catch (ParseException e) {
@@ -39,7 +39,7 @@ public class MateMatchWriteController implements Execute{
 		}
 		System.out.println(request.getParameter("mateStarttime"));
 		mateDTO.setMateStarttime(request.getParameter("mateStarttime"));
-		mateDTO.setMateStarttime(request.getParameter("mateEndtime"));
+		mateDTO.setMateEndtime(request.getParameter("mateEndtime"));
 		mateDTO.setMateExp(request.getParameter("mateExpint") + request.getParameter("mateExptext"));
 		mateDTO.setMateNtrp(Double.parseDouble(request.getParameter("mateNtrp")));
 		mateDTO.setMateGametype(request.getParameter("mateGametype"));

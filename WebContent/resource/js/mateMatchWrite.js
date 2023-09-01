@@ -3,18 +3,21 @@ function updateParentInputs(placeName, roadAddress) {
     var nameInput = document.querySelector('.court-name-input-text');
     var addressInput = document.querySelector('.court-address-input-address');
     
+    
+    nameInput.removeAttribute('disabled');
+    addressInput.removeAttribute('disabled');
     nameInput.value = placeName;
     addressInput.value = roadAddress;
     
     // mateCourtname 입력 요소의 disabled 속성 제거하고 값을 설정
-	var courtNameInput = document.getElementById('mateCourtname');
+	/*var courtNameInput = document.getElementById('mateCourtname');
 	courtNameInput.removeAttribute('disabled');
 	courtNameInput.value = placeName;
 	
 	// mateDate 입력 요소의 disabled 속성 제거하고 값을 설정
 	var dateInput = document.getElementsByName('mateDate')[0];
 	dateInput.removeAttribute('disabled');
-	dateInput.value = roadAddress;
+	dateInput.value = roadAddress;*/
     
 }
 
