@@ -1,1 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="qna">
+
+	<select id="countQnaNum" resultType="int">
+		select count(*) from tbl_qna
+	</select>
+
+	<select id="bringQnaLIst" parameterType="int"
+		resultType="QnaDTO">
+		select * from tbl_qna
+		order by qna_num desc
+		limit #{firstList}, 6
+	</select>
+</mapper>

@@ -26,8 +26,8 @@
                         <input class="Input-Style1 Shadow2" type="text" 
                         placeholder="   아이디를 입력해주세요" id="id"
                         name="userId" required>
-                        <button class="Button-Style1 Text-Style2 Shadow1"
-                        onclick="location.href='${pageContext.request.contextPath}/member/checkIdOk.me'">중복확인</button>
+                        <button class="Button-Style1 Text-Style2 Shadow1" type="button"
+                        id="idCheck" >중복확인</button>
                     </div>
                     <div id="check-id-msg"></div>
 
@@ -128,17 +128,18 @@
                         <div class="Agree-OuterContainer">
                             <div class="Agree-InnerContainer1">
                                 <span class="Text-Style3">이용약관</span>
-                                <input class="Input-Style4" type="checkbox" required/>
+                                <input class="Input-Style4" type="checkbox" id="agree1" required/>
                             </div>
                             <div class="Agree-InnerContainer2">
                                 <span class="Text-Style3">개인정보 처리방침</span>
-                                <input class="Input-Style4" type="checkbox" required/>
+                                <input class="Input-Style4" type="checkbox" id="agree2" required/>
                             </div>
                         </div>
                     </div>
 					<input type="hidden" id="userGender" name="userGender">
                     <!-- 회원가입 완료 -->
-                    <button type="button" onclick="completeRegistration()" class="SignUpDone-Container Shadow1">
+                    
+                    <button type="submit" class="SignUpDone-Container Shadow1">
                         <span class="Text-Style1" >회원가입 완료</span>
                     </button>
                 </form>
@@ -150,36 +151,14 @@
 
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="${pageContext.request.contextPath}/assets/js/join.js"></script>
+	
  	<script>
-	 	let $checkMsg = $("#check-id-msg");
-	 	let $checkPwMsg = $("#check-pw-msg");
-	 	let $idInput = $("#id");
-	 	let $pwInput = $("#password");
-	
-	 		
-	 	$idInput.on('blur', function () {
-	 		if($(this).val() == ''){
-	 			//console.log('id 입력 안함!')
-	 			$checkMsg.text('아이디를 입력하세요!')
-	 		}
-	 	});
-	
-	 	//중복 검사를 위한 ajax
-	 	let checkId = function(){
-	 		$.ajax({
-	 			url : '/member/checkIdOk.me',
-	 			type : 'get',
-	 			data : {userId : $idInput.val()},
-	 			success : function(result){
-	 				console.log(result);
-	 			},
-	 			error : function(xhr, status, error){
-	 				console.log(error);
-	 			}
-	 		})
-	 	};
-	 		
-	 	$idInput.on('change', checkId);
+ 	let $checkMsg = $("#check-id-msg");
+ 	let $checkPwMsg = $("#check-pw-msg");
+ 	let $idInput = $("#id");
+ 	let $pwInput = $("#password");
+ 	
+
 	 </script>	 
 	 <script>	
 	 	//비밀번호 유효성검사
@@ -204,9 +183,9 @@
 			
 			//console.log($('#agree').prop('checked'));
 			
-			if($('#agree').prop('checked')){
-				this.submit(); // 서브밋 이벤트를 발생시키는 메소드(폼 요소에 사용해야 함)
-			}else{
+			if($('#agree1').prop('checked') && $('#agree2').prop('checked')){
+		this.submit(); // 서브밋 이벤트를 발생시키는 메소드(폼 요소에 사용해야 함)
+			} else {
 				alert('약관에 동의해주세요!')
 			}
 		});

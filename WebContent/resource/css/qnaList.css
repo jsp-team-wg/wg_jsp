@@ -332,20 +332,17 @@ background-color: #00a18d;;
 .page_nation .arrow {
 	border:1px solid #ccc;
 }
-.page_nation .pprev {
-	background:#f8f8f8;
-}
 .page_nation .prev {
 	background:#f8f8f8;
 }
 .page_nation .next {
 	background:#f8f8f8;
 }
-.page_nation .nnext {
-	background:#f8f8f8;
-}
+
 .page_nation a.active {
 	background-color: #18c6ae;
 	color:#fff;
 	border:1px solid #18c6ae;
 }
+
+
