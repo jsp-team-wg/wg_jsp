@@ -75,6 +75,7 @@
   <servlet-mapping>
   	<servlet-name>mypage</servlet-name>
   	<url-pattern>*.my</url-pattern>
-  </servlet-mapping>  -->
+
+  </servlet-mapping> 
 </web-app>
 
