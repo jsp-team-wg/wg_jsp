@@ -12,7 +12,7 @@
   <body>
   <%@ include file="../../headerLogin.jsp" %>
     <main>
-      <form action="">
+      <form action="${pageContext.request.contextPath}/mateMatch/mateMatchWrite/mateMatchWriteOk.ma" method="post">
         <!-- 카테고리 섹션 -->
         <section class="section-category">
           <div class="category-name">메이트찾기</div>
@@ -44,7 +44,7 @@
               />
             </div>
             <div class="court-address-input-box2">
-              <button class="court-address-input-box2-button" type=""
+              <button class="court-address-input-box2-button" type="button"
               id="openPopup">
                 주소찾기
               </button>

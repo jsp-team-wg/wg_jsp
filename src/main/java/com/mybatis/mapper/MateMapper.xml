@@ -9,8 +9,35 @@
    		#{mate_content}, #{mate_writedate})
    </select>
    
-   <select id="signIn" parameterType="UserDTO" resultType="userDTO">
-   		select * from tbl_user
-   		where user_id = #{userId} AND user_password = #{userPassword}
+   <update id="update" parameterType="MateDTO">
+   		UPDATE tbl_mate
+		SET mate_courtname = #{mate_courtname},
+		    mate_courtaddr = #{mate_courtaddr},
+		    mate_date = #{mate_date},
+		    mate_starttime = #{mate_starttime},
+		    mate_endtime = #{mate_endtime},
+		    mate_exp = #{mate_exp},
+		    mate_ntrp = #{mate_ntrp},
+		    mate_gametype = #{mate_gametype},
+		    mate_mcount = #{mate_mcount},
+		    mate_wcount = #{mate_wcount},
+		    mate_content = #{mate_content},
+		    mate_writedate = #{mate_writedate}
+		WHERE mate_num = #{mateNum}
+   </update>
+   
+   <delete id="delete" parameterType="int">
+   		delete from tbl_mate 
+   		where mate_num = #{mateNum}
+   </delete>
+   
+   <select id = "selectOne" parameterType="MateDTO" resultType="MateDTO">
+   		select from tbl_mate
+   		where mate_num = #{mateNum}
    </select>
+   
+   <select id = "selectAll" parameterType="MateDTO" resultType="MateDTO">
+   		select * from tbl_mate
+   </select>
+   
 </mapper>

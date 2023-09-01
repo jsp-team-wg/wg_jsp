@@ -22,7 +22,7 @@
             <div class="container-id">
                 <div class="container-id-text">아이디</div>
             </div>
-            <form action="${pageContext.request.contextPath}/login/signIn/signInOk.me" method="post" onsubmit="return submitForm();">
+            <form action="${pageContext.request.contextPath}/login/signIn/signInOk.me" method="post">
                 <div class="container-id-input">
                     <input class="container-id-input-box" type="text" placeholder=" 아이디를 입력해주세요" name="userId">
                 </div>

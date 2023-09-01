@@ -15,8 +15,7 @@ import com.example.app.Execute;
 import com.example.app.dao.MateDAO;
 import com.example.app.dto.MateDTO;
 
-public class MateMatchWriteController implements Execute{
-
+public class MateMatchEditController implements Execute{
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		MateDAO mateDAO = new MateDAO();
@@ -45,9 +44,7 @@ public class MateMatchWriteController implements Execute{
 		mateDTO.setMateWritedate(date);
 		
 		System.out.println(mateDTO);
-		mateDAO.write(mateDTO);
+		mateDAO.update(mateDTO);
 		response.sendRedirect("/wg_jsp/mateMatch/mateMatchList/mateMatchList.jsp");
 	}
-
-	
 }
