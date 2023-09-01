@@ -18,6 +18,8 @@ public class SignUpOkController implements Execute{
 		MemberDTO memberDTO = new MemberDTO();
 		Date date = new Date();
 		
+		System.out.println("컨트롤러");
+		
 		memberDTO.setUserId(request.getParameter("userId"));
 		memberDTO.setUserNickname(request.getParameter("userNickname"));
 		memberDTO.setUserPassword(request.getParameter("userPassword"));

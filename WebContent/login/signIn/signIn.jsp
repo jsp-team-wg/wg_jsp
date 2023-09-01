@@ -31,7 +31,7 @@
 	            </div>
 
 
-            <form action="">
+            <form action="${pageContext.request.contextPath}/login/signIn/signInOk.me" method="post">
 
                 <div class="container-pw-input">
                     <input class="container-pw-input-box" type="password" placeholder=" 비밀번호를 입력해주세요" name="userPassword">
