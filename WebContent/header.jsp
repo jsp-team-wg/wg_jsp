@@ -25,7 +25,7 @@
                 <nav class="main-header-category">
                     <ul class="main-header-category-ul">   
                         <li class="main-header-category-list">
-                            <a href="${pageContext.request.contextPath}/mateMatch/mateMatchList/mateMatchList.jsp" class="main-header-category-matetag">
+                            <a href="${pageContext.request.contextPath}/mateMatch/mateMatchList/mateMatchList.ma" class="main-header-category-matetag">
                             메이트 찾기
                             </a>
                         </li>

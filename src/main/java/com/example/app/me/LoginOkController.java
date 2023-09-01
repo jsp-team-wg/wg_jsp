@@ -19,10 +19,14 @@ public class LoginOkController implements Execute{
 		MemberDTO memberDTO = new MemberDTO();
 		
 		
+		
+		
+		
 		memberDTO.setUserId(request.getParameter("userId"));
 		memberDTO.setUserPassword(request.getParameter("userPassword"));
-		
-		
+		memberDTO = memberDAO.signIn(memberDTO);
+		memberDTO.setUserNickname(memberDTO.getUserNickname());
+		memberDTO.setUserNum(memberDTO.getUserNum());
 		
 		System.out.println(memberDTO.getUserName());
 		System.out.println(memberDTO.getUserNum());
@@ -38,6 +42,7 @@ public class LoginOkController implements Execute{
 		System.out.println(session.getAttribute("userNum"));
 		System.out.println(session.getAttribute("userName"));
 		System.out.println(session.getAttribute("userNickname"));
+		
 		
 		response.sendRedirect("/wg_jsp/index.jsp");
 
