@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -20,14 +21,11 @@
         </div>
       </section>
       <!-- 제목 & 내용 -->
-       <c:choose>
-       <c:when test = "${not empty boardList}">
-          	 <c:forEach var="board" items="${boardList}">
       <form action="${pageContext.request.contextPath}/community/freeboard/freeboardEdit/freeboardEdit.fr" accept-charset="UTF-8" method="post">
         <section class="titleContentSection border-radius bgGray">
           <div class="titleContent">
             <div class="title">
-              <c:out value = "${board.getBoardNumber()}">
+              <c:out value = "${freeboard.getFreeboardTitle}">
               <p>제목</p>
               </c:out>
               <div class="title-out-box">
@@ -39,7 +37,7 @@
             <div class="content">
               <p>내용</p>
               <div class="content-box-out">
-              <c:out value = "${board.getBoardNumber()}">
+              <c:out value = "${freeboard.getFreeboardContent}">
                 <textarea
                   class="content-area border-radius"
                   name="freeboardContent"
@@ -50,9 +48,6 @@
             </div>
           </div>
         </section>
-         	</c:forEach>
-          	</c:when>
-        </c:choose>
     
         <!-- 뒤로가기 & 작성완료 -->
         <section>

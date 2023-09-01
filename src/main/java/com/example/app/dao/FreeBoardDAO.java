@@ -24,4 +24,8 @@ public class FreeBoardDAO {
 	public void freeDelete(FreeBoardDTO freeboardDTO) {
 		sqlSession.delete("FreeBoard.freeDelte", freeboardDTO);
 	}
+	
+	public freeboardDTO selectAll(){
+		return sqlSession.selectList("board.selectAll");
+	}
 }
