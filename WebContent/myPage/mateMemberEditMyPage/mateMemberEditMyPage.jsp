@@ -55,23 +55,20 @@
 			</form>
 			<form
 				action="${pageContext.request.contextPath}/mypage/MyPageEdit/MyPageEditOk.my">
-				<c:forEach var="member" items="${myPageEdit}">
+				
 				
 				<!-- 아이디 -->
 				<div class="accountmodify-smallform">
 					<div class="id-box mp">
-						아이디 : <span class="id-text">${member.getUserId()}</span>
+						아이디 : <span class="id-text">${myPageEdit.getUserId()}</span>
 					</div>
 					<!-- 이름 -->
 					<div class="name-box mp">
 						이름 : <span class="name-text"></span>
 					</div>
-					<c:out value="${member.getUserNum}" />
-					<c:out value="${member.getUserName()}" />
 					<!-- 닉네임 -->
 					<div class="nickname-box mp">
-						닉네임 : <span class="nickname-text"><c:out
-								value="${member.get(userNickname)}" /></span>
+						닉네임 : <span class="nickname-text">${myPageEdit.getUserNickname()}</span>
 					</div>
 					<!-- 비밀번호 변경 -->
 					<div class="pw-box mp">
@@ -96,8 +93,7 @@
 
 					<!-- 이메일 -->
 					<div class="email-box mp">
-						이메일 : <span class="emial-text"> <c:out
-								value="${member.get(userEmail)}" /></span>
+						이메일 : <span class="emial-text">${myPageEdit.getUserEmail()}</span>
 					</div>
 					<!-- 성별 -->
 					<div class="gender-box mp">
@@ -111,7 +107,7 @@
 					<div class="oldpower-box mp">
 						나의 구력
 						<div class="oldpower-text">
-							<input class="oldpower-input" type="text" value="">년
+							<input class="oldpower-input" type="text" value="${myPageEdit.getUserExp()}" name="userExp">년
 						</div>
 					</div>
 					<!-- NTRP -->
@@ -133,7 +129,7 @@
 						</div>
 					</div>
 				</div>
-				</c:forEach>
+			
 				<!-- 수정완료 버튼 -->
 
 				<div class="button-box">

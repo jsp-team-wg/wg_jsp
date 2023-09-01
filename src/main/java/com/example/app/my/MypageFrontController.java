@@ -59,11 +59,6 @@ public class MypageFrontController extends HttpServlet {
 		// 단순한 값비교는 if문보다 switch문이 효율성이 좋고 가독성도 좋다
 		// break문을 꼭 써야된다!
 		switch (target) {
-		/*case "/login/signUp/signUp.wg":
-			System.out.println("signUp!!");
-			request.getRequestDispatcher("/login/signUp/signUp.jsp").forward(request, response);
-			break;*/
-			
 		case "/myPage/mateMemberEditMyPage/MyPageEdit.my":
 			System.out.println("MypageEdit!!");
 			new MyPageEditController().execute(request, response);
