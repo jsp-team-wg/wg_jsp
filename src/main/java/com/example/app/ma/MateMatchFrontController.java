@@ -61,11 +61,51 @@ public class MateMatchFrontController extends HttpServlet {
 		//단순한 값비교는 if문보다 switch문이 효율성이 좋고 가독성도 좋다
 		//break문을 꼭 써야된다!
 		switch(target) {
-		case "/login/signUp/signUp.wg":
-			System.out.println("signUp!!");
-			request.getRequestDispatcher("/login/signUp/signUp.jsp").forward(request, response);
+		//메이트 글 작성 페이지 이동
+		case "/mateMatch/mateMatchWrite/mateMatchWrite.ma":
+			System.out.println("mateMatchWrite!!");
+			request.getRequestDispatcher("/mateMatch/mateMatchWrite/mateMatchWrite.jsp").forward(request, response);
 			break;
-		
+		//메이트 글 작성 기능
+		case "/mateMatch/mateMatchWrite/mateMatchWriteOk.ma":
+			System.out.println("mateMatchWriteOk!!");
+			new MateMatchWriteController().execute(request, response);
+			break;
+		//메이트 찾기 글 목록 화면 이동
+		case "/mateMatch/mateMatchList/mateMatchList.ma":
+			System.out.println("mateMatchList!!");
+			request.getRequestDispatcher("/mateMatch/mateMatchList/mateMatchList.jsp").forward(request, response);
+			break;
+		//메이트 찾기 글 목록 불러오기
+		case "/mateMatch/mateMatchList/mateMatchListOk.ma":
+			System.out.println("mateMatchListOk!!");
+			new MateMatchSelectAllController().execute(request, response);
+			break;
+		//메이트 찾기 글 상세 보기 화면 이동
+		case "/mateMatch/mateMatchViewDetail/mateMatchViewDetail.ma" :
+			System.out.println("mateMatchViewDetail!!");
+			request.getRequestDispatcher("/mateMatch/mateMatchViewDetail/mateMatchViewDetail.jsp").forward(request, response);
+			break;
+		//메이트 찾기 특정 글 데이터 불러오기
+		case "/mateMatch/mateMatchViewDetail/mateMatchViewDetailOk.ma" :
+			System.out.println("mateMatchViewDetailOk!!");
+			new MateMatchSelectOneController().execute(request, response);
+			break;
+		//메이트 찾기 글 수정 화면으로 이동
+		case "/mateMatch/mateMatchEdit/mateMatchEdit.ma":
+			System.out.println("mateMatchEdit!!");
+			request.getRequestDispatcher("/mateMatch/mateMatchEdit/mateMatchEdit.jsp");
+			break;
+		//메이트 찾기 글 수정 기능
+		case "/mateMatch/mateMatchEdit/mateMatchEditOk.ma":
+			System.out.println("mateMatchEditOk!!");
+			new MateMatchEditController().execute(request, response);
+			break;
+		//메이트 찾기 글 삭제 기능
+		case "/mateMatch/mateMatchViewDetail/mateMatchDeleteOk.ma" :
+			System.out.println("mateMatchDeleteOk!!");
+			new MateMatchDeleteController().execute(request, response);
+			break;
 		}
 
 	}

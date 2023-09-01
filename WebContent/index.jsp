@@ -28,35 +28,35 @@
             <div class="main-banner-group">
                 <div class="main-banner-list">
                     <a href="" class="main-banner-tag">
-                        <img src="./resource/img/tennislogo2.png" 
+                        <img src="http://localhost:8888/wg_jsp/resource/img/tennislogo2.png" 
                         class="main-banner-img"
                         alt="main-banner-img1">
                     </a>
                 </div>
                 <div class="main-banner-list">
                     <a href="" class="main-banner-tag">
-                        <img src="./resource/img//tennislogo1.png" 
+                        <img src="http://localhost:8888/wg_jsp/resource/img//tennislogo1.png" 
                         class="main-banner-img"
                         alt="main-banner-img1">
                     </a>
                 </div>
                 <div class="main-banner-list">
                     <a href="" class="main-banner-tag">
-                        <img src="resource/img//tennislogo3.png" 
+                        <img src="http://localhost:8888/wg_jsp/resource/img//tennislogo3.png" 
                         class="main-banner-img"
                         alt="main-banner-img1">
                     </a>
                 </div>
                 <div class="main-banner-list">
                     <a href="" class="main-banner-tag">
-                        <img src="resource/img//tennislogo4.png" 
+                        <img src="http://localhost:8888/wg_jsp/resource/img//tennislogo4.png" 
                         class="main-banner-img"
                         alt="main-banner-img1">
                     </a>
                 </div>
                 <div class="main-banner-list">
                     <a href="" class="main-banner-tag">
-                        <img src="resource/img/tennislogo5.png" 
+                        <img src="http://localhost:8888/wg_jsp/resource/img/tennislogo5.png" 
                         class="main-banner-img"
                         alt="main-banner-img1">
                     </a>
@@ -137,7 +137,7 @@
                         </div>
                         <div class="main-section2-mate-comment">
                             
-                            <img src="resource/img/comment.png" class="main-section2-mate-comment-img"
+                            <img src="http://localhost:8888/wg_jsp/resource/img/comment.png" class="main-section2-mate-comment-img"
                             alt="main-section2-mate-comment-img">
                             <div class="main-section2-mate-comment-count">
                                 12
@@ -198,7 +198,7 @@
                             </div>
                         </div>
                         <div class="main-section2-mate-comment">
-                            <img src="resource/img/comment.png" class="main-section2-mate-comment-img"
+                            <img src="http://localhost:8888/wg_jsp/resource/img/comment.png" class="main-section2-mate-comment-img"
                             alt="main-section2-mate-comment-img">
                             <div class="main-section2-mate-comment-count">
                                 12
@@ -259,7 +259,7 @@
                             </div>
                         </div>
                         <div class="main-section2-mate-comment">
-                            <img src="resource/img/comment.png" class="main-section2-mate-comment-img"
+                            <img src="http://localhost:8888/wg_jsp/resource/img/comment.png" class="main-section2-mate-comment-img"
                             alt="main-section2-mate-comment-img">
                             <div class="main-section2-mate-comment-count">
                                 12
@@ -320,7 +320,7 @@
                             </div>
                         </div>
                         <div class="main-section2-mate-comment">
-                            <img src="resource/img/comment.png" class="main-section2-mate-comment-img"
+                            <img src="http://localhost:8888/wg_jsp/resource/img/comment.png" class="main-section2-mate-comment-img"
                             alt="main-section2-mate-comment-img">
                             <div class="main-section2-mate-comment-count">
                                 12
@@ -357,7 +357,7 @@
                             </div>
                             <div class="main-section3-community-board-viewComment">
                                 <div class="main-section3-community-board-view">
-                                    <img src="resource/img/view.png" 
+                                    <img src="http://localhost:8888/wg_jsp/resource/img/view.png" 
                                     class="main-section3-community-board-viewImg"
                                     alt="main-section3-community-board-viewImg">
                                     <div class="main-section3-community-board-viewCount">
@@ -386,7 +386,7 @@
                             </div>
                             <div class="main-section3-community-board-viewComment">
                                 <div class="main-section3-community-board-view">
-                                    <img src="resource/img/view.png" 
+                                    <img src="http://localhost:8888/wg_jsp/resource/img/view.png" 
                                     class="main-section3-community-board-viewImg"
                                     alt="main-section3-community-board-viewImg">
                                     <div class="main-section3-community-board-viewCount">
@@ -394,7 +394,7 @@
                                     </div>
                                 </div>
                                 <div class="main-section3-community-board-comment">
-                                    <img src="resource/img/comment.png"
+                                    <img src="http://localhost:8888/wg_jsp/resource/img/comment.png"
                                     class="main-section3-community-board-commentImg"
                                     alt="main-section3-community-board-commentImg">
                                     <div class="main-section3-community-board-commentCount">
@@ -415,7 +415,7 @@
                             </div>
                             <div class="main-section3-community-board-viewComment">
                                 <div class="main-section3-community-board-view">
-                                    <img src="resource/img/view.png" 
+                                    <img src="http://localhost:8888/wg_jsp/resource/img/view.png" 
                                     class="main-section3-community-board-viewImg"
                                     alt="main-section3-community-board-viewImg">
                                     <div class="main-section3-community-board-viewCount">
@@ -423,7 +423,7 @@
                                     </div>
                                 </div>
                                 <div class="main-section3-community-board-comment">
-                                    <img src="resource/img/comment.png"
+                                    <img src="http://localhost:8888/wg_jsp/resource/img/comment.png"
                                     class="main-section3-community-board-commentImg"
                                     alt="main-section3-community-board-commentImg">
                                     <div class="main-section3-community-board-commentCount">
@@ -447,7 +447,7 @@
                             </div>
                             <div class="main-section3-community-QA-viewComment">
                                 <div class="main-section3-community-QA-view">
-                                    <img src="resource/img/view.png" 
+                                    <img src="http://localhost:8888/wg_jsp/resource/img/view.png" 
                                     class="main-section3-community-QA-viewImg"
                                     alt="main-section3-community-QA-viewImg">
                                     <div class="main-section3-community-QA-viewCount">
@@ -455,7 +455,7 @@
                                     </div>
                                 </div>
                                 <div class="main-section3-community-QA-comment">
-                                    <img src="resource/img/comment.png"
+                                    <img src="http://localhost:8888/wg_jsp/resource/img/comment.png"
                                     class="main-section3-community-QA-commentImg"
                                     alt="main-section3-community-QA-commentImg">
                                     <div class="main-section3-community-QA-commentCount">
@@ -476,7 +476,7 @@
                             </div>
                             <div class="main-section3-community-QA-viewComment">
                                 <div class="main-section3-community-QA-view">
-                                    <img src="resource/img/view.png" 
+                                    <img src="http://localhost:8888/wg_jsp/resource/img/view.png" 
                                     class="main-section3-community-QA-viewImg"
                                     alt="main-section3-community-QA-viewImg">
                                     <div class="main-section3-community-QA-viewCount">
@@ -484,7 +484,7 @@
                                     </div>
                                 </div>
                                 <div class="main-section3-community-QA-comment">
-                                    <img src="resource/img/comment.png"
+                                    <img src="http://localhost:8888/wg_jsp/resource/img/comment.png"
                                     class="main-section3-community-QA-commentImg"
                                     alt="main-section3-community-QA-commentImg">
                                     <div class="main-section3-community-QA-commentCount">
@@ -505,7 +505,7 @@
                             </div>
                             <div class="main-section3-community-QA-viewComment">
                                 <div class="main-section3-community-QA-view">
-                                    <img src="resource/img/view.png" 
+                                    <img src="http://localhost:8888/wg_jsp/resource/img/view.png" 
                                     class="main-section3-community-QA-viewImg"
                                     alt="main-section3-community-QA-viewImg">
                                     <div class="main-section3-community-QA-viewCount">
@@ -513,7 +513,7 @@
                                     </div>
                                 </div>
                                 <div class="main-section3-community-QA-comment">
-                                    <img src="resource/img/comment.png"
+                                    <img src="http://localhost:8888/wg_jsp/resource/img/comment.png"
                                     class="main-section3-community-QA-commentImg"
                                     alt="main-section3-community-QA-commentImg">
                                     <div class="main-section3-community-QA-commentCount">

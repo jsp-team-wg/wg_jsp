@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,7 +24,7 @@
         </div>
         <!-- 글쓰기버튼 -->
         <div class="section-top-write">
-          <a class="section-top-write-a" href="../../mateMatch/mateMatchWrite/mateMatchWrite.jsp">
+          <a class="section-top-write-a" href="${pageContext.request.contextPath}/mateMatch/mateMatchWrite/mateMatchWrite.ma">
             <button class="button-write">글쓰기</button>
           </a>
         </div>
