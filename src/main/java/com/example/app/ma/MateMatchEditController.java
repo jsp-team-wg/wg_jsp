@@ -33,11 +33,12 @@ public class MateMatchEditController implements Execute{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		mateDTO.setMateStarttime(Timestamp.valueOf(request.getParameter("mateStarttime")));
-		mateDTO.setMateStarttime(Timestamp.valueOf(request.getParameter("mateEndtime")));
+		mateDTO.setMateStarttime(request.getParameter("mateStarttime"));
+		mateDTO.setMateStarttime(request.getParameter("mateEndtime"));
 		mateDTO.setMateExp(request.getParameter("mateExpint") + request.getParameter("mateExptext"));
 		mateDTO.setMateNtrp(Double.parseDouble(request.getParameter("mateNtrp")));
 		mateDTO.setMateGametype(request.getParameter("mateGametype"));
+		System.out.println(request.getParameter("mateMcount"));
 		mateDTO.setMateMcount(Integer.parseInt(request.getParameter("mateMcount")));
 		mateDTO.setMateMcount(Integer.parseInt(request.getParameter("mateWcount")));
 		mateDTO.setMateContent(request.getParameter("mateContent"));

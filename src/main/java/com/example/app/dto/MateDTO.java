@@ -2,7 +2,7 @@ package com.example.app.dto;
 
 
 
-import java.sql.Timestamp;
+import java.sql.Time;
 import java.util.Date;
 
 public class MateDTO {
@@ -11,10 +11,10 @@ public class MateDTO {
 	private int mateNum;
 	private int userNum;
 	private String mateCourtname;
-	private String mateCourtddr;
+	private String mateCourtaddr;
 	private Date mateDate; 
-	private Timestamp mateStarttime;
-	private Timestamp mateEndtime;
+	private String mateStarttime;
+	private String mateEndtime;
 	private String mateExp;
 	private Double mateNtrp;
 	private String mateGametype; 
@@ -48,10 +48,10 @@ public class MateDTO {
 		this.mateCourtname = mateCourtname;
 	}
 	public String getMateCourtddr() {
-		return mateCourtddr;
+		return mateCourtaddr;
 	}
 	public void setMateCourtddr(String mateCourtddr) {
-		this.mateCourtddr = mateCourtddr;
+		this.mateCourtaddr = mateCourtddr;
 	}
 	public Date getMateDate() {
 		return mateDate;
@@ -59,16 +59,16 @@ public class MateDTO {
 	public void setMateDate(Date mateDate) {
 		this.mateDate = mateDate;
 	}
-	public Timestamp getMateStarttime() {
+	public String getMateStarttime() {
 		return mateStarttime;
 	}
-	public void setMateStarttime(Timestamp mateStarttime) {
+	public void setMateStarttime(String mateStarttime) {
 		this.mateStarttime = mateStarttime;
 	}
-	public Timestamp getMateEndtime() {
+	public String getMateEndtime() {
 		return mateEndtime;
 	}
-	public void setMateEndtime(Timestamp mateEndtime) {
+	public void setMateEndtime(String mateEndtime) {
 		this.mateEndtime = mateEndtime;
 	}
 	public String getMateExp() {
@@ -130,7 +130,7 @@ public class MateDTO {
 	@Override
 	public String toString() {
 		return "MateDTO [mateNum=" + mateNum + ", userNum=" + userNum + ", mateCourtname=" + mateCourtname
-				+ ", mateCourtddr=" + mateCourtddr + ", mateDate=" + mateDate + ", mateStarttime=" + mateStarttime
+				+ ", mateCourtaddr=" + mateCourtaddr + ", mateDate=" + mateDate + ", mateStarttime=" + mateStarttime
 				+ ", mateEndtime=" + mateEndtime + ", mateExp=" + mateExp + ", mateNtrp=" + mateNtrp + ", mateGametype="
 				+ mateGametype + ", mateMcount=" + mateMcount + ", mateWcount=" + mateWcount + ", mateContent="
 				+ mateContent + ", commentCnt=" + commentCnt + ", atstatus=" + atstatus + ", mateWritedate="

@@ -5,8 +5,7 @@
 <head>
  <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../resource/css/mateMatchWrite.css" />
-    <script defer src="../../resource/js/mateMatchWrite.js"></script>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resource/css/mateMatchWrite.css" />
     <title>메이트찾기 글작성</title>
   </head>
   <body>
@@ -26,9 +25,10 @@
             <div class="court-name-input">
               <input
                 class="court-name-input-text"
-                value="" type="text"
+                type="text" value=""
                 name="mateCourtname"
-                placeholder="코트 이름 입력" disabled
+                id="mateCourtname"
+                placeholder="코트 이름 입력"
               />
             </div>
           </div>
@@ -40,7 +40,8 @@
                 class="court-address-input-address"
                 type="text" value=""
                 name="mateCourtaddr"
-                placeholder="테니스장 주소" disabled
+                id="mateCourtaddr"
+                placeholder="테니스장 주소"
               />
             </div>
             <div class="court-address-input-box2">
@@ -205,5 +206,9 @@
       </form>
     </main>
     <%@ include file="../../footer.jsp" %>
+        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+        
+    
+    <script defer src="${pageContext.request.contextPath}/resource/js/mateMatchWrite.js"></script>
   </body>
 </html>

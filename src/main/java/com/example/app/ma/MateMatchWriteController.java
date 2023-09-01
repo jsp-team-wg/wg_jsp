@@ -1,6 +1,7 @@
 package com.example.app.ma;
 
 import java.io.IOException;
+import java.sql.Time;
 import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -27,15 +28,18 @@ public class MateMatchWriteController implements Execute{
 		
 		mateDTO.setUserNum((Integer)session.getAttribute("userNum"));
 		mateDTO.setMateCourtname(request.getParameter("mateCourtname"));
-		mateDTO.setMateCourtname(request.getParameter("mateCourtaddr"));
+		System.out.println(request.getParameter("mateCourtname"));
+		mateDTO.setMateCourtddr(request.getParameter("mateCourtaddr"));
+		System.out.println(request.getParameter("mateCourtname"));
 		try {
 			mateDTO.setMateDate(format.parse(request.getParameter("mateDate")));
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		mateDTO.setMateStarttime(Timestamp.valueOf(request.getParameter("mateStarttime")));
-		mateDTO.setMateStarttime(Timestamp.valueOf(request.getParameter("mateEndtime")));
+		System.out.println(request.getParameter("mateStarttime"));
+		mateDTO.setMateStarttime(request.getParameter("mateStarttime"));
+		mateDTO.setMateStarttime(request.getParameter("mateEndtime"));
 		mateDTO.setMateExp(request.getParameter("mateExpint") + request.getParameter("mateExptext"));
 		mateDTO.setMateNtrp(Double.parseDouble(request.getParameter("mateNtrp")));
 		mateDTO.setMateGametype(request.getParameter("mateGametype"));

@@ -24,7 +24,7 @@
         </div>
         <!-- 글쓰기버튼 -->
         <div class="section-top-write">
-          <a class="section-top-write-a" href="${pageContext.request.contextPath}/mateMatch/mateMatchWrite/mateMatchWrite.ma">
+          <a class="section-top-write-a" href="${pageContext.request.contextPath}/mateMatch/mateMatchWrite/mateMatchWrite.jsp">
             <button class="button-write">글쓰기</button>
           </a>
         </div>
