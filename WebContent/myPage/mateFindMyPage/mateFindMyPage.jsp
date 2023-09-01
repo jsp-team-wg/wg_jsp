@@ -6,7 +6,7 @@
  <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>마이페이지 회원정보 수정</title>
-    <link rel = "stylesheet" href = "../../resource/css/mateFindMyPage.css">
+    <link rel = "stylesheet" href = "${pageContext.request.contextPath}/resource/css/mateFindMyPage.css">
     
 </head>
 <body>

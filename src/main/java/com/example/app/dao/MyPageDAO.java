@@ -1,8 +1,10 @@
 package com.example.app.dao;
 
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 
-import com.example.app.dto.UserDTO;
+import com.example.app.dto.MemberDTO;
 import com.mybatis.config.MyBatisConfig;
 
 public class MyPageDAO {
@@ -12,12 +14,24 @@ public class MyPageDAO {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
 	
-	public UserDTO myPageEdit(UserDTO userDTO) {
-	    return sqlSession.selectOne("my.myPageEdit", userDTO);
+	public MemberDTO myPageEdit(MemberDTO memberDTO) {
+	    return sqlSession.selectOne("member.myPageEdit", memberDTO);
 	}
-	
-	public UserDTO myPageEditOk(UserDTO userDTO) {
-	    return sqlSession.update("my.myPageEditOk", userDTO);
+	public void myPageEditOk(MemberDTO memberDTO) {
+		sqlSession.update("member.myPageEditOk", memberDTO);
 	}
+	public void myPageDel(MemberDTO memberDTO) {
+		sqlSession.delete("member.myPageDel", memberDTO);
+	}
+	public void myPageMate(MemberDTO memberDTO) {
+		
+	}
+	public List<MateDAO> myPageMate(){
+		return sqlSession.selectList("board.selectUser");
+	}
+	public List<QnaDAO> myPageQna(){
+		return sqlSession.selectList("board.selectUser");
+	}
+
 
 }
