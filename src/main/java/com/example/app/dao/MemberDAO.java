@@ -22,6 +22,7 @@ public class MemberDAO {
 		return user;
 	}
 	
+	
 //	public boolean checkId(String id) {
 //		   //selectOne()의 반환타입은  Object타입이기 때문에 비교를 하기위해선 Integer타입으로 형변환 해야함 
 //		   return (Integer)sqlSession.selectOne("member.checkId",id)<=0;

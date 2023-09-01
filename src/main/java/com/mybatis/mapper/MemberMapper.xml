@@ -21,4 +21,6 @@
 		count(user_num) from tbl_user
 		where user_id = #{UserId}
 	</select>
+	
+
 </mapper>

@@ -62,7 +62,7 @@ public class QnaFrontController extends HttpServlet {
 		switch (target) {
 		case "/community/qnaList/qnaListOk.qna":
 			System.out.println("qnaOk!!");
-			request.getRequestDispatcher("/community/qna/qnaList/qnaList.jsp").forward(request, response);
+			new QnaListOkController().execute(request,response);
 			break;
 
 		}
