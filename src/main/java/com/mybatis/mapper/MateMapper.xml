@@ -39,5 +39,8 @@
    <select id = "selectAll" parameterType="MateDTO" resultType="MateDTO">
    		select * from tbl_mate
    </select>
+   <select id = "selectAllMe" parameterType="MateDTO" resultType="MateDTO">
+   		select * from tbl_mate where user_num = #{userNum}
+   </select>
    
 </mapper>

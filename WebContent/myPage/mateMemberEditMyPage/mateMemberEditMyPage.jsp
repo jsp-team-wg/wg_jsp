@@ -20,21 +20,23 @@
 				<div class="aside-member-box hover1">
 					<div class="aside-member-text-box">
 						<a
-							href="../../myPage/mateMemberEditMyPage/mateMemberEditMyPage.jsp">
+							href="${pageContext.request.contextPath}/mypage/MyPageEdit/MyPageEdit.my">
 							<span class="aside-member-text white">회원정보 수정</span>
 						</a>
 					</div>
 				</div>
 				<div class="aside-matematch-box hover1">
 					<div class="aside-matematch-text-box">
-						<a href="../../myPage/mateFindMyPage/mateFindMyPage.jsp"> <span
-							class="aside-matematch-text white">메이트 찾기</span>
+						<a
+							href="${pageContext.request.contextPath}/myPage/mateFindMyPage/mateFindMyPage.my">
+							<span class="aside-matematch-text white">메이트 찾기</span>
 						</a>
 					</div>
 				</div>
 				<div class="aside-qna-box hover1">
 					<div class="aside-qna-text-box">
-						<a href="../../myPage/mateMatchQnaMyPage/mateMatchQnaMyPage.jsp">
+						<a
+							href="${pageContext.request.contextPath}/myPage/mateMatchQnaMyPage/mateMatchQnaMyPage.my">
 							<span class="aside-qna-text white">Q&A</span>
 						</a>
 					</div>
@@ -45,25 +47,27 @@
 		<!-- 회원정보 수정 -->
 		<section class="accountmodify-form">
 			<form
-				action="${pageContext.request.contextPath}/mypage/MyPageEdit/MyPageDel.me">
+				action="${pageContext.request.contextPath}/mypage/MyPageEdit/MyPageDel.my">
 				<div class="withdraw">
 					<input class="withdraw-button" type="button" value="회원탈퇴"
 						onclick="withdraw_confirm();" style="cursor: pointer">
 				</div>
 			</form>
 			<form
-				action="${pageContext.request.contextPath}/mypage/MyPageEdit/MyPageEditOk.me">
+				action="${pageContext.request.contextPath}/mypage/MyPageEdit/MyPageEditOk.my">
+				<c:forEach var="member" items="${myPageEdit}">
+				
 				<!-- 아이디 -->
 				<div class="accountmodify-smallform">
 					<div class="id-box mp">
-						아이디 : <span class="id-text"><c:out
-								value="${member.get(userId)}" /></span>
+						아이디 : <span class="id-text">${member.getUserId()}</span>
 					</div>
 					<!-- 이름 -->
 					<div class="name-box mp">
-						이름 : <span class="name-text"><c:out
-								value="${member.get(userName)}" /></span>
+						이름 : <span class="name-text"></span>
 					</div>
+					<c:out value="${member.getUserNum}" />
+					<c:out value="${member.getUserName()}" />
 					<!-- 닉네임 -->
 					<div class="nickname-box mp">
 						닉네임 : <span class="nickname-text"><c:out
@@ -107,8 +111,7 @@
 					<div class="oldpower-box mp">
 						나의 구력
 						<div class="oldpower-text">
-							<input class="oldpower-input" type="text"
-								value="">년
+							<input class="oldpower-input" type="text" value="">년
 						</div>
 					</div>
 					<!-- NTRP -->
@@ -130,6 +133,7 @@
 						</div>
 					</div>
 				</div>
+				</c:forEach>
 				<!-- 수정완료 버튼 -->
 
 				<div class="button-box">

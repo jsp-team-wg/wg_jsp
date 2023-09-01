@@ -61,7 +61,7 @@
         <div class="main-header-service">
             <div class="main-header-service-mypage">
                 <a class="main-header-service-mypage-tag"
-                href="${pageContext.request.contextPath}/myPage/mateMemberEditMyPage/mateMemberEditMyPage.jsp">
+                href="${pageContext.request.contextPath}/myPage/mateMemberEditMyPage/MyPageEdit.my">
                     <div class="main-header-nickname">
                         ${sessionScope.userNickname}님
                     </div>

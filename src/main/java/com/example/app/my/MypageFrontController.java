@@ -2,7 +2,6 @@ package com.example.app.my;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -45,7 +44,7 @@ public class MypageFrontController extends HttpServlet {
 	// jsp프로젝트에서는 get과 post를 구분하지 않고 사용
 	protected void doProcess(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		System.out.println("wg 서블릿이 실행");
+		System.out.println("my 서블릿이 실행");
 
 		// request.getContextPath()는 URL루트 경로를 의미한다
 		System.out.println(request.getContextPath());
@@ -67,7 +66,8 @@ public class MypageFrontController extends HttpServlet {
 			
 		case "/myPage/mateMemberEditMyPage/MyPageEdit.my":
 			System.out.println("MypageEdit!!");
-			request.getRequestDispatcher("/myPage/mateMemberEditMyPage/mateMemberEditMyPage.jsp").forward(request, response);
+			new MyPageEditController().execute(request, response);
+			
 			break;
 			
 		case "/myPage/mateMemberEditMyPage/MyPageEditOk.my":
@@ -80,6 +80,14 @@ public class MypageFrontController extends HttpServlet {
 			System.out.println("MyPageDel!!");
 			new MyPageDelController().execute(request, response);
 			
+			break;
+			
+		case "/myPage/mateFindMyPage/mateFindMyPage.my":
+			new MateFindMyPageController().execute(request, response);
+			break;
+			
+		case "/myPage/mateMatchQnaMyPage/mateMatchQnaMyPage.my":
+			new MateMatchQnaMyPageController().execute(request, response);
 			break;
 
 

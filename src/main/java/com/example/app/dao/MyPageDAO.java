@@ -4,7 +4,9 @@ import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 
+import com.example.app.dto.MateDTO;
 import com.example.app.dto.MemberDTO;
+import com.example.app.dto.QnaDTO;
 import com.mybatis.config.MyBatisConfig;
 
 public class MyPageDAO {
@@ -23,14 +25,12 @@ public class MyPageDAO {
 	public void myPageDel(MemberDTO memberDTO) {
 		sqlSession.delete("member.myPageDel", memberDTO);
 	}
-	public void myPageMate(MemberDTO memberDTO) {
-		
+	
+	public List<MateDTO> selectMateAllMe(){
+		return sqlSession.selectList("mate.selectAllMe");
 	}
-	public List<MateDAO> myPageMate(){
-		return sqlSession.selectList("board.selectUser");
-	}
-	public List<QnaDAO> myPageQna(){
-		return sqlSession.selectList("board.selectUser");
+	public List<QnaDTO> selectQnaAllMe(){
+		return sqlSession.selectList("qna.selectAllMe");
 	}
 
 
