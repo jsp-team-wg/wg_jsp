@@ -66,7 +66,7 @@
                     </a>
                 </div>
                 <div class="main-header-service-join">
-                    <a class="/login/signUp/signUp.wg"
+                    <a class="main-header-service-join-tag"
                     href="${pageContext.request.contextPath}/login/signUp/signUp.me">
                         회원가입
                     </a>

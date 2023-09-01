@@ -8,32 +8,32 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.example.app.Execute;
-import com.example.app.dao.UserDAO;
-import com.example.app.dto.UserDTO;
+import com.example.app.dao.MemberDAO;
+import com.example.app.dto.MemberDTO;
 
 public class LoginOkController implements Execute{
 	
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException,ServletException{
-		UserDAO UserDAO = new UserDAO();
-		UserDTO UserDTO = new UserDTO();
-		UserDTO result = null;
+		MemberDAO memberDAO = new MemberDAO();
+		MemberDTO memberDTO = new MemberDTO();
 		
-		UserDTO.setUserId(request.getParameter("userId"));
-		UserDTO.setUserPassword(request.getParameter("userPassword"));
 		
-		result = UserDAO.signIn(UserDTO);
+		memberDTO.setUserId(request.getParameter("userId"));
+		memberDTO.setUserPassword(request.getParameter("userPassword"));
 		
-		System.out.println(result.getUserName());
-		System.out.println(result.getUserNum());
-		System.out.println(result.getUserNickname());
+		
+		
+		System.out.println(memberDTO.getUserName());
+		System.out.println(memberDTO.getUserNum());
+		System.out.println(memberDTO.getUserNickname());
 		
 		
 		//회원의 번호, 이름 세션에 저장
 		HttpSession session = request.getSession();
-		session.setAttribute("userNum",result.getUserNum());
-		session.setAttribute("userName",result.getUserName());
-		session.setAttribute("userNickname",result.getUserNickname());
+		session.setAttribute("userNum",memberDTO.getUserNum());
+		session.setAttribute("userName",memberDTO.getUserName());
+		session.setAttribute("userNickname",memberDTO.getUserNickname());
 		
 		System.out.println(session.getAttribute("userNum"));
 		System.out.println(session.getAttribute("userName"));
