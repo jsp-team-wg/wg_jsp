@@ -16,7 +16,7 @@
     />
   </head>
   <body>
-    <%@ include file="../../../header.jsp" %>
+    <%@ include file="../../../headerLogin.jsp" %>
     <!-- 커뮤니티(Q&A) 상세보기 전체 영역 -->
     <div class="Area">
       <!-- 위쪽 컨테이너 -->
@@ -70,14 +70,14 @@
               <button
                 class="Delete1"
                 type="button"
-                onclick="location.href='../freeboardList/freeboardList.jsp'"
+                onclick="location.href='${pageContext.request.contextPath}/community/freeboard/freeDelete.fr'"
               >
                 <span>삭제</span>
               </button>
               <button
                 class="Edit1"
                 type="button"
-                onclick="location.href='../freeboardEdit/freeboardEdit.jsp'"
+                onclick="location.href='${pageContext.request.contextPath}/community/freeboard/freeEdit.fr'"
               >
                 <span>수정</span>
               </button>
@@ -223,4 +223,3 @@
     <%@ include file="../../../footer.jsp" %>
   </body>
 </html>
-    

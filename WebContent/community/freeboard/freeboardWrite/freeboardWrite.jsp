@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,7 +10,7 @@
     <link rel="stylesheet" href="../../../resource/css/freeboardWrite.css" />
   </head>
   <body>
-    <%@ include file="../../../header.jsp" %>
+    <%@ include file="../../../headerLogin.jsp" %>
     <main>
       <!-- 자유게시판 글작성-->
       <section class="first-section">
@@ -19,10 +20,10 @@
         </div>
       </section>
       <!-- 제목 & 내용 -->
-      <form action="" accept-charset="UTF-8" method="post">
+      <form action="${pageContext.request.contextPath}/community/freeboard/freeboardWrite/freeboardWrite.fr" accept-charset="UTF-8" method="post">
         <section class="titleContentSection border-radius bgGray">
           <div class="titleContent">
-            <div class="title">
+            <div class="freeboardTitle">
               <p>제목</p>
               <div class="title-out-box">
                 <textarea class="title-in-box-text"
@@ -35,7 +36,7 @@
               <div class="content-box-out">
                 <textarea
                   class="content-area border-radius"
-                  name="content"
+                  name="freeboardContent"
                   placeholder="내용을 입력하세요(3000자 이내)"
                 ></textarea>
               </div>
@@ -46,7 +47,7 @@
         <section>
           <div class="pagebackComplete border-radius">
             <button type="button"
-            onclick="location.href='../freeboardList/freeboardList.jsp'"
+            onclick="location.href='${pageContext.request.contextPath}/community/freeboard/freeboardViewDetail/freeboardViewDetail.fr'"
               class="pageback button-size border-radius bgRed colorWhite"
               name="pageback"
             >
@@ -54,7 +55,7 @@
             </button>
 
             <button type="button"
-            onclick="location.href='../freeboardViewDetail/freeboardViewDetail.jsp'"
+            onclick="location.href='${pageContext.request.contextPath}/community/freeboard/freeboardList/freeboardList.fr'"
               class="complete button-size border-radius bgGreen colorWhite "
               name="complete"
             >
@@ -67,4 +68,3 @@
     <%@ include file="../../../footer.jsp" %>
   </body>
 </html>
-    
