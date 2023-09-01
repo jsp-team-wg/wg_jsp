@@ -40,7 +40,7 @@
   </servlet-mapping>
 
 
-  <!-- <servlet>
+   <servlet>
   	<servlet-name>qna</servlet-name>
   	<servlet-class>com.example.app.qna.QnaFrontController</servlet-class>
   </servlet>
@@ -49,7 +49,7 @@
   	<url-pattern>*.qna</url-pattern>
   </servlet-mapping>
 
-
+<!--
   <servlet>
   	<servlet-name>notice</servlet-name>
   	<servlet-class>com.example.app.no.NoticeFrontController</servlet-class>
@@ -75,7 +75,9 @@
   <servlet-mapping>
   	<servlet-name>mypage</servlet-name>
   	<url-pattern>*.my</url-pattern>
-
   </servlet-mapping> 
+
+-->
+
 </web-app>
 

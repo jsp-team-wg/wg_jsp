@@ -58,7 +58,7 @@
 				<div class="Button-OuterContainer1">
 					<div class="Button-InnerContainer1">
 						<button class="Delete1" type="button"
-							onclick="location.href='../qnaList/qnaList.jsp'">
+							onclick="location.href='${pageContext.request.contextPath}/community/qnaList/qnaListOk.qna'">
 							<span>뒤로가기</span>
 						</button>
 						<button class="Edit1" type="button"
