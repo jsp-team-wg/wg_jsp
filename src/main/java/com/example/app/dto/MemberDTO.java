@@ -2,21 +2,9 @@ package com.example.app.dto;
 
 import java.util.Date;
 
-public class UserDTO {
+public class MemberDTO {
 	
-//	CREATE TABLE TBL_USER (
-//		    user_num INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-//		    user_id VARCHAR(50) NOT NULL UNIQUE,
-//		    user_nickname VARCHAR(50) NOT NULL UNIQUE,
-//		    user_password VARCHAR(100) NOT NULL,
-//		    user_email VARCHAR(100) NOT NULL,
-//		    user_name VARCHAR(50) NOT NULL,
-//		    user_gender VARCHAR(10) NOT NULL,
-//		    user_exp DECIMAL(3,1) NOT NULL,
-//		    user_ntrp VARCHAR(50) NOT NULL,
-//		    user_joindate DATETIME NOT null DEFAULT CURRENT_TIMESTAMP
-//		);
-	
+
 	private int userNum;
 	private String userId;
 	private String userNickname;

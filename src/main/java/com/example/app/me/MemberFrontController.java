@@ -42,7 +42,7 @@ public class MemberFrontController extends HttpServlet {
 		
 		//jsp프로젝트에서는 get과 post를 구분하지 않고 사용
 		protected void doProcess(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-			System.out.println("wg 서블릿이 실행");
+			System.out.println("me 서블릿이 실행");
 			
 			//request.getContextPath()는 URL루트 경로를 의미한다
 			System.out.println(request.getContextPath());
@@ -78,6 +78,9 @@ public class MemberFrontController extends HttpServlet {
 				System.out.println("logout!");
 				new LogoutOkController().execute(request, response);
 				break;
+			case "/member/checkIdOk.me" :
+				System.out.println("checkIdOk!");
+				new CheckIdOkController().execute(request,response);
 			}
 		
 		

@@ -8,30 +8,30 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.example.app.Execute;
-import com.example.app.dao.UserDAO;
-import com.example.app.dto.UserDTO;
+import com.example.app.dao.MemberDAO;
+import com.example.app.dto.MemberDTO;
 
 public class SignUpOkController implements Execute{
 	
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException,ServletException{
-		UserDAO userDAO = new UserDAO();
-		UserDTO userDTO = new UserDTO();
+		MemberDAO memberDAO = new MemberDAO();
+		MemberDTO memberDTO = new MemberDTO();
 		Date date = new Date();
 		
-		userDTO.setUserId(request.getParameter("userId"));
-		userDTO.setUserNickname(request.getParameter("userNickname"));
-		userDTO.setUserPassword(request.getParameter("userPassword"));
-		userDTO.setUserEmail(request.getParameter("userEmail"));
-		userDTO.setUserName(request.getParameter("userName"));
-		userDTO.setUserGender(request.getParameter("userGender"));
-		userDTO.setUserExp(Integer.parseInt(request.getParameter("userExp")));
-		userDTO.setUserNtrp(Double.parseDouble(request.getParameter("userNtrp")));
-		userDTO.setUserJoindate(date);
+		memberDTO.setUserId(request.getParameter("userId"));
+		memberDTO.setUserNickname(request.getParameter("userNickname"));
+		memberDTO.setUserPassword(request.getParameter("userPassword"));
+		memberDTO.setUserEmail(request.getParameter("userEmail"));
+		memberDTO.setUserName(request.getParameter("userName"));
+		memberDTO.setUserGender(request.getParameter("userGender"));
+		memberDTO.setUserExp(Integer.parseInt(request.getParameter("userExp")));
+		memberDTO.setUserNtrp(Double.parseDouble(request.getParameter("userNtrp")));
+		memberDTO.setUserJoindate(date);
 		
-		System.out.println(userDTO);
+		System.out.println(memberDTO);
 		
-		userDAO.signUp(userDTO);
-		response.sendRedirect("/wg_jsp/login/signIn/signIn.wg");
+		memberDAO.signUp(memberDTO);
+		response.sendRedirect("/wg_jsp/login/signIn/signIn.me");
 		
 	}
 }
