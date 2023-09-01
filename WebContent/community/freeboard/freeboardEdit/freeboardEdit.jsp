@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../../../resource/css/freeboardEdit.css" />
   </head>
   <body>
+  
   	<%@ include file="../../../headerLogin.jsp" %>
     <main>
       <!-- 자유게시판 글수정-->
@@ -19,29 +20,40 @@
         </div>
       </section>
       <!-- 제목 & 내용 -->
+       <c:choose>
+       <c:when test = "${not empty boardList}">
+          	 <c:forEach var="board" items="${boardList}">
       <form action="${pageContext.request.contextPath}/community/freeboard/freeboardEdit/freeboardEdit.fr" accept-charset="UTF-8" method="post">
         <section class="titleContentSection border-radius bgGray">
           <div class="titleContent">
             <div class="title">
+              <c:out value = "${board.getBoardNumber()}">
               <p>제목</p>
+              </c:out>
               <div class="title-out-box">
                 <textarea class="title-in-box-text"
-                name="title" 
+                name="freeboardTitle" 
                 placeholder="제목을 입력하세요(50자 이내)"></textarea>
               </div>
             </div>
             <div class="content">
               <p>내용</p>
               <div class="content-box-out">
+              <c:out value = "${board.getBoardNumber()}">
                 <textarea
                   class="content-area border-radius"
-                  name="content"
+                  name="freeboardContent"
                   placeholder="내용을 입력하세요(3000자 이내)"
                 >대충 쳐도 좋아요</textarea>
+                </c:out>
               </div>
             </div>
           </div>
         </section>
+         	</c:forEach>
+          	</c:when>
+        </c:choose>
+    
         <!-- 뒤로가기 & 작성완료 -->
         <section>
           <div class="pagebackComplete border-radius">

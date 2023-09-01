@@ -22,7 +22,7 @@
       <form action="${pageContext.request.contextPath}/community/freeboard/freeboardWrite/freeboardWrite.fr" accept-charset="UTF-8" method="post">
         <section class="titleContentSection border-radius bgGray">
           <div class="titleContent">
-            <div class="title">
+            <div class="freeboardTitle">
               <p>제목</p>
               <div class="title-out-box">
                 <textarea class="title-in-box-text"
@@ -35,7 +35,7 @@
               <div class="content-box-out">
                 <textarea
                   class="content-area border-radius"
-                  name="content"
+                  name="freeboardContent"
                   placeholder="내용을 입력하세요(3000자 이내)"
                 ></textarea>
               </div>
@@ -46,7 +46,7 @@
         <section>
           <div class="pagebackComplete border-radius">
             <button type="button"
-            onclick="location.href='${pageContext.request.contextPath}/community/freeboard/freeboardList/freeboardList.fr'"
+            onclick="location.href='${pageContext.request.contextPath}/community/freeboard/freeboardViewDetail/freeboardViewDetail.fr'"
               class="pageback button-size border-radius bgRed colorWhite"
               name="pageback"
             >
