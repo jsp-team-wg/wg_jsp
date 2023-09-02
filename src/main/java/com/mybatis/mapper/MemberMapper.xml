@@ -1,20 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="member">
-   <select id = "signUp" parameterType="MemberDTO">
-   		insert into tbl_user(user_id, user_nickname, user_password, user_email, user_name,
-   		user_gender, user_exp, user_ntrp)
-   		value(#{userId}, #{userNickname}, #{userPassword}, #{userEmail}, #{userName},
-   		#{userGender}, #{userExp}, #{userNtrp})
-   </select>
-   
-   <select id="signIn" parameterType="MemberDTO" resultType="MemberDTO">
-   		select * from tbl_user
-   		where user_id = #{userId} AND user_password = #{userPassword}
-   </select>
-   
-  <select id="checkId" parameterType="string" resultType="_int">
-		select count(user_num) from tbl_user
+
+	<select id="signUp" parameterType="MemberDTO">
+		insert into tbl_user(user_id, user_nickname, user_password, user_email,
+		user_name,
+		user_gender, user_exp, user_ntrp)
+		value(#{userId}, #{userNickname}, #{userPassword}, #{userEmail}, #{userName},
+		#{userGender}, #{userExp}, #{userNtrp})
+	</select>
+
+	<select id="signIn" parameterType="MemberDTO"
+		resultType="MemberDTO">
+		select * from tbl_user
+		where user_id = #{userId} AND user_password = #{userPassword}
+	</select>
+
+	<select id="checkId" parameterType="string" resultType="_int">
+		select
+		count(user_num) from tbl_user
 		where user_id = #{UserId}
 	</select>
+	
+
 </mapper>
