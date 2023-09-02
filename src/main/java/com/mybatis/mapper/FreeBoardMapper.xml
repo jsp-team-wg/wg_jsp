@@ -1,19 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="FreeBoard">
-   <select id = "freeWrite" parameterType="FreeBoardDTO">
-         insert into TBL_FREEBOARD(freeboard_num, user_num, freeboard_title, freeboard_content)
+<mapper namespace="freeboard">
+   <select id = "write" parameterType="FreeBoardDTO">
+         insert into tbl_freeboard(freeboard_num, user_num, freeboard_title, freeboard_content)
          value(#{freeboardNum}, #{userNum}, #{freeboardTitle}, #{freeboardContent});
    </select>
    
-   <update id = "freeEdit" parameterType = "FreeBoardDTO">
-   		update TBL_FREEBOARD set 
+   <update id = "edit" parameterType = "FreeBoardDTO">
+   		update tbl_freeboard set 
    		freeboard_title = #{freeboardTitle}, freeboard_content = #{freeboardContent}
    		where freeboard_num = #{freeboardNum};
    </update>
    
-   <delete id = "freeDelete" parameterType = "FreeBoardDTO">
-   		delete from TBL_FREEBOARD where freeboard_num = #{freeboardNum};
+   <delete id = "delete" parameterType = "FreeBoardDTO">
+   		delete from tbl_freeboard where freeboard_num = #{freeboardNum};
    </delete>
+   
+   <select id = "selectOne" parameterType="FreeBoardDTO" resultType="FreeBoardDTO">
+   		select from tbl_freeboard
+   		where freeboard_num = #{freeboardNum}
+   </select>
+   
+   <select id = "selectAll" parameterType="FreeBoardDTO" resultType="FreeBoardDTO">
+   		select * from tbl_freeboard
+   </select>
    
  </mapper>

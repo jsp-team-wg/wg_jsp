@@ -15,7 +15,7 @@
       <aside>
         <div class="aside-spacing"></div>
         <section class="section-freeboard">
-          <a class="freeboard-a" href="../freeboardList/freeboardListLogin.jsp">
+          <a class="freeboard-a" href="../freeboardList/freeboardList.jsp">
             <div class="freeboard">자유게시판</div>
           </a>
         </section>
@@ -25,7 +25,7 @@
           </a>
         </section>
         <section class="section-notice">
-          <a class="notice-a" href="../../notice/noticeList/noticeListLogin.jsp">
+          <a class="notice-a" href="../../notice/noticeList/noticeList.jsp">
             <div class="notice">공지사항</div>
           </a>
         </section>
@@ -42,8 +42,10 @@
           </div>
           <!-- 글쓰기버튼 -->
           <div class="section-top-write">
-            <a class="section-top-write-a" href="../freeboardWrite/freeboardWriteLogin.jsp">
-                <button class="button-write">글쓰기</button>
+            <a class="section-top-write-a" href="../freeboardWrite/freeboardWrite.jsp">
+                <button class="button-write" 
+                onclick = "location.href = '${pageContext.request.contextPath}/community/freeboard/freeboardWrite/freeboardWrite.fr'"
+                >글쓰기</button>
             </a>
           </div>
         </section>
@@ -53,7 +55,9 @@
           <form class="search-form" action="">
             <div class="search-inner">
               <input class="search-bar" type="text">
-              <button class="search-button" type="submit" >검색</button>
+              <button class="search-button" type="submit" 
+              onclick = "location.href = '${pageContext.request.contextPath}/community/freeboard/freeboardList/freeboardList.fr'"
+              >검색</button>
             </div>
           </form>
         </section>
@@ -61,21 +65,19 @@
         <!-- 게시글 목록 -->
         <section class="section-board">
 
-          <!-- @@아우터박스 -->
+         <!-- @@아우터박스 -->
           <div class="board-outer-box">
-            <a class="board-inner-box" href="../freeboardViewDetail/freeboardViewDetailLogin.jsp">
+            <a class="board-inner-box" href="../freeboardViewDetail/freeboardViewDetail.jsp">
               <!-- 이너박스 상단 -->
               <div class="board-inner-box-title">
                 <div class="board-inner-box-title-text">
-                  구력 2개월 테린이인데 라켓 추천 부탁드려요
+                  ${freeboard.getfreeboardTitle}
                 </div>
               </div>
               <!-- 이너박스 중단 -->
               <div class="board-inner-box-content">
                 <div class="board-inner-box-content-text">
-                  이번에 테니스 라켓을 새로 구매하려고합니다. 라켓추천
-                  부탁드립니다. 이번에 테니스 라켓을 새로 구매하려고합니다.
-                  라켓추천 부탁드립니다.
+                  ${freeboard.getfreeboardContent}
                 </div>
               </div>
               <!-- 이너박스 하단 -->
@@ -84,35 +86,33 @@
                   <img class="comment-view-img" src="../../../resource/img/view.png" alt="" />
                 </div>
                 <div class="comment-view-cnt">
-                  <div class="comment-view-cnt-text">112</div>
+                  <div class="comment-view-cnt-text">${freeboard.getfreeboardViewCnt}</div>
                 </div>
                 <div class="comment-comment">
                   <img class="comment-comment-img" src="../../../resource/img/comment.png" alt="" />
                 </div>
                 <div class="comment-comment-cnt">
-                  <div class="comment-comment-cnt-text">12</div>
+                  <div class="comment-comment-cnt-text">${freeboard.getfreeboardCommentCnt}</div>
                 </div>
                 <div class="comment-written-date">
-                  <div class="comment-written-date-text">2023.08.11 11:13</div>
+                  <div class="comment-written-date-text">${freeboard.getfreeboardWriteDate}</div>
                 </div>
               </div>
             </a>
           </div>
           <!-- @@아우터박스 -->
           <div class="board-outer-box">
-            <a class="board-inner-box" href="../freeboardViewDetail/freeboardViewDetailLogin.jsp">
+            <a class="board-inner-box" href="../freeboardViewDetail/freeboardViewDetail.jsp">
               <!-- 이너박스 상단 -->
               <div class="board-inner-box-title">
                 <div class="board-inner-box-title-text">
-                  구력 2개월 테린이인데 라켓 추천 부탁드려요
+                  ${freeboard.getfreeboardTitle}
                 </div>
               </div>
               <!-- 이너박스 중단 -->
               <div class="board-inner-box-content">
                 <div class="board-inner-box-content-text">
-                  이번에 테니스 라켓을 새로 구매하려고합니다. 라켓추천
-                  부탁드립니다. 이번에 테니스 라켓을 새로 구매하려고합니다.
-                  라켓추천 부탁드립니다.
+                  ${freeboard.getfreeboardContent}
                 </div>
               </div>
               <!-- 이너박스 하단 -->
@@ -121,35 +121,33 @@
                   <img class="comment-view-img" src="../../../resource/img/view.png" alt="" />
                 </div>
                 <div class="comment-view-cnt">
-                  <div class="comment-view-cnt-text">112</div>
+                  <div class="comment-view-cnt-text">${freeboard.getfreeboardViewCnt}</div>
                 </div>
                 <div class="comment-comment">
                   <img class="comment-comment-img" src="../../../resource/img/comment.png" alt="" />
                 </div>
                 <div class="comment-comment-cnt">
-                  <div class="comment-comment-cnt-text">12</div>
+                  <div class="comment-comment-cnt-text">${freeboard.getfreeboardCommentCnt}</div>
                 </div>
                 <div class="comment-written-date">
-                  <div class="comment-written-date-text">2023.08.11 11:13</div>
+                  <div class="comment-written-date-text">${freeboard.getfreeboardWriteDate}</div>
                 </div>
               </div>
             </a>
           </div>
           <!-- @@아우터박스 -->
           <div class="board-outer-box">
-            <a class="board-inner-box" href="../freeboardViewDetail/freeboardViewDetailLogin.jsp">
+            <a class="board-inner-box" href="../freeboardViewDetail/freeboardViewDetail.jsp">
               <!-- 이너박스 상단 -->
               <div class="board-inner-box-title">
                 <div class="board-inner-box-title-text">
-                  구력 2개월 테린이인데 라켓 추천 부탁드려요
+                  ${freeboard.getfreeboardTitle}
                 </div>
               </div>
               <!-- 이너박스 중단 -->
               <div class="board-inner-box-content">
                 <div class="board-inner-box-content-text">
-                  이번에 테니스 라켓을 새로 구매하려고합니다. 라켓추천
-                  부탁드립니다. 이번에 테니스 라켓을 새로 구매하려고합니다.
-                  라켓추천 부탁드립니다.
+                  ${freeboard.getfreeboardContent}
                 </div>
               </div>
               <!-- 이너박스 하단 -->
@@ -158,35 +156,33 @@
                   <img class="comment-view-img" src="../../../resource/img/view.png" alt="" />
                 </div>
                 <div class="comment-view-cnt">
-                  <div class="comment-view-cnt-text">112</div>
+                  <div class="comment-view-cnt-text">${freeboard.getfreeboardViewCnt}</div>
                 </div>
                 <div class="comment-comment">
                   <img class="comment-comment-img" src="../../../resource/img/comment.png" alt="" />
                 </div>
                 <div class="comment-comment-cnt">
-                  <div class="comment-comment-cnt-text">12</div>
+                  <div class="comment-comment-cnt-text">${freeboard.getfreeboardCommentCnt}</div>
                 </div>
                 <div class="comment-written-date">
-                  <div class="comment-written-date-text">2023.08.11 11:13</div>
+                  <div class="comment-written-date-text">${freeboard.getfreeboardWriteDate}</div>
                 </div>
               </div>
             </a>
           </div>
           <!-- @@아우터박스 -->
           <div class="board-outer-box">
-            <a class="board-inner-box" href="../freeboardViewDetail/freeboardViewDetailLogin.jsp">
+            <a class="board-inner-box" href="../freeboardViewDetail/freeboardViewDetail.jsp">
               <!-- 이너박스 상단 -->
               <div class="board-inner-box-title">
                 <div class="board-inner-box-title-text">
-                  구력 2개월 테린이인데 라켓 추천 부탁드려요
+                  ${freeboard.getfreeboardTitle}
                 </div>
               </div>
               <!-- 이너박스 중단 -->
               <div class="board-inner-box-content">
                 <div class="board-inner-box-content-text">
-                  이번에 테니스 라켓을 새로 구매하려고합니다. 라켓추천
-                  부탁드립니다. 이번에 테니스 라켓을 새로 구매하려고합니다.
-                  라켓추천 부탁드립니다.
+                  ${freeboard.getfreeboardContent}
                 </div>
               </div>
               <!-- 이너박스 하단 -->
@@ -195,35 +191,33 @@
                   <img class="comment-view-img" src="../../../resource/img/view.png" alt="" />
                 </div>
                 <div class="comment-view-cnt">
-                  <div class="comment-view-cnt-text">112</div>
+                  <div class="comment-view-cnt-text">${freeboard.getfreeboardViewCnt}</div>
                 </div>
                 <div class="comment-comment">
                   <img class="comment-comment-img" src="../../../resource/img/comment.png" alt="" />
                 </div>
                 <div class="comment-comment-cnt">
-                  <div class="comment-comment-cnt-text">12</div>
+                  <div class="comment-comment-cnt-text">${freeboard.getfreeboardCommentCnt}</div>
                 </div>
                 <div class="comment-written-date">
-                  <div class="comment-written-date-text">2023.08.11 11:13</div>
+                  <div class="comment-written-date-text">${freeboard.getfreeboardWriteDate}</div>
                 </div>
               </div>
             </a>
           </div>
           <!-- @@아우터박스 -->
           <div class="board-outer-box">
-            <a class="board-inner-box" href="../freeboardViewDetail/freeboardViewDetailLogin.jsp">
+            <a class="board-inner-box" href="../freeboardViewDetail/freeboardViewDetail.jsp">
               <!-- 이너박스 상단 -->
               <div class="board-inner-box-title">
                 <div class="board-inner-box-title-text">
-                  구력 2개월 테린이인데 라켓 추천 부탁드려요
+                  ${freeboard.getfreeboardTitle}
                 </div>
               </div>
               <!-- 이너박스 중단 -->
               <div class="board-inner-box-content">
                 <div class="board-inner-box-content-text">
-                  이번에 테니스 라켓을 새로 구매하려고합니다. 라켓추천
-                  부탁드립니다. 이번에 테니스 라켓을 새로 구매하려고합니다.
-                  라켓추천 부탁드립니다.
+                  ${freeboard.getfreeboardContent}
                 </div>
               </div>
               <!-- 이너박스 하단 -->
@@ -232,35 +226,33 @@
                   <img class="comment-view-img" src="../../../resource/img/view.png" alt="" />
                 </div>
                 <div class="comment-view-cnt">
-                  <div class="comment-view-cnt-text">112</div>
+                  <div class="comment-view-cnt-text">${freeboard.getfreeboardViewCnt}</div>
                 </div>
                 <div class="comment-comment">
                   <img class="comment-comment-img" src="../../../resource/img/comment.png" alt="" />
                 </div>
                 <div class="comment-comment-cnt">
-                  <div class="comment-comment-cnt-text">12</div>
+                  <div class="comment-comment-cnt-text">${freeboard.getfreeboardCommentCnt}</div>
                 </div>
                 <div class="comment-written-date">
-                  <div class="comment-written-date-text">2023.08.11 11:13</div>
+                  <div class="comment-written-date-text">${freeboard.getfreeboardWriteDate}</div>
                 </div>
               </div>
             </a>
           </div>
           <!-- @@아우터박스 -->
           <div class="board-outer-box">
-            <a class="board-inner-box" href="../freeboardViewDetail/freeboardViewDetailLogin.jsp">
+            <a class="board-inner-box" href="../freeboardViewDetail/freeboardViewDetail.jsp">
               <!-- 이너박스 상단 -->
               <div class="board-inner-box-title">
                 <div class="board-inner-box-title-text">
-                  구력 2개월 테린이인데 라켓 추천 부탁드려요
+                  ${freeboard.getfreeboardTitle}
                 </div>
               </div>
               <!-- 이너박스 중단 -->
               <div class="board-inner-box-content">
                 <div class="board-inner-box-content-text">
-                  이번에 테니스 라켓을 새로 구매하려고합니다. 라켓추천
-                  부탁드립니다. 이번에 테니스 라켓을 새로 구매하려고합니다.
-                  라켓추천 부탁드립니다.
+                     ${freeboard.getfreeboardContent}
                 </div>
               </div>
               <!-- 이너박스 하단 -->
@@ -269,16 +261,16 @@
                   <img class="comment-view-img" src="../../../resource/img/view.png" alt="" />
                 </div>
                 <div class="comment-view-cnt">
-                  <div class="comment-view-cnt-text">112</div>
+                  <div class="comment-view-cnt-text">${freeboard.getfreeboardViewCnt}</div>
                 </div>
                 <div class="comment-comment">
                   <img class="comment-comment-img" src="../../../resource/img/comment.png" alt="" />
                 </div>
                 <div class="comment-comment-cnt">
-                  <div class="comment-comment-cnt-text">12</div>
+                  <div class="comment-comment-cnt-text">${freeboard.getfreeboardCommentCnt}</div>
                 </div>
                 <div class="comment-written-date">
-                  <div class="comment-written-date-text">2023.08.11 11:13</div>
+                  <div class="comment-written-date-text">${freeboard.getfreeboardWriteDate}</div>
                 </div>
               </div>
             </a>

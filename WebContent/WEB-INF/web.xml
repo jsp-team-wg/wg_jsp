@@ -20,14 +20,14 @@
   </servlet-mapping>
 
 
-  <!-- <servlet>
+  <servlet>
   	<servlet-name>matematch</servlet-name>
   	<servlet-class>com.example.app.ma.MateMatchFrontController</servlet-class>
   </servlet>
   <servlet-mapping>
   	<servlet-name>matematch</servlet-name>
   	<url-pattern>*.ma</url-pattern>
-  </servlet-mapping>  -->
+  </servlet-mapping>
 
 
   <servlet>
@@ -40,7 +40,7 @@
   </servlet-mapping>
 
 
-  <!-- <servlet>
+  <servlet>
   	<servlet-name>qna</servlet-name>
   	<servlet-class>com.example.app.qna.QnaFrontController</servlet-class>
   </servlet>
@@ -75,6 +75,6 @@
   <servlet-mapping>
   	<servlet-name>mypage</servlet-name>
   	<url-pattern>*.my</url-pattern>
-  </servlet-mapping>  -->
+  </servlet-mapping>
 </web-app>
 

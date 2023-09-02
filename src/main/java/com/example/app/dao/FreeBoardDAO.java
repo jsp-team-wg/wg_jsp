@@ -1,8 +1,11 @@
 package com.example.app.dao;
 
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 
 import com.example.app.dto.FreeBoardDTO;
+import com.example.app.dto.MateDTO;
 import com.mybatis.config.MyBatisConfig;
 
 public class FreeBoardDAO {
@@ -13,19 +16,30 @@ public class FreeBoardDAO {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
 	
-	public void freeWrite(FreeBoardDTO freeboardDTO) {
-		sqlSession.insert("FreeBoard.freeWrite", freeboardDTO);
+	// 자유게시판 글 작성
+	public void write(FreeBoardDTO freeboardDTO) {
+		sqlSession.insert("freeboard.write", freeboardDTO);
 	}
 	
-	public void freeEdit(FreeBoardDTO freeboardDTO) {
-		sqlSession.update("FreeBoard.freeEdit", freeboardDTO);
+	// 자유게시판 글 수정
+	public void edit(FreeBoardDTO freeboardDTO) {
+		sqlSession.update("freeboard.edit", freeboardDTO);
 	}
 	
-	public void freeDelete(FreeBoardDTO freeboardDTO) {
-		sqlSession.delete("FreeBoard.freeDelte", freeboardDTO);
+	//자유게시판 글 삭제
+	public void delete(int freeboardNum) {
+		sqlSession.delete("freeboard.delete", freeboardNum);
 	}
 	
-	public freeboardDTO selectAll(){
-		return sqlSession.selectList("board.selectAll");
+	//자유게시판 글 상세보기
+	public MateDTO selectOne() {
+		return sqlSession.selectOne("freeboard.selectOne");
 	}
+		
+	//자유게시판 글 리스트 불러오기
+	public List<FreeBoardDTO> selectAll(){
+		return sqlSession.selectList("freeboard.selectAll");
+	}
+		
+	
 }

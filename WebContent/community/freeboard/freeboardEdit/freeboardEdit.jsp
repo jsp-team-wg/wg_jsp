@@ -41,8 +41,7 @@
                 <textarea
                   class="content-area border-radius"
                   name="freeboardContent"
-                  placeholder="내용을 입력하세요(3000자 이내)"
-                >대충 쳐도 좋아요</textarea>
+                  placeholder="내용을 입력하세요(3000자 이내)"></textarea>
                 </c:out>
               </div>
             </div>

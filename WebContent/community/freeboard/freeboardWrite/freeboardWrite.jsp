@@ -28,7 +28,7 @@
               <div class="title-out-box">
                 <textarea class="title-in-box-text"
                 name="title" 
-                placeholder="제목을 입력하세요(50자 이내)"></textarea>
+                placeholder="제목을 입력하세요(50자 이내)" value = "${freeboard.getFreeboardTitle}"></textarea>
               </div>
             </div>
             <div class="content">
@@ -37,7 +37,7 @@
                 <textarea
                   class="content-area border-radius"
                   name="freeboardContent"
-                  placeholder="내용을 입력하세요(3000자 이내)"
+                  placeholder="내용을 입력하세요(3000자 이내)" value = "${freeboard.getFreeboardContent}"
                 ></textarea>
               </div>
             </div>

@@ -57,7 +57,7 @@
                   </div>
                   <div class="Text-Style1 Input-Style2 content-Size1">
                     <textarea class="content-box" readonly>
-안녕하세요 새로 가입했습니당
+						안녕하세요 새로 가입했습니당
                     </textarea>
                   </div>
                 </div>
@@ -93,11 +93,11 @@
           <div class="Icon-InnerContainer">
             <div class="Icon-Margin">
               <img class="Icon-Size1" src="../../../resource/img/view.png" alt="조회수" />
-              <div class="Font-Size">112</div>
+              <div class="Font-Size"> ${freeboard.getfreeboardViewCnt}</div>
             </div>
             <div class="Icon-Margin">
               <img class="Icon-Size2" src="../../../resource/img/comment.png" alt="댓글수" />
-              <div class="Font-Size Font-Size2">12</div>
+              <div class="Font-Size Font-Size2"> ${freeboard.getfreeboardCommentCnt}</div>
             </div>
           </div>
         </div>

@@ -9,22 +9,17 @@ import javax.servlet.http.HttpServletResponse;
 import com.example.app.Execute;
 import com.example.app.dao.FreeBoardDAO;
 
-public class FreeboardDeleteController implements Execute{
+public class FreeboardSelectAllController implements Execute{
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-		FreeBoardDAO freeboardDAO = new FreeBoardDAO();
-	
-		int freeboardNum = Integer.parseInt(request.getParameter("freeboardNum"));
+		// TODO Auto-generated method stub
 		
-		freeboardDAO.delete(freeboardNum);
-		response.sendRedirect("community/freeboard/freeboardList/freeboardList.jsp");
-			
-			
-			
-		}
-
+		FreeBoardDAO freeboardDAO = new FreeBoardDAO();
+		
+		request.setAttribute("freeboardList", freeboardDAO.selectAll());
+		request.getRequestDispatcher("/community/freeboard/freeboardList/freeboardList.jsp").forward(request, response);
+		
 	}
 
-
-
+}
