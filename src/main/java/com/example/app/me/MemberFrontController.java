@@ -78,9 +78,7 @@ public class MemberFrontController extends HttpServlet {
 				System.out.println("logout!");
 				new LogoutOkController().execute(request, response);
 				break;
-			case "/member/checkIdOk.me" :
-				System.out.println("checkIdOk!");
-				new CheckIdOkController().execute(request,response);
+			 
 			}
 		
 		
