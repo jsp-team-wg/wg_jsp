@@ -29,10 +29,11 @@ public class MateMatchWriteController implements Execute{
 		mateDTO.setUserNum((Integer)session.getAttribute("userNum"));
 		mateDTO.setMateCourtname(request.getParameter("mateCourtname"));
 		System.out.println(request.getParameter("mateCourtname"));
-		mateDTO.setMateCourtddr(request.getParameter("mateCourtaddr"));
+		mateDTO.setMateCourtaddr(request.getParameter("mateCourtaddr"));
 		System.out.println(request.getParameter("mateCourtaddr"));
 		try {
 			mateDTO.setMateDate(format.parse(request.getParameter("mateDate")));
+			System.out.println(format.parse(request.getParameter("mateDate")));
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -50,7 +51,7 @@ public class MateMatchWriteController implements Execute{
 		
 		System.out.println(mateDTO);
 		mateDAO.write(mateDTO);
-		response.sendRedirect("/wg_jsp/mateMatch/mateMatchList/mateMatchList.jsp");
+		response.sendRedirect("/wg_jsp/mateMatch/mateMatchList/mateMatchListOk.ma");
 	}
 
 	

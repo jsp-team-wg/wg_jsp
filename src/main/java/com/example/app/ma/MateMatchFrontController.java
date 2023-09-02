@@ -80,7 +80,7 @@ public class MateMatchFrontController extends HttpServlet {
 		//메이트 찾기 글 상세 보기 화면 이동
 		case "/mateMatch/mateMatchViewDetail/mateMatchViewDetail.ma" :
 			System.out.println("mateMatchViewDetail!!");
-			request.getRequestDispatcher("/mateMatch/mateMatchViewDetail/mateMatchViewDetail.jsp").forward(request, response);
+			new MateMatchSelectOneController().execute(request, response);
 			break;
 		//메이트 찾기 특정 글 데이터 불러오기
 		case "/mateMatch/mateMatchViewDetail/mateMatchViewDetailOk.ma" :
@@ -101,6 +101,11 @@ public class MateMatchFrontController extends HttpServlet {
 		case "/mateMatch/mateMatchViewDetail/mateMatchDeleteOk.ma" :
 			System.out.println("mateMatchDeleteOk!!");
 			new MateMatchDeleteController().execute(request, response);
+			break;
+		//메이트 글 검색 기능
+		case "/mateMatch/mateMatchWrite/mateMatchWriteSearchOk.ma" :
+			System.out.println("mateMatchWriteSearchOk!!");
+			new MateMatchWriteSearchOkController().execute(request, response);
 			break;
 		}
 

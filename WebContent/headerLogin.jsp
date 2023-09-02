@@ -16,7 +16,7 @@
     <div class="main-header-container">
         <div class="main-header-logo-category">
             <div class="main-header-logo">
-                <a href="${pageContext.request.contextPath}/indexLogin.jsp" class="main-header-logo-tag">
+                <a href="${pageContext.request.contextPath}/index.jsp" class="main-header-logo-tag">
                     <img class="main-header-logo-img" 
                     src="${pageContext.request.contextPath}/resource/img/warigarilogo.png"
                     alt="main-header-logo-img">

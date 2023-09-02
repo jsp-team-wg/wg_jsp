@@ -1,12 +1,8 @@
-package com.example.app.dto;
+package com.example.app.vo;
 
-
-
-import java.sql.Time;
 import java.util.Date;
 
-public class MateDTO {
-	
+public class MateVO {
 	
 	private int mateNum;
 	private int userNum;
@@ -24,11 +20,11 @@ public class MateDTO {
 	private int commentCnt;
 	private int atstatus;
 	private Date mateWritedate;
+	private String userNickname;
+	private String userGender;
+	private int userExp;
+	private double userNtrp;
 	
-	
-	
-	
-
 	public int getMateNum() {
 		return mateNum;
 	}
@@ -50,8 +46,8 @@ public class MateDTO {
 	public String getMateCourtaddr() {
 		return mateCourtaddr;
 	}
-	public void setMateCourtaddr(String mateCourtddr) {
-		this.mateCourtaddr = mateCourtddr;
+	public void setMateCourtaddr(String mateCourtaddr) {
+		this.mateCourtaddr = mateCourtaddr;
 	}
 	public Date getMateDate() {
 		return mateDate;
@@ -125,22 +121,40 @@ public class MateDTO {
 	public void setMateWritedate(Date mateWritedate) {
 		this.mateWritedate = mateWritedate;
 	}
-
-
+	public String getUserNickname() {
+		return userNickname;
+	}
+	public void setUserNickname(String userNickname) {
+		this.userNickname = userNickname;
+	}
+	public String getUserGender() {
+		return userGender;
+	}
+	public void setUserGender(String userGender) {
+		this.userGender = userGender;
+	}
+	public int getUserExp() {
+		return userExp;
+	}
+	public void setUserExp(int userExp) {
+		this.userExp = userExp;
+	}
+	public double getUserNtrp() {
+		return userNtrp;
+	}
+	public void setUserNtrp(double userNtrp) {
+		this.userNtrp = userNtrp;
+	}
 	@Override
 	public String toString() {
-		return "MateDTO [mateNum=" + mateNum + ", userNum=" + userNum + ", mateCourtname=" + mateCourtname
+		return "MateVO [mateNum=" + mateNum + ", userNum=" + userNum + ", mateCourtname=" + mateCourtname
 				+ ", mateCourtaddr=" + mateCourtaddr + ", mateDate=" + mateDate + ", mateStarttime=" + mateStarttime
 				+ ", mateEndtime=" + mateEndtime + ", mateExp=" + mateExp + ", mateNtrp=" + mateNtrp + ", mateGametype="
 				+ mateGametype + ", mateMcount=" + mateMcount + ", mateWcount=" + mateWcount + ", mateContent="
 				+ mateContent + ", commentCnt=" + commentCnt + ", atstatus=" + atstatus + ", mateWritedate="
-				+ mateWritedate + "]";
+				+ mateWritedate + ", userNickname=" + userNickname + ", userGender=" + userGender + ", userExp="
+				+ userExp + ", userNtrp=" + userNtrp + "]";
 	}
-
-	
-	
-	
-	
 	
 	
 }

@@ -28,7 +28,7 @@
                 type="text" value=""
                 name="mateCourtname"
                 id="mateCourtname"
-                placeholder="코트 이름 입력"
+                placeholder="코트 이름 입력"  disabled
               />
             </div>
           </div>
@@ -41,7 +41,7 @@
                 type="text" value=""
                 name="mateCourtaddr"
                 id="mateCourtaddr"
-                placeholder="테니스장 주소"
+                placeholder="테니스장 주소"  disabled
               />
             </div>
             <div class="court-address-input-box2">
@@ -59,7 +59,7 @@
             <div class="date-text">날짜</div>
             <div class="date-calender">
               <input class="date-calendar-input" 
-              name="mateDate" disabled
+              name="mateDate"
               type="date" />
             </div>
           </div>
@@ -80,7 +80,7 @@
                 class="time-end-input"
                 type="time"
                 name="mateEndtime"
-                placeholder="종료 시간" disabled
+                placeholder="종료 시간"
               />
               <div class="si"></div>
             </div>

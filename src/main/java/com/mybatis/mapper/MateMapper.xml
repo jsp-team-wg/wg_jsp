@@ -9,6 +9,7 @@
    		#{mateContent}, #{mateWritedate})
    </select>
    
+   <!-- 메이트 글 수정 -->
    <update id="update" parameterType="MateDTO">
    		UPDATE tbl_mate
 		SET mate_courtname = #{mateCourtname},
@@ -25,19 +26,38 @@
 		    mate_writedate = #{mateWritedate}
 		WHERE mate_num = #{mateNum}
    </update>
-   
+   <!-- 메이트 글 삭제 -->
    <delete id="delete" parameterType="int">
    		delete from tbl_mate 
    		where mate_num = #{mateNum}
    </delete>
-   
-   <select id = "selectOne" parameterType="MateDTO" resultType="MateDTO">
-   		select from tbl_mate
-   		where mate_num = #{mateNum}
-   </select>
-   
-   <select id = "selectAll" parameterType="MateDTO" resultType="MateDTO">
+   <!-- 메이트 전체 조회 -->
+   <select id = "selectAll" resultType="MateDTO">
    		select * from tbl_mate
+   </select>
+   <!-- 메이트 내가 작성한 글 조회 -->
+   <select id = "selectMyAll" parameterType="int" resultType="MateDTO">
+   		select * from tbl_mate
+   		where user_num = #{userNum}
+   </select>
+   <!-- 모집상태 업데이트-->
+   <update id="changeAt" parameterType="int">
+   		update tbl_mate
+   		set mate_atstatus = 1
+   		where mate_num = #{mate_num}
+   </update>
+   <!-- 메이트 검색 결과 조회 -->
+   <select id="searchMate" parameterType="string" resultType="MateDTO">
+   		select * from tbl_mate
+   		WHERE mate_courtname LIKE '%${searchQuery}%'
+   </select>
+   <!-- 메이트 상세 조회 -->
+   <select id = "selectOne" parameterType="int" resultType="MateVO">
+   		select m.*, u.user_num, u.user_nickname, u.user_gender,
+   		u.user_ntrp, u.user_exp
+   		from tbl_user u join tbl_mate m
+   		on u.user_num = m.user_num
+   		where m.mate_num = #{mateNum}
    </select>
    
 </mapper>

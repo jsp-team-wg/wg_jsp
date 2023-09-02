@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +10,14 @@
     <script defer src="../../resource/js/mateMatchEdit.js"></script>
     <title>메이트찾기 글수정</title>
   </head>
-  <%@ include file="../../headerLogin.jsp" %>
+  <c:choose>
+	    <c:when test="${empty sessionScope}">
+	        <jsp:include page="../../header.jsp" />
+	    </c:when>
+	    <c:otherwise>
+	        <jsp:include page="../../headerLogin.jsp" />
+	    </c:otherwise>
+	</c:choose>
   <body>
     <main>
       <form action="">
