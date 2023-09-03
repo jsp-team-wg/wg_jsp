@@ -33,6 +33,7 @@ public class NoticeViewDetailEditOkController implements Execute{
 
 		// 수정된 내용으로 데이터베이스를 업데이트합니다.
 		noticeDAO.update(noticeEdit);
+		request.getRequestDispatcher("/community/notice/noticeViewDetail/noticeViewDetail.ad").forward(request, response);
 	}
 
 }
