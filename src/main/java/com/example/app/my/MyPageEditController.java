@@ -23,9 +23,6 @@ public class MyPageEditController implements Execute{
 		Integer userNum = (Integer)session.getAttribute("userNum");
 		memberDTO.setUserNum(userNum);
 		System.out.println("세션" + userNum);
-
-		String exp = request.getParameter("userExp");
-		System.out.println("새구력 : " +exp);
 		
 		
 		request.setCharacterEncoding("UTF-8");
@@ -35,9 +32,13 @@ public class MyPageEditController implements Execute{
 		System.out.println(myPageEdit.getUserEmail());
 		System.out.println(myPageEdit.getUserName());
 		System.out.println(myPageEdit.getUserNickname());
+		System.out.println(myPageEdit.getUserGender());
+		System.out.println(myPageEdit.getUserExp());
+		System.out.println(myPageEdit.getUserNtrp());
+		
 		
 		request.setAttribute("myPageEdit", myPageEdit);
-		request.getRequestDispatcher("/myPage/mateMemberEditMyPage/mateMemberEditMyPage.jsp").forward(request, response);
+		request.getRequestDispatcher("/myPage/myPageEdit/myPageEdit.jsp").forward(request, response);
 //		response.sendRedirect("/wg_jsp/myPage/mateMemberEditMyPage/MyPageEdit.my");
 		
 	}

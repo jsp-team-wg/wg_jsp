@@ -5,6 +5,7 @@ import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.example.app.Execute;
 import com.example.app.dao.MyPageDAO;
@@ -17,9 +18,14 @@ public class MyPageDelController implements Execute{
 		MyPageDAO myPageDAO = new MyPageDAO();
 		MemberDTO memberDTO = new MemberDTO();
 		
-		myPageDAO.myPageDel(memberDTO);
-		response.sendRedirect("/myPage/mateMemberEditMyPage/MyPageEdit.my");
+		HttpSession session = request.getSession();
 		
+		Integer userNum = (Integer)session.getAttribute("userNum");
+		memberDTO.setUserNum(userNum);
+		System.out.println("세션" + userNum);
+		
+		myPageDAO.myPageDel(memberDTO);
+		request.getRequestDispatcher("/login/signIn/signOutOk.me").forward(request, response);
 		
 	}
 

@@ -6,7 +6,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>비밀번호 변경</title>
-<link rel="stylesheet" href="../../resource/css/findPw.css" />
+<link rel="stylesheet" href="../../resource/css/findPW.css" />
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
@@ -16,7 +16,7 @@
 			<div class="findPwH2">
 				<h2>비밀번호 찾기</h2>
 			</div>
-			<form action="">
+			<form action="${pageContext.request.contextPath}/login/findPw/findPwOk.me">
 					<div class="findPwText">
 						<p>*기존의 가입하신정보가 일치하면 비밀번호일부를 알려 드립니다</p>
 					</div>
@@ -24,7 +24,7 @@
 					<div class="findPwInput">
 						<div class="inputGroup">
 							<div class="inputLabel">가입한 아이디</div>
-							<input type="text" name="userID" id="userID"
+							<input type="text" name="userId" id="userID"
 								placeholder="ex) honggildong" />
 						</div>
 						<div class="inputGroup">
@@ -38,13 +38,13 @@
 								placeholder="ex) honggildong@naver.com" />
 						</div>
 					</div>
-					<button class="bgGreen">비밀번호 찾기</button>
+					<button class="bgGreen" type="submit">비밀번호 찾기</button>
 
 					<div class="findIdComplete" id="findIdResult"
 						style="display: block;">
 						<div>
 							<p id="foundUserName"></p>
-							님의 비밀번호는 " <span>abb6******</span> " 입니다
+							${member.getUserId()}님의 비밀번호는 " ${member.getUserPassword()} " 입니다
 						</div>
 						<div id="foundUserId"></div>
 					</div>

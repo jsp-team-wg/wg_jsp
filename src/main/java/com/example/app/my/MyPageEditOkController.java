@@ -21,20 +21,28 @@ public class MyPageEditOkController implements Execute {
 		
 		HttpSession session = request.getSession();
 		Integer userNum = (Integer)session.getAttribute("userNum");
+		memberDTO.setUserNum(userNum);
+		System.out.println("세션" + userNum);
 
 		request.setCharacterEncoding("UTF-8");
 		
-		memberDTO.setUserNum(userNum);
-		memberDTO.setUserPassword(request.getParameter("userPassword"));
-		memberDTO.setUserGender(request.getParameter("userGender"));
-		memberDTO.setUserExp(Integer.parseInt(request.getParameter("userExp")));
-		memberDTO.setUserNtrp(Double.parseDouble(request.getParameter("userNtrp")));
+		MemberDTO myPageEdit = myPageDAO.myPageEdit(memberDTO);
+		
+		myPageEdit.setUserPassword(request.getParameter("userPassword"));
+		myPageEdit.setUserGender(request.getParameter("userGender"));
+		myPageEdit.setUserExp(Integer.parseInt(request.getParameter("userExp")));
+		myPageEdit.setUserNtrp(Double.parseDouble(request.getParameter("userNtrp")));
+		System.out.println(myPageEdit.getUserNum());
+		System.out.println(myPageEdit.getUserPassword());
+		System.out.println(myPageEdit.getUserExp());
+		System.out.println(myPageEdit.getUserGender());
+		System.out.println(myPageEdit.getUserNtrp());
+		
+		
 
-		
-		myPageDAO.myPageEditOk(memberDTO);
-//		request.getRequestDispatcher("/myPage/mateMemberEditMyPage/mateMemberEditMyPage.jsp").forward(request, response);
-		response.sendRedirect("myPage/mateMemberEditMyPage/mateMemberEditMyPage.jsp");
-		
+		myPageDAO.myPageEditOk(myPageEdit);
+//		request.getRequestDispatcher("/myPage/myPageEdit/myPageEdit.jsp").forward(request, response);
+		response.sendRedirect("/wg_jsp/myPage/mateMemberEditMyPage/MyPageEdit.my");
 	}
 	
 }

@@ -21,6 +21,31 @@
 		count(user_num) from tbl_user
 		where user_id = #{UserId}
 	</select>
-	
+	<!-- 이우진 -->
+	<select id="myPageEdit" parameterType="MemberDTO" resultType="MemberDTO">
+		select * from tbl_user
+		where user_num = #{userNum}
+	</select>
+	<update id="myPageEditOk" parameterType="MemberDTO" >
+		update tbl_user 
+   		set 
+   		user_password = #{userPassword}
+   		, user_gender = #{userGender}
+   		, user_exp = #{userExp}
+   		, user_ntrp = #{userNtrp}
+   		where user_num = #{userNum}
+	</update>
+	<delete id="myPageDel" parameterType="MemberDTO" >
+		delete from tbl_user where user_num = #{userNum}
+	</delete>
+	<select id="findId" parameterType="MemberDTO" resultType="MemberDTO">
+		select * from tbl_user
+		where user_name = #{userName} and user_email = #{userEmail}
+	</select>
+	<select id="findPw" parameterType="MemberDTO" resultType="MemberDTO">
+		select * from tbl_user
+		where user_id= #{userId} and user_name = #{userName} and user_email = #{userEmail}
+	</select>
+	<!-- 이우진 -->
 
 </mapper>

@@ -78,7 +78,24 @@ public class MemberFrontController extends HttpServlet {
 				System.out.println("logout!");
 				new LogoutOkController().execute(request, response);
 				break;
-			 
+			case "/login/findId/findId.me":
+				System.out.println("findId!!");
+				request.getRequestDispatcher("/login/findId/findId.jsp").forward(request, response);
+				break;
+			case "/login/findId/findIdOk.me":
+				System.out.println("findIdOk!!");
+				new FindIdOkController().execute(request, response);
+				break;
+				
+			case "/login/findPw/findPw.me":
+				System.out.println("findPw!!");
+				request.getRequestDispatcher("/login/findPw/findPw.jsp").forward(request, response);
+				break;
+				
+			case "/login/findPw/findPwOk.me":
+				System.out.println("findPwOk!!");
+				new FindPwOkController().execute(request, response);
+				break;
 			}
 		
 		

@@ -46,7 +46,7 @@
 	            </button>
 			</form>
             <div class="find-id-pw">
-                <a class="find-id-a" href="../findId/findId.jsp">
+                <a class="find-id-a" href="${pageContext.request.contextPath}/login/findId/findId.me">
                     <div class="find-id">
                         <div class="find-id-text">
                             아이디 찾기
@@ -54,7 +54,7 @@
                     </div>
                 </a>
                 <div class="seperate-bar">|</div>
-                <a class="find-pw-a" href="../findPw/findPw.jsp">
+                <a class="find-pw-a" href="${pageContext.request.contextPath}/login/findPw/findPw.me">
                     <div class="find-pw">
                         <div class="find-pw-text">
                             비밀번호 찾기

@@ -78,11 +78,11 @@ public class MypageFrontController extends HttpServlet {
 			break;
 			
 		case "/myPage/mateFindMyPage/mateFindMyPage.my":
-			new MateFindMyPageController().execute(request, response);
+			new MyPageMateController().execute(request, response);
 			break;
 			
 		case "/myPage/mateMatchQnaMyPage/mateMatchQnaMyPage.my":
-			new MateMatchQnaMyPageController().execute(request, response);
+			new MyPageQnaController().execute(request, response);
 			break;
 
 
