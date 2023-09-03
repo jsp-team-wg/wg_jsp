@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+        <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="ko">
   <head>
@@ -26,29 +27,34 @@
         </div>
       </section>
       <section class="Up-Container">
-        <form action="" method="get">
+        
           <div class="Content-OuterContainer1 Shadow">
             <div class="Content-InnerContainer1">
               <!-- 제목 -->
               <div class="Title-Container">
-                <span>불법광고 관리관련 안내사항</span>
+                <span>
+                <c:out value="${noticeRead.getNoticeTitle()}"></c:out>
+                </span>
               </div>
               <hr />
               <!-- 작성자 -->
               <div class="Author-Container">
                 <span>관리자</span>
                 <span class="Text-Style1 man">남성</span>
-                <span class="ntrp">NTRP</span>
-                <span class="ntrp-num">1.5</span>
+                <!-- <span class="ntrp">NTRP${notice.getNoticeNum()}</span>
+                <span class="ntrp-num">1.5${notice.getNoticeNum()}</span>
                 <span class="exp">구력</span>
                 <span class="exp-year">1</span>
-                <span class="year">년</span>
+                <span class="year">년</span> -->
               </div>
               <hr />
+              <input type="hidden"  value="${noticeRead.getNoticeNum()}">
               <!-- 게시일 -->
               <div class="PostDate-Container">
                 <span class="Text-Color-Gray">게시일</span>
-                <span class="Text-Style1">2023.08.11 11:13</span>
+                <span class="Text-Style1">${noticeRead.getNoticeWriteDate()}
+                
+                </span>
               </div>
               <!-- 코멘트 -->
               <div class="Comment-OuterContainer">
@@ -58,8 +64,7 @@
                   </div>
                   <div class="Text-Style1 Input-Style2 content-Size1">
                     <textarea class="content-box" readonly
-                      >불법광고 하지마라 진짜
-                    </textarea>
+                      ><c:out value="${noticeRead.getNoticeContent()}"></c:out></textarea>
                   </div>
                 </div>
               </div>
@@ -68,23 +73,21 @@
           <!-- 삭제, 수정 버튼 -->
           <div class="Button-OuterContainer1">
             <div class="Button-InnerContainer1">
-              <button
-                class="Delete1"
-                type="button"
-                onclick="location.href='${pageContext.request.contextPath}/community/notice/noticeList/noticeList.jsp'"
-              >
-                <span>삭제</span>
-              </button>
+							<button class="Delete1" type="button"
+								onclick="location.href='${pageContext.request.contextPath}/community/notice/noticeViewDetail/noticeViewDetailDel.ad?noticeNum=${noticeRead.getNoticeNum()}'"
+								><span>삭제</span>
+							</button>
+						
               <button
                 class="Edit1"
                 type="button"
-                onclick="location.href='${pageContext.request.contextPath}/admin/adminNotice/adminNoticeEdit/adminNoticeEdit.jsp'"
+                onclick="location.href='${pageContext.request.contextPath}/community/notice/noticeViewDetail/noticeViewDetailEdit.ad?noticeNum=${noticeRead.getNoticeNum()}'"
               >
                 <span>수정</span>
               </button>
             </div>
           </div>
-        </form>
+        
       </section>
     </div>
     <%@ include file="../../../footer.jsp" %>

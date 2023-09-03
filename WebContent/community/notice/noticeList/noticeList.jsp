@@ -57,7 +57,7 @@
 
           <!-- @@아우터박스 -->
           <div class="board-outer-box">
-            <a class="board-inner-box" href="${pageContext.request.contextPath}/community/notice/noticeViewDetail/noticeViewDetail.jsp">
+            <a class="board-inner-box" href="${pageContext.request.contextPath}/community/notice/noticeViewDetail/noticeViewDetail.ad">
               <!-- 이너박스 상단 -->
               <div class="board-inner-box-title">
                 <div class="board-inner-box-title-text">
