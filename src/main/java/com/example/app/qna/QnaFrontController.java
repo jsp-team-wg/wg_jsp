@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.ibatis.reflection.SystemMetaObject;
+
 /**
  * Servlet implementation class QnaFrontController
  */
@@ -64,7 +66,22 @@ public class QnaFrontController extends HttpServlet {
 			System.out.println("qnaOk!!");
 			new QnaListOkController().execute(request,response);
 			break;
-
+		case "/community/qnaViewDetail/qnaViewDetailOk.qna":
+			System.out.println("qnaViewDetailOk!!");
+			new QnaViewDetailOkController().execute(request, response);
+			break;
+		case "/community/qnaWrite/qnaWriteOk.qna":
+			System.out.println("qnaWriteOk!!");
+			new QnaWriteOkController().execute(request,response);
+			break;
+		case "/community/qnaEdit/qnaEdit.qna":
+			System.out.println("qnaEdit!!");
+			new QnaEditController().execute(request, response);
+			break;
+		case "/community/qnaEdit/qnaEditOk.qna": 
+			System.out.println("QnaEditOk!!");
+			new QnaEditOkController().execute(request, response);
+			break;
 		}
 	}
 

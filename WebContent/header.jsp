@@ -45,12 +45,12 @@
                             </a>
                         </li>
                         <li class="main-sub-menu-li">
-                            <a href="${pageContext.request.contextPath}/community/qna/qnaList/qnaList.jsp" class="main-sub-menu-tag">
+                            <a href="${pageContext.request.contextPath}/community/qnaList/qnaListOk.qna" class="main-sub-menu-tag">
                                 Q&A
                             </a>
                         </li>
                         <li class="main-sub-menu-li">
-                            <a href="${pageContext.request.contextPath}/community/notice/noticeList/noticeList.jsp" class="main-sub-menu-tag">
+                            <a href="${pageContext.request.contextPath}/community/noticeList/noticeListOk.no" class="main-sub-menu-tag">
                                 공지사항
                             </a>
                         </li>

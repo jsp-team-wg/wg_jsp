@@ -1,16 +1,27 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Q&A 상세보기</title>
-<link rel="stylesheet" href="../../../resource/css/qnaViewDetail.css" />
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/resource/css/qnaViewDetail.css" />
 <!-- 구글 폰트 -->
 </head>
 <body>
-	<%@ include file="../../../header.jsp"%>
+	<c:choose>
+		<c:when test="${empty sessionScope}">
+			<jsp:include page="../../../header.jsp" />
+		</c:when>
+		<c:otherwise>
+			<jsp:include page="../../../headerLogin.jsp" />
+		</c:otherwise>
+	</c:choose>
+
 	<!-- 커뮤니티(Q&A) 상세보기 전체 영역 -->
 	<div class="Area">
 		<!-- 위쪽 컨테이너 -->
@@ -24,21 +35,22 @@
 					<div class="Content-InnerContainer1">
 						<!-- 제목 -->
 						<div class="Title-Container">
-							<span>프로스태프 좋나여?</span>
+							<span>${qnaViewDetail.getQnaTitle()}</span>
 						</div>
 						<hr />
 						<!-- 작성자 -->
 						<div class="Author-Container">
-							<span>임재준</span> <span class="Text-Style1 man">남성</span> <span
-								class="ntrp">NTRP</span> <span class="ntrp-num">1.5</span> <span
-								class="exp">구력</span> <span class="exp-year">1</span> <span
-								class="year">년</span>
+							<span>${qnaViewDetail.getUserNickname()}</span> <span
+								class="Text-Style1 man">${qnaViewDetail.getUserGender()}</span>
+							<span class="ntrp">NTRP</span> <span class="ntrp-num">${qnaViewDetail.getUserNTRP()}</span>
+							<span class="exp">구력</span> <span class="exp-year">${qnaViewDetail.getUserExp()}</span>
+							<span class="year">년</span>
 						</div>
 						<hr />
 						<!-- 게시일 -->
 						<div class="PostDate-Container">
 							<span class="Text-Color-Gray">게시일</span> <span
-								class="Text-Style1">2023.08.11 11:13</span>
+								class="Text-Style1">${qnaViewDetail.getQnaWriteDate()}</span>
 						</div>
 						<!-- 코멘트 -->
 						<div class="Comment-OuterContainer">
@@ -47,8 +59,7 @@
 									<span class="Text-Color-Gray">내용</span>
 								</div>
 								<div class="Text-Style1 Input-Style2 content-Size1">
-									<textarea class="content-box" readonly>이번에 라켓 살까하는데 프로스태프 좋음?
-                        </textarea>
+									<textarea class="content-box" readonly>${qnaViewDetail.getQnaContent()}</textarea>
 								</div>
 							</div>
 						</div>
@@ -62,7 +73,7 @@
 							<span>뒤로가기</span>
 						</button>
 						<button class="Edit1" type="button"
-							onclick="location.href='../qnaEdit/qnaEdit.jsp'">
+							onclick="location.href='${pageContext.request.contextPath}/community/qnaEdit/qnaEdit.qna?listNum=${listNum}'">
 							<span>수정</span>
 						</button>
 					</div>
@@ -76,120 +87,90 @@
 			<div class="Icon-OuterContainer">
 				<div class="Icon-InnerContainer">
 					<div class="Icon-Margin">
-						<img class="Icon-Size1" src="../../../resource/img/view.png"
+						<img class="Icon-Size1"
+							src="${pageContext.request.contextPath}/resource/img/view.png"
 							alt="조회수" />
-						<div class="Font-Size">112</div>
+						<div class="Font-Size">${qnaViewDetail.getQnaViewCnt()}</div>
 					</div>
 					<div class="Icon-Margin">
-						<img class="Icon-Size2" src="../../../resource/img/comment.png"
+						<img class="Icon-Size2"
+							src="${pageContext.request.contextPath}/resource/img/comment.png"
 							alt="댓글수" />
-						<div class="Font-Size Font-Size2">12</div>
+						<div class="Font-Size Font-Size2">${qnaViewDetail.getQnaCommentCnt()}</div>
 					</div>
 				</div>
 			</div>
+			
 			<!-- 댓글 -->
-
 			<div class="Review-OuterContainer">
-				<form action="" method="get">
-					<div class="Review-InnerContainer">
-						<hr />
-						<div class="Review-Align">
-							<div>
-								<span class="Text-Color-Gray">홍길동</span> <span
-									class="Text-Style1">테니스 용품 구해요!</span>
-							</div>
-							<div>
-								<button class="Delete2">삭제</button>
-								<button class="Edit2">수정</button>
-							</div>
-						</div>
-						<hr />
-						<div class="Review-Align">
-							<div>
-								<span class="Text-Color-Gray">고길동</span> <span
-									class="Text-Style1">스포츠용품 어디가 좋은가요?</span>
-							</div>
-							<div>
-								<button class="Delete2">삭제</button>
-								<button class="Edit2">수정</button>
-							</div>
-						</div>
-						<hr />
-						<div class="Review-Align">
-							<div>
-								<span class="Text-Color-Gray">이우진</span> <span
-									class="Text-Style1">나이키 제품 어떠신가요?</span>
-							</div>
-							<div>
-								<button class="Delete2">삭제</button>
-								<button class="Edit2">수정</button>
-							</div>
-						</div>
-						<hr />
-						<div class="Review-Align">
-							<div>
-								<span class="Text-Color-Gray">강진혁</span> <span
-									class="Text-Style1">어디서 구매하나요?</span>
-							</div>
-							<div>
-								<button class="Delete2">삭제</button>
-								<button class="Edit2">수정</button>
-							</div>
-						</div>
-						<hr />
-						<div class="Review-Align">
-							<div>
-								<span class="Text-Color-Gray">나예은</span> <span
-									class="Text-Style1">그것도 좋네요</span>
-							</div>
-							<div>
-								<button class="Delete2">삭제</button>
-								<button class="Edit2">수정</button>
-							</div>
-						</div>
-						<hr />
-						<div class="Review-Align">
-							<div>
-								<span class="Text-Color-Gray">박승권</span> <span
-									class="Text-Style1">좋아요</span>
-							</div>
-							<div>
-								<button class="Delete2">삭제</button>
-								<button class="Edit2">수정</button>
-							</div>
-						</div>
-						<hr />
-						<div class="Review-Align">
-							<div>
-								<span class="Text-Color-Gray">임재준</span> <span
-									class="Text-Style1">네</span>
-							</div>
-							<div>
-								<button class="Delete2">삭제</button>
-								<button class="Edit2">수정</button>
-							</div>
-						</div>
-						<hr />
-					</div>
+				
+					<c:choose>
+						<c:when test="${not empty qnaReview}">
+							<c:forEach var="review" items="${qnaReview}">
+<form action="${pageContext.request.contextPath}/community/qnaViewDetail/qnaViewDetailOk.qna?listNum=${listNum}&page=${currentPage}&reviewNum=${review.getCommentNum()}" method="get">
+
+								<div class="Review-InnerContainer">
+									<hr />
+									<div class="Review-Align">
+										<div>
+											<span class="Text-Color-Gray">${review.getUserNickname()}</span>
+											<span class="Text-Style1">${review.getCommentContent()}</span>
+										</div>
+										<div>
+											<button class="Delete2">삭제</button>
+										</div>
+									</div>
+									<hr />
+								</div>
+
+							</c:forEach>
+						</c:when>
+						<c:otherwise>
+							<tr class="notList-box">
+								<td colspan="5" align="center" class="noList">등록된 댓글이 없습니다</td>
+							</tr>
+						</c:otherwise>
+					</c:choose>
+
 				</form>
 			</div>
+
+
 			<!-- 페이징  -->
 			<div class="page_wrap">
 				<div class="page_nation">
-					<a class="arrow pprev" href="#">&lt;&lt;</a> <a class="arrow prev"
-						href="#">&lt;</a> <a href="#" class="active">1</a> <a href="#">2</a>
-					<a href="#">3</a> <a href="#">4</a> <a href="#">5</a> <a href="#">6</a>
-					<a href="#">7</a> <a href="#">8</a> <a href="#">9</a> <a href="#">10</a>
-					<a class="arrow next" href="#">&gt;</a> <a class="arrow nnext"
-						href="#">&gt;&gt;</a>
+
+					<a class="arrow prev"
+						href="${pageContext.request.contextPath}/community/qnaViewDetail/qnaViewDetailOk.qna?listNum=${listNum}&page=${currentPage-1}">&lt;</a>
+					<c:forEach var="page" items="${pageList}">
+
+						<c:if test="${ currentPage == page }">
+							<a class="active"
+								href="${pageContext.request.contextPath}/community/qnaViewDetail/qnaViewDetailOk.qna?listNum=${listNum}&page=${page}">
+								<c:out value="${page}" />
+							</a>
+						</c:if>
+						<c:if test="${ currentPage != page }">
+							<a
+								href="${pageContext.request.contextPath}/community/qnaViewDetail/qnaViewDetailOk.qna?listNum=${listNum}&page=${page}">
+								<c:out value="${page}" />
+							</a>
+						</c:if>
+					</c:forEach>
+					<a class="arrow next"
+						href="${pageContext.request.contextPath}/community/qnaViewDetail/qnaViewDetailOk.qna?listNum=${listNum}&page=${currentPage+1}">&gt;</a>
+
 				</div>
 			</div>
+
 			<!-- 댓글작성란, 댓글등록 버튼 -->
 			<div class="ReviewWrite-Container">
-				<form class="ReviewWrite-Container-form" action="" method="get">
+				<form class="ReviewWrite-Container-form"
+					action="${pageContext.request.contextPath}/community/qnaViewDetail/qnaViewDetailOk.qna?listNum=${listNum}&page=${currentPage}"
+					method="get">
 					<div class="ReviewWrite-Container-box1">
 						<textarea class="ReviewWrite-Container-form-text"
-							placeholder="댓글을 입력하세요(50자 이내)"></textarea>
+							placeholder="댓글을 입력하세요(50자 이내)" name="commentWrite"></textarea>
 					</div>
 					<button class="Review-Button">댓글 달기</button>
 				</form>

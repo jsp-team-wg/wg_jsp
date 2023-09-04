@@ -45,7 +45,7 @@
                         </a>
                     </li>
                     <li class="main-sub-menu-li">
-                        <a href="${pageContext.request.contextPath}/community/qna/qnaList/qnaListLogin.jsp" class="main-sub-menu-tag">
+                        <a href="${pageContext.request.contextPath}/community/qnaList/qnaListOk.qna" class="main-sub-menu-tag">
                             Q&A
                         </a>
                     </li>
