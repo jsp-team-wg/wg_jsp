@@ -1,1 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="notice">
+
+	<select id="countNoticeNum" resultType="int">
+		select count(*) from tbl_notice
+	</select>
+
+	<select id="bringNoticeList" parameterType="int"
+		resultType="NoticeDTO">
+		select * from tbl_notice
+		order by notice_num desc
+		limit
+		#{firstList}, 6
+	</select>
+
+	<select id="noticeViewDetail" resultType="NoticeDTO" parameterType="int">
+		select notice_title, notice_writedate, notice_content from tbl_notice
+		where notice_num = #{listNum}
+	</select>
+	
+	
+	
+	
+	
+</mapper>

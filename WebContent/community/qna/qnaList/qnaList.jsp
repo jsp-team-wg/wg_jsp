@@ -11,7 +11,15 @@
 	href="${pageContext.request.contextPath}/resource/css/qnaList.css" />
 </head>
 <body>
-	<%@ include file="../../../header.jsp"%>
+	<c:choose>
+		<c:when test="${empty sessionScope}">
+			<jsp:include page="../../../header.jsp" />
+		</c:when>
+		<c:otherwise>
+			<jsp:include page="../../../headerLogin.jsp" />
+		</c:otherwise>
+	</c:choose>
+
 	<div class="container">
 		<!-- 좌측 어사이드 -->
 		<aside>
@@ -43,12 +51,22 @@
 					<div class="section-top-category-name-text1">커뮤니티</div>
 					<div class="section-top-category-name-text2">Q&A - 게시글 목록</div>
 				</div>
-				<!-- 글쓰기버튼 -->
-				<div class="section-top-write">
-					<a class="section-top-write-a" href="../qnaWrite/qnaWrite.jsp">
-						<button class="button-write">글쓰기</button>
-					</a>
-				</div>
+
+				<c:choose>
+					<c:when test="${empty sessionScope}">
+
+					</c:when>
+					<c:otherwise>
+						<!-- 글쓰기버튼 -->
+						<div class="section-top-write">
+							<a class="section-top-write-a" href="${pageContext.request.contextPath}/community/qna/qnaWrite/qnaWrite.jsp">
+								<button class="button-write">글쓰기</button>
+							</a>
+						</div>
+					</c:otherwise>
+				</c:choose>
+
+
 			</section>
 
 			<!-- 검색바 -->
@@ -63,41 +81,51 @@
 
 			<!-- 게시글 목록 -->
 			<section class="section-board">
-
-				<c:forEach var="page" items="${qnaList}">
-					<!-- @@아우터박스 -->
-					<div class="board-outer-box">
-						<a class="board-inner-box"
-							href="../qnaViewDetail/qnaViewDetail.jsp"> 
-							<!-- 이너박스 상단 -->
-							<div class="board-inner-box-title">
-								<div class="board-inner-box-title-text">${page.getQnaTitle()}</div>
-							</div> <!-- 이너박스 중단 -->
-							<div class="board-inner-box-content">
-								<div class="board-inner-box-content-text">${page.getQnaContent()}</div>
-							</div> <!-- 이너박스 하단 -->
-							<div class="board-inner-box-view-comment">
-								<div class="comment-view">
-									<img class="comment-view-img"
-										src="${pageContext.request.contextPath}/resource/img/view.png" alt="" />
-								</div>
-								<div class="comment-view-cnt">
-									<div class="comment-view-cnt-text">${page.getQnaViewCnt()}</div>
-								</div>
-								<div class="comment-comment">
-									<img class="comment-comment-img"
-										src="${pageContext.request.contextPath}/resource/img/comment.png" alt="" />
-								</div>
-								<div class="comment-comment-cnt">
-									<div class="comment-comment-cnt-text">${page.getQnaCommentCnt()}</div>
-								</div>
-								<div class="comment-written-date">
-									<div class="comment-written-date-text">${page.getQnaWriteDate()}</div>
-								</div>
+				<c:choose>
+					<c:when test="${not empty qnaList}">
+						<c:forEach var="page" items="${qnaList}">
+							<!-- @@아우터박스 -->
+							<div class="board-outer-box">
+								<a class="board-inner-box"
+									href="${pageContext.request.contextPath}/community/qnaViewDetail/qnaViewDetailOk.qna?listNum=${page.getQnaNum()}">
+									<!-- 이너박스 상단 -->
+									<div class="board-inner-box-title">
+										<div class="board-inner-box-title-text">${page.getQnaTitle()}</div>
+									</div> <!-- 이너박스 중단 -->
+									<div class="board-inner-box-content">
+										<div class="board-inner-box-content-text">${page.getQnaContent()}</div>
+									</div> <!-- 이너박스 하단 -->
+									<div class="board-inner-box-view-comment">
+										<div class="comment-view">
+											<img class="comment-view-img"
+												src="${pageContext.request.contextPath}/resource/img/view.png"
+												alt="" />
+										</div>
+										<div class="comment-view-cnt">
+											<div class="comment-view-cnt-text">${page.getQnaViewCnt()}</div>
+										</div>
+										<div class="comment-comment">
+											<img class="comment-comment-img"
+												src="${pageContext.request.contextPath}/resource/img/comment.png"
+												alt="" />
+										</div>
+										<div class="comment-comment-cnt">
+											<div class="comment-comment-cnt-text">${page.getQnaCommentCnt()}</div>
+										</div>
+										<div class="comment-written-date">
+											<div class="comment-written-date-text">${page.getQnaWriteDate()}</div>
+										</div>
+									</div>
+								</a>
 							</div>
-						</a>
-					</div>
-				</c:forEach>
+						</c:forEach>
+					</c:when>
+					<c:otherwise>
+						<tr class="notList-box">
+							<td colspan="5" align="center" class="noList">등록된 게시물이 없습니다</td>
+						</tr>
+					</c:otherwise>
+				</c:choose>
 			</section>
 
 			<!-- 페이징  -->

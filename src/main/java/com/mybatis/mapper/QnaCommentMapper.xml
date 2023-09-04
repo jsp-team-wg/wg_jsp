@@ -1,1 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="qnaComment">
+
+	<select id="countQnaCommentNum" resultType="int">
+		select count(*) from
+		TBL_QNACOMMENT
+	</select>
+
+	<select id="bringQnaCommentList" parameterType="int"
+		resultType="QnaCommentVO">
+		select q.comment_num, q.qna_num, u.user_num, q.comment_content, u.user_nickname
+		from tbl_qnacomment q join tbl_user u  
+		on q.user_num = u.user_num
+		order by qna_num desc
+		limit #{firstList}, 6
+	</select>
+	
+	
+	<insert id="commentWrite" parameterType="QnaCommentDTO">
+		insert into tbl_qnacomment (qna_num, user_num, comment_content) 
+		values(#{qnaNum},#{userNum},#{commentContent})
+	</insert>
+	
+	<delete id="deleteReview" parameterType="int">
+		delete from tbl_qnacomment where comment_num = #{reviewNum}
+	</delete>
+	
+ 	
+</mapper>
