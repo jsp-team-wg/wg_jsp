@@ -1,36 +1,40 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+    
 <!DOCTYPE html>
 <html>
 <head>
  <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>마이페이지 회원정보 수정</title>
-    <link rel = "stylesheet" href = "../../resource/css/mateFindMyPage.css">
+    <link rel = "stylesheet" href = "${pageContext.request.contextPath}/resource/css/mateFindMyPage.css">
     
 </head>
 <body>
+
+
 	<%@ include file="../../headerLogin.jsp" %>
   	<main>
     <aside>
         <section  class = "aside-box">
         <div class = "aside-member-box hover1">
             <div class = "aside-member-text-box">
-                <a href = "../../myPage/mateMemberEditMyPage/mateMemberEditMyPage.jsp">
+                <a href = "${pageContext.request.contextPath}/mypage/MyPageEdit/MyPageEdit.my">
                 <span class = "aside-member-text white">회원정보 수정</span>
                 </a>
             </div>
         </div>
         <div class = "aside-matematch-box hover1">
           <div class = "aside-matematch-text-box">
-              <a href = "../../myPage/mateFindMyPage/mateFindMyPage.jsp">
+              <a href = "${pageContext.request.contextPath}/myPage/mateFindMyPage/mateFindMyPage.my">
               <span class = "aside-matematch-text white">메이트 찾기</span>
               </a>
           </div>
         </div>
         <div class = "aside-qna-box hover1">
           <div class = "aside-qna-text-box">
-              <a href = "../../myPage/mateMatchQnaMyPage/mateMatchQnaMyPage.jsp">
+              <a href = "${pageContext.request.contextPath}/myPage/mateMatchQnaMyPage/mateMatchQnaMyPage.my">
               <span class = "aside-qna-text white">Q&A</span>
               </a>
           </div>
@@ -40,6 +44,42 @@
 
       <!-- 회원정보 수정 -->
       <section class = "accountmodify-form">
+      <!-- ========== /게시글 목록 예시 =========== -->
+      <table class="board-table">
+			<thead>
+				<tr>
+					<th>번호</th>
+					<th>제목</th>
+					<th>작성자</th>
+					<th>날짜</th>
+					<th>조회수</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- ========== 게시글 목록 예시 =========== -->
+				<c:choose>
+					<c:when test="${not empty selectAllMe}">
+						<c:forEach var="mate" items="${selectAllMe}">
+							<tr>
+								<td><c:out value="${mate.getMateNumber()}" /></td>
+								<td><c:out value="${mate.getMateNumber()}" /></td>
+								<td><c:out value="${mate.getMateNumber()}" /></td>
+								<td><c:out value="${mate.getMateNumber()}" /></td>
+								<td><c:out value="${mate.getMateNumber()}" /></td>
+							</tr>
+						</c:forEach>
+					</c:when>
+					<c:otherwise>
+						<tr>
+							<td colspan="5" align="center">등록된 게시물이 없습니다</td>
+						</tr>
+					</c:otherwise>
+				</c:choose>
+				<!-- ========== /게시글 목록 예시 =========== -->
+			</tbody>
+		</table>
+		<!-- ========== /게시글 목록 예시 =========== -->
+      
          <!-- 아우터 박스 -->
          <div class="board-outer-box">
             <!-- 이너 박스 -->
