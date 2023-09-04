@@ -7,7 +7,7 @@
 		value(#{mateNum}, #{userNum}, #{commentContent})
 	</select>
 	
-	<select id="selectComment" resultType="MateCommentDTO">
+	<select id="selectComment" parameterType="int" resultType="MateCommentDTO">
 		select * from tbl_matecomment
 		where mate_num = #{mateNum}
 	</select>

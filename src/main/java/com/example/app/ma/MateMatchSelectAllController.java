@@ -14,7 +14,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.example.app.Execute;
+import com.example.app.dao.MateCommentDAO;
 import com.example.app.dao.MateDAO;
+import com.example.app.dto.MateCommentDTO;
 import com.example.app.dto.MateDTO;
 
 public class MateMatchSelectAllController implements Execute {
@@ -24,8 +26,10 @@ public class MateMatchSelectAllController implements Execute {
 		// TODO Auto-generated method stub
 		MateDAO mateDAO = new MateDAO();
 		MateDTO mateDTO = new MateDTO();
+		
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
 		SimpleDateFormat sdfc = new SimpleDateFormat("yyyyMMddHHmm");
+		
 		List<MateDTO> list = mateDAO.selectAll();
 		List<Map>resultList = new ArrayList<>();
 		
@@ -87,7 +91,7 @@ public class MateMatchSelectAllController implements Execute {
 			
 			//기한마감시 마감완료
 			int status = mateDTO.getAtstatus();
-			System.out.println(status);
+			System.out.println(mateDTO.getMateNum() + " 모집상태  : " +mateDTO.getAtstatus());
 			if(status == 1) {
 				mateInfo.put("mateAtStatus", status);
 			}else {

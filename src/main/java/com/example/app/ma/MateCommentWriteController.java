@@ -11,6 +11,7 @@ import javax.servlet.http.HttpSession;
 
 import com.example.app.Execute;
 import com.example.app.dao.MateCommentDAO;
+import com.example.app.dao.MateDAO;
 import com.example.app.dto.MateCommentDTO;
 
 public class MateCommentWriteController implements Execute {
@@ -18,6 +19,7 @@ public class MateCommentWriteController implements Execute {
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		MateCommentDAO mateCommentDAO = new MateCommentDAO();
+		MateDAO mateDAO = new MateDAO();
 		MateCommentDTO mateCommentDTO = new MateCommentDTO();
 		Date date = new Date();
 		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
@@ -31,6 +33,7 @@ public class MateCommentWriteController implements Execute {
 		mateCommentDTO.setCommentWritedate(date);
 		
 		System.out.println(mateCommentDTO);
+		mateDAO.commentCntUp(mateNum);
 		mateCommentDAO.wirte(mateCommentDTO);
 		request.getRequestDispatcher("/mateMatch/mateMatchViewDetail/mateMatchViewDetail.jsp?mateNum=" + mateNum).forward(request, response);
 	}

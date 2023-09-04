@@ -69,11 +69,11 @@ public class MateDAO {
 	}
 	//메이트 글 댓글 수 증가
 	public void commentCntUp(int mateNum) {
-		sqlSession.update("mate,commentCntUp",mateNum);
+		sqlSession.update("mate.commentCntUp",mateNum);
 	}
 	//메이트 글 댓글 수 증가
 	public void commentCntDown(int mateNum) {
-		sqlSession.update("mate,commentCntDown",mateNum);
+		sqlSession.update("mate.commentCntDown",mateNum);
 	}
 	
 }

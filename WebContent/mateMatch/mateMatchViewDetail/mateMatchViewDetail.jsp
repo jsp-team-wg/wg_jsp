@@ -33,7 +33,7 @@
           <button
             type="button"
             class="mate-detail-form-button3"
-            onclick="location.href='../../mateMatch/mateMatchList/mateMatchList.jsp'"
+            onclick="location.href='${pageContext.request.contextPath}/mateMatch/mateMatchViewDetail/mateMatchAttOk.ma?mateNum=${mate.mateNum}'"
           >
             <span class="mate-detail-form-button-text">모집완료</span>
           </button>
@@ -148,6 +148,7 @@
           </div>
         </div>
         <!-- 댓글 목록 -->
+        <c:forEach var="mateComment" items="${mateCommentList}" begin="0" end="5" >
         <div class="comment2-box">
           <div class="comment2-nickname">
             <span class="comment2-text">길동님</span>
@@ -163,7 +164,7 @@
           <hr />
         </div>
         <hr />
-
+		</c:forEach>
         <!-- 페이징 -->
         <div class="page_wrap">
           <div class="page_nation">
@@ -185,7 +186,7 @@
         </div>
         <!-- 댓글달기 -->
         <div class="ReviewWrite-Container">
-          <form class="ReviewWrite-Container-form" action="" method="post">
+          <form class="ReviewWrite-Container-form" action="${pageContext.request.contextPath}/mateMatch/mateMatchViewDetail/mateMatchCommentWriteOk.ma?mateNum=${mate.mateNum}" method="post">
             <div class="ReviewWrite-Container-box1">
               <textarea
                 class="ReviewWrite-Container-form-text"

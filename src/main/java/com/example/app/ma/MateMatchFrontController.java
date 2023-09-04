@@ -112,6 +112,10 @@ public class MateMatchFrontController extends HttpServlet {
 			System.out.println("mateMatchCommentWriteOk!!");
 			new MateCommentWriteController().execute(request, response);
 			break;
+		case "/mateMatch/mateMatchViewDetail/mateMatchAttOk.ma" :
+			System.out.println("mateMatchAttOk!!");
+			new MateMatchAttOkController().execute(request, response);
+			break;
 		}
 		
 	}
