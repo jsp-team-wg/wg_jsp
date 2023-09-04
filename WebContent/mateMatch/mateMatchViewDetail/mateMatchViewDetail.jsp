@@ -161,28 +161,6 @@
           </div>
           <br />
           <hr />
-
-          <div class="comment2-nickname">
-            <span class="comment2-text">길동님</span>
-          </div>
-          <div class="comment2-list-box">
-            <span class="comment2-list-text">hong@123.com으로 연락주세요</span>
-          </div>
-          <div class="delete-button-box">
-            <button class="delete-button">삭제</button>
-          </div>
-          <br />
-          <hr />
-
-          <div class="comment2-nickname">
-            <span class="comment2-text">길동님</span>
-          </div>
-          <div class="comment2-list-box">
-            <span class="comment2-list-text">hong@123.com으로 연락주세요</span>
-          </div>
-          <div class="delete-button-box">
-            <button class="delete-button">삭제</button>
-          </div>
         </div>
         <hr />
 
@@ -207,14 +185,15 @@
         </div>
         <!-- 댓글달기 -->
         <div class="ReviewWrite-Container">
-          <form class="ReviewWrite-Container-form" action="" method="get">
+          <form class="ReviewWrite-Container-form" action="" method="post">
             <div class="ReviewWrite-Container-box1">
               <textarea
                 class="ReviewWrite-Container-form-text"
                 placeholder="댓글을 입력하세요(50자 이내)"
+                name = "commentContent"
               ></textarea>
             </div>
-            <button class="Review-Button">댓글 달기</button>
+            <button class="Review-Button" type="submit">댓글 달기</button>
           </form>
         </div>
       </section>
