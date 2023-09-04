@@ -66,9 +66,7 @@
                     <span class="Text-Color-Gray">내용</span>
                   </div>
                   <div class="Text-Style1 Input-Style2 content-Size1">
-                    <textarea class="content-box" readonly>
-						${freeboard.freeboardContent}
-                    </textarea>
+                    <textarea class="content-box" readonly>${freeboard.freeboardContent}</textarea>
                   </div>
                 </div>
               </div>

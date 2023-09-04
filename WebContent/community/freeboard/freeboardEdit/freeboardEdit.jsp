@@ -40,9 +40,7 @@
                 <textarea
                   class="content-area border-radius"
                   name="freeboardContent"
-                  placeholder="내용을 입력하세요(3000자 이내)"> 
-                 ${freeboard.freeboardContent}
-                </textarea>
+                  placeholder="내용을 입력하세요(3000자 이내)">${freeboard.freeboardContent}</textarea>
                 
               </div>
             </div>
@@ -51,7 +49,7 @@
         <!-- 뒤로가기 & 작성완료 -->
         <section>
           <div class="pagebackComplete border-radius">
-            <button type="submit" 
+            <button type="button" 
             onclick="window.location.href='${pageContext.request.contextPath}/community/freeboard/freeboardViewDetail/freeboardViewDetail.fr?freeboardNum=${freeboard.freeboardNum}'"
               class="pageback button-size border-radius bgRed colorWhite"
               name="pageback"

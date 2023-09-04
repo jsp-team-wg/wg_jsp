@@ -6,17 +6,28 @@
    </settings>
    
    <typeAliases>
-      <typeAlias type="com.example.app.dto.AdminDTO" alias = "AdminDTO"/>
-      <typeAlias type="com.example.app.dto.FreeBoardDTO" alias = "FreeBoardDTO"/>
-      <typeAlias type="com.example.app.vo.FreeBoardVO" alias = "FreeBoardVO"/>
-      <typeAlias type="com.example.app.dto.FreeCommentDTO" alias = "FreeCommentDTO"/>
-      <typeAlias type="com.example.app.dto.MateCommentDTO" alias = "MateCommentDTO"/>
-      <typeAlias type="com.example.app.vo.MateVO" alias = "MateVO"/>
-      <typeAlias type="com.example.app.dto.MateDTO" alias = "MateDTO"/>
-      <typeAlias type="com.example.app.dto.MemberDTO" alias = "MemberDTO"/>
-      <typeAlias type="com.example.app.dto.NoticeDTO" alias = "NoticeDTO"/>
-      <typeAlias type="com.example.app.dto.QnaCommentDTO" alias = "QnaCommentDTO"/>
-      <typeAlias type="com.example.app.dto.QnaDTO" alias = "QnaDTO"/>
+      <typeAlias type="com.example.app.dto.AdminDTO"
+         alias="AdminDTO" />
+      <typeAlias type="com.example.app.dto.FreeBoardDTO"
+         alias="FreeBoardDTO" />
+      <typeAlias type="com.example.app.vo.FreeBoardVO"
+         alias="FreeBoardVO" />
+      <typeAlias type="com.example.app.dto.FreeCommentDTO"
+         alias="FreeCommentDTO" />
+      <typeAlias type="com.example.app.dto.MateCommentDTO"
+         alias="MateCommentDTO" />
+      <typeAlias type="com.example.app.vo.MateVO" alias="MateVO" />
+      <typeAlias type="com.example.app.dto.MateDTO"
+         alias="MateDTO" />
+      <typeAlias type="com.example.app.dto.MemberDTO"
+         alias="MemberDTO" />
+      <typeAlias type="com.example.app.dto.NoticeDTO"
+         alias="NoticeDTO" />
+      <typeAlias type="com.example.app.dto.QnaCommentDTO" alias="QnaCommentDTO" />
+      <typeAlias type="com.example.app.dto.QnaDTO" alias="QnaDTO" />
+      <typeAlias type="com.example.app.vo.QnaCommentVO" alias="QnaCommentVO" />
+      <typeAlias type="com.example.app.vo.QnaViewDetailVo" alias="QnaViewDetailVo" />
+      
    </typeAliases>
 
 
@@ -33,15 +44,15 @@
    </environments>
    
    <mappers>
-   		<mapper resource = "com/mybatis/mapper/AdminMapper.xml"></mapper>
-   		<mapper resource = "com/mybatis/mapper/FreeBoardMapper.xml"></mapper>
-   		<mapper resource = "com/mybatis/mapper/FreeCommentMapper.xml"></mapper>
-   		<mapper resource = "com/mybatis/mapper/MateCommetMapper.xml"></mapper>
-   		<mapper resource = "com/mybatis/mapper/MateMapper.xml"></mapper>
-   		<mapper resource = "com/mybatis/mapper/MemberMapper.xml"></mapper>
-   		<mapper resource = "com/mybatis/mapper/NoticeMapper.xml"></mapper>
-   		<mapper resource = "com/mybatis/mapper/QnaCommentMapper.xml"></mapper>
-   		<mapper resource = "com/mybatis/mapper/QnaMapper.xml"></mapper>
+      <mapper resource="com/mybatis/mapper/AdminMapper.xml"></mapper>
+      <mapper resource="com/mybatis/mapper/FreeBoardMapper.xml"></mapper>
+      <mapper resource="com/mybatis/mapper/FreeCommentMapper.xml"></mapper>
+      <mapper resource="com/mybatis/mapper/MateCommentMapper.xml"></mapper>
+      <mapper resource="com/mybatis/mapper/MateMapper.xml"></mapper>
+      <mapper resource="com/mybatis/mapper/MemberMapper.xml"></mapper>
+      <mapper resource="com/mybatis/mapper/NoticeMapper.xml"></mapper>
+      <mapper resource="com/mybatis/mapper/QnaCommentMapper.xml"></mapper>
+      <mapper resource="com/mybatis/mapper/QnaMapper.xml"></mapper>
 
    </mappers>
    

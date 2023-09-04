@@ -6,6 +6,13 @@
          value(#{freeboardNum}, #{userNum}, #{freeboardTitle}, #{freeboardContent});
    </select>
    
+   <select id="bringFreeboardList" parameterType="int"
+		resultType="FreeBoardDTO">
+		select * from tbl_freeboard
+		order by freeboard_num desc
+		limit #{firstList}, 6
+	</select>
+	
    <update id = "edit" parameterType = "FreeBoardDTO">
    		update tbl_freeboard 
    		set freeboard_title = #{freeboardTitle}, 
@@ -30,5 +37,24 @@
    		select * from tbl_freeboard
    		where freeboard_num = #{freeboardNum}
    </select> 
+   
+   <select id="countFreeboardNum" resultType="int">
+		select count(*) from tbl_freeboard
+	</select>
+	
+	<select id="getPrevView" resultType="FreeBoardDTO">
+		select freeboard_viewcnt from tbl_freeboard
+		where freeboard_num = #{listNum}
+	</select>
+	
+	<update id="addViewCnt" parameterType="FreeBoardDTO">
+		update tbl_freeboard set freeboard_viewcnt = #{freeboardViewCnt} where freeboard_num = #{freeboardNum}
+	</update>
+	
+	<select id="bringContent" parameterType="int" resultType="FreeBoardDTO">
+ 		select freeboard_title, freeboard_content from tbl_freeboard
+ 		where freeboard_num = #{listNum}
+	</select>
+	
    
  </mapper>

@@ -1,17 +1,12 @@
 package com.example.app.fr;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.example.app.ma.MateMatchDeleteController;
-import com.example.app.ma.MateMatchEditController;
-import com.example.app.ma.MateMatchSelectAllController;
-import com.example.app.ma.MateMatchSelectOneController;
-import com.example.app.ma.MateMatchWriteController;
 
 /**
  * Servlet implementation class FreeboardFrontController
@@ -105,7 +100,7 @@ public class FreeboardFrontController extends HttpServlet {
 		//자유게시판 글 수정 기능
 		case "/community/freeboard/freeboardList/freeboardEditOk.fr":
 			System.out.println("freeboardEditOk!!");
-			new FreeBoardEditOkController().execute(request, response);
+			new FreeboardEditOkController().execute(request, response);
 			break;
 		//자유게시판 글 삭제 기능
 		case "/community/freeboard/freeboardViewDetail/freeboardDeleteOk.fr" :
