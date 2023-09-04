@@ -79,7 +79,6 @@ function displayPlaces(places) {
     removeMarker();
     
     for ( var i=0; i<places.length; i++ ) {
-
         // 마커를 생성하고 지도에 표시합니다
         var placePosition = new kakao.maps.LatLng(places[i].y, places[i].x),
             marker = addMarker(placePosition, i), 
@@ -119,13 +118,14 @@ function displayPlaces(places) {
 
     // 검색된 장소 위치를 기준으로 지도 범위를 재설정합니다
     map.setBounds(bounds);
+    
 }
 
 
 
 // 검색결과 항목을 Element로 반환하는 함수입니다
 function getListItem(index, places) {
-
+	
     var el = document.createElement('li'),
     itemStr = '<span class="markerbg marker_' + (index+1) + '"></span>' +
                 '<div class="info">' +
@@ -147,6 +147,8 @@ function getListItem(index, places) {
    // 클릭 이벤트 핸들러 등록
    el.addEventListener('click', function() {
     // 선택한 값을 부모 창에 전달
+    console.log('click!!!!')
+    console.log(places.place_name);
     window.opener.updateParentInputs(places.place_name, places.road_address_name || places.address_name);
     window.close(); // 자식 창 닫기
 });

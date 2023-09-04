@@ -16,7 +16,7 @@
     <div class="main-header-container">
         <div class="main-header-logo-category">
             <div class="main-header-logo">
-                <a href="${pageContext.request.contextPath}/indexLogin.jsp" class="main-header-logo-tag">
+                <a href="${pageContext.request.contextPath}/index.jsp" class="main-header-logo-tag">
                     <img class="main-header-logo-img" 
                     src="${pageContext.request.contextPath}/resource/img/warigarilogo.png"
                     alt="main-header-logo-img">
@@ -25,7 +25,7 @@
             <nav class="main-header-category">
                 <ul class="main-header-category-ul">   
                     <li class="main-header-category-list">
-                        <a href="${pageContext.request.contextPath}/mateMatch/mateMatchList/mateMatchList.jsp" class="main-header-category-matetag">
+                        <a href="${pageContext.request.contextPath}/mateMatch/mateMatchList/mateMatchListOk.ma" class="main-header-category-matetag">
                         메이트 찾기
                         </a>
                     </li>
