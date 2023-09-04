@@ -13,6 +13,7 @@ public class FreeBoardDTO {
 //    freeboard_writedate DATETIME NOT null DEFAULT CURRENT_TIMESTAMP,
 	
 	private int freeboardNum;
+	private int userNum;
 	private String freeboardTitle;
 	private String freeboardContent;
 	private int freeboardViewCnt;
@@ -31,6 +32,18 @@ public class FreeBoardDTO {
 
 	public void setFreeboardNum(int freeboardNum) {
 		this.freeboardNum = freeboardNum;
+	}
+	
+	
+
+	public int getUserNum() {
+		return userNum;
+	}
+
+
+
+	public void setUserNum(int userNum) {
+		this.userNum = userNum;
 	}
 
 

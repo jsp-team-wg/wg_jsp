@@ -6,28 +6,41 @@ import java.util.Date;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.example.app.Execute;
 import com.example.app.dao.FreeBoardDAO;
 import com.example.app.dto.FreeBoardDTO;
+import com.example.app.dto.MemberDTO;
 
-public class FreeBoardWriteOk implements Execute{
+public class FreeboardWriteController implements Execute{
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-		FreeBoardDTO freeboardDTO = new FreeBoardDTO();
+		// TODO Auto-generated method stub
 		FreeBoardDAO freeboardDAO = new FreeBoardDAO();
+		FreeBoardDTO freeboardDTO = new FreeBoardDTO();
 		Date date = new Date();
+		HttpSession session = request.getSession();
 		
-		freeboardDTO.setFreeboardNum(Integer.valueOf(request.getParameter("freeboardNum")));
+		Integer userNum = (Integer)session.getAttribute("userNum");
+		System.out.println("check UserNum : "+userNum);
+		
+		
+		freeboardDTO.setUserNum(userNum);
+
+		request.setCharacterEncoding("UTF-8");
+		
+
 		freeboardDTO.setFreeboardTitle(request.getParameter("freeboardTitle"));
 		freeboardDTO.setFreeboardContent(request.getParameter("freeboardContent"));
-		freeboardDTO.setFreeboardViewCnt(Integer.valueOf(request.getParameter("freeboardViewCnt")));
-		freeboardDTO.setFreeboardCommentCnt(Integer.valueOf(request.getParameter("freeboardCommentCnt")));
 		freeboardDTO.setFreeboardWriteDate(date);
-		request.getRequestDispatcher("/community/freeboard/freeboardEdit/freeboardEdit.jsp").forward(request, response);
+
+		
+		System.out.println(freeboardDTO);
+		freeboardDAO.write(freeboardDTO);
+		response.sendRedirect("/wg_jsp/community/freeboard/freeboardList/freeboardListOk.fr");
 		
 	}
-	
 
 }

@@ -7,6 +7,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.example.app.ma.MateMatchDeleteController;
+import com.example.app.ma.MateMatchEditController;
+import com.example.app.ma.MateMatchSelectAllController;
+import com.example.app.ma.MateMatchSelectOneController;
+import com.example.app.ma.MateMatchWriteController;
+
 /**
  * Servlet implementation class FreeboardFrontController
  */
@@ -61,17 +67,52 @@ public class FreeboardFrontController extends HttpServlet {
 		// 단순한 값비교는 if문보다 switch문이 효율성이 좋고 가독성도 좋다
 		// break문을 꼭 써야된다!
 		switch (target) {
+		// 자유게시판 글 작성 페이지 이동
 		case "/community/freeboard/freeboardWrite/freeboardWrite.fr":
-			System.out.println("Free Write!!");
+			System.out.println("freeboardWrite!!");
 			request.getRequestDispatcher("/community/freeboard/freeboardWrite/freeboardWrite.jsp").forward(request, response);
 			break;
-			
+		//자유게시판 글 작성 기능
+		case "/community/freeboard/freeboardWrite/freeboardWriteOk.fr":
+			System.out.println("freeboardWriteOk!!");
+			new FreeboardWriteController().execute(request, response);
+			break;
+		//자유게시판 글 목록 화면 이동
+		case "/community/freeboard/freeboardList/freeboardList.fr":
+			System.out.println("freeboardList!!");
+			request.getRequestDispatcher("/community/freeboard/freeboardList/freeboardList.jsp").forward(request, response);
+			break;
+		//자유게시판 찾기 글 목록 불러오기
+		case "/community/freeboard/freeboardList/freeboardListOk.fr":
+			System.out.println("freeboardListOk!!");
+			new FreeboardSelectAllController().execute(request, response);
+			break;
+		//자유게시판 글 상세 보기 화면 이동
+		case "/community/freeboard/freeboardViewDetail/freeboardViewDetail.fr" :
+			System.out.println("freeboardViewDetail!!");
+			new FreeboardSelectOneController().execute(request, response);
+			break;
+		//자유게시판 특정 글 데이터 불러오기
+		case "/community/freeboard/freeboardViewDetail/freeboardViewDetailOk.fr" :
+			System.out.println("mateMatchViewDetailOk!!");
+			new FreeboardSelectOneController().execute(request, response);
+			break;
+		//자유게시판 글 수정 화면으로 이동
 		case "/community/freeboard/freeboardEdit/freeboardEdit.fr":
-			System.out.println("Free Edit!!");
-			request.getRequestDispatcher("/community/freeboard/freeboardWrite/freeboardWrite.jsp").forward(request, response);
+			System.out.println("freeboardEdit!!");
+			new FreeboardEditController().execute(request, response);
+			break;
+		//자유게시판 글 수정 기능
+		case "/community/freeboard/freeboardList/freeboardEditOk.fr":
+			System.out.println("freeboardEditOk!!");
+			new FreeBoardEditOkController().execute(request, response);
+			break;
+		//자유게시판 글 삭제 기능
+		case "/community/freeboard/freeboardViewDetail/freeboardDeleteOk.fr" :
+			System.out.println("freeboardDeleteOk!!");
+			new FreeboardDeleteController().execute(request, response);
 			break;
 		
-			
 
 		}
 	}
