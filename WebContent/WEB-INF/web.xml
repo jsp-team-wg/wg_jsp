@@ -21,8 +21,7 @@
 		<servlet-name>member</servlet-name>
 		<url-pattern>*.me</url-pattern>
 	</servlet-mapping>
-
-
+	
 	<servlet>
 		<servlet-name>matematch</servlet-name>
 		<servlet-class>com.example.app.ma.MateMatchFrontController</servlet-class>
@@ -41,17 +40,6 @@
 		<url-pattern>*.fr</url-pattern>
 	</servlet-mapping>
 
-
-	<servlet>
-		<servlet-name>qna</servlet-name>
-		<servlet-class>com.example.app.qna.QnaFrontController</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>qna</servlet-name>
-		<url-pattern>*.qna</url-pattern>
-	</servlet-mapping>
-
-
 	<servlet>
 		<servlet-name>notice</servlet-name>
 		<servlet-class>com.example.app.no.NoticeFrontController</servlet-class>
@@ -61,24 +49,32 @@
 		<url-pattern>*.no</url-pattern>
 	</servlet-mapping>
 
-	<servlet>
-		<servlet-name>admin</servlet-name>
-		<servlet-class>com.example.app.ad.AdminFrontController</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>admin</servlet-name>
-		<url-pattern>*.ad</url-pattern>
-	</servlet-mapping>
+  <servlet>
+  	<servlet-name>qna</servlet-name>
+  	<servlet-class>com.example.app.qna.QnaFrontController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>qna</servlet-name>
+  	<url-pattern>*.qna</url-pattern>
+  </servlet-mapping>
 
+  <servlet>
+  	<servlet-name>admin</servlet-name>
+  	<servlet-class>com.example.app.ad.AdminFrontController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>admin</servlet-name>
+  	<url-pattern>*.ad</url-pattern>
+  </servlet-mapping>
 
-	<servlet>
-		<servlet-name>mypage</servlet-name>
-		<servlet-class>com.example.app.my.MypageFrontController</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>mypage</servlet-name>
-		<url-pattern>*.my</url-pattern>
-	</servlet-mapping>
+  <servlet>
+  	<servlet-name>mypage</servlet-name>
+  	<servlet-class>com.example.app.my.MypageFrontController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>mypage</servlet-name>
+  	<url-pattern>*.my</url-pattern>
+  </servlet-mapping>
 
 </web-app>
 
