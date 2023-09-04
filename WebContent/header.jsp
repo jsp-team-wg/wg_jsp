@@ -30,7 +30,7 @@
                             </a>
                         </li>
                         <li class="main-header-category-list">
-                            <a href="${pageContext.request.contextPath}/community/freeboard/freeboardList/freeboardList.jsp" class="main-header-category-communitytag">
+                            <a href="${pageContext.request.contextPath}/community/freeboard/freeboardList/freeboardList.fr" class="main-header-category-communitytag">
                             커뮤니티
                             </a>
                         </li>

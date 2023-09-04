@@ -14,7 +14,7 @@ public class MemberDAO {
 	}
 	
 	public void signUp(MemberDTO memberDTO) {
-		sqlSession.insert("user.signUp",memberDTO);
+		sqlSession.insert("member.signUp",memberDTO);
 	}
 	
 	public MemberDTO signIn(MemberDTO memberDTO) {

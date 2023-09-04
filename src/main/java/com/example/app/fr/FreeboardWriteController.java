@@ -11,6 +11,7 @@ import javax.servlet.http.HttpSession;
 import com.example.app.Execute;
 import com.example.app.dao.FreeBoardDAO;
 import com.example.app.dto.FreeBoardDTO;
+import com.example.app.dto.MemberDTO;
 
 public class FreeboardWriteController implements Execute{
 
@@ -22,20 +23,23 @@ public class FreeboardWriteController implements Execute{
 		Date date = new Date();
 		HttpSession session = request.getSession();
 		
-		freeboardDTO.setFreeboardNum((Integer)session.getAttribute("freeboardNum"));
-
+		Integer userNum = (Integer)session.getAttribute("userNum");
+		System.out.println("check UserNum : "+userNum);
 		
-		freeboardDTO.setFreeboardNum(Integer.parseInt(request.getParameter("freeboardNum")));
+		
+		freeboardDTO.setUserNum(userNum);
+
+		request.setCharacterEncoding("UTF-8");
+		
+
 		freeboardDTO.setFreeboardTitle(request.getParameter("freeboardTitle"));
 		freeboardDTO.setFreeboardContent(request.getParameter("freeboardContent"));
-		freeboardDTO.setFreeboardViewCnt(Integer.parseInt(request.getParameter("freeboardViewCnt")));
-		freeboardDTO.setFreeboardCommentCnt(Integer.parseInt(request.getParameter("freeboardCommentCnt")));
 		freeboardDTO.setFreeboardWriteDate(date);
 
 		
 		System.out.println(freeboardDTO);
 		freeboardDAO.write(freeboardDTO);
-		response.sendRedirect("/wg_jsp/community/freeboard/freeboardList/freeboardList.jsp");
+		response.sendRedirect("/wg_jsp/community/freeboard/freeboardList/freeboardListOk.fr");
 		
 	}
 

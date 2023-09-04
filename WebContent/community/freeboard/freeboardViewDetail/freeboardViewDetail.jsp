@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+    
 <!DOCTYPE html>
 <html lang="ko">
   <head>
@@ -16,11 +18,19 @@
     />
   </head>
   <body>
-    <%@ include file="../../../headerLogin.jsp" %>
+   <c:choose>
+       <c:when test="${empty sessionScope}">
+           <jsp:include page="../../../header.jsp" />
+       </c:when>
+       <c:otherwise>
+           <jsp:include page="../../../headerLogin.jsp" />
+       </c:otherwise>
+   </c:choose>
     <!-- 커뮤니티(Q&A) 상세보기 전체 영역 -->
     <div class="Area">
       <!-- 위쪽 컨테이너 -->
       <section class="MainText-Container">
+      <input type="hidden" value="${freeboard.freeboardNum}" name="freeboardNum"/>
         <div class="MainText-Container-text1">커뮤니티</div>
         <div class="MainText-Container-text2">자유게시판 - 상세페이지</div>
       </section>
@@ -30,24 +40,24 @@
             <div class="Content-InnerContainer1">
               <!-- 제목 -->
               <div class="Title-Container">
-                <span>가입인사</span>
+                <span>${freeboard.freeboardTitle}</span>
               </div>
               <hr />
               <!-- 작성자 -->
               <div class="Author-Container">
-                <span>임재준</span>
-                <span class="Text-Style1 man">남성</span>
+                <span>${freeboard.userNickName}</span>
+                <span class="Text-Style1 man">${freeboard.userGender}</span>
                 <span class="ntrp">NTRP</span>
-                <span class="ntrp-num">1.5</span>
+                <span class="ntrp-num">${freeboard.userNtrp}</span>
                 <span class="exp">구력</span>
-                <span class="exp-year">1</span>
+                <span class="exp-year">${freeboard.userExp}</span>
                 <span class="year">년</span>
               </div>
               <hr />
               <!-- 게시일 -->
               <div class="PostDate-Container">
                 <span class="Text-Color-Gray">게시일</span>
-                <span class="Text-Style1">2023.08.11 11:13</span>
+                <span class="Text-Style1">${freeboard.freeboardMonthDay}</span>
               </div>
               <!-- 코멘트 -->
               <div class="Comment-OuterContainer">
@@ -57,7 +67,7 @@
                   </div>
                   <div class="Text-Style1 Input-Style2 content-Size1">
                     <textarea class="content-box" readonly>
-						안녕하세요 새로 가입했습니당
+						${freeboard.freeboardContent}
                     </textarea>
                   </div>
                 </div>
@@ -67,18 +77,12 @@
           <!-- 삭제, 수정 버튼 -->
           <div class="Button-OuterContainer1">
             <div class="Button-InnerContainer1">
-              <button
-                class="Delete1"
-                type="button"
-                onclick="location.href='${pageContext.request.contextPath}/community/freeboard/freeDelete.fr'"
-              >
+              <button  class="Delete1" type="button"
+              onclick="window.location.href='${pageContext.request.contextPath}/community/freeboard/freeboardViewDetail/freeboardDeleteOk.fr?freeboardNum=${freeboard.freeboardNum}'">
                 <span>삭제</span>
               </button>
-              <button
-                class="Edit1"
-                type="button"
-                onclick="location.href='${pageContext.request.contextPath}/community/freeboard/freeEdit.fr'"
-              >
+              <button class="Edit1" type="button"
+                onclick="location.href='${pageContext.request.contextPath}/community/freeboard/freeboardEdit/freeboardEdit.fr?freeboardNum=${freeboard.freeboardNum}'">
                 <span>수정</span>
               </button>
             </div>
@@ -93,11 +97,11 @@
           <div class="Icon-InnerContainer">
             <div class="Icon-Margin">
               <img class="Icon-Size1" src="../../../resource/img/view.png" alt="조회수" />
-              <div class="Font-Size"> ${freeboard.getfreeboardViewCnt}</div>
+              <div class="Font-Size">${freeboard.freeboardViewCnt}</div>
             </div>
             <div class="Icon-Margin">
               <img class="Icon-Size2" src="../../../resource/img/comment.png" alt="댓글수" />
-              <div class="Font-Size Font-Size2"> ${freeboard.getfreeboardCommentCnt}</div>
+              <div class="Font-Size Font-Size2"> ${freeboard.freeboardCommentCnt}</div>
             </div>
           </div>
         </div>

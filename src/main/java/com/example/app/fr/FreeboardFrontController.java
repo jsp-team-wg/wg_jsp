@@ -90,7 +90,7 @@ public class FreeboardFrontController extends HttpServlet {
 		//자유게시판 글 상세 보기 화면 이동
 		case "/community/freeboard/freeboardViewDetail/freeboardViewDetail.fr" :
 			System.out.println("freeboardViewDetail!!");
-			request.getRequestDispatcher("/community/freeboard/freeboardViewDetail/freeboardViewDetail.jsp").forward(request, response);
+			new FreeboardSelectOneController().execute(request, response);
 			break;
 		//자유게시판 특정 글 데이터 불러오기
 		case "/community/freeboard/freeboardViewDetail/freeboardViewDetailOk.fr" :
@@ -98,22 +98,21 @@ public class FreeboardFrontController extends HttpServlet {
 			new FreeboardSelectOneController().execute(request, response);
 			break;
 		//자유게시판 글 수정 화면으로 이동
-		case "/community/freeboard/freeboardEdit/freeBoardEdit.fr":
+		case "/community/freeboard/freeboardEdit/freeboardEdit.fr":
 			System.out.println("freeboardEdit!!");
-			request.getRequestDispatcher("/community/freeboard/freeboardEdit/freeboardEdit.jsp");
-			break;
-		//자유게시판 글 수정 기능
-		case "/community/freeboard/freeboardEdit/freeboardEditOk.fr":
-			System.out.println("freeboardEditOk!!");
 			new FreeboardEditController().execute(request, response);
 			break;
+		//자유게시판 글 수정 기능
+		case "/community/freeboard/freeboardList/freeboardEditOk.fr":
+			System.out.println("freeboardEditOk!!");
+			new FreeBoardEditOkController().execute(request, response);
+			break;
 		//자유게시판 글 삭제 기능
-		case "/community/freeboard/freeboardViewDetail/freeboardDeleteOk.ma" :
+		case "/community/freeboard/freeboardViewDetail/freeboardDeleteOk.fr" :
 			System.out.println("freeboardDeleteOk!!");
 			new FreeboardDeleteController().execute(request, response);
 			break;
 		
-			
 
 		}
 	}

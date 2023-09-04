@@ -18,8 +18,7 @@ public class FreeboardDeleteController implements Execute{
 		int freeboardNum = Integer.parseInt(request.getParameter("freeboardNum"));
 		
 		freeboardDAO.delete(freeboardNum);
-		response.sendRedirect("community/freeboard/freeboardList/freeboardList.jsp");
-			
+		request.getRequestDispatcher("/community/freeboard/freeboardList/freeboardListOk.fr").forward(request, response);
 			
 			
 		}

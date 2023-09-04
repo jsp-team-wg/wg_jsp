@@ -7,22 +7,28 @@
    </select>
    
    <update id = "edit" parameterType = "FreeBoardDTO">
-   		update tbl_freeboard set 
-   		freeboard_title = #{freeboardTitle}, freeboard_content = #{freeboardContent}
-   		where freeboard_num = #{freeboardNum};
+   		update tbl_freeboard 
+   		set freeboard_title = #{freeboardTitle}, 
+   			freeboard_content = #{freeboardContent},
+   			freeboard_writedate = #{freeboardWriteDate} where freeboard_num = #{freeboardNum};
    </update>
    
    <delete id = "delete" parameterType = "FreeBoardDTO">
    		delete from tbl_freeboard where freeboard_num = #{freeboardNum};
    </delete>
    
-   <select id = "selectOne" parameterType="FreeBoardDTO" resultType="FreeBoardDTO">
-   		select from tbl_freeboard
+   <select id = "selectOne" parameterType="int" resultType="FreeBoardVO">
+   		select * from tbl_freeboard join tbl_user
    		where freeboard_num = #{freeboardNum}
    </select>
    
    <select id = "selectAll" parameterType="FreeBoardDTO" resultType="FreeBoardDTO">
    		select * from tbl_freeboard
    </select>
+   
+   <select id = "selectWrite" parameterType = "int" resultType="FreeBoardDTO">
+   		select * from tbl_freeboard
+   		where freeboard_num = #{freeboardNum}
+   </select> 
    
  </mapper>
