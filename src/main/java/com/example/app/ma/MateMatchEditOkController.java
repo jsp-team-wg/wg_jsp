@@ -25,6 +25,7 @@ public class MateMatchEditOkController implements Execute{
 		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 		HttpSession session = request.getSession();
 		
+		int mateNum = Integer.parseInt(request.getParameter("mateNum"));
 		mateDTO.setUserNum((Integer)session.getAttribute("userNum"));
 		mateDTO.setMateCourtname(request.getParameter("mateCourtname"));
 		mateDTO.setMateCourtaddr(request.getParameter("mateCourtaddr"));
@@ -45,7 +46,7 @@ public class MateMatchEditOkController implements Execute{
 		mateDTO.setMateWritedate(date);
 		
 		System.out.println(mateDTO);
-		mateDAO.update(mateDTO);
+		mateDAO.update(mateNum,mateDTO);
 		request.getRequestDispatcher("/mateMatch/mateMatchList/mateMatchListOk.ma").forward(request, response);
 	}
 

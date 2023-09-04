@@ -17,6 +17,7 @@
       <typeAlias type="com.example.app.dto.MateCommentDTO"
          alias="MateCommentDTO" />
       <typeAlias type="com.example.app.vo.MateVO" alias="MateVO" />
+      <typeAlias type="com.example.app.vo.MateCommentVO" alias="MateCommentVO" />
       <typeAlias type="com.example.app.dto.MateDTO"
          alias="MateDTO" />
       <typeAlias type="com.example.app.dto.MemberDTO"
@@ -27,10 +28,6 @@
       <typeAlias type="com.example.app.dto.QnaDTO" alias="QnaDTO" />
       <typeAlias type="com.example.app.vo.QnaCommentVO" alias="QnaCommentVO" />
       <typeAlias type="com.example.app.vo.QnaViewDetailVo" alias="QnaViewDetailVo" />
-<<<<<<< HEAD
-=======
-      
->>>>>>> main
    </typeAliases>
 
 
@@ -49,21 +46,13 @@
    <mappers>
       <mapper resource="com/mybatis/mapper/AdminMapper.xml"></mapper>
       <mapper resource="com/mybatis/mapper/FreeBoardMapper.xml"></mapper>
-<<<<<<< HEAD
-      <!--<mapper resource = "com/mybatis/mapper/FreeCommentMapper.xml"></mapper> -->
-=======
       <mapper resource="com/mybatis/mapper/FreeCommentMapper.xml"></mapper>
->>>>>>> main
       <mapper resource="com/mybatis/mapper/MateCommentMapper.xml"></mapper>
       <mapper resource="com/mybatis/mapper/MateMapper.xml"></mapper>
       <mapper resource="com/mybatis/mapper/MemberMapper.xml"></mapper>
       <mapper resource="com/mybatis/mapper/NoticeMapper.xml"></mapper>
       <mapper resource="com/mybatis/mapper/QnaCommentMapper.xml"></mapper>
       <mapper resource="com/mybatis/mapper/QnaMapper.xml"></mapper>
-<<<<<<< HEAD
-=======
-
->>>>>>> main
    </mappers>
    
 </configuration>

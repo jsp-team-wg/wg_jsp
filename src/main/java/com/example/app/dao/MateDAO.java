@@ -25,8 +25,22 @@ public class MateDAO {
 	
 
 	// 메이트 글 수정
-	public int update(MateDTO mateDTO) {
-	    return sqlSession.update("mate.update", mateDTO);
+	public void update(int mateNum, MateDTO mateDTO) {
+		Map<String, Object> params = new HashMap<>();
+	    params.put("mateCourtname", mateDTO.getMateCourtname());
+	    params.put("mateCourtaddr", mateDTO.getMateCourtaddr());
+	    params.put("mateDate", mateDTO.getMateDate());
+	    params.put("mateStarttime", mateDTO.getMateStarttime());
+	    params.put("mateEndtime", mateDTO.getMateEndtime());
+	    params.put("mateExp", mateDTO.getMateExp());
+	    params.put("mateNtrp", mateDTO.getMateNtrp());
+	    params.put("mateGametype", mateDTO.getMateGametype());
+	    params.put("mateMcount", mateDTO.getMateMcount());
+	    params.put("mateWcount", mateDTO.getMateWcount());
+	    params.put("mateContent", mateDTO.getMateContent());
+	    params.put("mateWritedate", mateDTO.getMateWritedate());
+	    params.put("mateNum", mateNum);
+		sqlSession.update("mate.update", params);
 	}
 	
 	//메이트 글 상세보기

@@ -18,7 +18,7 @@ public class MateMatchAttOkController implements Execute{
 	    int mateNum = Integer.parseInt(request.getParameter("mateNum"));
 	    System.out.println("mateNum : "+mateNum);
 	    mateDAO.changeAt(mateNum);
-	    request.getRequestDispatcher("/mateMatch/mateMatchViewDetail/mateMatchViewDetail.jsp?mateNum=" + mateNum).forward(request, response);
+	    request.getRequestDispatcher("/mateMatch/mateMatchViewDetail/mateMatchViewDetail.ma?mateNum=" + mateNum).forward(request, response);
 	}
 
 	

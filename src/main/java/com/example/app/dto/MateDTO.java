@@ -21,8 +21,8 @@ public class MateDTO {
 	private int mateMcount;
 	private int mateWcount;
 	private String mateContent; 
-	private int commentCnt;
-	private int atstatus;
+	private int mateCommentCnt;
+	private int mateAtstatus;
 	private Date mateWritedate;
 	
 	
@@ -108,16 +108,16 @@ public class MateDTO {
 		this.mateContent = mateContent;
 	}
 	public int getCommentCnt() {
-		return commentCnt;
+		return mateCommentCnt;
 	}
 	public void setCommentCnt(int commentCnt) {
-		this.commentCnt = commentCnt;
+		this.mateCommentCnt = commentCnt;
 	}
 	public int getAtstatus() {
-		return atstatus;
+		return mateAtstatus;
 	}
 	public void setAtstatus(int atstatus) {
-		this.atstatus = atstatus;
+		this.mateAtstatus = atstatus;
 	}
 	public Date getMateWritedate() {
 		return mateWritedate;
@@ -133,7 +133,7 @@ public class MateDTO {
 				+ ", mateCourtaddr=" + mateCourtaddr + ", mateDate=" + mateDate + ", mateStarttime=" + mateStarttime
 				+ ", mateEndtime=" + mateEndtime + ", mateExp=" + mateExp + ", mateNtrp=" + mateNtrp + ", mateGametype="
 				+ mateGametype + ", mateMcount=" + mateMcount + ", mateWcount=" + mateWcount + ", mateContent="
-				+ mateContent + ", commentCnt=" + commentCnt + ", atstatus=" + atstatus + ", mateWritedate="
+				+ mateContent + ", commentCnt=" + mateCommentCnt + ", atstatus=" + mateAtstatus + ", mateWritedate="
 				+ mateWritedate + "]";
 	}
 

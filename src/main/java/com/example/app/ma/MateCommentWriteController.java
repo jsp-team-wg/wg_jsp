@@ -29,13 +29,13 @@ public class MateCommentWriteController implements Execute {
 		
 		mateCommentDTO.setUserNum((Integer)session.getAttribute("userNum"));
 		mateCommentDTO.setMateNum(mateNum);
-		mateCommentDTO.setCommentContent("commentContent");
+		mateCommentDTO.setCommentContent(request.getParameter("commentContent"));
 		mateCommentDTO.setCommentWritedate(date);
 		
 		System.out.println(mateCommentDTO);
 		mateDAO.commentCntUp(mateNum);
 		mateCommentDAO.wirte(mateCommentDTO);
-		request.getRequestDispatcher("/mateMatch/mateMatchViewDetail/mateMatchViewDetail.jsp?mateNum=" + mateNum).forward(request, response);
+		request.getRequestDispatcher("/mateMatch/mateMatchViewDetail/mateMatchViewDetailOk.ma?mateNum=" + mateNum).forward(request, response);
 	}
 	
 	

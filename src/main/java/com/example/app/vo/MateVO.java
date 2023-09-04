@@ -17,8 +17,8 @@ public class MateVO {
 	private int mateMcount;
 	private int mateWcount;
 	private String mateContent; 
-	private int commentCnt;
-	private int atstatus;
+	private int mateCommentCnt;
+	private int mateAtstatus;
 	private Date mateWritedate;
 	private String userNickname;
 	private String userGender;
@@ -103,17 +103,17 @@ public class MateVO {
 	public void setMateContent(String mateContent) {
 		this.mateContent = mateContent;
 	}
-	public int getCommentCnt() {
-		return commentCnt;
+	public int getMateCommentCnt() {
+		return mateCommentCnt;
 	}
-	public void setCommentCnt(int commentCnt) {
-		this.commentCnt = commentCnt;
+	public void setMateCommentCnt(int commentCnt) {
+		this.mateCommentCnt = commentCnt;
 	}
-	public int getAtstatus() {
-		return atstatus;
+	public int getMateAtstatus() {
+		return mateAtstatus;
 	}
-	public void setAtstatus(int atstatus) {
-		this.atstatus = atstatus;
+	public void setMateAtstatus(int atstatus) {
+		this.mateAtstatus = atstatus;
 	}
 	public Date getMateWritedate() {
 		return mateWritedate;
@@ -151,7 +151,7 @@ public class MateVO {
 				+ ", mateCourtaddr=" + mateCourtaddr + ", mateDate=" + mateDate + ", mateStarttime=" + mateStarttime
 				+ ", mateEndtime=" + mateEndtime + ", mateExp=" + mateExp + ", mateNtrp=" + mateNtrp + ", mateGametype="
 				+ mateGametype + ", mateMcount=" + mateMcount + ", mateWcount=" + mateWcount + ", mateContent="
-				+ mateContent + ", commentCnt=" + commentCnt + ", atstatus=" + atstatus + ", mateWritedate="
+				+ mateContent + ", commentCnt=" + mateCommentCnt + ", atstatus=" + mateAtstatus + ", mateWritedate="
 				+ mateWritedate + ", userNickname=" + userNickname + ", userGender=" + userGender + ", userExp="
 				+ userExp + ", userNtrp=" + userNtrp + "]";
 	}
