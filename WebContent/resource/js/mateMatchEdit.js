@@ -21,3 +21,18 @@ document.getElementById("openPopup").addEventListener("click", function() {
       updateParentInputs(popupWindow.selectedPlaceName, popupWindow.selectedRoadAddress);
     };
 });
+
+// JavaScript로 값을 받아온다고 가정
+   var userNtrpValue = "${mate.mateNtrp()}";
+	console.log(userNtrpValue);
+   // 받아온 값을 사용하여 선택 요소의 기본값 설정
+   var dropdown = document.getElementById("ntrp-select");
+   for (var i = 0; i < dropdown.options.length; i++) {
+      if (dropdown.options[i].value == userNtrpValue) {
+         dropdown.selectedIndex = i;
+         break;
+      }
+   }
+
+
+

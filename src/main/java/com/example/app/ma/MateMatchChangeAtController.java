@@ -9,19 +9,13 @@ import javax.servlet.http.HttpServletResponse;
 import com.example.app.Execute;
 import com.example.app.dao.MateDAO;
 
-public class MateMatchDeleteController implements Execute{
+public class MateMatchChangeAtController implements Execute {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-		// TODO Auto-generated method stub
-		
 		MateDAO mateDAO = new MateDAO();
-		int mateNum = Integer.parseInt(request.getParameter("mateNum"));
+		mateDAO.changeAt(Integer.parseInt(request.getParameter("mateNum")));
 		
-		mateDAO.delete(mateNum);
-		request.getRequestDispatcher("/mateMatch/mateMatchList/mateMatchListOk.ma").forward(request, response);
 	}
-
-	
 	
 }

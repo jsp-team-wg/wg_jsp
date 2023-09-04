@@ -78,7 +78,7 @@
                     메이트 찾기
                 </div>
                 <div class="main-section2-title-more">
-                    <a class="main-section2-title-more-tag" href="${pageContext.request.contextPath}/mateMatch/mateMatchList/mateMatchList.jsp">
+                    <a class="main-section2-title-more-tag" href="${pageContext.request.contextPath}/mateMatch/mateMatchList/mateMatchListOk.ma">
                         더보기
                     </a>
                 </div>
