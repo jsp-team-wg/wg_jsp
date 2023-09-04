@@ -58,7 +58,6 @@ public class NoticeFrontController extends HttpServlet {
 		System.out.println(target);
 
 		switch (target) {
-<<<<<<< HEAD
 		case "/community/noticeList/noticeListOk.no":
 			System.out.println("noticeListOk!!");
 			new NoticeListOkController().execute(request, response);
@@ -68,9 +67,7 @@ public class NoticeFrontController extends HttpServlet {
 			System.out.println("NoticeViewDetailOk!!");
 			new NoticeViewDetailOkController().execute(request, response);
 			break;	
-	
-=======
->>>>>>> ljj
+
 
 			
 //		case "/admin/adminNotice/adminNoticeWrite/adminNoticeWrite.ad":

@@ -2,7 +2,6 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="notice">
 
-<<<<<<< HEAD
 	<select id="countNoticeNum" resultType="int">
 		select count(*) from tbl_notice
 	</select>
@@ -20,11 +19,6 @@
 		where notice_num = #{listNum}
 	</select>
 	
-	
-	
-	
-	
-=======
 	<insert id="write" parameterType="NoticeDTO">
 		insert into
 		tbl_notice(admin_num, notice_title, notice_content, notice_writedate)
@@ -52,5 +46,4 @@
 		where notice_num = #{noticeNum}
 	</update>
 
->>>>>>> ljj
 </mapper>

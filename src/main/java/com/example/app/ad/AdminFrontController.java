@@ -71,8 +71,7 @@ public class AdminFrontController extends HttpServlet {
 			System.out.println("adminLoginOk!!");
 			new AdminLoginOkController().execute(request, response);
 			break;
-<<<<<<< HEAD
-=======
+
 		case "/admin/adminNotice/adminNoticeWrite/adminNoticeWriteOk.ad":
 			System.out.println("noticewriteOk!!");
 			new AdminNoticeWriteOkController().execute(request, response);
@@ -103,8 +102,7 @@ public class AdminFrontController extends HttpServlet {
 			new NoticeViewDetailEditOkController().execute(request, response);
 			break;
 			
-			
->>>>>>> ljj
+
 		}
 	}
 

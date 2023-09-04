@@ -1,22 +1,16 @@
 package com.example.app.dao;
 
-<<<<<<< HEAD
 import java.util.ArrayList;
-=======
->>>>>>> ljj
+
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 
-<<<<<<< HEAD
-=======
 import com.example.app.dto.MateDTO;
->>>>>>> ljj
 import com.example.app.dto.NoticeDTO;
 import com.mybatis.config.MyBatisConfig;
 
 public class NoticeDAO {
-<<<<<<< HEAD
 public SqlSession sqlSession;
 	
 	public NoticeDAO(){
@@ -37,14 +31,7 @@ public SqlSession sqlSession;
 	public NoticeDTO noticeViewDetail(int listNum){
 		return  sqlSession.selectOne("notice.noticeViewDetail",listNum);
 	}
-	
-=======
-	
-	public SqlSession sqlSession;
 
-	public NoticeDAO() {
-		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
-	}
 	
 	//공지사항 글쓰기
 	public void write(NoticeDTO NoticeDTO) {
@@ -70,7 +57,5 @@ public SqlSession sqlSession;
 		sqlSession.delete("notice.delete", noticeDTO);
 	}
 
-	
->>>>>>> ljj
 	
 }
