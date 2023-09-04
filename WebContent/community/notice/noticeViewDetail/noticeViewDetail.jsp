@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -18,7 +17,6 @@
 	rel="stylesheet" />
 </head>
 <body>
-
 	<c:choose>
 		<c:when test="${empty sessionScope}">
 			<jsp:include page="../../../header.jsp" />
@@ -50,7 +48,6 @@
 							<span>관리자</span>
 						</div>
 						<hr />
-
 						<!-- 게시일 -->
 						<div class="PostDate-Container">
 							<span class="Text-Color-Gray">게시일</span> <span
@@ -67,9 +64,6 @@
 						</div>
 					</div>
 				</div>
-
-
-
 				<!-- 삭제, 수정 버튼 -->
 				<div class="Button-OuterContainer1">
 					<div class="Button-InnerContainer1">
@@ -88,4 +82,5 @@
 	</div>
 	<%@ include file="../../../footer.jsp"%>
 </body>
+
 </html>

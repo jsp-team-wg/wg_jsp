@@ -26,13 +26,18 @@ public class AdminLoginOkController implements Execute{
 		adminDTO.setAdminPw(request.getParameter("adminPw"));
 		adminDTO = adminDAO.signIn(adminDTO);
 		adminDTO.setAdminNum(adminDTO.getAdminNum());
+
+		System.out.println(request.getParameter("adminId"));
 		
+
 		System.out.println(adminDTO.getAdminNum());
 		
 		
 		//회원의 번호, 이름 세션에 저장
 		HttpSession session = request.getSession();
-		session.setAttribute("AdminNum",adminDTO.getAdminNum());
+
+		session.setAttribute("adminNum",1);
+
 		
 		System.out.println(session.getAttribute("adminNum"));
 		

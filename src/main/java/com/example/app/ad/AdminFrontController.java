@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
+
 /**
  * Servlet implementation class AdminFrontController
  */
@@ -45,7 +47,7 @@ public class AdminFrontController extends HttpServlet {
 	// jsp프로젝트에서는 get과 post를 구분하지 않고 사용
 	protected void doProcess(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		System.out.println("wg 서블릿이 실행");
+		System.out.println("ad 서블릿이 실행");
 
 		// request.getContextPath()는 URL루트 경로를 의미한다
 		System.out.println(request.getContextPath());
@@ -69,6 +71,38 @@ public class AdminFrontController extends HttpServlet {
 			System.out.println("adminLoginOk!!");
 			new AdminLoginOkController().execute(request, response);
 			break;
+
+		case "/admin/adminNotice/adminNoticeWrite/adminNoticeWriteOk.ad":
+			System.out.println("noticewriteOk!!");
+			new AdminNoticeWriteOkController().execute(request, response);
+			break;
+			
+		case "/admin/adminNotice/adminNoticeList/adminNoticeList.ad":
+			new AdminNoticeListController().execute(request, response);
+			System.out.println("noticeList!!");
+			break;
+			
+		case "/community/notice/noticeViewDetail/noticeViewDetail.ad":
+			System.out.println("notice!!");
+			new NoticeViewDetailController().execute(request, response);
+			break;
+
+		case "/community/notice/noticeViewDetail/noticeViewDetailDel.ad":
+			System.out.println("noticeDel!!");
+			new NoticeViewDetailDelController().execute(request, response);
+			break;
+			
+		case"/community/notice/noticeViewDetail/noticeViewDetailEdit.ad":
+			System.out.println("noticeEdit!!");
+			new NoticeViewDetailEditController().execute(request, response);
+			break;
+			
+		case"/community/notice/noticeViewDetail/noticeViewDetailEditOk.ad":
+			System.out.println("noticeEditOk!!");
+			new NoticeViewDetailEditOkController().execute(request, response);
+			break;
+			
+
 		}
 	}
 
