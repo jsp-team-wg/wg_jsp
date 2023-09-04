@@ -1,5 +1,7 @@
 package com.example.app.dao;
 
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 
 import com.example.app.dto.AdminDTO;
@@ -19,5 +21,10 @@ public class AdminDAO {
 		sqlSession.selectOne("admin.signIn", adminDTO);
 		return adminDTO;
 		
+	}
+
+	
+	public List<MemberDTO> selectAll(){
+		return sqlSession.selectList("member.selectAll");
 	}
 }

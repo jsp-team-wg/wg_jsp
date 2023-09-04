@@ -22,5 +22,9 @@
 		where user_id = #{UserId}
 	</select>
 	
+	<select id="selectAll" resultType="memberDTO">
+		select * from tbl_user
+	</select>
+	
 
 </mapper>

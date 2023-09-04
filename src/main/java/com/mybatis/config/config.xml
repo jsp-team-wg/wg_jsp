@@ -41,14 +41,10 @@
    		<mapper resource = "com/mybatis/mapper/MateCommetMapper.xml"></mapper> -->
    		<mapper resource = "com/mybatis/mapper/MateMapper.xml"></mapper>
    		<mapper resource = "com/mybatis/mapper/MemberMapper.xml"></mapper>
-<<<<<<< HEAD
    		<mapper resource = "com/mybatis/mapper/NoticeMapper.xml"></mapper>
-   		<!--<mapper resource = "com/mybatis/mapper/QnaCommentMapper.xml"></mapper>
-=======
-   		<!-- <mapper resource = "com/mybatis/mapper/NoticeMapper.xml"></mapper>
    		<mapper resource = "com/mybatis/mapper/QnaCommentMapper.xml"></mapper>
->>>>>>> main
-   		<mapper resource = "com/mybatis/mapper/QnaMapper.xml"></mapper> -->
+   		<mapper resource = "com/mybatis/mapper/QnaCommentMapper.xml"></mapper>
+   		<mapper resource = "com/mybatis/mapper/QnaMapper.xml"></mapper>
 
    </mappers>
    
