@@ -1,5 +1,6 @@
 package com.example.app.dao;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -8,7 +9,9 @@ import org.apache.ibatis.session.SqlSession;
 
 import com.example.app.dto.FreeBoardDTO;
 import com.example.app.dto.MateDTO;
+import com.example.app.dto.QnaDTO;
 import com.example.app.vo.FreeBoardVO;
+import com.example.app.vo.QnaViewDetailVo;
 import com.mybatis.config.MyBatisConfig;
 
 public class FreeBoardDAO {
@@ -54,6 +57,36 @@ public class FreeBoardDAO {
 	public List<FreeBoardDTO> selectAll(){
 		return sqlSession.selectList("freeboard.selectAll");
 	}
+
+
+		public int countFreeboardNum(){
+			return sqlSession.selectOne("freeboard.countFreeboardNum");
+		}
+		
+		public int countFreeboardCommentNum(){
+			return sqlSession.selectOne("freeboard.countFreeboardCommentNum");
+		}
+		
+		public List<FreeBoardDTO> bringFreeboardList(int firstList) {
+			List<FreeBoardDTO> list = new ArrayList<>();
+			list = sqlSession.selectList("freeboard.bringFreeboardList",firstList);
+			return list;
+		}
+		
+		
+		public FreeBoardDTO getPrevView(int listNum) {
+			return sqlSession.selectOne("freeboard.getPrevView",listNum);
+		}
+		
+		public void addViewCnt(FreeBoardDTO freeboardDTO) {
+			sqlSession.update("freeboard.addViewCnt",freeboardDTO);
+		}
+		
+			
+		public FreeBoardDTO bringContent(int listNum) {
+			return sqlSession.selectOne("freeboard.bringContent",listNum);
+		}
+		
 	
 }
 

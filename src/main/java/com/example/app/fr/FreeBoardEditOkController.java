@@ -13,7 +13,7 @@ import com.example.app.dao.FreeBoardDAO;
 import com.example.app.dto.FreeBoardDTO;
 import com.example.app.vo.FreeBoardVO;
 
-public class FreeBoardEditOkController implements Execute{
+public class FreeboardEditOkController implements Execute{
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
@@ -24,6 +24,7 @@ public class FreeBoardEditOkController implements Execute{
 	      Date date = new Date();
 	      HttpSession session = request.getSession();
 	      
+	      freeboardDTO.setFreeboardNum(freeboardNum);
 	      freeboardDTO.setUserNum((Integer)session.getAttribute("userNum"));
 	      freeboardDTO.setFreeboardTitle(request.getParameter("freeboardTitle"));
 	      freeboardDTO.setFreeboardContent(request.getParameter("freeboardContent"));
@@ -32,7 +33,8 @@ public class FreeBoardEditOkController implements Execute{
 	      
 	      System.out.println(freeboardDTO);
 	      freeboardDAO.update(freeboardDTO);
-	      request.getRequestDispatcher("/community/freeboard/freeboardList/freeboardEidtOk.fr").forward(request, response);
+//	      request.getRequestDispatcher("/community/freeboard/freeboardList/freeboardEditOk.fr").forward(request, response);
+	      response.sendRedirect("/wg_jsp/community/freeboard/freeboardViewDetail/freeboardViewDetailOk.fr?freeboardNum="+freeboardNum);
 	   }
 	}
 	

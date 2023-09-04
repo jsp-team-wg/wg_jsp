@@ -73,7 +73,7 @@
         <section class="section-board">
 		<c:choose>
 			<c:when test = "${not empty freeboardList}">
-				<c:forEach var = "freeboard" items = "${freeboardList}" begin = "0" end = "5">
+				<c:forEach var = "freeboard" items = "${freeboardList}">
          <!-- @@아우터박스 -->
          <input type = "hidden" value = "${freeboard.freeboardNum}"/>
           <div class="board-outer-box">
@@ -121,24 +121,31 @@
         </section>
 		</form>
         <!-- 페이징  -->
-        <div class="page_wrap">
-          <div class="page_nation">
-             <a class="arrow pprev" href="#">&lt;&lt;</a>
-             <a class="arrow prev" href="#">&lt;</a>
-             <a href="#" class="active">1</a>
-             <a href="#">2</a>
-             <a href="#">3</a>
-             <a href="#">4</a>
-             <a href="#">5</a>
-             <a href="#">6</a>
-             <a href="#">7</a>
-             <a href="#">8</a>
-             <a href="#">9</a>
-             <a href="#">10</a>
-             <a class="arrow next" href="#">&gt;</a>
-             <a class="arrow nnext" href="#">&gt;&gt;</a>
-          </div>
-       </div>
+			<div class="page_wrap">
+				<div class="page_nation">
+
+					<a class="arrow prev"
+						href="${pageContext.request.contextPath}/community/freeboard/freeboardList/freeboardListOk.fr?page=${currentPage-1}">&lt;</a>
+					<c:forEach var="page" items="${pageList}">
+
+						<c:if test="${ currentPage == page }">
+							<a class="active"
+								href="${pageContext.request.contextPath}/community/freeboard/freeboardList/freeboardListOk.fr?page=${page}">
+								<c:out value="${page}" />
+							</a>
+						</c:if>
+						<c:if test="${ currentPage != page }">
+							<a
+								href="${pageContext.request.contextPath}/community/freeboard/freeboardList/freeboardListOk.fr?page=${page}">
+								<c:out value="${page}" />
+							</a>
+						</c:if>
+					</c:forEach>
+					<a class="arrow next"
+						href="${pageContext.request.contextPath}/community/freeboard/freeboardList/freeboardListOk.fr?page=${currentPage+1}">&gt;</a>
+
+				</div>
+			</div>
        
       </main>
     </div>
