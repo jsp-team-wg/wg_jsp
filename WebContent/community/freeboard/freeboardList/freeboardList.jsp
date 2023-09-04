@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+ <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+    
 <!DOCTYPE html>
 <html lang="ko">
   <head>
@@ -9,13 +11,20 @@
     <link rel="stylesheet" href="../../../resource/css/freeboardList.css" />
   </head>
   <body>
-    <%@ include file="../../../headerLogin.jsp" %>
+    <c:choose>
+       <c:when test="${empty sessionScope}">
+           <jsp:include page="../../../header.jsp" />
+       </c:when>
+       <c:otherwise>
+           <jsp:include page="../../../headerLogin.jsp" />
+       </c:otherwise>
+   </c:choose>
     <div class="container">
       <!-- 좌측 어사이드 -->
       <aside>
         <div class="aside-spacing"></div>
         <section class="section-freeboard">
-          <a class="freeboard-a" href="../freeboardList/freeboardListLogin.jsp">
+          <a class="freeboard-a" href="${pageContext.request.contextPath}/community/freeboard/freeboardList/freeboardListOk.jsp">
             <div class="freeboard">자유게시판</div>
           </a>
         </section>
@@ -25,7 +34,7 @@
           </a>
         </section>
         <section class="section-notice">
-          <a class="notice-a" href="../../notice/noticeList/noticeListLogin.jsp">
+          <a class="notice-a" href="../../notice/noticeList/noticeList.jsp">
             <div class="notice">공지사항</div>
           </a>
         </section>
@@ -42,7 +51,7 @@
           </div>
           <!-- 글쓰기버튼 -->
           <div class="section-top-write">
-            <a class="section-top-write-a" href="../freeboardWrite/freeboardWriteLogin.jsp">
+            <a class="section-top-write-a" href="../freeboardWrite/freeboardWrite.jsp">
                 <button class="button-write">글쓰기</button>
             </a>
           </div>
@@ -50,32 +59,35 @@
 
          <!-- 검색바 -->
         <section class="section-search">
-          <form class="search-form" action="">
+          <form class="search-form" action="${pageContext.request.contextPath}/community/freeboard/freeboardWrite/freeboardWriteOk.fr">
             <div class="search-inner">
               <input class="search-bar" type="text">
-              <button class="search-button" type="submit" >검색</button>
+              <button class="search-button" type="submit" 
+              onclick = "location.href = '${pageContext.request.contextPath}/community/freeboard/freeboardList/freeboardList.fr'"
+              >검색</button>
             </div>
           </form>
         </section>
 
         <!-- 게시글 목록 -->
         <section class="section-board">
-
-          <!-- @@아우터박스 -->
+		<c:choose>
+			<c:when test = "${not empty freeboardList}">
+				<c:forEach var = "freeboard" items = "${freeboardList}" begin = "0" end = "5">
+         <!-- @@아우터박스 -->
+         <input type = "hidden" value = "${freeboard.freeboardNum}"/>
           <div class="board-outer-box">
-            <a class="board-inner-box" href="../freeboardViewDetail/freeboardViewDetailLogin.jsp">
+            <a class="board-inner-box" href="${pageContext.request.contextPath}/community/freeboard/freeboardViewDetail/freeboardViewDetail.fr?freeboardNum=${freeboard.freeboardNum}">
               <!-- 이너박스 상단 -->
               <div class="board-inner-box-title">
                 <div class="board-inner-box-title-text">
-                  구력 2개월 테린이인데 라켓 추천 부탁드려요
+                  ${freeboard.freeboardTitle}
                 </div>
               </div>
               <!-- 이너박스 중단 -->
               <div class="board-inner-box-content">
                 <div class="board-inner-box-content-text">
-                  이번에 테니스 라켓을 새로 구매하려고합니다. 라켓추천
-                  부탁드립니다. 이번에 테니스 라켓을 새로 구매하려고합니다.
-                  라켓추천 부탁드립니다.
+                  ${freeboard.freeboardContent}
                 </div>
               </div>
               <!-- 이너박스 하단 -->
@@ -84,208 +96,30 @@
                   <img class="comment-view-img" src="../../../resource/img/view.png" alt="" />
                 </div>
                 <div class="comment-view-cnt">
-                  <div class="comment-view-cnt-text">112</div>
+                  <div class="comment-view-cnt-text">${freeboard.freeboardViewCnt}</div>
                 </div>
                 <div class="comment-comment">
                   <img class="comment-comment-img" src="../../../resource/img/comment.png" alt="" />
                 </div>
                 <div class="comment-comment-cnt">
-                  <div class="comment-comment-cnt-text">12</div>
+                  <div class="comment-comment-cnt-text">${freeboard.freeboardCommentCnt}</div>
                 </div>
                 <div class="comment-written-date">
-                  <div class="comment-written-date-text">2023.08.11 11:13</div>
+                  <div class="comment-written-date-text">${freeboard.freeboardWriteDate}</div>
                 </div>
               </div>
             </a>
           </div>
-          <!-- @@아우터박스 -->
-          <div class="board-outer-box">
-            <a class="board-inner-box" href="../freeboardViewDetail/freeboardViewDetailLogin.jsp">
-              <!-- 이너박스 상단 -->
-              <div class="board-inner-box-title">
-                <div class="board-inner-box-title-text">
-                  구력 2개월 테린이인데 라켓 추천 부탁드려요
-                </div>
-              </div>
-              <!-- 이너박스 중단 -->
-              <div class="board-inner-box-content">
-                <div class="board-inner-box-content-text">
-                  이번에 테니스 라켓을 새로 구매하려고합니다. 라켓추천
-                  부탁드립니다. 이번에 테니스 라켓을 새로 구매하려고합니다.
-                  라켓추천 부탁드립니다.
-                </div>
-              </div>
-              <!-- 이너박스 하단 -->
-              <div class="board-inner-box-view-comment">
-                <div class="comment-view">
-                  <img class="comment-view-img" src="../../../resource/img/view.png" alt="" />
-                </div>
-                <div class="comment-view-cnt">
-                  <div class="comment-view-cnt-text">112</div>
-                </div>
-                <div class="comment-comment">
-                  <img class="comment-comment-img" src="../../../resource/img/comment.png" alt="" />
-                </div>
-                <div class="comment-comment-cnt">
-                  <div class="comment-comment-cnt-text">12</div>
-                </div>
-                <div class="comment-written-date">
-                  <div class="comment-written-date-text">2023.08.11 11:13</div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <!-- @@아우터박스 -->
-          <div class="board-outer-box">
-            <a class="board-inner-box" href="../freeboardViewDetail/freeboardViewDetailLogin.jsp">
-              <!-- 이너박스 상단 -->
-              <div class="board-inner-box-title">
-                <div class="board-inner-box-title-text">
-                  구력 2개월 테린이인데 라켓 추천 부탁드려요
-                </div>
-              </div>
-              <!-- 이너박스 중단 -->
-              <div class="board-inner-box-content">
-                <div class="board-inner-box-content-text">
-                  이번에 테니스 라켓을 새로 구매하려고합니다. 라켓추천
-                  부탁드립니다. 이번에 테니스 라켓을 새로 구매하려고합니다.
-                  라켓추천 부탁드립니다.
-                </div>
-              </div>
-              <!-- 이너박스 하단 -->
-              <div class="board-inner-box-view-comment">
-                <div class="comment-view">
-                  <img class="comment-view-img" src="../../../resource/img/view.png" alt="" />
-                </div>
-                <div class="comment-view-cnt">
-                  <div class="comment-view-cnt-text">112</div>
-                </div>
-                <div class="comment-comment">
-                  <img class="comment-comment-img" src="../../../resource/img/comment.png" alt="" />
-                </div>
-                <div class="comment-comment-cnt">
-                  <div class="comment-comment-cnt-text">12</div>
-                </div>
-                <div class="comment-written-date">
-                  <div class="comment-written-date-text">2023.08.11 11:13</div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <!-- @@아우터박스 -->
-          <div class="board-outer-box">
-            <a class="board-inner-box" href="../freeboardViewDetail/freeboardViewDetailLogin.jsp">
-              <!-- 이너박스 상단 -->
-              <div class="board-inner-box-title">
-                <div class="board-inner-box-title-text">
-                  구력 2개월 테린이인데 라켓 추천 부탁드려요
-                </div>
-              </div>
-              <!-- 이너박스 중단 -->
-              <div class="board-inner-box-content">
-                <div class="board-inner-box-content-text">
-                  이번에 테니스 라켓을 새로 구매하려고합니다. 라켓추천
-                  부탁드립니다. 이번에 테니스 라켓을 새로 구매하려고합니다.
-                  라켓추천 부탁드립니다.
-                </div>
-              </div>
-              <!-- 이너박스 하단 -->
-              <div class="board-inner-box-view-comment">
-                <div class="comment-view">
-                  <img class="comment-view-img" src="../../../resource/img/view.png" alt="" />
-                </div>
-                <div class="comment-view-cnt">
-                  <div class="comment-view-cnt-text">112</div>
-                </div>
-                <div class="comment-comment">
-                  <img class="comment-comment-img" src="../../../resource/img/comment.png" alt="" />
-                </div>
-                <div class="comment-comment-cnt">
-                  <div class="comment-comment-cnt-text">12</div>
-                </div>
-                <div class="comment-written-date">
-                  <div class="comment-written-date-text">2023.08.11 11:13</div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <!-- @@아우터박스 -->
-          <div class="board-outer-box">
-            <a class="board-inner-box" href="../freeboardViewDetail/freeboardViewDetailLogin.jsp">
-              <!-- 이너박스 상단 -->
-              <div class="board-inner-box-title">
-                <div class="board-inner-box-title-text">
-                  구력 2개월 테린이인데 라켓 추천 부탁드려요
-                </div>
-              </div>
-              <!-- 이너박스 중단 -->
-              <div class="board-inner-box-content">
-                <div class="board-inner-box-content-text">
-                  이번에 테니스 라켓을 새로 구매하려고합니다. 라켓추천
-                  부탁드립니다. 이번에 테니스 라켓을 새로 구매하려고합니다.
-                  라켓추천 부탁드립니다.
-                </div>
-              </div>
-              <!-- 이너박스 하단 -->
-              <div class="board-inner-box-view-comment">
-                <div class="comment-view">
-                  <img class="comment-view-img" src="../../../resource/img/view.png" alt="" />
-                </div>
-                <div class="comment-view-cnt">
-                  <div class="comment-view-cnt-text">112</div>
-                </div>
-                <div class="comment-comment">
-                  <img class="comment-comment-img" src="../../../resource/img/comment.png" alt="" />
-                </div>
-                <div class="comment-comment-cnt">
-                  <div class="comment-comment-cnt-text">12</div>
-                </div>
-                <div class="comment-written-date">
-                  <div class="comment-written-date-text">2023.08.11 11:13</div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <!-- @@아우터박스 -->
-          <div class="board-outer-box">
-            <a class="board-inner-box" href="../freeboardViewDetail/freeboardViewDetailLogin.jsp">
-              <!-- 이너박스 상단 -->
-              <div class="board-inner-box-title">
-                <div class="board-inner-box-title-text">
-                  구력 2개월 테린이인데 라켓 추천 부탁드려요
-                </div>
-              </div>
-              <!-- 이너박스 중단 -->
-              <div class="board-inner-box-content">
-                <div class="board-inner-box-content-text">
-                  이번에 테니스 라켓을 새로 구매하려고합니다. 라켓추천
-                  부탁드립니다. 이번에 테니스 라켓을 새로 구매하려고합니다.
-                  라켓추천 부탁드립니다.
-                </div>
-              </div>
-              <!-- 이너박스 하단 -->
-              <div class="board-inner-box-view-comment">
-                <div class="comment-view">
-                  <img class="comment-view-img" src="../../../resource/img/view.png" alt="" />
-                </div>
-                <div class="comment-view-cnt">
-                  <div class="comment-view-cnt-text">112</div>
-                </div>
-                <div class="comment-comment">
-                  <img class="comment-comment-img" src="../../../resource/img/comment.png" alt="" />
-                </div>
-                <div class="comment-comment-cnt">
-                  <div class="comment-comment-cnt-text">12</div>
-                </div>
-                <div class="comment-written-date">
-                  <div class="comment-written-date-text">2023.08.11 11:13</div>
-                </div>
-              </div>
-            </a>
-          </div>
-          
+          	</c:forEach>
+          	</c:when>
+          	<c:otherwise>
+          		<tr>
+          			<td colspan = "5" align = "center" > 등록된 게시물이 없습니다 </td>
+          		</tr>
+          	</c:otherwise>
+          </c:choose>
         </section>
-
+		</form>
         <!-- 페이징  -->
         <div class="page_wrap">
           <div class="page_nation">
