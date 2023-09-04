@@ -28,4 +28,7 @@ public class AdminDAO {
 		return memberDTO;
 		
 	}
+	public List<MemberDTO> selectAll(){
+		return sqlSession.selectList("member.selectAll");
+	}
 }

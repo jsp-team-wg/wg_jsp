@@ -1,4 +1,4 @@
-package com.example.app.qna;
+package com.example.app.no;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -7,18 +7,18 @@ import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import com.example.app.Execute;
-import com.example.app.dao.QnaDAO;
-import com.example.app.dto.QnaDTO;
+import com.example.app.dao.NoticeDAO;
+import com.example.app.dto.NoticeDTO;
 
-public class QnaListOkController implements Execute {
+public class NoticeListOkController implements Execute{
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-		// TODO Auto-generated method stub
-		QnaDAO qnaDAO = new QnaDAO();
+			
+		
+		NoticeDAO noticeDAO = new NoticeDAO();
 
 		// 페이지네이션
 		
@@ -29,7 +29,7 @@ public class QnaListOkController implements Execute {
 		int lastPage = 1;
 
 //		게시글 개수
-		int totalListNum = qnaDAO.countQnaNum();
+		int totalListNum = noticeDAO.countNoticeNum();
 		int maxBlock = (totalListNum - 1) / 60 + 1;
 		int listLeftOver = totalListNum % 60;
 		int maxPage = listLeftOver / 6 + 1;
@@ -69,23 +69,24 @@ public class QnaListOkController implements Execute {
 		int firstList = (currentPage - 1) * totalList;
 
 		// 리스트출력
-		List<QnaDTO> qnaList = null;
+		List<NoticeDTO> noticeList = null;
 		if(totalListNum != 0) {
 			System.out.println("조건문 진입!!");
 			System.out.println("firstList!! : " + firstList);
-		qnaList = qnaDAO.bringQnaList(firstList);
+		noticeList = noticeDAO.bringNoticeList(firstList);
 		}
 		
-		System.out.println("qnaList!! : " + qnaList);
-		request.setAttribute("qnaList", qnaList);
+		System.out.println("noticeList!! : " + noticeList);
+		request.setAttribute("noticeList", noticeList);
 		request.setAttribute("currentPage", currentPage);
 		request.setAttribute("pageList", pageList);
 		
 		
-		request.getRequestDispatcher("/community/qna/qnaList/qnaList.jsp").forward(request, response);	
+		request.getRequestDispatcher("/community/notice/noticeList/noticeList.jsp").forward(request, response);		
 		
-
+		
 	}
+	
 	
 
 }
