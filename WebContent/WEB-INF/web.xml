@@ -23,14 +23,14 @@
 	</servlet-mapping>
 
 
-	<servlet>
-		<servlet-name>matematch</servlet-name>
-		<servlet-class>com.example.app.ma.MateMatchFrontController</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>matematch</servlet-name>
-		<url-pattern>*.ma</url-pattern>
-	</servlet-mapping>
+  <servlet>
+  	<servlet-name>matematch</servlet-name>
+  	<servlet-class>com.example.app.ma.MateMatchFrontController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>matematch</servlet-name>
+  	<url-pattern>*.ma</url-pattern>
+  </servlet-mapping>
 
 
 	<servlet>
@@ -42,15 +42,14 @@
 		<url-pattern>*.fr</url-pattern>
 	</servlet-mapping>
 
-
-	<servlet>
-		<servlet-name>qna</servlet-name>
-		<servlet-class>com.example.app.qna.QnaFrontController</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>qna</servlet-name>
-		<url-pattern>*.qna</url-pattern>
-	</servlet-mapping>
+  <servlet>
+  	<servlet-name>qna</servlet-name>
+  	<servlet-class>com.example.app.qna.QnaFrontController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>qna</servlet-name>
+  	<url-pattern>*.qna</url-pattern>
+  </servlet-mapping>
 
 
 	<servlet>

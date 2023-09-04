@@ -1,46 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mate">
-   <select id = "wirte" parameterType="MateDTO">
+   <select id = "write" parameterType="MateDTO">
    		insert into tbl_mate(user_num, mate_courtname, mate_courtaddr, mate_date, mate_starttime,
    		mate_endtime, mate_exp, mate_ntrp, mate_gametype, mate_mcount, mate_wcount, mate_content, mate_writedate)
-   		value(#{userNum}, #{mate_courtname}, #{mate_courtaddr}, #{mate_date}, #{mate_starttime},
-   		#{mate_endtime}, #{mate_exp}, #{mate_ntrp}, #{mate_gametype}, #{mate_mcount}, #{mate_wcount},
-   		#{mate_content}, #{mate_writedate})
+   		value(#{userNum}, #{mateCourtname}, #{mateCourtaddr}, #{mateDate}, #{mateStarttime},
+   		#{mateEndtime}, #{mateExp}, #{mateNtrp}, #{mateGametype}, #{mateMcount}, #{mateWcount},
+   		#{mateContent}, #{mateWritedate})
    </select>
    
+   <!-- 메이트 글 수정 -->
    <update id="update" parameterType="MateDTO">
    		UPDATE tbl_mate
-		SET mate_courtname = #{mate_courtname},
-		    mate_courtaddr = #{mate_courtaddr},
-		    mate_date = #{mate_date},
-		    mate_starttime = #{mate_starttime},
-		    mate_endtime = #{mate_endtime},
-		    mate_exp = #{mate_exp},
-		    mate_ntrp = #{mate_ntrp},
-		    mate_gametype = #{mate_gametype},
-		    mate_mcount = #{mate_mcount},
-		    mate_wcount = #{mate_wcount},
-		    mate_content = #{mate_content},
-		    mate_writedate = #{mate_writedate}
-		WHERE mate_num = #{mateNum}
+		SET mate_courtname = #{mateCourtname},
+		    mate_courtaddr = #{mateCourtaddr},
+		    mate_date = #{mateDate},
+		    mate_starttime = #{mateStarttime},
+		    mate_endtime = #{mateEndtime},
+		    mate_exp = #{mateExp},
+		    mate_ntrp = #{mateNtrp},
+		    mate_gametype = #{mateGametype},
+		    mate_mcount = #{mateMcount},
+		    mate_wcount = #{mateWcount},
+		    mate_content = #{mateContent},
+		    mate_writedate = #{mateWritedate}
    </update>
-   
+   <!-- 메이트 글 삭제 -->
    <delete id="delete" parameterType="int">
    		delete from tbl_mate 
    		where mate_num = #{mateNum}
    </delete>
-   
-   <select id = "selectOne" parameterType="MateDTO" resultType="MateDTO">
-   		select from tbl_mate
-   		where mate_num = #{mateNum}
-   </select>
-   
-   <select id = "selectAll" parameterType="MateDTO" resultType="MateDTO">
+   <!-- 메이트 전체 조회 -->
+   <select id = "selectAll" resultType="MateDTO">
    		select * from tbl_mate
    </select>
-   <select id = "selectAllMe" parameterType="MateDTO" resultType="MateDTO">
-   		select * from tbl_mate where user_num = #{userNum}
+   <!-- 메이트 내가 작성한 글 조회 -->
+   <select id = "selectMyAll" parameterType="int" resultType="MateDTO">
+   		select * from tbl_mate
+   		where user_num = #{userNum}
    </select>
-   
+   <!-- 모집상태 업데이트-->
+   <update id="changeAt" parameterType="int">
+   		update tbl_mate
+   		set mate_atstatus = 1
+   		where mate_num = #{mate_num}
+   </update>
+   <!-- 메이트 검색 결과 조회 -->
+   <select id="searchMate" parameterType="string" resultType="MateDTO">
+   		select * from tbl_mate
+   		WHERE mate_courtname LIKE '%${searchQuery}%'
+   </select>
+   <!-- 메이트 상세 조회 -->
+   <select id = "selectOne" parameterType="int" resultType="MateVO">
+   		select m.*, u.user_num, u.user_nickname, u.user_gender,
+   		u.user_ntrp, u.user_exp
+   		from tbl_user u join tbl_mate m
+   		on u.user_num = m.user_num
+   		where m.mate_num = #{mateNum}
+   </select>
+   <select id ="selectEditOne" parameterType="int" resultType="MateDTO">
+   		select * from tbl_mate
+   		where mate_num = #{mateNum}
+   </select>
+   <!-- 댓글 수 증가  -->
+   <update id="commentCntUp" parameterType="int">
+   		UPDATE tbl_mate
+		SET mate_commentcnt = mate_commentcnt + 1
+		WHERE mate_num = #{mate_num}
+   </update>
+   <!-- 댓글 수 증가  -->
+   <update id="commentCntDown" parameterType="int">
+   		UPDATE tbl_mate
+		SET mate_commentcnt = mate_commentcnt - 1
+		WHERE mate_num = #{mate_num}
+   </update>
 </mapper>

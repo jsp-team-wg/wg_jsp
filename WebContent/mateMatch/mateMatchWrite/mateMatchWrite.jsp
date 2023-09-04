@@ -5,8 +5,7 @@
 <head>
  <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../resource/css/mateMatchWrite.css" />
-    <script defer src="../../resource/js/mateMatchWrite.js"></script>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resource/css/mateMatchWrite.css" />
     <title>메이트찾기 글작성</title>
   </head>
   <body>
@@ -26,9 +25,10 @@
             <div class="court-name-input">
               <input
                 class="court-name-input-text"
-                value="" type="text"
+                type="text" value=""
                 name="mateCourtname"
-                placeholder="코트 이름 입력" disabled
+                id="mateCourtname"
+                placeholder="코트 이름 입력"  disabled
               />
             </div>
           </div>
@@ -40,7 +40,8 @@
                 class="court-address-input-address"
                 type="text" value=""
                 name="mateCourtaddr"
-                placeholder="테니스장 주소" disabled
+                id="mateCourtaddr"
+                placeholder="테니스장 주소"  disabled
               />
             </div>
             <div class="court-address-input-box2">
@@ -97,9 +98,9 @@
                 <select class="exp-dropdown-select" 
                 name="mateExptext" id="">
                   <option value="null">선택</option>
-                  <option value="down">년 이하</option>
-                  <option value="up">년 이상</option>
-                  <option value="around">년 전후</option>
+                  <option value="년 이하">년 이하</option>
+                  <option value="년 이상">년 이상</option>
+                  <option value="년 전후">년 전후</option>
                 </select>
               </div>
             </div>
@@ -129,12 +130,12 @@
             <div class="game-type-text">게임유형</div>
             <div class="game-type-dropbox">
               <select class="game-type-select" name="mateGametype" id="">
-                <option value="null">선택</option>
-                <option value="single">단식</option>
-                <option value="mix-double">혼복</option>
-                <option value="man-double">남복</option>
-                <option value="woman-double">여복</option>
-                <option value="rally">랠리</option>
+                <option value="없음">선택</option>
+                <option value="단식">단식</option>
+                <option value="혼복">혼복</option>
+                <option value="남복">남복</option>
+                <option value="여복">여복</option>
+                <option value="랠리">랠리</option>
               </select>
             </div>
           </div>
@@ -163,17 +164,16 @@
               <select class="recruit-woman-select" name="mateWcount" id="">
                 <option value="null">선택</option>
                 <option value="0">0명</option>
-                <option value="0">1명</option>
-                <option value="1">2명</option>
-                <option value="2">3명</option>
-                <option value="3">4명</option>
-                <option value="4">5명</option>
-                <option value="5">6명</option>
-                <option value="6">7명</option>
-                <option value="7">8명</option>
-                <option value="8">9명</option>
-                <option value="9">11명</option>
-                <option value="10">12명</option>
+                <option value="1">1명</option>
+                <option value="2">2명</option>
+                <option value="3">3명</option>
+                <option value="4">4명</option>
+                <option value="5">5명</option>
+                <option value="6">6명</option>
+                <option value="7">7명</option>
+                <option value="8">8명</option>
+                <option value="9">9명</option>
+                <option value="10">10명</option>
               </select>
             </div>
           </div>
@@ -205,5 +205,9 @@
       </form>
     </main>
     <%@ include file="../../footer.jsp" %>
+        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+        
+    
+    <script defer src="${pageContext.request.contextPath}/resource/js/mateMatchWrite.js"></script>
   </body>
 </html>
