@@ -24,7 +24,6 @@
 		    mate_wcount = #{mateWcount},
 		    mate_content = #{mateContent},
 		    mate_writedate = #{mateWritedate}
-		WHERE mate_num = #{mateNum}
    </update>
    <!-- 메이트 글 삭제 -->
    <delete id="delete" parameterType="int">
@@ -59,5 +58,20 @@
    		on u.user_num = m.user_num
    		where m.mate_num = #{mateNum}
    </select>
-   
+   <select id ="selectEditOne" parameterType="int" resultType="MateDTO">
+   		select * from tbl_mate
+   		where mate_num = #{mateNum}
+   </select>
+   <!-- 댓글 수 증가  -->
+   <update id="commentCntUp" parameterType="int">
+   		UPDATE tbl_mate
+		SET mate_commentcnt = mate_commentcnt + 1
+		WHERE mate_num = #{mate_num}
+   </update>
+   <!-- 댓글 수 증가  -->
+   <update id="commentCntDown" parameterType="int">
+   		UPDATE tbl_mate
+		SET mate_commentcnt = mate_commentcnt - 1
+		WHERE mate_num = #{mate_num}
+   </update>
 </mapper>

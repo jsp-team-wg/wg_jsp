@@ -90,12 +90,12 @@ public class MateMatchFrontController extends HttpServlet {
 		//메이트 찾기 글 수정 화면으로 이동
 		case "/mateMatch/mateMatchEdit/mateMatchEdit.ma":
 			System.out.println("mateMatchEdit!!");
-			request.getRequestDispatcher("/mateMatch/mateMatchEdit/mateMatchEdit.jsp");
+			new MateMatchEditController().execute(request, response);
 			break;
 		//메이트 찾기 글 수정 기능
 		case "/mateMatch/mateMatchEdit/mateMatchEditOk.ma":
 			System.out.println("mateMatchEditOk!!");
-			new MateMatchEditController().execute(request, response);
+			new MateMatchEditOkController().execute(request, response);
 			break;
 		//메이트 찾기 글 삭제 기능
 		case "/mateMatch/mateMatchViewDetail/mateMatchDeleteOk.ma" :

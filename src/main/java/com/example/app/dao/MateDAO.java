@@ -23,9 +23,10 @@ public class MateDAO {
 		sqlSession.insert("mate.write",mateDTO);
 	}
 	
-	//메이트 글 수정
-	public void update(MateDTO mateDTO) {
-		sqlSession.update("mate.update", mateDTO);
+
+	// 메이트 글 수정
+	public int update(MateDTO mateDTO) {
+	    return sqlSession.update("mate.update", mateDTO);
 	}
 	
 	//메이트 글 상세보기
@@ -59,6 +60,20 @@ public class MateDAO {
 	//메이트 글 코트장명 검색 조회
 	public List<MateDTO> searchMate(String searchQuery) {
 		return sqlSession.selectList("mate.searchMate",searchQuery);
+	}
+	//메이트 글 수정 페이지 불러오기
+	public MateDTO selectEditOne(int mateNum) {
+		Map<String, Integer> params = new HashMap<>();
+	    params.put("mateNum", mateNum);
+		return sqlSession.selectOne("mate.selectEditOne", params);
+	}
+	//메이트 글 댓글 수 증가
+	public void commentCntUp(int mateNum) {
+		sqlSession.update("mate,commentCntUp",mateNum);
+	}
+	//메이트 글 댓글 수 증가
+	public void commentCntDown(int mateNum) {
+		sqlSession.update("mate,commentCntDown",mateNum);
 	}
 	
 }

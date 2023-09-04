@@ -129,7 +129,7 @@
           <button
             type="button"
             class="mate-detail-form-button2"
-            onclick="location.href='../../mateMatch/mateMatchEdit/mateMatchEdit.jsp'"
+            onclick="location.href='${pageContext.request.contextPath}/mateMatch/mateMatchEdit/mateMatchEdit.ma?mateNum=${mate.mateNum}'"
           >
             <span>수정</span>
           </button>
@@ -155,9 +155,7 @@
           <div class="comment2-list-box">
             <span class="comment2-list-text">hong@123.com으로 연락주세요</span>
           </div>
-          <div class="modify-button-box">
-            <button class="modify-button">수정</button>
-          </div>
+          
           <div class="delete-button-box">
             <button class="delete-button">삭제</button>
           </div>
@@ -170,9 +168,6 @@
           <div class="comment2-list-box">
             <span class="comment2-list-text">hong@123.com으로 연락주세요</span>
           </div>
-          <div class="modify-button-box">
-            <button class="modify-button">수정</button>
-          </div>
           <div class="delete-button-box">
             <button class="delete-button">삭제</button>
           </div>
@@ -184,9 +179,6 @@
           </div>
           <div class="comment2-list-box">
             <span class="comment2-list-text">hong@123.com으로 연락주세요</span>
-          </div>
-          <div class="modify-button-box">
-            <button class="modify-button">수정</button>
           </div>
           <div class="delete-button-box">
             <button class="delete-button">삭제</button>
