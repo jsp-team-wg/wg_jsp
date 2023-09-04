@@ -32,7 +32,7 @@ public class FreeBoardEditOkController implements Execute{
 	      
 	      System.out.println(freeboardDTO);
 	      freeboardDAO.update(freeboardDTO);
-	      request.getRequestDispatcher("/community/freeboard/freeboardList/freeboardListOk.fr").forward(request, response);
+	      request.getRequestDispatcher("/community/freeboard/freeboardList/freeboardEidtOk.fr").forward(request, response);
 	   }
 	}
 	

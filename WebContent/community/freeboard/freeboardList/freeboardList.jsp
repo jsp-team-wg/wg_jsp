@@ -24,7 +24,7 @@
       <aside>
         <div class="aside-spacing"></div>
         <section class="section-freeboard">
-          <a class="freeboard-a" href="../freeboardList/freeboardList.jsp">
+          <a class="freeboard-a" href="${pageContext.request.contextPath}/community/freeboard/freeboardList/freeboardListOk.jsp">
             <div class="freeboard">자유게시판</div>
           </a>
         </section>
