@@ -18,20 +18,20 @@
 			</div>
 		</section>
 		<!-- 제목 & 내용 -->
-		<form action="" accept-charset="UTF-8" method="post">
+		<form action="${pageContext.request.contextPath}/admin/adminNotice/adminNoticeWrite/adminNoticeWriteOk.ad" accept-charset="UTF-8" method="post">
 			<section class="titleContentSection border-radius bgGray">
 				<div class="titleContent">
 					<div class="title">
 						<p>제목</p>
 						<div class="title-out-box">
-							<textarea class="title-in-box-text" name="title"
+							<textarea class="title-in-box-text" name="noticeTitle"
 								placeholder="제목을 입력하세요(50자 이내)"></textarea>
 						</div>
 					</div>
 					<div class="content">
 						<p>내용</p>
 						<div class="content-box-out">
-							<textarea class="content-area border-radius" name="content"
+							<textarea class="content-area border-radius" name="noticeContent"
 								placeholder="내용을 입력하세요(3000자 이내)"></textarea>
 						</div>
 					</div>
@@ -41,12 +41,11 @@
 			<section>
 				<div class="pagebackComplete border-radius">
 					<button type="button"
-						onclick="location.href='${pageContext.request.contextPath}/admin/adminNotice/adminNoticeList/adminNoticeList.jsp'"
+						onclick="location.href='${pageContext.request.contextPath}/admin/adminNotice/adminNoticeList/adminNoticeList.ad'"
 						class="pageback button-size border-radius bgRed colorWhite"
 						name="pageback">뒤로가기</button>
 
-					<button type="button"
-						onclick="location.href='${pageContext.request.contextPath}/community/notice/noticeViewDetail/noticeViewDetail.jsp'"
+					<button type="submit"
 						class="complete button-size border-radius bgGreen colorWhite "
 						name="complete">작성완료</button>
 				</div>

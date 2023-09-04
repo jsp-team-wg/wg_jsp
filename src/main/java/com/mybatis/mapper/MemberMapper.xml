@@ -21,6 +21,7 @@
 		count(user_num) from tbl_user
 		where user_id = #{UserId}
 	</select>
+
 	<!-- 이우진 -->
 	<select id="myPageEdit" parameterType="MemberDTO" resultType="MemberDTO">
 		select * from tbl_user
@@ -51,5 +52,10 @@
 		on m.member_number = b.member_number
 	</select>
 	<!-- 이우진 -->
+	
+	<select id="selectAll" resultType="memberDTO">
+		select * from tbl_user
+	</select>
+	
 
 </mapper>

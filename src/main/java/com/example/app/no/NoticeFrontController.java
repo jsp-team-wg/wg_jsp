@@ -67,8 +67,13 @@ public class NoticeFrontController extends HttpServlet {
 			System.out.println("NoticeViewDetailOk!!");
 			new NoticeViewDetailOkController().execute(request, response);
 			break;	
-	
 
+
+			
+//		case "/admin/adminNotice/adminNoticeWrite/adminNoticeWrite.ad":
+//			System.out.println("write!!");
+//			request.getRequestDispatcher("/admin/adminNotice/adminNoticeWrite/adminNoticeWrite.jsp");
+//			break;
 		}
 	}
 

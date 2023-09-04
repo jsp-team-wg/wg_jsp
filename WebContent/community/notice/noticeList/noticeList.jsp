@@ -98,7 +98,9 @@
 					</c:otherwise>
 				</c:choose>
 
+
 			</section>
+
 
 			<!-- 페이징  -->
 			<div class="page_wrap">

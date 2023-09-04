@@ -22,12 +22,14 @@ public class AdminDAO {
 		return adminDTO;
 		
 	}
+
 	
 	public MemberDTO memberList(MemberDTO memberDTO) {
 		sqlSession.selectOne("admin.signIn", memberDTO);
 		return memberDTO;
 		
 	}
+
 	public List<MemberDTO> selectAll(){
 		return sqlSession.selectList("member.selectAll");
 	}

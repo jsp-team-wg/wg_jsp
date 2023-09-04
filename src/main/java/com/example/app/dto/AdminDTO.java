@@ -37,9 +37,7 @@ public class AdminDTO {
 		this.adminPw = adminPw;
 	}
 	
-	
-	
-	
+
 	//오버라이딩
 	@Override
 	public String toString() {
