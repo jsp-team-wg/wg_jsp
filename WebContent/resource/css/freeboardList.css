@@ -167,6 +167,7 @@ main {
   height: 840px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 /* 아우터박스 */
 .board-outer-box {

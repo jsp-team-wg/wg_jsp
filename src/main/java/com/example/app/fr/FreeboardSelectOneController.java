@@ -26,7 +26,7 @@ public class FreeboardSelectOneController implements Execute{
 		freeboardInfo.put("freeboardNum", freeboardNum);
 		freeboardInfo.put("userNum", freeboardVO.getUserNum());
 		freeboardInfo.put("userNickName", freeboardVO.getUserNickname());
-		freeboardInfo.put("useGender", freeboardVO.getUserGender());
+		freeboardInfo.put("userGender", freeboardVO.getUserGender());
 		freeboardInfo.put("userNtrp", freeboardVO.getUserNtrp());
 		freeboardInfo.put("userExp", freeboardVO.getUserExp());
 		freeboardInfo.put("freeboardTitle", freeboardVO.getFreeboardTitle());
