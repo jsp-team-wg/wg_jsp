@@ -46,6 +46,10 @@
 		select * from tbl_user
 		where user_id= #{userId} and user_name = #{userName} and user_email = #{userEmail}
 	</select>
+	<select id="memberSelectAll" resultType="MemberDTO">
+		select * from tbl_member
+		on m.member_number = b.member_number
+	</select>
 	<!-- 이우진 -->
 
 </mapper>

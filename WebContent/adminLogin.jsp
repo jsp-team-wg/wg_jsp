@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resource/css/adminLogin.css">
 </head>
 <body>
+<form action="${pageContext.request.contextPath}/adminLoginOk.ad">
     <section class="section1-login">관리자 로그인</section>
     
     <section class="section2-input">
@@ -19,7 +20,7 @@
             </div>
             <form action="">
                 <div class="container-id-input">
-                    <input class="container-id-input-box" type="text" placeholder=" 아이디를 입력해주세요" name="">
+                    <input class="container-id-input-box" type="text" placeholder=" 아이디를 입력해주세요" name="adminId">
                 </div>
             </form>
             <div class="container-pw">
@@ -28,12 +29,11 @@
             
                 <form action="">
                     <div class="container-pw-input">
-                        <input class="container-pw-input-box" type="text" placeholder=" 비밀번호를 입력해주세요" name="">
+                        <input class="container-pw-input-box" type="text" placeholder=" 비밀번호를 입력해주세요" name="adminPw">
                     </div>
                 </form>
             <button class="container-login-button" 
-				type="button"
-				onclick="location.href='${pageContext.request.contextPath}/admin/adminMember/adminMember.jsp'">
+				type="submit">
                 <div class="container-login-button-text">
                     로그인
                 </div>
@@ -42,5 +42,6 @@
             
         </div>
     </section>
+    </form>
 </body>
 </html>

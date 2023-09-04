@@ -34,8 +34,8 @@
    
    <mappers>
 
-   		<!-- <mapper resource = "com/mybatis/mapper/AdminMapper.xml"></mapper>
-   		<mapper resource = "com/mybatis/mapper/FreeBoardMapper.xml"></mapper>
+   		<mapper resource = "com/mybatis/mapper/AdminMapper.xml"></mapper>
+   		<!-- <mapper resource = "com/mybatis/mapper/FreeBoardMapper.xml"></mapper>
    		<mapper resource = "com/mybatis/mapper/FreeCommentMapper.xml"></mapper>
    		<mapper resource = "com/mybatis/mapper/MateCommetMapper.xml"></mapper>
    		<mapper resource = "com/mybatis/mapper/MateMapper.xml"></mapper> -->
