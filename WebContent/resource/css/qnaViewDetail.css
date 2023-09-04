@@ -401,3 +401,8 @@ button {
     font-size: 17px;
     margin-left: 20px;
 }
+.page_nation a.active {
+	background-color: #18c6ae;
+	color:#fff;
+	border:1px solid #18c6ae;
+}

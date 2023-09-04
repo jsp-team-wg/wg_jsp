@@ -6,10 +6,43 @@
 		select count(*) from tbl_qna
 	</select>
 
-	<select id="bringQnaLIst" parameterType="int"
+	<select id="bringQnaList" parameterType="int"
 		resultType="QnaDTO">
 		select * from tbl_qna
 		order by qna_num desc
-		limit #{firstList}, 6
+		limit
+		#{firstList}, 6
 	</select>
+
+	<select id="qnaViewDetail" resultType="QnaViewDetailVo">
+		select q.user_num, q.qna_num, q.qna_title, u.user_nickname, u.user_gender,
+		u.user_ntrp, u.user_exp, q.qna_writedate, q.qna_content, q.qna_viewcnt, q.qna_commentcnt 
+		from tbl_qna q join tbl_user u
+		on q.user_num = u.user_num
+		where q.qna_num = #{listNum}
+	</select>
+	
+	<select id="getPrevView" resultType="QnaDTO">
+		select qna_viewcnt from tbl_qna
+		where qna_num = #{listNum}
+	</select>
+	
+	<update id="addViewCnt" parameterType="QnaDTO">
+		update tbl_qna set qna_viewcnt = #{QnaViewCnt} where qna_num = #{qnaNum}
+	</update>
+	
+	<insert id="qnaWrite" parameterType="QnaDTO">
+		insert into tbl_qna (user_num, qna_title, qna_content) values(#{userNum},#{qnaTitle},#{qnaContent})
+	</insert>
+	
+	<select id="bringContent" parameterType="int" resultType="QnaDTO">
+ 		select qna_title, qna_content from tbl_qna
+ 		where qna_num = #{listNum}
+	</select>
+	
+	<update id="qnaEdit" parameterType="QnaDTO">
+		update tbl_qna set qna_title = #{qnaTitle}, qna_content= #{qnaContent} 
+		where qna_num = #{listNum}
+	</update>
+	
 </mapper>

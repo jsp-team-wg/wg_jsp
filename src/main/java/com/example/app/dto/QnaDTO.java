@@ -3,16 +3,6 @@ package com.example.app.dto;
 import java.util.Date;
 
 public class QnaDTO {
-
-	
-//		    qna_num INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-//		    user_num INT NOT NULL,
-//		    qna_title VARCHAR(300) NOT NULL,
-//		    qna_content TEXT NOT NULL,
-//		    qna_viewcnt INT DEFAULT 0,
-//		    qna_commentcnt INT DEFAULT 0,
-//		    qna_writedate DATETIME NOT null DEFAULT CURRENT_TIMESTAMP,
-//		    FOREIGN KEY (user_num) REFERENCES TBL_USER(user_num)
 		
 	private int qnaNum;
 	private int userNum;
@@ -21,6 +11,9 @@ public class QnaDTO {
 	private int QnaViewCnt;
 	private int qnaCommentCnt;
 	private Date qnaWriteDate;
+	
+	
+	
 	public int getQnaNum() {
 		return qnaNum;
 	}
@@ -63,6 +56,7 @@ public class QnaDTO {
 	public void setQnaWriteDate(Date qnaWriteDate) {
 		this.qnaWriteDate = qnaWriteDate;
 	}
+	
 	@Override
 	public String toString() {
 		return "QnaDTO [qnaNum=" + qnaNum + ", userNum=" + userNum + ", qnaTitle=" + qnaTitle + ", qnaContent="
@@ -70,7 +64,7 @@ public class QnaDTO {
 				+ qnaWriteDate + "]";
 	}
 	
-
+	
 	
 	
 

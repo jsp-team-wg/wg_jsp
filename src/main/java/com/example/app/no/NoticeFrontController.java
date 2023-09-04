@@ -1,8 +1,8 @@
 package com.example.app.no;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -45,7 +45,7 @@ public class NoticeFrontController extends HttpServlet {
 	// jsp프로젝트에서는 get과 post를 구분하지 않고 사용
 	protected void doProcess(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		System.out.println("wg 서블릿이 실행");
+		System.out.println("no 서블릿이 실행");
 
 		// request.getContextPath()는 URL루트 경로를 의미한다
 		System.out.println(request.getContextPath());
@@ -57,13 +57,17 @@ public class NoticeFrontController extends HttpServlet {
 		String target = request.getRequestURI().substring(request.getContextPath().length());
 		System.out.println(target);
 
-		// 단순한 값비교는 if문보다 switch문이 효율성이 좋고 가독성도 좋다
-		// break문을 꼭 써야된다!
 		switch (target) {
-		case "/login/signUp/signUp.wg":
-			System.out.println("signUp!!");
-			request.getRequestDispatcher("/login/signUp/signUp.jsp").forward(request, response);
+		case "/community/noticeList/noticeListOk.no":
+			System.out.println("noticeListOk!!");
+			new NoticeListOkController().execute(request, response);
 			break;
+			
+		case "/Ok.no":
+			System.out.println("NoticeViewDetailOk!!");
+			new NoticeViewDetailOkController().execute(request, response);
+			break;	
+	
 
 		}
 	}

@@ -1,14 +1,16 @@
-package com.example.app.dto;
+package com.example.app.vo;
 
 import java.util.Date;
 
-public class QnaCommentDTO {
-
+public class QnaCommentVO {
+	
 	int commentNum;
 	int qnaNum;
 	int userNum;
+	String userNickname; 
 	String commentContent;
 	Date commentWritedate;
+	
 	public int getCommentNum() {
 		return commentNum;
 	}
@@ -27,6 +29,12 @@ public class QnaCommentDTO {
 	public void setUserNum(int userNum) {
 		this.userNum = userNum;
 	}
+	public String getUserNickname() {
+		return userNickname;
+	}
+	public void setUserNickname(String userNickname) {
+		this.userNickname = userNickname;
+	}
 	public String getCommentContent() {
 		return commentContent;
 	}
@@ -39,13 +47,12 @@ public class QnaCommentDTO {
 	public void setCommentWritedate(Date commentWritedate) {
 		this.commentWritedate = commentWritedate;
 	}
-	
 	@Override
 	public String toString() {
-		return "QnaCommentDTO [commentNum=" + commentNum + ", qnaNum=" + qnaNum + ", userNum=" + userNum
-				+ ", commentContent=" + commentContent + ", commentWritedate=" + commentWritedate + "]";
+		return "QnaCommentVO [commentNum=" + commentNum + ", qnaNum=" + qnaNum + ", userNum=" + userNum
+				+ ", userNickname=" + userNickname + ", commentContent=" + commentContent + ", commentWritedate="
+				+ commentWritedate + "]";
 	}
-
 	
-
+	
 }
