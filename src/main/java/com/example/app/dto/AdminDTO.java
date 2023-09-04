@@ -38,8 +38,11 @@ public class AdminDTO {
 	}
 	
 	
+<<<<<<< HEAD
 	
 	
+=======
+>>>>>>> ljj
 	//오버라이딩
 	@Override
 	public String toString() {

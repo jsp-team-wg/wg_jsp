@@ -22,12 +22,17 @@ public class AdminDAO {
 		return adminDTO;
 		
 	}
+<<<<<<< HEAD
 	
 	public MemberDTO memberList(MemberDTO memberDTO) {
 		sqlSession.selectOne("admin.signIn", memberDTO);
 		return memberDTO;
 		
 	}
+=======
+
+	
+>>>>>>> ljj
 	public List<MemberDTO> selectAll(){
 		return sqlSession.selectList("member.selectAll");
 	}

@@ -27,5 +27,10 @@ public class FreeBoardDAO {
 	
 //	public freeboardDTO selectAll(){
 //		return sqlSession.selectList("board.selectAll");
+<<<<<<< HEAD
 //	}
 }
+=======
+	}
+
+>>>>>>> ljj

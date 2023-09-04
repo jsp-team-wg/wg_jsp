@@ -29,7 +29,11 @@
             
                 <form action="">
                     <div class="container-pw-input">
+<<<<<<< HEAD
                         <input class="container-pw-input-box" type="text" placeholder=" 비밀번호를 입력해주세요" name="adminPw">
+=======
+                        <input class="container-pw-input-box" type="password" placeholder=" 비밀번호를 입력해주세요" name="adminPw">
+>>>>>>> ljj
                     </div>
                 </form>
             <button class="container-login-button" 
