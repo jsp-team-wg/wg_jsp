@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +10,15 @@
 <link rel="stylesheet" href="../../../resource/css/qnaWrite.css" />
 </head>
 <body>
-	<%@ include file="../../../headerLogin.jsp"%>
+	<c:choose>
+		<c:when test="${empty sessionScope}">
+			<jsp:include page="../../../header.jsp" />
+		</c:when>
+		<c:otherwise>
+			<jsp:include page="../../../headerLogin.jsp" />
+		</c:otherwise>
+	</c:choose>
+
 
 	<main>
 		<!-- Q&A 글작성-->
@@ -20,20 +29,20 @@
 			</div>
 		</section>
 		<!-- 제목 & 내용 -->
-		<form action="" accept-charset="UTF-8" method="post">
+		<form action="${pageContext.request.contextPath}/community/qnaWrite/qnaWriteOk.qna" accept-charset="UTF-8" method="post">
 			<section class="titleContentSection border-radius bgGray">
 				<div class="titleContent">
 					<div class="title">
 						<p>제목</p>
 						<div class="title-out-box">
-							<textarea class="title-in-box-text" name="title" readonly
+							<textarea class="title-in-box-text" name="title"
 								placeholder="제목을 입력하세요(50자 이내)"></textarea>
 						</div>
 					</div>
 					<div class="content">
 						<p>내용</p>
 						<div class="content-box-out">
-							<textarea readonly class="content-area border-radius"
+							<textarea class="content-area border-radius"
 								name="content" placeholder="내용을 입력하세요(3000자 이내)"></textarea>
 						</div>
 					</div>
@@ -43,14 +52,12 @@
 			<section>
 				<div class="pagebackComplete border-radius">
 					<button type="button"
-						onclick="location.href='../qnaList/qnaListLogin.jsp'"
+						onclick="location.href='${pageContext.request.contextPath}/community/qnaList/qnaListOk.qna'"
 						class="pageback button-size border-radius bgRed colorWhite"
 						name="pageback">뒤로가기</button>
 
-					<button type="button"
-						onclick="location.href='../qnaViewDetail/qnaViewDetailLogin.jsp'"
-						class="complete button-size border-radius bgGreen colorWhite "
-						name="complete">작성완료</button>
+					<button type="submit"
+						class="complete button-size border-radius bgGreen colorWhite ">작성완료</button>
 				</div>
 			</section>
 		</form>

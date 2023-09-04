@@ -36,9 +36,7 @@ public class AdminDTO {
 	public void setAdminPw(String adminPw) {
 		this.adminPw = adminPw;
 	}
-	public List<MemberDTO> selectAll(){
-		return sqlSession.selectList("member.selectAll");
-	}
+	
 	
 	
 	
