@@ -15,7 +15,7 @@
 			<div class="findPwH2">
 				<h2>아이디 찾기</h2>
 			</div>
-			<form action="">
+			<form action="${pageContext.request.contextPath}/login/findId/findIdOk.me" method="post">
 				<div class="findPwText">
 					<p>*기존의 가입하신정보가 일치하면 아이디를 알려드립니다</p>
 				</div>
@@ -40,7 +40,7 @@
 						style="display: block;">
 						<div>
 							<p id="foundUserName"></p>
-							님의 아이디는 입니다
+							${member.getUserName()}님의 아이디는 ${member.getUserId()} 입니다
 						</div>
 						<div id="foundUserId"></div>
 					</div>
