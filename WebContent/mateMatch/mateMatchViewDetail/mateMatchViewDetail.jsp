@@ -28,12 +28,14 @@
         <br />
       </section>
       <!-- 모집 완료 버튼 -->
+      <c:if test="${mate.mateAtStatus eq 0 and mate.userNum eq sessionScope.userNum}">
       <section class="mate-detail-button2">
+      
         <form class="form-button2">
           <button
             type="button"
             class="mate-detail-form-button3"
-            onclick="location.href='../../mateMatch/mateMatchList/mateMatchList.jsp'"
+            onclick="location.href='${pageContext.request.contextPath}/mateMatch/mateMatchViewDetail/mateMatchAttOk.ma?mateNum=${mate.mateNum}'"
           >
             <span class="mate-detail-form-button-text">모집완료</span>
           </button>
@@ -42,6 +44,7 @@
           >
         </form>
       </section>
+      </c:if>
       <!--글 쓰기 제목-->
       <section class="mate-detail-bigform">
         <div class="mate-detail-form-title-text">
@@ -115,6 +118,8 @@
       </section>
       <!-- 삭제, 수정 버튼 -->
       <section class="mate-detail-button">
+      <c:choose>
+    	<c:when test="${mate.userNum eq sessionScope.userNum}">
         <form class="form-button">
           <button
             type="button"
@@ -124,6 +129,24 @@
             <span>삭제</span>
           </button>
         </form>
+        </c:when>
+        <c:when test="${not empty sessionScope.adminNum}">
+        <form class="form-button">
+          <button
+            type="button"
+            class="mate-detail-form-button1"
+            onclick="location.href='${pageContext.request.contextPath}/mateMatch/mateMatchViewDetail/mateMatchDeleteOk.ma?mateNum=${mate.mateNum}'"
+          >
+            <span>삭제</span>
+          </button>
+        </form>
+        </c:when>
+        <c:otherwise>
+        </c:otherwise>
+        </c:choose>
+        
+        <c:choose>
+    	<c:when test="${mate.userNum eq sessionScope.userNum}">
         <form class="form-button">
           <!-- 링크 연결 안 됨 -->
           <button
@@ -134,6 +157,10 @@
             <span>수정</span>
           </button>
         </form>
+        </c:when>
+        <c:otherwise>
+        </c:otherwise>
+        </c:choose>
       </section>
       <br />
 
@@ -148,44 +175,31 @@
           </div>
         </div>
         <!-- 댓글 목록 -->
+        <c:forEach var="mateComment" items="${mateCommentList}" begin="0" end="2" >
         <div class="comment2-box">
           <div class="comment2-nickname">
-            <span class="comment2-text">길동님</span>
+            <span class="comment2-text">${mateComment.userNickname}</span>
           </div>
           <div class="comment2-list-box">
-            <span class="comment2-list-text">hong@123.com으로 연락주세요</span>
+            <span class="comment2-list-text">${mateComment.commentContent}</span>
           </div>
           
+          <c:choose>
+    	  <c:when test="${mateComment.userNum eq sessionScope.userNum}">
           <div class="delete-button-box">
-            <button class="delete-button">삭제</button>
+            <button class="delete-button"
+            onclick="location.href='${pageContext.request.contextPath}/mateMatch/mateMatchViewDetail/deleteComment.ma?commentNum=${mateComment.commentNum}&mateNum=${mate.mateNum}'"
+            >삭제</button>
           </div>
+          </c:when>
+        <c:otherwise>
+        </c:otherwise>
+        </c:choose>
           <br />
           <hr />
-
-          <div class="comment2-nickname">
-            <span class="comment2-text">길동님</span>
-          </div>
-          <div class="comment2-list-box">
-            <span class="comment2-list-text">hong@123.com으로 연락주세요</span>
-          </div>
-          <div class="delete-button-box">
-            <button class="delete-button">삭제</button>
-          </div>
-          <br />
-          <hr />
-
-          <div class="comment2-nickname">
-            <span class="comment2-text">길동님</span>
-          </div>
-          <div class="comment2-list-box">
-            <span class="comment2-list-text">hong@123.com으로 연락주세요</span>
-          </div>
-          <div class="delete-button-box">
-            <button class="delete-button">삭제</button>
-          </div>
         </div>
         <hr />
-
+		</c:forEach>
         <!-- 페이징 -->
         <div class="page_wrap">
           <div class="page_nation">
@@ -206,17 +220,20 @@
           </div>
         </div>
         <!-- 댓글달기 -->
+        <c:if test="${not empty sessionScope}">
         <div class="ReviewWrite-Container">
-          <form class="ReviewWrite-Container-form" action="" method="get">
+          <form class="ReviewWrite-Container-form" action="${pageContext.request.contextPath}/mateMatch/mateMatchViewDetail/mateMatchCommentWriteOk.ma?mateNum=${mate.mateNum}" method="post">
             <div class="ReviewWrite-Container-box1">
               <textarea
                 class="ReviewWrite-Container-form-text"
                 placeholder="댓글을 입력하세요(50자 이내)"
+                name = "commentContent"
               ></textarea>
             </div>
-            <button class="Review-Button">댓글 달기</button>
+            <button class="Review-Button" type="submit">댓글 달기</button>
           </form>
         </div>
+        </c:if>
       </section>
     </main>
   </body>

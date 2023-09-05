@@ -20,7 +20,7 @@
 	</c:choose>
   <body>
     <main>
-      <form action="${pageContext.request.contextPath}/mateMatch/mateMatchEdit/mateMatchEditOk.ma" method="post">
+      <form action="${pageContext.request.contextPath}/mateMatch/mateMatchEdit/mateMatchEditOk.ma?mateNum=${mate.mateNum}" method="post">
         <!-- 카테고리 섹션 -->
         <section class="section-category">
           <div class="category-name">메이트찾기</div>
@@ -51,7 +51,7 @@
               />
             </div>
             <div class="court-address-input-box2">
-              <button class="court-address-input-box2-button" type=""
+              <button class="court-address-input-box2-button" type="button"
               id="openPopup">
                 주소찾기
               </button>
@@ -110,7 +110,7 @@
 
           <!-- ntrp -->
           <div class="ntrp">
-            <div class="ntrp-text">NTRP(선택)&nbsp &nbsp 현재 NTRP : ${mate.mateNtrp}</div>
+            <div class="ntrp-text">NTRP(선택)</div>
             <div class="ntrp-dropbox">
               <select class="ntrp-select" name="mateNtrp" id="ntrp-select">
                 <option value="null">선택</option>
@@ -129,7 +129,7 @@
 
           <!-- 게임유형 -->
           <div class="game-type">
-            <div class="game-type-text">게임유형 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 현재 게임 유형 : ${mate.mateGametype}</div>
+            <div class="game-type-text">게임유형</div>
             <div class="game-type-dropbox">
               <select class="game-type-select"  name="mateGametype" id="">
                 <option value="선택">선택</option>

@@ -7,14 +7,20 @@
 		value(#{mateNum}, #{userNum}, #{commentContent})
 	</select>
 	
-	<select id="selectComment" resultType="MateCommentDTO">
-		select * from tbl_matecomment
-		where mate_num = #{mateNum}
+	<select id="selectComment" parameterType="int" resultType="MateCommentVO">
+		select m.comment_num, m.mate_num, m.user_num, m.comment_content, u.user_nickname
+		from tbl_matecomment m join tbl_user u  
+		on m.user_num = u.user_num
+		where m.mate_num = #{mateNum}
 	</select>
 	
 	<delete id="deleteComment" parameterType="int">
 		delete from tbl_matecomment
-		where comment_num = #{comment_num}
+		where comment_num = #{commentNum}
+	</delete>
+	<delete id="deleteWriteComment" parameterType="int">
+		delete from tbl_matecomment
+		where mate_num = #{mateNum}
 	</delete>
 	
 </mapper>

@@ -149,22 +149,22 @@
                 <a href="${pageContext.request.contextPath}/mateMatch/mateMatchViewDetail/mateMatchViewDetail.jsp" class="main-section2-mate-tag">             
                     <div class="main-section2-mate">
                         <div class="main-section2-mate-title">
-                            호원실내테니스장
+                            의정부실내테니스장
                         </div>
                         <div class="main-section2-mate-dateTime">
                             <div class="main-section2-mate-date">
-                                08.11
+                                09.10
                             </div>
                             <div class="main-section2-mate-day">
-                                금
+                                일
                             </div>
                             <div class="main-section2-mate-time">
-                                18:00-20:00
+                                15:00-18:00
                             </div>
                         </div>
                         <div class="main-section2-mate-gameType">
                             <div class="main-section2-mate-game">
-                                랠리
+                                혼복
                             </div>
                             <div class="main-section2-mate-condition">
                                 <div class="main-section2-mate-open">
@@ -175,7 +175,7 @@
                                         남
                                     </div>
                                     <div class="main-section2-mate-condition1-m-cnt">
-                                        1
+                                        3
                                     </div>
                                     <div class="main-section2-mate-condition1-w-text">
                                         여
@@ -190,7 +190,7 @@
                                 <div class="main-section2-mate-condition3">,
                                 </div>
                                 <div class="main-section2-mate-condition4">
-                                    5년 이상
+                                    2년 이상
                                 </div>
                                 <div class="main-section2-mate-close">
                                     &#41;
@@ -201,7 +201,7 @@
                             <img src="http://localhost:8888/wg_jsp/resource/img/comment.png" class="main-section2-mate-comment-img"
                             alt="main-section2-mate-comment-img">
                             <div class="main-section2-mate-comment-count">
-                                12
+                                20
                             </div>
                         </div>
                     </div>
@@ -210,22 +210,22 @@
                 <a href="${pageContext.request.contextPath}/mateMatch/mateMatchViewDetail/mateMatchViewDetail.jsp" class="main-section2-mate-tag">             
                     <div class="main-section2-mate">
                         <div class="main-section2-mate-title">
-                            호원실내테니스장
+                            다락원테니스장
                         </div>
                         <div class="main-section2-mate-dateTime">
                             <div class="main-section2-mate-date">
-                                08.11
+                                09.16
                             </div>
                             <div class="main-section2-mate-day">
-                                금
+                                토
                             </div>
                             <div class="main-section2-mate-time">
-                                18:00-20:00
+                                19:00-21:00
                             </div>
                         </div>
                         <div class="main-section2-mate-gameType">
                             <div class="main-section2-mate-game">
-                                랠리
+                                남복
                             </div>
                             <div class="main-section2-mate-condition">
                                 <div class="main-section2-mate-open">
@@ -236,13 +236,13 @@
                                         남
                                     </div>
                                     <div class="main-section2-mate-condition1-m-cnt">
-                                        1
+                                        6
                                     </div>
                                     <div class="main-section2-mate-condition1-w-text">
                                         여
                                     </div>
                                     <div class="main-section2-mate-condition1-w-cnt">
-                                        2
+                                        0
                                     </div>
                                 </div>
                                 <div class="main-section2-mate-condition2">
@@ -251,7 +251,7 @@
                                 <div class="main-section2-mate-condition3">,
                                 </div>
                                 <div class="main-section2-mate-condition4">
-                                    5년 이상
+                                    4년 이상
                                 </div>
                                 <div class="main-section2-mate-close">
                                     &#41;
@@ -262,7 +262,7 @@
                             <img src="http://localhost:8888/wg_jsp/resource/img/comment.png" class="main-section2-mate-comment-img"
                             alt="main-section2-mate-comment-img">
                             <div class="main-section2-mate-comment-count">
-                                12
+                                30
                             </div>
                         </div>
                     </div>
@@ -271,22 +271,22 @@
                 <a href="${pageContext.request.contextPath}/mateMatch/mateMatchViewDetail/mateMatchViewDetail.jsp" class="main-section2-mate-tag">             
                     <div class="main-section2-mate">
                         <div class="main-section2-mate-title">
-                            호원실내테니스장
+                            푸른마당테니스장
                         </div>
                         <div class="main-section2-mate-dateTime">
                             <div class="main-section2-mate-date">
-                                08.11
+                                09.24
                             </div>
                             <div class="main-section2-mate-day">
-                                금
+                                일
                             </div>
                             <div class="main-section2-mate-time">
-                                18:00-20:00
+                                14:00-17:00
                             </div>
                         </div>
                         <div class="main-section2-mate-gameType">
                             <div class="main-section2-mate-game">
-                                랠리
+                                혼복
                             </div>
                             <div class="main-section2-mate-condition">
                                 <div class="main-section2-mate-open">
@@ -297,7 +297,7 @@
                                         남
                                     </div>
                                     <div class="main-section2-mate-condition1-m-cnt">
-                                        1
+                                        4
                                     </div>
                                     <div class="main-section2-mate-condition1-w-text">
                                         여
@@ -312,7 +312,7 @@
                                 <div class="main-section2-mate-condition3">,
                                 </div>
                                 <div class="main-section2-mate-condition4">
-                                    5년 이상
+                                    4년 이하
                                 </div>
                                 <div class="main-section2-mate-close">
                                     &#41;
@@ -323,7 +323,7 @@
                             <img src="http://localhost:8888/wg_jsp/resource/img/comment.png" class="main-section2-mate-comment-img"
                             alt="main-section2-mate-comment-img">
                             <div class="main-section2-mate-comment-count">
-                                12
+                                15
                             </div>
                         </div>
                     </div>
@@ -349,7 +349,7 @@
                         <div class="main-section3-community-board">
                             <div class="main-section3-community-board-title">
                                 <a href="${pageContext.request.contextPath}/community/freeboard/freeboardViewDetail/freeboardViewDetail.jsp" class="main-section3-community-board-tag">
-                                    구력 2개월 테린인데 라켓 추천부탁드려요 구력 2개월 테린인데 라켓 추천부탁드려요
+                                    구력 2개월 테린인데 라켓 추천부탁드려요
                                 </a>
                             </div>
                             <div class="main-section3-community-board-content">
@@ -361,7 +361,7 @@
                                     class="main-section3-community-board-viewImg"
                                     alt="main-section3-community-board-viewImg">
                                     <div class="main-section3-community-board-viewCount">
-                                        1
+                                        40
                                     </div>
                                 </div>
                                 <div class="main-section3-community-board-comment">
@@ -369,7 +369,7 @@
                                     class="main-section3-community-board-commentImg"
                                     alt="main-section3-community-board-commentImg">
                                     <div class="main-section3-community-board-commentCount">
-                                        1
+                                        13
                                     </div>
                                 </div>
                             </div>
@@ -378,11 +378,11 @@
                         <div class="main-section3-community-board">
                             <div class="main-section3-community-board-title">
                                 <a href="${pageContext.request.contextPath}/community/freeboard/freeboardViewDetail/freeboardViewDetail.jsp" class="main-section3-community-board-tag">
-                                    구력 2개월 테린인데 라켓 추천부탁드려요 구력 2개월 테린인데 라켓 추천부탁드려요
+                                    이번에 다녀온 테니스장 추천합니다~~!!
                                 </a>
                             </div>
                             <div class="main-section3-community-board-content">
-                                이번에 테니스 라켓을 새로 구매하려고합니다. 라켓추천 부탁드립니다!이번에 테니스 라켓을 새로 구매하려고합니다. 라켓추천 부탁드립니다!이번에 테니스 라켓을 새로 구매하려고합니다. 라켓추천 부탁드립니다!
+                                이번 휴가에 친구들하고 다녀온 경기도에 있는 테니스장 추천합니다. 테니스에 관심있는 분들께 추천드려요!
                             </div>
                             <div class="main-section3-community-board-viewComment">
                                 <div class="main-section3-community-board-view">
@@ -390,7 +390,7 @@
                                     class="main-section3-community-board-viewImg"
                                     alt="main-section3-community-board-viewImg">
                                     <div class="main-section3-community-board-viewCount">
-                                        1
+                                        100
                                     </div>
                                 </div>
                                 <div class="main-section3-community-board-comment">
@@ -398,7 +398,7 @@
                                     class="main-section3-community-board-commentImg"
                                     alt="main-section3-community-board-commentImg">
                                     <div class="main-section3-community-board-commentCount">
-                                        1
+                                        15
                                     </div>
                                 </div>
                             </div>
@@ -407,11 +407,11 @@
                         <div class="main-section3-community-board">
                             <div class="main-section3-community-board-title">
                                 <a href="${pageContext.request.contextPath}/community/freeboard/freeboardViewDetail/freeboardViewDetail.jsp" class="main-section3-community-board-tag">
-                                    구력 2개월 테린인데 라켓 추천부탁드려요 구력 2개월 테린인데 라켓 추천부탁드려요
+                                    요즘 테니스가 유행이러던데 어렵지 않나요?
                                 </a>
                             </div>
                             <div class="main-section3-community-board-content">
-                                이번에 테니스 라켓을 새로 구매하려고합니다. 라켓추천 부탁드립니다!이번에 테니스 라켓을 새로 구매하려고합니다. 라켓추천 부탁드립니다!이번에 테니스 라켓을 새로 구매하려고합니다. 라켓추천 부탁드립니다!
+                                테니스 치는 사람들이 늘어서 관심이 생겼는데 재밌나요?
                             </div>
                             <div class="main-section3-community-board-viewComment">
                                 <div class="main-section3-community-board-view">
@@ -419,7 +419,7 @@
                                     class="main-section3-community-board-viewImg"
                                     alt="main-section3-community-board-viewImg">
                                     <div class="main-section3-community-board-viewCount">
-                                        1
+                                        24
                                     </div>
                                 </div>
                                 <div class="main-section3-community-board-comment">
@@ -427,7 +427,7 @@
                                     class="main-section3-community-board-commentImg"
                                     alt="main-section3-community-board-commentImg">
                                     <div class="main-section3-community-board-commentCount">
-                                        1
+                                        150
                                     </div>
                                 </div>
                             </div>
@@ -439,11 +439,11 @@
                         <div class="main-section3-community-QA">
                             <div class="main-section3-community-QA-title">
                                 <a href="${pageContext.request.contextPath}/community/qna/qnaViewDetail/qnaViewDetail.jsp" class="main-section3-community-QA-tag">
-                                    구력 2개월 테린인데 라켓 추천부탁드려요 구력 2개월 테린인데 라켓 추천부탁드려요
+                                    테니스 잘 치려면 뭐 해야 돼요?
                                 </a>
                             </div>
                             <div class="main-section3-community-QA-content">
-                                이번에 테니스 라켓을 새로 구매하려고합니다. 라켓추천 부탁드립니다!이번에 테니스 라켓을 새로 구매하려고합니다. 라켓추천 부탁드립니다!이번에 테니스 라켓을 새로 구매하려고합니다. 라켓추천 부탁드립니다!
+                                테니스 잘 치고 싶은데 아무리 쳐도 안 느네요 ㅠㅠ 뭘해야 할지 모르겠어요 ㅠ 고수님들의 조언 좀 부탁드립니다
                             </div>
                             <div class="main-section3-community-QA-viewComment">
                                 <div class="main-section3-community-QA-view">
@@ -451,7 +451,7 @@
                                     class="main-section3-community-QA-viewImg"
                                     alt="main-section3-community-QA-viewImg">
                                     <div class="main-section3-community-QA-viewCount">
-                                        1
+                                        40
                                     </div>
                                 </div>
                                 <div class="main-section3-community-QA-comment">
@@ -459,7 +459,7 @@
                                     class="main-section3-community-QA-commentImg"
                                     alt="main-section3-community-QA-commentImg">
                                     <div class="main-section3-community-QA-commentCount">
-                                        1
+                                        230
                                     </div>
                                 </div>
                             </div>
@@ -468,11 +468,11 @@
                         <div class="main-section3-community-QA">
                             <div class="main-section3-community-QA-title">
                                 <a href="${pageContext.request.contextPath}/community/qna/qnaViewDetail/qnaViewDetail.jsp" class="main-section3-community-QA-tag">
-                                    구력 2개월 테린인데 라켓 추천부탁드려요 구력 2개월 테린인데 라켓 추천부탁드려요
+                                    테니스화
                                 </a>
                             </div>
                             <div class="main-section3-community-QA-content">
-                                이번에 테니스 라켓을 새로 구매하려고합니다. 라켓추천 부탁드립니다!이번에 테니스 라켓을 새로 구매하려고합니다. 라켓추천 부탁드립니다!이번에 테니스 라켓을 새로 구매하려고합니다. 라켓추천 부탁드립니다!
+                                 테니스 치려고 하는데 테니스화 신으시는 브랜드가 따로 있으신가요? 어떤걸 사야 할지 모르겠네요 아직도 고민중이에요...
                             </div>
                             <div class="main-section3-community-QA-viewComment">
                                 <div class="main-section3-community-QA-view">
@@ -480,7 +480,7 @@
                                     class="main-section3-community-QA-viewImg"
                                     alt="main-section3-community-QA-viewImg">
                                     <div class="main-section3-community-QA-viewCount">
-                                        1
+                                        30
                                     </div>
                                 </div>
                                 <div class="main-section3-community-QA-comment">
@@ -488,7 +488,7 @@
                                     class="main-section3-community-QA-commentImg"
                                     alt="main-section3-community-QA-commentImg">
                                     <div class="main-section3-community-QA-commentCount">
-                                        1
+                                        102
                                     </div>
                                 </div>
                             </div>

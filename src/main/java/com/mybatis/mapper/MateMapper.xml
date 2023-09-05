@@ -24,6 +24,7 @@
 		    mate_wcount = #{mateWcount},
 		    mate_content = #{mateContent},
 		    mate_writedate = #{mateWritedate}
+		 where mate_num =#{mateNum}
    </update>
    <!-- 메이트 글 삭제 -->
    <delete id="delete" parameterType="int">

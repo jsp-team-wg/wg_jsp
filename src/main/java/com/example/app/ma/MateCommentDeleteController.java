@@ -10,21 +10,19 @@ import com.example.app.Execute;
 import com.example.app.dao.MateCommentDAO;
 import com.example.app.dao.MateDAO;
 
-public class MateMatchDeleteController implements Execute{
+public class MateCommentDeleteController implements Execute{
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-		// TODO Auto-generated method stub
-		
+		MateCommentDAO  mateCommentDAO = new MateCommentDAO();
 		MateDAO mateDAO = new MateDAO();
-		MateCommentDAO mateCommentDAO = new MateCommentDAO();
+		int commentNum = Integer.parseInt(request.getParameter("commentNum"));
+		mateCommentDAO.deleteComment(commentNum);
 		int mateNum = Integer.parseInt(request.getParameter("mateNum"));
+		mateDAO.commentCntDown(mateNum);
+		request.getRequestDispatcher("/mateMatch/mateMatchViewDetail/mateMatchViewDetail.ma?mateNum=" + mateNum).forward(request, response);
 		
-		mateCommentDAO.deleteWriteComment(mateNum);
-		mateDAO.delete(mateNum);
-		request.getRequestDispatcher("/mateMatch/mateMatchList/mateMatchListOk.ma").forward(request, response);
 	}
-
 	
 	
 }

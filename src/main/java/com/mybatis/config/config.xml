@@ -17,6 +17,7 @@
       <typeAlias type="com.example.app.dto.MateCommentDTO"
          alias="MateCommentDTO" />
       <typeAlias type="com.example.app.vo.MateVO" alias="MateVO" />
+      <typeAlias type="com.example.app.vo.MateCommentVO" alias="MateCommentVO" />
       <typeAlias type="com.example.app.dto.MateDTO"
          alias="MateDTO" />
       <typeAlias type="com.example.app.dto.MemberDTO"
@@ -27,7 +28,6 @@
       <typeAlias type="com.example.app.dto.QnaDTO" alias="QnaDTO" />
       <typeAlias type="com.example.app.vo.QnaCommentVO" alias="QnaCommentVO" />
       <typeAlias type="com.example.app.vo.QnaViewDetailVo" alias="QnaViewDetailVo" />
-      
    </typeAliases>
 
 
@@ -53,7 +53,6 @@
       <mapper resource="com/mybatis/mapper/NoticeMapper.xml"></mapper>
       <mapper resource="com/mybatis/mapper/QnaCommentMapper.xml"></mapper>
       <mapper resource="com/mybatis/mapper/QnaMapper.xml"></mapper>
-
    </mappers>
    
 </configuration>
