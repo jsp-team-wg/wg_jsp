@@ -29,7 +29,6 @@
                         <button class="Button-Style1 Text-Style2 Shadow1" type="button"
                         id="idCheck" >중복확인</button>
                     </div>
-                    <div id="check-id-msg"></div>
 
                     <!-- 닉네임 -->
                     <div class="Container2">
