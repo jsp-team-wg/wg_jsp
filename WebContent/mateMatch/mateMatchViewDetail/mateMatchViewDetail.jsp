@@ -185,7 +185,7 @@
           </div>
           
           <c:choose>
-    	  <c:when test="${mate.userNum eq sessionScope.userNum}">
+    	  <c:when test="${mateComment.userNum eq sessionScope.userNum}">
           <div class="delete-button-box">
             <button class="delete-button"
             onclick="location.href='${pageContext.request.contextPath}/mateMatch/mateMatchViewDetail/deleteComment.ma?commentNum=${mateComment.commentNum}&mateNum=${mate.mateNum}'"
